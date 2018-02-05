@@ -1,0 +1,88 @@
+
+*** Running vivado
+    with args -log design_1_axi_uartlite_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_uartlite_0_0.tcl
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source design_1_axi_uartlite_0_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1205.566 ; gain = 76.000 ; free physical = 6857 ; free virtual = 35857
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_uartlite_0_0' [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/synth/design_1_axi_uartlite_0_0.vhd:86]
+INFO: [Synth 8-638] synthesizing module 'axi_uartlite' [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:2160]
+INFO: [Synth 8-638] synthesizing module 'uartlite_core' [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1615]
+INFO: [Synth 8-638] synthesizing module 'baudrate' [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1418]
+INFO: [Synth 8-256] done synthesizing module 'baudrate' (1#1) [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1418]
+INFO: [Synth 8-638] synthesizing module 'uartlite_rx' [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:909]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (2#1) [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_i_f' [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:168]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_i_f' (3#1) [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:168]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f' [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f' [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f' [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f' (4#1) [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f' [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f' (5#1) [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f' (6#1) [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f' (7#1) [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'uartlite_rx' (8#1) [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:909]
+INFO: [Synth 8-638] synthesizing module 'uartlite_tx' [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:408]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_i_f__parameterized0' [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:168]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_i_f__parameterized0' (8#1) [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:168]
+INFO: [Synth 8-256] done synthesizing module 'uartlite_tx' (9#1) [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:408]
+INFO: [Synth 8-256] done synthesizing module 'uartlite_core' (10#1) [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1615]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (11#1) [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (11#1) [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (11#1) [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (11#1) [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (12#1) [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (13#1) [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (14#1) [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-256] done synthesizing module 'axi_uartlite' (15#1) [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:2160]
+INFO: [Synth 8-256] done synthesizing module 'design_1_axi_uartlite_0_0' (16#1) [/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/synth/design_1_axi_uartlite_0_0.vhd:86]
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1248.066 ; gain = 118.500 ; free physical = 6828 ; free virtual = 35828
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1248.066 ; gain = 118.500 ; free physical = 6806 ; free virtual = 35807
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1651.738 ; gain = 1.000 ; free physical = 6447 ; free virtual = 35447
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1651.738 ; gain = 522.172 ; free physical = 6349 ; free virtual = 35349
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1651.738 ; gain = 522.172 ; free physical = 6349 ; free virtual = 35349
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1651.738 ; gain = 522.172 ; free physical = 6350 ; free virtual = 35350
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1651.738 ; gain = 522.172 ; free physical = 6330 ; free virtual = 35331
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1651.738 ; gain = 522.172 ; free physical = 6283 ; free virtual = 35284
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1651.738 ; gain = 522.172 ; free physical = 6503 ; free virtual = 35504
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1651.738 ; gain = 522.172 ; free physical = 6496 ; free virtual = 35497
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1651.738 ; gain = 522.172 ; free physical = 6496 ; free virtual = 35496
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1651.738 ; gain = 522.172 ; free physical = 6494 ; free virtual = 35494
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1651.738 ; gain = 522.172 ; free physical = 6494 ; free virtual = 35494
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1651.738 ; gain = 522.172 ; free physical = 6494 ; free virtual = 35494
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1651.738 ; gain = 522.172 ; free physical = 6494 ; free virtual = 35494
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1651.738 ; gain = 522.172 ; free physical = 6494 ; free virtual = 35494
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1651.738 ; gain = 522.172 ; free physical = 6494 ; free virtual = 35494
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |LUT1   |     1|
+|2     |LUT2   |    10|
+|3     |LUT3   |    23|
+|4     |LUT4   |    15|
+|5     |LUT5   |    44|
+|6     |LUT6   |    21|
+|7     |SRL16E |    18|
+|8     |FDR    |     4|
+|9     |FDRE   |    74|
+|10    |FDSE   |    16|
++------+-------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1651.738 ; gain = 522.172 ; free physical = 6494 ; free virtual = 35494
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1651.738 ; gain = 534.754 ; free physical = 6492 ; free virtual = 35496
