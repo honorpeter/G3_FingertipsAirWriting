@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date                      : Sat Feb 10 15:17:41 2018
-| Host                      : SFB520WS02 running 64-bit Service Pack 1  (build 7601)
+| Date                      : Sat Feb 10 16:12:19 2018
+| Host                      : SFB520WS12 running 64-bit Service Pack 1  (build 7601)
 | Command                   : report_io -file design_1_wrapper_io_placed.rpt
 | Design                    : design_1_wrapper
 | Device                    : xc7a100t

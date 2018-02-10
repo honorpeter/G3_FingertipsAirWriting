@@ -47,23 +47,24 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a100tcsg324-1
   set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/chenyueq/ece532_project/ece532_project.cache/wt [current_project]
-  set_property parent.project_path C:/Users/chenyueq/ece532_project/ece532_project.xpr [current_project]
-  set_property ip_repo_paths C:/Users/chenyueq/ece532_project/ip_repository [current_project]
-  set_property ip_output_repo C:/Users/chenyueq/ece532_project/ece532_project.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/lingujia/ece532_project/ece532_project.cache/wt [current_project]
+  set_property parent.project_path C:/Users/lingujia/ece532_project/ece532_project.xpr [current_project]
+  set_property ip_repo_paths C:/Users/lingujia/ece532_project/ip_repository [current_project]
+  set_property ip_output_repo C:/Users/lingujia/ece532_project/ece532_project.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet C:/Users/chenyueq/ece532_project/ece532_project.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet C:/Users/lingujia/ece532_project/ece532_project.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -suppress
   set_param project.isImplRun true
-  add_files C:/Users/chenyueq/ece532_project/ece532_project.srcs/sources_1/bd/design_1/design_1.bd
-  set_property is_locked true [get_files C:/Users/chenyueq/ece532_project/ece532_project.srcs/sources_1/bd/design_1/design_1.bd]
+  add_files C:/Users/lingujia/ece532_project/ece532_project.srcs/sources_1/bd/design_1/design_1.bd
+  set_property is_locked true [get_files C:/Users/lingujia/ece532_project/ece532_project.srcs/sources_1/bd/design_1/design_1.bd]
   set_param project.isImplRun false
-  read_xdc C:/Users/chenyueq/ece532_project/ece532_project.srcs/constrs_1/new/eth_ref_clk.xdc
+  read_xdc C:/Users/lingujia/ece532_project/ece532_project.srcs/constrs_1/new/eth_ref_clk.xdc
   set_param project.isImplRun true
   link_design -top design_1_wrapper -part xc7a100tcsg324-1
   set_param project.isImplRun false
