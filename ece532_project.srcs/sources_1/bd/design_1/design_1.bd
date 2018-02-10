@@ -206,35 +206,6 @@
         </spirit:parameters>
       </spirit:busInterface>
       <spirit:busInterface>
-        <spirit:name>RST.RESET</spirit:name>
-        <spirit:displayName>Reset</spirit:displayName>
-        <spirit:description>Reset</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>RST</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>reset</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>POLARITY</spirit:name>
-            <spirit:value>ACTIVE_LOW</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="user"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:busInterface>
-      <spirit:busInterface>
         <spirit:name>CLK.SYS_CLOCK</spirit:name>
         <spirit:displayName>Clk</spirit:displayName>
         <spirit:description>Clock</spirit:description>
@@ -310,6 +281,35 @@
           </spirit:parameter>
         </spirit:parameters>
       </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>RST.RESET</spirit:name>
+        <spirit:displayName>Reset</spirit:displayName>
+        <spirit:description>Reset</spirit:description>
+        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:slave/>
+        <spirit:portMaps>
+          <spirit:portMap>
+            <spirit:logicalPort>
+              <spirit:name>RST</spirit:name>
+            </spirit:logicalPort>
+            <spirit:physicalPort>
+              <spirit:name>reset</spirit:name>
+            </spirit:physicalPort>
+          </spirit:portMap>
+        </spirit:portMaps>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>POLARITY</spirit:name>
+            <spirit:value>ACTIVE_LOW</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
     </spirit:busInterfaces>
     <spirit:model>
       <spirit:views>
@@ -324,12 +324,6 @@
           <spirit:name>eth_ref_clk</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>reset</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
           </spirit:wire>
         </spirit:port>
         <spirit:port>
@@ -448,6 +442,12 @@
           <spirit:name>reset_1</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>reset</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
           </spirit:wire>
         </spirit:port>
       </spirit:ports>
@@ -616,17 +616,17 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>video_in_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="video_in" spirit:vendor="utoronto.ca" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_video_in_0_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>frame_average_buffer_0</spirit:instanceName>
         <spirit:componentRef spirit:library="user" spirit:name="frame_average_buffer" spirit:vendor="utoronto.ca" spirit:version="1.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_frame_average_buffer_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>video_in_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="video_in" spirit:vendor="utoronto.ca" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_video_in_0_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -819,14 +819,14 @@
         <spirit:name>clk_wiz_1_clk_out4</spirit:name>
         <spirit:internalPortReference spirit:componentRef="clk_wiz_1" spirit:portRef="clk_out4"/>
         <spirit:internalPortReference spirit:componentRef="vga444_0" spirit:portRef="clk25"/>
-        <spirit:internalPortReference spirit:componentRef="video_in_0" spirit:portRef="CLK25"/>
         <spirit:internalPortReference spirit:componentRef="frame_average_buffer_0" spirit:portRef="clk_25"/>
+        <spirit:internalPortReference spirit:componentRef="video_in_0" spirit:portRef="CLK25"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>OV7670_PCLK_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="OV7670_PCLK"/>
-        <spirit:internalPortReference spirit:componentRef="video_in_0" spirit:portRef="OV7670_PCLK"/>
         <spirit:internalPortReference spirit:componentRef="frame_average_buffer_0" spirit:portRef="pclk"/>
+        <spirit:internalPortReference spirit:componentRef="video_in_0" spirit:portRef="OV7670_PCLK"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>vga444_0_vga_red</spirit:name>
@@ -856,8 +856,8 @@
       <spirit:adHocConnection>
         <spirit:name>OV7670_VSYNC_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="OV7670_VSYNC"/>
-        <spirit:internalPortReference spirit:componentRef="video_in_0" spirit:portRef="OV7670_VSYNC"/>
         <spirit:internalPortReference spirit:componentRef="frame_average_buffer_0" spirit:portRef="vsync"/>
+        <spirit:internalPortReference spirit:componentRef="video_in_0" spirit:portRef="OV7670_VSYNC"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>OV7670_HREF_1</spirit:name>
@@ -895,12 +895,6 @@
         <spirit:externalPortReference spirit:portRef="LED"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>video_in_0_pwdn</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="video_in_0" spirit:portRef="pwdn"/>
-        <spirit:externalPortReference spirit:portRef="pwdn"/>
-        <spirit:internalPortReference spirit:componentRef="frame_average_buffer_0" spirit:portRef="reset"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>video_in_0_reset</spirit:name>
         <spirit:internalPortReference spirit:componentRef="video_in_0" spirit:portRef="reset"/>
         <spirit:externalPortReference spirit:portRef="reset_1"/>
@@ -932,6 +926,16 @@
         <spirit:internalPortReference spirit:componentRef="rst_clk_wiz_1_100M" spirit:portRef="ext_reset_in"/>
         <spirit:internalPortReference spirit:componentRef="mig_7series_0" spirit:portRef="sys_rst"/>
         <spirit:internalPortReference spirit:componentRef="mii_to_rmii_0" spirit:portRef="rst_n"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>video_in_0_pwdn</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="video_in_0" spirit:portRef="pwdn"/>
+        <spirit:externalPortReference spirit:portRef="pwdn"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>video_in_0_resend</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="video_in_0" spirit:portRef="resend"/>
+        <spirit:internalPortReference spirit:componentRef="frame_average_buffer_0" spirit:portRef="reset"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>

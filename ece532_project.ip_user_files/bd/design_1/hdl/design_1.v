@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-//Date        : Sat Feb 10 15:12:24 2018
+//Date        : Sat Feb 10 16:35:01 2018
 //Host        : SFB520WS02 running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=34,numReposBlks=22,numNonXlnxBlks=2,numHierBlks=12,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=9,da_board_cnt=8,da_mb_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=34,numReposBlks=22,numNonXlnxBlks=3,numHierBlks=12,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=9,da_board_cnt=8,da_mb_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (BTNC,
     DDR2_addr,
@@ -156,10 +156,10 @@ module design_1
   wire axi_timer_0_interrupt;
   wire axi_uartlite_0_UART_RxD;
   wire axi_uartlite_0_UART_TxD;
-  wire [15:0]blk_mem_gen_0_doutb;
   wire clk_wiz_1_clk_out2;
   wire clk_wiz_1_clk_out3;
   wire clk_wiz_1_clk_out4;
+  wire [15:0]frame_average_buffer_0_request_data;
   wire mdm_1_debug_sys_rst;
   wire microblaze_0_Clk;
   wire [31:0]microblaze_0_M_AXI_DC_ARADDR;
@@ -370,8 +370,8 @@ module design_1
   wire [16:0]video_in_0_capture_addr;
   wire [15:0]video_in_0_data_16;
   wire video_in_0_pwdn;
+  wire video_in_0_resend;
   wire video_in_0_reset;
-  wire video_in_0_wea;
 
   assign BTNC_1 = BTNC;
   assign DDR2_addr[12:0] = mig_7series_0_DDR2_ADDR;
@@ -578,14 +578,6 @@ module design_1
         .s_axi_wstrb(microblaze_0_axi_periph_M01_AXI_WSTRB),
         .s_axi_wvalid(microblaze_0_axi_periph_M01_AXI_WVALID),
         .tx(axi_uartlite_0_UART_TxD));
-  design_1_blk_mem_gen_0_0 blk_mem_gen_0
-       (.addra(video_in_0_capture_addr),
-        .addrb(vga444_0_frame_addr),
-        .clka(OV7670_PCLK_1),
-        .clkb(clk_wiz_1_clk_out4),
-        .dina(video_in_0_data_16),
-        .doutb(blk_mem_gen_0_doutb),
-        .wea(video_in_0_wea));
   design_1_clk_wiz_1_0 clk_wiz_1
        (.clk_in1(sys_clock_1),
         .clk_out1(microblaze_0_Clk),
@@ -593,6 +585,15 @@ module design_1
         .clk_out3(clk_wiz_1_clk_out3),
         .clk_out4(clk_wiz_1_clk_out4),
         .resetn(\^reset_1 ));
+  design_1_frame_average_buffer_0_0 frame_average_buffer_0
+       (.capture_address(video_in_0_capture_addr),
+        .capture_data(video_in_0_data_16),
+        .clk_25(clk_wiz_1_clk_out4),
+        .pclk(OV7670_PCLK_1),
+        .request_address(vga444_0_frame_addr),
+        .request_data(frame_average_buffer_0_request_data),
+        .reset(video_in_0_resend),
+        .vsync(OV7670_VSYNC_1));
   design_1_mdm_1_0 mdm_1
        (.Dbg_Capture_0(microblaze_0_debug_CAPTURE),
         .Dbg_Clk_0(microblaze_0_debug_CLK),
@@ -1011,7 +1012,7 @@ module design_1
   design_1_vga444_0_0 vga444_0
        (.clk25(clk_wiz_1_clk_out4),
         .frame_addr(vga444_0_frame_addr),
-        .frame_pixel(blk_mem_gen_0_doutb),
+        .frame_pixel(frame_average_buffer_0_request_data),
         .vga_blue(vga444_0_vga_blue),
         .vga_green(vga444_0_vga_green),
         .vga_hsync(vga444_0_vga_hsync),
@@ -1032,8 +1033,8 @@ module design_1
         .capture_addr(video_in_0_capture_addr),
         .data_16(video_in_0_data_16),
         .pwdn(video_in_0_pwdn),
-        .reset(video_in_0_reset),
-        .wea(video_in_0_wea));
+        .resend(video_in_0_resend),
+        .reset(video_in_0_reset));
 endmodule
 
 module design_1_microblaze_0_axi_periph_0

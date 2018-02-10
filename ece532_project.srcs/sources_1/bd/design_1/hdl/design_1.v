@@ -1,8 +1,8 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-//Date        : Sat Feb 10 16:05:34 2018
-//Host        : SFB520WS12 running 64-bit Service Pack 1  (build 7601)
+//Date        : Sat Feb 10 16:35:01 2018
+//Host        : SFB520WS02 running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target design_1.bd
 //Design      : design_1
 //Purpose     : IP block netlist
@@ -370,6 +370,7 @@ module design_1
   wire [16:0]video_in_0_capture_addr;
   wire [15:0]video_in_0_data_16;
   wire video_in_0_pwdn;
+  wire video_in_0_resend;
   wire video_in_0_reset;
 
   assign BTNC_1 = BTNC;
@@ -591,7 +592,7 @@ module design_1
         .pclk(OV7670_PCLK_1),
         .request_address(vga444_0_frame_addr),
         .request_data(frame_average_buffer_0_request_data),
-        .reset(video_in_0_pwdn),
+        .reset(video_in_0_resend),
         .vsync(OV7670_VSYNC_1));
   design_1_mdm_1_0 mdm_1
        (.Dbg_Capture_0(microblaze_0_debug_CAPTURE),
@@ -1032,6 +1033,7 @@ module design_1
         .capture_addr(video_in_0_capture_addr),
         .data_16(video_in_0_data_16),
         .pwdn(video_in_0_pwdn),
+        .resend(video_in_0_resend),
         .reset(video_in_0_reset));
 endmodule
 

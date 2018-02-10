@@ -444,7 +444,8 @@ CONFIG.USE_BOARD_FLOW {true} \
   connect_bd_net -net video_in_0_OV7670_XCLK [get_bd_ports OV7670_XCLK] [get_bd_pins video_in_0/OV7670_XCLK]
   connect_bd_net -net video_in_0_capture_addr [get_bd_pins frame_average_buffer_0/capture_address] [get_bd_pins video_in_0/capture_addr]
   connect_bd_net -net video_in_0_data_16 [get_bd_pins frame_average_buffer_0/capture_data] [get_bd_pins video_in_0/data_16]
-  connect_bd_net -net video_in_0_pwdn [get_bd_ports pwdn] [get_bd_pins frame_average_buffer_0/reset] [get_bd_pins video_in_0/pwdn]
+  connect_bd_net -net video_in_0_pwdn [get_bd_ports pwdn] [get_bd_pins video_in_0/pwdn]
+  connect_bd_net -net video_in_0_resend [get_bd_pins frame_average_buffer_0/reset] [get_bd_pins video_in_0/resend]
   connect_bd_net -net video_in_0_reset [get_bd_ports reset_1] [get_bd_pins video_in_0/reset]
 
   # Create address segments

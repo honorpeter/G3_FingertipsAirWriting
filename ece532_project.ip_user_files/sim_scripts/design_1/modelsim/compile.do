@@ -381,15 +381,19 @@ vlog -work xil_defaultlib -64 -incr "+incdir+../../../../ece532_project.srcs/sou
 "../../../bd/design_1/ip/design_1_lmb_bram_0/sim/design_1_lmb_bram_0.v" \
 "../../../bd/design_1/ipshared/df56/vga444.v" \
 "../../../bd/design_1/ip/design_1_vga444_0_0/sim/design_1_vga444_0_0.v" \
-"../../../bd/design_1/ip/design_1_blk_mem_gen_0_0/sim/design_1_blk_mem_gen_0_0.v" \
 "../../../bd/design_1/hdl/design_1.v" \
-"../../../bd/design_1/ipshared/6194/I2C_AV_Config.v" \
-"../../../bd/design_1/ipshared/6194/I2C_Controller.v" \
-"../../../bd/design_1/ipshared/6194/I2C_OV7670_RGB444_Config.v" \
-"../../../bd/design_1/ipshared/6194/debounce.v" \
-"../../../bd/design_1/ipshared/6194/ov7670_capture.v" \
-"../../../bd/design_1/ipshared/6194/video_in.v" \
+"../../../bd/design_1/ipshared/6f77/I2C_AV_Config.v" \
+"../../../bd/design_1/ipshared/6f77/I2C_Controller.v" \
+"../../../bd/design_1/ipshared/6f77/I2C_OV7670_RGB444_Config.v" \
+"../../../bd/design_1/ipshared/6f77/debounce.v" \
+"../../../bd/design_1/ipshared/6f77/ov7670_capture.v" \
+"../../../bd/design_1/ipshared/6f77/video_in.v" \
 "../../../bd/design_1/ip/design_1_video_in_0_0/sim/design_1_video_in_0_0.v" \
+"../../../bd/design_1/ip/design_1_frame_average_buffer_0_0/ip/blk_mem_average_buffer/sim/blk_mem_average_buffer.v" \
+"../../../bd/design_1/ip/design_1_frame_average_buffer_0_0/ip/blk_mem_average_buffer_single/sim/blk_mem_average_buffer_single.v" \
+"../../../bd/design_1/ipshared/3fd1/imports/video_cam/frame_average.v" \
+"../../../bd/design_1/ipshared/3fd1/imports/new/frame_average_buffer.v" \
+"../../../bd/design_1/ip/design_1_frame_average_buffer_0_0/sim/design_1_frame_average_buffer_0_0.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

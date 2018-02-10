@@ -48,7 +48,7 @@
 
 
 // IP VLNV: utoronto.ca:user:video_in:1.0
-// IP Revision: 2
+// IP Revision: 3
 
 `timescale 1ns/1ps
 
@@ -69,7 +69,8 @@ module design_1_video_in_0_0 (
   data_16,
   pwdn,
   reset,
-  wea
+  wea,
+  resend
 );
 
 input wire CLK50;
@@ -89,6 +90,7 @@ output wire pwdn;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *)
 output wire reset;
 output wire wea;
+output wire resend;
 
   video_in inst (
     .CLK50(CLK50),
@@ -106,6 +108,7 @@ output wire wea;
     .data_16(data_16),
     .pwdn(pwdn),
     .reset(reset),
-    .wea(wea)
+    .wea(wea),
+    .resend(resend)
   );
 endmodule
