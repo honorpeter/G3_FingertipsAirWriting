@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-// Date        : Sun Jan 28 20:12:46 2018
-// Host        : ug226 running 64-bit Debian GNU/Linux 9.3 (stretch)
-// Command     : write_verilog -force -mode funcsim
-//               /nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_sim_netlist.v
+// Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+// Date        : Sat Feb 10 11:11:08 2018
+// Host        : SFB520WS02 running 64-bit Service Pack 1  (build 7601)
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_clk_wiz_1_0 -prefix
+//               design_1_clk_wiz_1_0_ design_1_clk_wiz_1_0_sim_netlist.v
 // Design      : design_1_clk_wiz_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -17,12 +17,14 @@ module design_1_clk_wiz_1_0
    (clk_out1,
     clk_out2,
     clk_out3,
+    clk_out4,
     resetn,
     locked,
     clk_in1);
   output clk_out1;
   output clk_out2;
   output clk_out3;
+  output clk_out4;
   input resetn;
   output locked;
   input clk_in1;
@@ -31,6 +33,7 @@ module design_1_clk_wiz_1_0
   wire clk_out1;
   wire clk_out2;
   wire clk_out3;
+  wire clk_out4;
   wire locked;
   wire resetn;
 
@@ -39,21 +42,23 @@ module design_1_clk_wiz_1_0
         .clk_out1(clk_out1),
         .clk_out2(clk_out2),
         .clk_out3(clk_out3),
+        .clk_out4(clk_out4),
         .locked(locked),
         .resetn(resetn));
 endmodule
 
-(* ORIG_REF_NAME = "design_1_clk_wiz_1_0_clk_wiz" *) 
 module design_1_clk_wiz_1_0_design_1_clk_wiz_1_0_clk_wiz
    (clk_out1,
     clk_out2,
     clk_out3,
+    clk_out4,
     resetn,
     locked,
     clk_in1);
   output clk_out1;
   output clk_out2;
   output clk_out3;
+  output clk_out4;
   input resetn;
   output locked;
   input clk_in1;
@@ -66,6 +71,8 @@ module design_1_clk_wiz_1_0_design_1_clk_wiz_1_0_clk_wiz
   wire clk_out2_design_1_clk_wiz_1_0;
   wire clk_out3;
   wire clk_out3_design_1_clk_wiz_1_0;
+  wire clk_out4;
+  wire clk_out4_design_1_clk_wiz_1_0;
   wire clkfbout_buf_design_1_clk_wiz_1_0;
   wire clkfbout_design_1_clk_wiz_1_0;
   wire locked;
@@ -77,7 +84,6 @@ module design_1_clk_wiz_1_0_design_1_clk_wiz_1_0_clk_wiz
   wire NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED;
-  wire NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT4_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT5_UNCONNECTED;
@@ -112,6 +118,10 @@ module design_1_clk_wiz_1_0_design_1_clk_wiz_1_0_clk_wiz
        (.I(clk_out3_design_1_clk_wiz_1_0),
         .O(clk_out3));
   (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFG clkout4_buf
+       (.I(clk_out4_design_1_clk_wiz_1_0),
+        .O(clk_out4));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   MMCME2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
     .CLKFBOUT_MULT_F(10.000000),
@@ -131,7 +141,7 @@ module design_1_clk_wiz_1_0_design_1_clk_wiz_1_0_clk_wiz
     .CLKOUT2_DUTY_CYCLE(0.500000),
     .CLKOUT2_PHASE(0.000000),
     .CLKOUT2_USE_FINE_PS("FALSE"),
-    .CLKOUT3_DIVIDE(1),
+    .CLKOUT3_DIVIDE(40),
     .CLKOUT3_DUTY_CYCLE(0.500000),
     .CLKOUT3_PHASE(0.000000),
     .CLKOUT3_USE_FINE_PS("FALSE"),
@@ -176,7 +186,7 @@ module design_1_clk_wiz_1_0_design_1_clk_wiz_1_0_clk_wiz
         .CLKOUT1B(NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED),
         .CLKOUT2(clk_out3_design_1_clk_wiz_1_0),
         .CLKOUT2B(NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED),
-        .CLKOUT3(NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED),
+        .CLKOUT3(clk_out4_design_1_clk_wiz_1_0),
         .CLKOUT3B(NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED),
         .CLKOUT4(NLW_mmcm_adv_inst_CLKOUT4_UNCONNECTED),
         .CLKOUT5(NLW_mmcm_adv_inst_CLKOUT5_UNCONNECTED),

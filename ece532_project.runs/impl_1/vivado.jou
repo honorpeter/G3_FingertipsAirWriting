@@ -2,11 +2,11 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Mon Feb  5 16:34:37 2018
-# Process ID: 5488
-# Current directory: C:/Users/lingujia/ece532_project/ece532_project.runs/impl_1
+# Start of session at: Sat Feb 10 15:15:14 2018
+# Process ID: 2168
+# Current directory: C:/Users/chenyueq/ece532_project/ece532_project.runs/impl_1
 # Command line: vivado.exe -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
-# Log file: C:/Users/lingujia/ece532_project/ece532_project.runs/impl_1/design_1_wrapper.vdi
-# Journal file: C:/Users/lingujia/ece532_project/ece532_project.runs/impl_1\vivado.jou
+# Log file: C:/Users/chenyueq/ece532_project/ece532_project.runs/impl_1/design_1_wrapper.vdi
+# Journal file: C:/Users/chenyueq/ece532_project/ece532_project.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace

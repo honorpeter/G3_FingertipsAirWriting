@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-//Date        : Mon Feb  5 16:32:28 2018
+//Date        : Sat Feb 10 15:12:24 2018
 //Host        : SFB520WS02 running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,9 +9,10 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=31,numReposBlks=19,numNonXlnxBlks=0,numHierBlks=12,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=9,da_board_cnt=8,da_mb_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=34,numReposBlks=22,numNonXlnxBlks=2,numHierBlks=12,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=9,da_board_cnt=8,da_mb_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
-   (DDR2_addr,
+   (BTNC,
+    DDR2_addr,
     DDR2_ba,
     DDR2_cas_n,
     DDR2_ck_n,
@@ -25,6 +26,14 @@ module design_1
     DDR2_odt,
     DDR2_ras_n,
     DDR2_we_n,
+    LED,
+    OV7670_D,
+    OV7670_HREF,
+    OV7670_PCLK,
+    OV7670_SIOC,
+    OV7670_SIOD,
+    OV7670_VSYNC,
+    OV7670_XCLK,
     eth_mdio_mdc_mdc,
     eth_mdio_mdc_mdio_i,
     eth_mdio_mdc_mdio_o,
@@ -35,10 +44,18 @@ module design_1
     eth_rmii_rxd,
     eth_rmii_tx_en,
     eth_rmii_txd,
+    pwdn,
     reset,
+    reset_1,
     sys_clock,
     usb_uart_rxd,
-    usb_uart_txd);
+    usb_uart_txd,
+    vga_blue,
+    vga_green,
+    vga_hsync,
+    vga_red,
+    vga_vsync);
+  input BTNC;
   output [12:0]DDR2_addr;
   output [2:0]DDR2_ba;
   output DDR2_cas_n;
@@ -53,6 +70,14 @@ module design_1
   output [0:0]DDR2_odt;
   output DDR2_ras_n;
   output DDR2_we_n;
+  output LED;
+  input [7:0]OV7670_D;
+  input OV7670_HREF;
+  input OV7670_PCLK;
+  output OV7670_SIOC;
+  inout OV7670_SIOD;
+  input OV7670_VSYNC;
+  output OV7670_XCLK;
   output eth_mdio_mdc_mdc;
   input eth_mdio_mdc_mdio_i;
   output eth_mdio_mdc_mdio_o;
@@ -63,11 +88,24 @@ module design_1
   input [1:0]eth_rmii_rxd;
   output eth_rmii_tx_en;
   output [1:0]eth_rmii_txd;
+  output pwdn;
   input reset;
+  output reset_1;
   input sys_clock;
   input usb_uart_rxd;
   output usb_uart_txd;
+  output [3:0]vga_blue;
+  output [3:0]vga_green;
+  output vga_hsync;
+  output [3:0]vga_red;
+  output vga_vsync;
 
+  wire BTNC_1;
+  wire Net;
+  wire [7:0]OV7670_D_1;
+  wire OV7670_HREF_1;
+  wire OV7670_PCLK_1;
+  wire OV7670_VSYNC_1;
   wire axi_ethernetlite_0_MDIO_MDC;
   wire axi_ethernetlite_0_MDIO_MDIO_I;
   wire axi_ethernetlite_0_MDIO_MDIO_O;
@@ -118,9 +156,10 @@ module design_1
   wire axi_timer_0_interrupt;
   wire axi_uartlite_0_UART_RxD;
   wire axi_uartlite_0_UART_TxD;
+  wire [15:0]blk_mem_gen_0_doutb;
   wire clk_wiz_1_clk_out2;
   wire clk_wiz_1_clk_out3;
-  wire clk_wiz_1_locked;
+  wire clk_wiz_1_clk_out4;
   wire mdm_1_debug_sys_rst;
   wire microblaze_0_Clk;
   wire [31:0]microblaze_0_M_AXI_DC_ARADDR;
@@ -312,14 +351,29 @@ module design_1
   wire mii_to_rmii_0_RMII_PHY_M_RX_ER;
   wire [1:0]mii_to_rmii_0_RMII_PHY_M_TXD;
   wire mii_to_rmii_0_RMII_PHY_M_TX_EN;
-  wire reset_1;
+  wire \^reset_1 ;
   wire [0:0]rst_clk_wiz_1_100M_bus_struct_reset;
   wire [0:0]rst_clk_wiz_1_100M_interconnect_aresetn;
   wire rst_clk_wiz_1_100M_mb_reset;
   wire [0:0]rst_clk_wiz_1_100M_peripheral_aresetn;
   wire [0:0]rst_mig_7series_0_81M_peripheral_aresetn;
   wire sys_clock_1;
+  wire [16:0]vga444_0_frame_addr;
+  wire [3:0]vga444_0_vga_blue;
+  wire [3:0]vga444_0_vga_green;
+  wire vga444_0_vga_hsync;
+  wire [3:0]vga444_0_vga_red;
+  wire vga444_0_vga_vsync;
+  wire video_in_0_LED;
+  wire video_in_0_OV7670_SIOC;
+  wire video_in_0_OV7670_XCLK;
+  wire [16:0]video_in_0_capture_addr;
+  wire [15:0]video_in_0_data_16;
+  wire video_in_0_pwdn;
+  wire video_in_0_reset;
+  wire video_in_0_wea;
 
+  assign BTNC_1 = BTNC;
   assign DDR2_addr[12:0] = mig_7series_0_DDR2_ADDR;
   assign DDR2_ba[2:0] = mig_7series_0_DDR2_BA;
   assign DDR2_cas_n = mig_7series_0_DDR2_CAS_N;
@@ -331,6 +385,14 @@ module design_1
   assign DDR2_odt[0] = mig_7series_0_DDR2_ODT;
   assign DDR2_ras_n = mig_7series_0_DDR2_RAS_N;
   assign DDR2_we_n = mig_7series_0_DDR2_WE_N;
+  assign LED = video_in_0_LED;
+  assign OV7670_D_1 = OV7670_D[7:0];
+  assign OV7670_HREF_1 = OV7670_HREF;
+  assign OV7670_PCLK_1 = OV7670_PCLK;
+  assign OV7670_SIOC = video_in_0_OV7670_SIOC;
+  assign OV7670_VSYNC_1 = OV7670_VSYNC;
+  assign OV7670_XCLK = video_in_0_OV7670_XCLK;
+  assign \^reset_1  = reset;
   assign axi_ethernetlite_0_MDIO_MDIO_I = eth_mdio_mdc_mdio_i;
   assign axi_uartlite_0_UART_RxD = usb_uart_rxd;
   assign eth_mdio_mdc_mdc = axi_ethernetlite_0_MDIO_MDC;
@@ -342,9 +404,15 @@ module design_1
   assign mii_to_rmii_0_RMII_PHY_M_CRS_DV = eth_rmii_crs_dv;
   assign mii_to_rmii_0_RMII_PHY_M_RXD = eth_rmii_rxd[1:0];
   assign mii_to_rmii_0_RMII_PHY_M_RX_ER = eth_rmii_rx_er;
-  assign reset_1 = reset;
+  assign pwdn = video_in_0_pwdn;
+  assign reset_1 = video_in_0_reset;
   assign sys_clock_1 = sys_clock;
   assign usb_uart_txd = axi_uartlite_0_UART_TxD;
+  assign vga_blue[3:0] = vga444_0_vga_blue;
+  assign vga_green[3:0] = vga444_0_vga_green;
+  assign vga_hsync = vga444_0_vga_hsync;
+  assign vga_red[3:0] = vga444_0_vga_red;
+  assign vga_vsync = vga444_0_vga_vsync;
   design_1_axi_ethernetlite_0_0 axi_ethernetlite_0
        (.ip2intc_irpt(axi_ethernetlite_0_ip2intc_irpt),
         .phy_col(axi_ethernetlite_0_MII_COL),
@@ -510,13 +578,21 @@ module design_1
         .s_axi_wstrb(microblaze_0_axi_periph_M01_AXI_WSTRB),
         .s_axi_wvalid(microblaze_0_axi_periph_M01_AXI_WVALID),
         .tx(axi_uartlite_0_UART_TxD));
+  design_1_blk_mem_gen_0_0 blk_mem_gen_0
+       (.addra(video_in_0_capture_addr),
+        .addrb(vga444_0_frame_addr),
+        .clka(OV7670_PCLK_1),
+        .clkb(clk_wiz_1_clk_out4),
+        .dina(video_in_0_data_16),
+        .doutb(blk_mem_gen_0_doutb),
+        .wea(video_in_0_wea));
   design_1_clk_wiz_1_0 clk_wiz_1
        (.clk_in1(sys_clock_1),
         .clk_out1(microblaze_0_Clk),
         .clk_out2(clk_wiz_1_clk_out2),
         .clk_out3(clk_wiz_1_clk_out3),
-        .locked(clk_wiz_1_locked),
-        .resetn(reset_1));
+        .clk_out4(clk_wiz_1_clk_out4),
+        .resetn(\^reset_1 ));
   design_1_mdm_1_0 mdm_1
        (.Dbg_Capture_0(microblaze_0_debug_CAPTURE),
         .Dbg_Clk_0(microblaze_0_debug_CLK),
@@ -894,7 +970,7 @@ module design_1
         .s_axi_wstrb(axi_smc_M00_AXI_WSTRB),
         .s_axi_wvalid(axi_smc_M00_AXI_WVALID),
         .sys_clk_i(clk_wiz_1_clk_out2),
-        .sys_rst(reset_1),
+        .sys_rst(\^reset_1 ),
         .ui_clk(mig_7series_0_ui_clk),
         .ui_clk_sync_rst(mig_7series_0_ui_clk_sync_rst));
   design_1_mii_to_rmii_0_0 mii_to_rmii_0
@@ -914,12 +990,12 @@ module design_1
         .rmii2mac_tx_clk(axi_ethernetlite_0_MII_TX_CLK),
         .rmii2phy_tx_en(mii_to_rmii_0_RMII_PHY_M_TX_EN),
         .rmii2phy_txd(mii_to_rmii_0_RMII_PHY_M_TXD),
-        .rst_n(reset_1));
+        .rst_n(\^reset_1 ));
   design_1_rst_clk_wiz_1_100M_0 rst_clk_wiz_1_100M
        (.aux_reset_in(1'b1),
         .bus_struct_reset(rst_clk_wiz_1_100M_bus_struct_reset),
-        .dcm_locked(clk_wiz_1_locked),
-        .ext_reset_in(reset_1),
+        .dcm_locked(1'b1),
+        .ext_reset_in(\^reset_1 ),
         .interconnect_aresetn(rst_clk_wiz_1_100M_interconnect_aresetn),
         .mb_debug_sys_rst(mdm_1_debug_sys_rst),
         .mb_reset(rst_clk_wiz_1_100M_mb_reset),
@@ -932,6 +1008,32 @@ module design_1
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_mig_7series_0_81M_peripheral_aresetn),
         .slowest_sync_clk(mig_7series_0_ui_clk));
+  design_1_vga444_0_0 vga444_0
+       (.clk25(clk_wiz_1_clk_out4),
+        .frame_addr(vga444_0_frame_addr),
+        .frame_pixel(blk_mem_gen_0_doutb),
+        .vga_blue(vga444_0_vga_blue),
+        .vga_green(vga444_0_vga_green),
+        .vga_hsync(vga444_0_vga_hsync),
+        .vga_red(vga444_0_vga_red),
+        .vga_vsync(vga444_0_vga_vsync));
+  design_1_video_in_0_0 video_in_0
+       (.BTNC(BTNC_1),
+        .CLK25(clk_wiz_1_clk_out4),
+        .CLK50(clk_wiz_1_clk_out3),
+        .LED(video_in_0_LED),
+        .OV7670_D(OV7670_D_1),
+        .OV7670_HREF(OV7670_HREF_1),
+        .OV7670_PCLK(OV7670_PCLK_1),
+        .OV7670_SIOC(video_in_0_OV7670_SIOC),
+        .OV7670_SIOD(OV7670_SIOD),
+        .OV7670_VSYNC(OV7670_VSYNC_1),
+        .OV7670_XCLK(video_in_0_OV7670_XCLK),
+        .capture_addr(video_in_0_capture_addr),
+        .data_16(video_in_0_data_16),
+        .pwdn(video_in_0_pwdn),
+        .reset(video_in_0_reset),
+        .wea(video_in_0_wea));
 endmodule
 
 module design_1_microblaze_0_axi_periph_0
@@ -1016,9 +1118,11 @@ module design_1_microblaze_0_axi_periph_0
     M04_ACLK,
     M04_ARESETN,
     M04_AXI_araddr,
+    M04_AXI_arprot,
     M04_AXI_arready,
     M04_AXI_arvalid,
     M04_AXI_awaddr,
+    M04_AXI_awprot,
     M04_AXI_awready,
     M04_AXI_awvalid,
     M04_AXI_bready,
@@ -1035,9 +1139,11 @@ module design_1_microblaze_0_axi_periph_0
     M05_ACLK,
     M05_ARESETN,
     M05_AXI_araddr,
+    M05_AXI_arprot,
     M05_AXI_arready,
     M05_AXI_arvalid,
     M05_AXI_awaddr,
+    M05_AXI_awprot,
     M05_AXI_awready,
     M05_AXI_awvalid,
     M05_AXI_bready,
@@ -1054,9 +1160,11 @@ module design_1_microblaze_0_axi_periph_0
     M06_ACLK,
     M06_ARESETN,
     M06_AXI_araddr,
+    M06_AXI_arprot,
     M06_AXI_arready,
     M06_AXI_arvalid,
     M06_AXI_awaddr,
+    M06_AXI_awprot,
     M06_AXI_awready,
     M06_AXI_awvalid,
     M06_AXI_bready,
@@ -1073,9 +1181,11 @@ module design_1_microblaze_0_axi_periph_0
     M07_ACLK,
     M07_ARESETN,
     M07_AXI_araddr,
+    M07_AXI_arprot,
     M07_AXI_arready,
     M07_AXI_arvalid,
     M07_AXI_awaddr,
+    M07_AXI_awprot,
     M07_AXI_awready,
     M07_AXI_awvalid,
     M07_AXI_bready,
@@ -1212,9 +1322,11 @@ module design_1_microblaze_0_axi_periph_0
   input M04_ACLK;
   input M04_ARESETN;
   output M04_AXI_araddr;
+  output M04_AXI_arprot;
   input M04_AXI_arready;
   output M04_AXI_arvalid;
   output M04_AXI_awaddr;
+  output M04_AXI_awprot;
   input M04_AXI_awready;
   output M04_AXI_awvalid;
   output M04_AXI_bready;
@@ -1231,9 +1343,11 @@ module design_1_microblaze_0_axi_periph_0
   input M05_ACLK;
   input M05_ARESETN;
   output M05_AXI_araddr;
+  output M05_AXI_arprot;
   input M05_AXI_arready;
   output M05_AXI_arvalid;
   output M05_AXI_awaddr;
+  output M05_AXI_awprot;
   input M05_AXI_awready;
   output M05_AXI_awvalid;
   output M05_AXI_bready;
@@ -1250,9 +1364,11 @@ module design_1_microblaze_0_axi_periph_0
   input M06_ACLK;
   input M06_ARESETN;
   output M06_AXI_araddr;
+  output M06_AXI_arprot;
   input M06_AXI_arready;
   output M06_AXI_arvalid;
   output M06_AXI_awaddr;
+  output M06_AXI_awprot;
   input M06_AXI_awready;
   output M06_AXI_awvalid;
   output M06_AXI_bready;
@@ -1269,9 +1385,11 @@ module design_1_microblaze_0_axi_periph_0
   input M07_ACLK;
   input M07_ARESETN;
   output M07_AXI_araddr;
+  output M07_AXI_arprot;
   input M07_AXI_arready;
   output M07_AXI_arvalid;
   output M07_AXI_awaddr;
+  output M07_AXI_awprot;
   input M07_AXI_awready;
   output M07_AXI_awvalid;
   output M07_AXI_bready;
@@ -1417,9 +1535,11 @@ module design_1_microblaze_0_axi_periph_0
   wire [3:0]m03_couplers_to_microblaze_0_axi_periph_WSTRB;
   wire m03_couplers_to_microblaze_0_axi_periph_WVALID;
   wire m04_couplers_to_microblaze_0_axi_periph_ARADDR;
+  wire m04_couplers_to_microblaze_0_axi_periph_ARPROT;
   wire m04_couplers_to_microblaze_0_axi_periph_ARREADY;
   wire m04_couplers_to_microblaze_0_axi_periph_ARVALID;
   wire m04_couplers_to_microblaze_0_axi_periph_AWADDR;
+  wire m04_couplers_to_microblaze_0_axi_periph_AWPROT;
   wire m04_couplers_to_microblaze_0_axi_periph_AWREADY;
   wire m04_couplers_to_microblaze_0_axi_periph_AWVALID;
   wire m04_couplers_to_microblaze_0_axi_periph_BREADY;
@@ -1434,9 +1554,11 @@ module design_1_microblaze_0_axi_periph_0
   wire m04_couplers_to_microblaze_0_axi_periph_WSTRB;
   wire m04_couplers_to_microblaze_0_axi_periph_WVALID;
   wire m05_couplers_to_microblaze_0_axi_periph_ARADDR;
+  wire m05_couplers_to_microblaze_0_axi_periph_ARPROT;
   wire m05_couplers_to_microblaze_0_axi_periph_ARREADY;
   wire m05_couplers_to_microblaze_0_axi_periph_ARVALID;
   wire m05_couplers_to_microblaze_0_axi_periph_AWADDR;
+  wire m05_couplers_to_microblaze_0_axi_periph_AWPROT;
   wire m05_couplers_to_microblaze_0_axi_periph_AWREADY;
   wire m05_couplers_to_microblaze_0_axi_periph_AWVALID;
   wire m05_couplers_to_microblaze_0_axi_periph_BREADY;
@@ -1451,9 +1573,11 @@ module design_1_microblaze_0_axi_periph_0
   wire m05_couplers_to_microblaze_0_axi_periph_WSTRB;
   wire m05_couplers_to_microblaze_0_axi_periph_WVALID;
   wire m06_couplers_to_microblaze_0_axi_periph_ARADDR;
+  wire m06_couplers_to_microblaze_0_axi_periph_ARPROT;
   wire m06_couplers_to_microblaze_0_axi_periph_ARREADY;
   wire m06_couplers_to_microblaze_0_axi_periph_ARVALID;
   wire m06_couplers_to_microblaze_0_axi_periph_AWADDR;
+  wire m06_couplers_to_microblaze_0_axi_periph_AWPROT;
   wire m06_couplers_to_microblaze_0_axi_periph_AWREADY;
   wire m06_couplers_to_microblaze_0_axi_periph_AWVALID;
   wire m06_couplers_to_microblaze_0_axi_periph_BREADY;
@@ -1468,9 +1592,11 @@ module design_1_microblaze_0_axi_periph_0
   wire m06_couplers_to_microblaze_0_axi_periph_WSTRB;
   wire m06_couplers_to_microblaze_0_axi_periph_WVALID;
   wire m07_couplers_to_microblaze_0_axi_periph_ARADDR;
+  wire m07_couplers_to_microblaze_0_axi_periph_ARPROT;
   wire m07_couplers_to_microblaze_0_axi_periph_ARREADY;
   wire m07_couplers_to_microblaze_0_axi_periph_ARVALID;
   wire m07_couplers_to_microblaze_0_axi_periph_AWADDR;
+  wire m07_couplers_to_microblaze_0_axi_periph_AWPROT;
   wire m07_couplers_to_microblaze_0_axi_periph_AWREADY;
   wire m07_couplers_to_microblaze_0_axi_periph_AWVALID;
   wire m07_couplers_to_microblaze_0_axi_periph_BREADY;
@@ -1612,9 +1738,11 @@ module design_1_microblaze_0_axi_periph_0
   wire [15:12]xbar_to_m03_couplers_WSTRB;
   wire [3:3]xbar_to_m03_couplers_WVALID;
   wire [159:128]xbar_to_m04_couplers_ARADDR;
+  wire [14:12]xbar_to_m04_couplers_ARPROT;
   wire xbar_to_m04_couplers_ARREADY;
   wire [4:4]xbar_to_m04_couplers_ARVALID;
   wire [159:128]xbar_to_m04_couplers_AWADDR;
+  wire [14:12]xbar_to_m04_couplers_AWPROT;
   wire xbar_to_m04_couplers_AWREADY;
   wire [4:4]xbar_to_m04_couplers_AWVALID;
   wire [4:4]xbar_to_m04_couplers_BREADY;
@@ -1629,9 +1757,11 @@ module design_1_microblaze_0_axi_periph_0
   wire [19:16]xbar_to_m04_couplers_WSTRB;
   wire [4:4]xbar_to_m04_couplers_WVALID;
   wire [191:160]xbar_to_m05_couplers_ARADDR;
+  wire [17:15]xbar_to_m05_couplers_ARPROT;
   wire xbar_to_m05_couplers_ARREADY;
   wire [5:5]xbar_to_m05_couplers_ARVALID;
   wire [191:160]xbar_to_m05_couplers_AWADDR;
+  wire [17:15]xbar_to_m05_couplers_AWPROT;
   wire xbar_to_m05_couplers_AWREADY;
   wire [5:5]xbar_to_m05_couplers_AWVALID;
   wire [5:5]xbar_to_m05_couplers_BREADY;
@@ -1646,9 +1776,11 @@ module design_1_microblaze_0_axi_periph_0
   wire [23:20]xbar_to_m05_couplers_WSTRB;
   wire [5:5]xbar_to_m05_couplers_WVALID;
   wire [223:192]xbar_to_m06_couplers_ARADDR;
+  wire [20:18]xbar_to_m06_couplers_ARPROT;
   wire xbar_to_m06_couplers_ARREADY;
   wire [6:6]xbar_to_m06_couplers_ARVALID;
   wire [223:192]xbar_to_m06_couplers_AWADDR;
+  wire [20:18]xbar_to_m06_couplers_AWPROT;
   wire xbar_to_m06_couplers_AWREADY;
   wire [6:6]xbar_to_m06_couplers_AWVALID;
   wire [6:6]xbar_to_m06_couplers_BREADY;
@@ -1663,9 +1795,11 @@ module design_1_microblaze_0_axi_periph_0
   wire [27:24]xbar_to_m06_couplers_WSTRB;
   wire [6:6]xbar_to_m06_couplers_WVALID;
   wire [255:224]xbar_to_m07_couplers_ARADDR;
+  wire [23:21]xbar_to_m07_couplers_ARPROT;
   wire xbar_to_m07_couplers_ARREADY;
   wire [7:7]xbar_to_m07_couplers_ARVALID;
   wire [255:224]xbar_to_m07_couplers_AWADDR;
+  wire [23:21]xbar_to_m07_couplers_AWPROT;
   wire xbar_to_m07_couplers_AWREADY;
   wire [7:7]xbar_to_m07_couplers_AWVALID;
   wire [7:7]xbar_to_m07_couplers_BREADY;
@@ -1748,8 +1882,10 @@ module design_1_microblaze_0_axi_periph_0
   assign M04_ACLK_1 = M04_ACLK;
   assign M04_ARESETN_1 = M04_ARESETN;
   assign M04_AXI_araddr = m04_couplers_to_microblaze_0_axi_periph_ARADDR;
+  assign M04_AXI_arprot = m04_couplers_to_microblaze_0_axi_periph_ARPROT;
   assign M04_AXI_arvalid = m04_couplers_to_microblaze_0_axi_periph_ARVALID;
   assign M04_AXI_awaddr = m04_couplers_to_microblaze_0_axi_periph_AWADDR;
+  assign M04_AXI_awprot = m04_couplers_to_microblaze_0_axi_periph_AWPROT;
   assign M04_AXI_awvalid = m04_couplers_to_microblaze_0_axi_periph_AWVALID;
   assign M04_AXI_bready = m04_couplers_to_microblaze_0_axi_periph_BREADY;
   assign M04_AXI_rready = m04_couplers_to_microblaze_0_axi_periph_RREADY;
@@ -1759,8 +1895,10 @@ module design_1_microblaze_0_axi_periph_0
   assign M05_ACLK_1 = M05_ACLK;
   assign M05_ARESETN_1 = M05_ARESETN;
   assign M05_AXI_araddr = m05_couplers_to_microblaze_0_axi_periph_ARADDR;
+  assign M05_AXI_arprot = m05_couplers_to_microblaze_0_axi_periph_ARPROT;
   assign M05_AXI_arvalid = m05_couplers_to_microblaze_0_axi_periph_ARVALID;
   assign M05_AXI_awaddr = m05_couplers_to_microblaze_0_axi_periph_AWADDR;
+  assign M05_AXI_awprot = m05_couplers_to_microblaze_0_axi_periph_AWPROT;
   assign M05_AXI_awvalid = m05_couplers_to_microblaze_0_axi_periph_AWVALID;
   assign M05_AXI_bready = m05_couplers_to_microblaze_0_axi_periph_BREADY;
   assign M05_AXI_rready = m05_couplers_to_microblaze_0_axi_periph_RREADY;
@@ -1770,8 +1908,10 @@ module design_1_microblaze_0_axi_periph_0
   assign M06_ACLK_1 = M06_ACLK;
   assign M06_ARESETN_1 = M06_ARESETN;
   assign M06_AXI_araddr = m06_couplers_to_microblaze_0_axi_periph_ARADDR;
+  assign M06_AXI_arprot = m06_couplers_to_microblaze_0_axi_periph_ARPROT;
   assign M06_AXI_arvalid = m06_couplers_to_microblaze_0_axi_periph_ARVALID;
   assign M06_AXI_awaddr = m06_couplers_to_microblaze_0_axi_periph_AWADDR;
+  assign M06_AXI_awprot = m06_couplers_to_microblaze_0_axi_periph_AWPROT;
   assign M06_AXI_awvalid = m06_couplers_to_microblaze_0_axi_periph_AWVALID;
   assign M06_AXI_bready = m06_couplers_to_microblaze_0_axi_periph_BREADY;
   assign M06_AXI_rready = m06_couplers_to_microblaze_0_axi_periph_RREADY;
@@ -1781,8 +1921,10 @@ module design_1_microblaze_0_axi_periph_0
   assign M07_ACLK_1 = M07_ACLK;
   assign M07_ARESETN_1 = M07_ARESETN;
   assign M07_AXI_araddr = m07_couplers_to_microblaze_0_axi_periph_ARADDR;
+  assign M07_AXI_arprot = m07_couplers_to_microblaze_0_axi_periph_ARPROT;
   assign M07_AXI_arvalid = m07_couplers_to_microblaze_0_axi_periph_ARVALID;
   assign M07_AXI_awaddr = m07_couplers_to_microblaze_0_axi_periph_AWADDR;
+  assign M07_AXI_awprot = m07_couplers_to_microblaze_0_axi_periph_AWPROT;
   assign M07_AXI_awvalid = m07_couplers_to_microblaze_0_axi_periph_AWVALID;
   assign M07_AXI_bready = m07_couplers_to_microblaze_0_axi_periph_BREADY;
   assign M07_AXI_rready = m07_couplers_to_microblaze_0_axi_periph_RREADY;
@@ -2057,9 +2199,11 @@ module design_1_microblaze_0_axi_periph_0
        (.M_ACLK(M04_ACLK_1),
         .M_ARESETN(M04_ARESETN_1),
         .M_AXI_araddr(m04_couplers_to_microblaze_0_axi_periph_ARADDR),
+        .M_AXI_arprot(m04_couplers_to_microblaze_0_axi_periph_ARPROT),
         .M_AXI_arready(m04_couplers_to_microblaze_0_axi_periph_ARREADY),
         .M_AXI_arvalid(m04_couplers_to_microblaze_0_axi_periph_ARVALID),
         .M_AXI_awaddr(m04_couplers_to_microblaze_0_axi_periph_AWADDR),
+        .M_AXI_awprot(m04_couplers_to_microblaze_0_axi_periph_AWPROT),
         .M_AXI_awready(m04_couplers_to_microblaze_0_axi_periph_AWREADY),
         .M_AXI_awvalid(m04_couplers_to_microblaze_0_axi_periph_AWVALID),
         .M_AXI_bready(m04_couplers_to_microblaze_0_axi_periph_BREADY),
@@ -2076,9 +2220,11 @@ module design_1_microblaze_0_axi_periph_0
         .S_ACLK(microblaze_0_axi_periph_ACLK_net),
         .S_ARESETN(microblaze_0_axi_periph_ARESETN_net),
         .S_AXI_araddr(xbar_to_m04_couplers_ARADDR[128]),
+        .S_AXI_arprot(xbar_to_m04_couplers_ARPROT[12]),
         .S_AXI_arready(xbar_to_m04_couplers_ARREADY),
         .S_AXI_arvalid(xbar_to_m04_couplers_ARVALID),
         .S_AXI_awaddr(xbar_to_m04_couplers_AWADDR[128]),
+        .S_AXI_awprot(xbar_to_m04_couplers_AWPROT[12]),
         .S_AXI_awready(xbar_to_m04_couplers_AWREADY),
         .S_AXI_awvalid(xbar_to_m04_couplers_AWVALID),
         .S_AXI_bready(xbar_to_m04_couplers_BREADY),
@@ -2096,9 +2242,11 @@ module design_1_microblaze_0_axi_periph_0
        (.M_ACLK(M05_ACLK_1),
         .M_ARESETN(M05_ARESETN_1),
         .M_AXI_araddr(m05_couplers_to_microblaze_0_axi_periph_ARADDR),
+        .M_AXI_arprot(m05_couplers_to_microblaze_0_axi_periph_ARPROT),
         .M_AXI_arready(m05_couplers_to_microblaze_0_axi_periph_ARREADY),
         .M_AXI_arvalid(m05_couplers_to_microblaze_0_axi_periph_ARVALID),
         .M_AXI_awaddr(m05_couplers_to_microblaze_0_axi_periph_AWADDR),
+        .M_AXI_awprot(m05_couplers_to_microblaze_0_axi_periph_AWPROT),
         .M_AXI_awready(m05_couplers_to_microblaze_0_axi_periph_AWREADY),
         .M_AXI_awvalid(m05_couplers_to_microblaze_0_axi_periph_AWVALID),
         .M_AXI_bready(m05_couplers_to_microblaze_0_axi_periph_BREADY),
@@ -2115,9 +2263,11 @@ module design_1_microblaze_0_axi_periph_0
         .S_ACLK(microblaze_0_axi_periph_ACLK_net),
         .S_ARESETN(microblaze_0_axi_periph_ARESETN_net),
         .S_AXI_araddr(xbar_to_m05_couplers_ARADDR[160]),
+        .S_AXI_arprot(xbar_to_m05_couplers_ARPROT[15]),
         .S_AXI_arready(xbar_to_m05_couplers_ARREADY),
         .S_AXI_arvalid(xbar_to_m05_couplers_ARVALID),
         .S_AXI_awaddr(xbar_to_m05_couplers_AWADDR[160]),
+        .S_AXI_awprot(xbar_to_m05_couplers_AWPROT[15]),
         .S_AXI_awready(xbar_to_m05_couplers_AWREADY),
         .S_AXI_awvalid(xbar_to_m05_couplers_AWVALID),
         .S_AXI_bready(xbar_to_m05_couplers_BREADY),
@@ -2135,9 +2285,11 @@ module design_1_microblaze_0_axi_periph_0
        (.M_ACLK(M06_ACLK_1),
         .M_ARESETN(M06_ARESETN_1),
         .M_AXI_araddr(m06_couplers_to_microblaze_0_axi_periph_ARADDR),
+        .M_AXI_arprot(m06_couplers_to_microblaze_0_axi_periph_ARPROT),
         .M_AXI_arready(m06_couplers_to_microblaze_0_axi_periph_ARREADY),
         .M_AXI_arvalid(m06_couplers_to_microblaze_0_axi_periph_ARVALID),
         .M_AXI_awaddr(m06_couplers_to_microblaze_0_axi_periph_AWADDR),
+        .M_AXI_awprot(m06_couplers_to_microblaze_0_axi_periph_AWPROT),
         .M_AXI_awready(m06_couplers_to_microblaze_0_axi_periph_AWREADY),
         .M_AXI_awvalid(m06_couplers_to_microblaze_0_axi_periph_AWVALID),
         .M_AXI_bready(m06_couplers_to_microblaze_0_axi_periph_BREADY),
@@ -2154,9 +2306,11 @@ module design_1_microblaze_0_axi_periph_0
         .S_ACLK(microblaze_0_axi_periph_ACLK_net),
         .S_ARESETN(microblaze_0_axi_periph_ARESETN_net),
         .S_AXI_araddr(xbar_to_m06_couplers_ARADDR[192]),
+        .S_AXI_arprot(xbar_to_m06_couplers_ARPROT[18]),
         .S_AXI_arready(xbar_to_m06_couplers_ARREADY),
         .S_AXI_arvalid(xbar_to_m06_couplers_ARVALID),
         .S_AXI_awaddr(xbar_to_m06_couplers_AWADDR[192]),
+        .S_AXI_awprot(xbar_to_m06_couplers_AWPROT[18]),
         .S_AXI_awready(xbar_to_m06_couplers_AWREADY),
         .S_AXI_awvalid(xbar_to_m06_couplers_AWVALID),
         .S_AXI_bready(xbar_to_m06_couplers_BREADY),
@@ -2174,9 +2328,11 @@ module design_1_microblaze_0_axi_periph_0
        (.M_ACLK(M07_ACLK_1),
         .M_ARESETN(M07_ARESETN_1),
         .M_AXI_araddr(m07_couplers_to_microblaze_0_axi_periph_ARADDR),
+        .M_AXI_arprot(m07_couplers_to_microblaze_0_axi_periph_ARPROT),
         .M_AXI_arready(m07_couplers_to_microblaze_0_axi_periph_ARREADY),
         .M_AXI_arvalid(m07_couplers_to_microblaze_0_axi_periph_ARVALID),
         .M_AXI_awaddr(m07_couplers_to_microblaze_0_axi_periph_AWADDR),
+        .M_AXI_awprot(m07_couplers_to_microblaze_0_axi_periph_AWPROT),
         .M_AXI_awready(m07_couplers_to_microblaze_0_axi_periph_AWREADY),
         .M_AXI_awvalid(m07_couplers_to_microblaze_0_axi_periph_AWVALID),
         .M_AXI_bready(m07_couplers_to_microblaze_0_axi_periph_BREADY),
@@ -2193,9 +2349,11 @@ module design_1_microblaze_0_axi_periph_0
         .S_ACLK(microblaze_0_axi_periph_ACLK_net),
         .S_ARESETN(microblaze_0_axi_periph_ARESETN_net),
         .S_AXI_araddr(xbar_to_m07_couplers_ARADDR[224]),
+        .S_AXI_arprot(xbar_to_m07_couplers_ARPROT[21]),
         .S_AXI_arready(xbar_to_m07_couplers_ARREADY),
         .S_AXI_arvalid(xbar_to_m07_couplers_ARVALID),
         .S_AXI_awaddr(xbar_to_m07_couplers_AWADDR[224]),
+        .S_AXI_awprot(xbar_to_m07_couplers_AWPROT[21]),
         .S_AXI_awready(xbar_to_m07_couplers_AWREADY),
         .S_AXI_awvalid(xbar_to_m07_couplers_AWVALID),
         .S_AXI_bready(xbar_to_m07_couplers_BREADY),
@@ -2299,11 +2457,11 @@ module design_1_microblaze_0_axi_periph_0
        (.aclk(microblaze_0_axi_periph_ACLK_net),
         .aresetn(microblaze_0_axi_periph_ARESETN_net),
         .m_axi_araddr({xbar_to_m08_couplers_ARADDR,xbar_to_m07_couplers_ARADDR,xbar_to_m06_couplers_ARADDR,xbar_to_m05_couplers_ARADDR,xbar_to_m04_couplers_ARADDR,xbar_to_m03_couplers_ARADDR,xbar_to_m02_couplers_ARADDR,xbar_to_m01_couplers_ARADDR,xbar_to_m00_couplers_ARADDR}),
-        .m_axi_arprot({xbar_to_m08_couplers_ARPROT,NLW_xbar_m_axi_arprot_UNCONNECTED[23:0]}),
+        .m_axi_arprot({xbar_to_m08_couplers_ARPROT,xbar_to_m07_couplers_ARPROT,xbar_to_m06_couplers_ARPROT,xbar_to_m05_couplers_ARPROT,xbar_to_m04_couplers_ARPROT,NLW_xbar_m_axi_arprot_UNCONNECTED[11:0]}),
         .m_axi_arready({xbar_to_m08_couplers_ARREADY,xbar_to_m07_couplers_ARREADY,xbar_to_m06_couplers_ARREADY,xbar_to_m05_couplers_ARREADY,xbar_to_m04_couplers_ARREADY,xbar_to_m03_couplers_ARREADY,xbar_to_m02_couplers_ARREADY,xbar_to_m01_couplers_ARREADY,xbar_to_m00_couplers_ARREADY}),
         .m_axi_arvalid({xbar_to_m08_couplers_ARVALID,xbar_to_m07_couplers_ARVALID,xbar_to_m06_couplers_ARVALID,xbar_to_m05_couplers_ARVALID,xbar_to_m04_couplers_ARVALID,xbar_to_m03_couplers_ARVALID,xbar_to_m02_couplers_ARVALID,xbar_to_m01_couplers_ARVALID,xbar_to_m00_couplers_ARVALID}),
         .m_axi_awaddr({xbar_to_m08_couplers_AWADDR,xbar_to_m07_couplers_AWADDR,xbar_to_m06_couplers_AWADDR,xbar_to_m05_couplers_AWADDR,xbar_to_m04_couplers_AWADDR,xbar_to_m03_couplers_AWADDR,xbar_to_m02_couplers_AWADDR,xbar_to_m01_couplers_AWADDR,xbar_to_m00_couplers_AWADDR}),
-        .m_axi_awprot({xbar_to_m08_couplers_AWPROT,NLW_xbar_m_axi_awprot_UNCONNECTED[23:0]}),
+        .m_axi_awprot({xbar_to_m08_couplers_AWPROT,xbar_to_m07_couplers_AWPROT,xbar_to_m06_couplers_AWPROT,xbar_to_m05_couplers_AWPROT,xbar_to_m04_couplers_AWPROT,NLW_xbar_m_axi_awprot_UNCONNECTED[11:0]}),
         .m_axi_awready({xbar_to_m08_couplers_AWREADY,xbar_to_m07_couplers_AWREADY,xbar_to_m06_couplers_AWREADY,xbar_to_m05_couplers_AWREADY,xbar_to_m04_couplers_AWREADY,xbar_to_m03_couplers_AWREADY,xbar_to_m02_couplers_AWREADY,xbar_to_m01_couplers_AWREADY,xbar_to_m00_couplers_AWREADY}),
         .m_axi_awvalid({xbar_to_m08_couplers_AWVALID,xbar_to_m07_couplers_AWVALID,xbar_to_m06_couplers_AWVALID,xbar_to_m05_couplers_AWVALID,xbar_to_m04_couplers_AWVALID,xbar_to_m03_couplers_AWVALID,xbar_to_m02_couplers_AWVALID,xbar_to_m01_couplers_AWVALID,xbar_to_m00_couplers_AWVALID}),
         .m_axi_bready({xbar_to_m08_couplers_BREADY,xbar_to_m07_couplers_BREADY,xbar_to_m06_couplers_BREADY,xbar_to_m05_couplers_BREADY,xbar_to_m04_couplers_BREADY,xbar_to_m03_couplers_BREADY,xbar_to_m02_couplers_BREADY,xbar_to_m01_couplers_BREADY,xbar_to_m00_couplers_BREADY}),
@@ -2870,9 +3028,11 @@ module m04_couplers_imp_5LX7BU
    (M_ACLK,
     M_ARESETN,
     M_AXI_araddr,
+    M_AXI_arprot,
     M_AXI_arready,
     M_AXI_arvalid,
     M_AXI_awaddr,
+    M_AXI_awprot,
     M_AXI_awready,
     M_AXI_awvalid,
     M_AXI_bready,
@@ -2889,9 +3049,11 @@ module m04_couplers_imp_5LX7BU
     S_ACLK,
     S_ARESETN,
     S_AXI_araddr,
+    S_AXI_arprot,
     S_AXI_arready,
     S_AXI_arvalid,
     S_AXI_awaddr,
+    S_AXI_awprot,
     S_AXI_awready,
     S_AXI_awvalid,
     S_AXI_bready,
@@ -2908,9 +3070,11 @@ module m04_couplers_imp_5LX7BU
   input M_ACLK;
   input M_ARESETN;
   output M_AXI_araddr;
+  output M_AXI_arprot;
   input M_AXI_arready;
   output M_AXI_arvalid;
   output M_AXI_awaddr;
+  output M_AXI_awprot;
   input M_AXI_awready;
   output M_AXI_awvalid;
   output M_AXI_bready;
@@ -2927,9 +3091,11 @@ module m04_couplers_imp_5LX7BU
   input S_ACLK;
   input S_ARESETN;
   input S_AXI_araddr;
+  input S_AXI_arprot;
   output S_AXI_arready;
   input S_AXI_arvalid;
   input S_AXI_awaddr;
+  input S_AXI_awprot;
   output S_AXI_awready;
   input S_AXI_awvalid;
   input S_AXI_bready;
@@ -2945,9 +3111,11 @@ module m04_couplers_imp_5LX7BU
   input S_AXI_wvalid;
 
   wire m04_couplers_to_m04_couplers_ARADDR;
+  wire m04_couplers_to_m04_couplers_ARPROT;
   wire m04_couplers_to_m04_couplers_ARREADY;
   wire m04_couplers_to_m04_couplers_ARVALID;
   wire m04_couplers_to_m04_couplers_AWADDR;
+  wire m04_couplers_to_m04_couplers_AWPROT;
   wire m04_couplers_to_m04_couplers_AWREADY;
   wire m04_couplers_to_m04_couplers_AWVALID;
   wire m04_couplers_to_m04_couplers_BREADY;
@@ -2963,8 +3131,10 @@ module m04_couplers_imp_5LX7BU
   wire m04_couplers_to_m04_couplers_WVALID;
 
   assign M_AXI_araddr = m04_couplers_to_m04_couplers_ARADDR;
+  assign M_AXI_arprot = m04_couplers_to_m04_couplers_ARPROT;
   assign M_AXI_arvalid = m04_couplers_to_m04_couplers_ARVALID;
   assign M_AXI_awaddr = m04_couplers_to_m04_couplers_AWADDR;
+  assign M_AXI_awprot = m04_couplers_to_m04_couplers_AWPROT;
   assign M_AXI_awvalid = m04_couplers_to_m04_couplers_AWVALID;
   assign M_AXI_bready = m04_couplers_to_m04_couplers_BREADY;
   assign M_AXI_rready = m04_couplers_to_m04_couplers_RREADY;
@@ -2980,9 +3150,11 @@ module m04_couplers_imp_5LX7BU
   assign S_AXI_rvalid = m04_couplers_to_m04_couplers_RVALID;
   assign S_AXI_wready = m04_couplers_to_m04_couplers_WREADY;
   assign m04_couplers_to_m04_couplers_ARADDR = S_AXI_araddr;
+  assign m04_couplers_to_m04_couplers_ARPROT = S_AXI_arprot;
   assign m04_couplers_to_m04_couplers_ARREADY = M_AXI_arready;
   assign m04_couplers_to_m04_couplers_ARVALID = S_AXI_arvalid;
   assign m04_couplers_to_m04_couplers_AWADDR = S_AXI_awaddr;
+  assign m04_couplers_to_m04_couplers_AWPROT = S_AXI_awprot;
   assign m04_couplers_to_m04_couplers_AWREADY = M_AXI_awready;
   assign m04_couplers_to_m04_couplers_AWVALID = S_AXI_awvalid;
   assign m04_couplers_to_m04_couplers_BREADY = S_AXI_bready;
@@ -3002,9 +3174,11 @@ module m05_couplers_imp_1XR4ZAZ
    (M_ACLK,
     M_ARESETN,
     M_AXI_araddr,
+    M_AXI_arprot,
     M_AXI_arready,
     M_AXI_arvalid,
     M_AXI_awaddr,
+    M_AXI_awprot,
     M_AXI_awready,
     M_AXI_awvalid,
     M_AXI_bready,
@@ -3021,9 +3195,11 @@ module m05_couplers_imp_1XR4ZAZ
     S_ACLK,
     S_ARESETN,
     S_AXI_araddr,
+    S_AXI_arprot,
     S_AXI_arready,
     S_AXI_arvalid,
     S_AXI_awaddr,
+    S_AXI_awprot,
     S_AXI_awready,
     S_AXI_awvalid,
     S_AXI_bready,
@@ -3040,9 +3216,11 @@ module m05_couplers_imp_1XR4ZAZ
   input M_ACLK;
   input M_ARESETN;
   output M_AXI_araddr;
+  output M_AXI_arprot;
   input M_AXI_arready;
   output M_AXI_arvalid;
   output M_AXI_awaddr;
+  output M_AXI_awprot;
   input M_AXI_awready;
   output M_AXI_awvalid;
   output M_AXI_bready;
@@ -3059,9 +3237,11 @@ module m05_couplers_imp_1XR4ZAZ
   input S_ACLK;
   input S_ARESETN;
   input S_AXI_araddr;
+  input S_AXI_arprot;
   output S_AXI_arready;
   input S_AXI_arvalid;
   input S_AXI_awaddr;
+  input S_AXI_awprot;
   output S_AXI_awready;
   input S_AXI_awvalid;
   input S_AXI_bready;
@@ -3077,9 +3257,11 @@ module m05_couplers_imp_1XR4ZAZ
   input S_AXI_wvalid;
 
   wire m05_couplers_to_m05_couplers_ARADDR;
+  wire m05_couplers_to_m05_couplers_ARPROT;
   wire m05_couplers_to_m05_couplers_ARREADY;
   wire m05_couplers_to_m05_couplers_ARVALID;
   wire m05_couplers_to_m05_couplers_AWADDR;
+  wire m05_couplers_to_m05_couplers_AWPROT;
   wire m05_couplers_to_m05_couplers_AWREADY;
   wire m05_couplers_to_m05_couplers_AWVALID;
   wire m05_couplers_to_m05_couplers_BREADY;
@@ -3095,8 +3277,10 @@ module m05_couplers_imp_1XR4ZAZ
   wire m05_couplers_to_m05_couplers_WVALID;
 
   assign M_AXI_araddr = m05_couplers_to_m05_couplers_ARADDR;
+  assign M_AXI_arprot = m05_couplers_to_m05_couplers_ARPROT;
   assign M_AXI_arvalid = m05_couplers_to_m05_couplers_ARVALID;
   assign M_AXI_awaddr = m05_couplers_to_m05_couplers_AWADDR;
+  assign M_AXI_awprot = m05_couplers_to_m05_couplers_AWPROT;
   assign M_AXI_awvalid = m05_couplers_to_m05_couplers_AWVALID;
   assign M_AXI_bready = m05_couplers_to_m05_couplers_BREADY;
   assign M_AXI_rready = m05_couplers_to_m05_couplers_RREADY;
@@ -3112,9 +3296,11 @@ module m05_couplers_imp_1XR4ZAZ
   assign S_AXI_rvalid = m05_couplers_to_m05_couplers_RVALID;
   assign S_AXI_wready = m05_couplers_to_m05_couplers_WREADY;
   assign m05_couplers_to_m05_couplers_ARADDR = S_AXI_araddr;
+  assign m05_couplers_to_m05_couplers_ARPROT = S_AXI_arprot;
   assign m05_couplers_to_m05_couplers_ARREADY = M_AXI_arready;
   assign m05_couplers_to_m05_couplers_ARVALID = S_AXI_arvalid;
   assign m05_couplers_to_m05_couplers_AWADDR = S_AXI_awaddr;
+  assign m05_couplers_to_m05_couplers_AWPROT = S_AXI_awprot;
   assign m05_couplers_to_m05_couplers_AWREADY = M_AXI_awready;
   assign m05_couplers_to_m05_couplers_AWVALID = S_AXI_awvalid;
   assign m05_couplers_to_m05_couplers_BREADY = S_AXI_bready;
@@ -3134,9 +3320,11 @@ module m06_couplers_imp_4YOIXL
    (M_ACLK,
     M_ARESETN,
     M_AXI_araddr,
+    M_AXI_arprot,
     M_AXI_arready,
     M_AXI_arvalid,
     M_AXI_awaddr,
+    M_AXI_awprot,
     M_AXI_awready,
     M_AXI_awvalid,
     M_AXI_bready,
@@ -3153,9 +3341,11 @@ module m06_couplers_imp_4YOIXL
     S_ACLK,
     S_ARESETN,
     S_AXI_araddr,
+    S_AXI_arprot,
     S_AXI_arready,
     S_AXI_arvalid,
     S_AXI_awaddr,
+    S_AXI_awprot,
     S_AXI_awready,
     S_AXI_awvalid,
     S_AXI_bready,
@@ -3172,9 +3362,11 @@ module m06_couplers_imp_4YOIXL
   input M_ACLK;
   input M_ARESETN;
   output M_AXI_araddr;
+  output M_AXI_arprot;
   input M_AXI_arready;
   output M_AXI_arvalid;
   output M_AXI_awaddr;
+  output M_AXI_awprot;
   input M_AXI_awready;
   output M_AXI_awvalid;
   output M_AXI_bready;
@@ -3191,9 +3383,11 @@ module m06_couplers_imp_4YOIXL
   input S_ACLK;
   input S_ARESETN;
   input S_AXI_araddr;
+  input S_AXI_arprot;
   output S_AXI_arready;
   input S_AXI_arvalid;
   input S_AXI_awaddr;
+  input S_AXI_awprot;
   output S_AXI_awready;
   input S_AXI_awvalid;
   input S_AXI_bready;
@@ -3209,9 +3403,11 @@ module m06_couplers_imp_4YOIXL
   input S_AXI_wvalid;
 
   wire m06_couplers_to_m06_couplers_ARADDR;
+  wire m06_couplers_to_m06_couplers_ARPROT;
   wire m06_couplers_to_m06_couplers_ARREADY;
   wire m06_couplers_to_m06_couplers_ARVALID;
   wire m06_couplers_to_m06_couplers_AWADDR;
+  wire m06_couplers_to_m06_couplers_AWPROT;
   wire m06_couplers_to_m06_couplers_AWREADY;
   wire m06_couplers_to_m06_couplers_AWVALID;
   wire m06_couplers_to_m06_couplers_BREADY;
@@ -3227,8 +3423,10 @@ module m06_couplers_imp_4YOIXL
   wire m06_couplers_to_m06_couplers_WVALID;
 
   assign M_AXI_araddr = m06_couplers_to_m06_couplers_ARADDR;
+  assign M_AXI_arprot = m06_couplers_to_m06_couplers_ARPROT;
   assign M_AXI_arvalid = m06_couplers_to_m06_couplers_ARVALID;
   assign M_AXI_awaddr = m06_couplers_to_m06_couplers_AWADDR;
+  assign M_AXI_awprot = m06_couplers_to_m06_couplers_AWPROT;
   assign M_AXI_awvalid = m06_couplers_to_m06_couplers_AWVALID;
   assign M_AXI_bready = m06_couplers_to_m06_couplers_BREADY;
   assign M_AXI_rready = m06_couplers_to_m06_couplers_RREADY;
@@ -3244,9 +3442,11 @@ module m06_couplers_imp_4YOIXL
   assign S_AXI_rvalid = m06_couplers_to_m06_couplers_RVALID;
   assign S_AXI_wready = m06_couplers_to_m06_couplers_WREADY;
   assign m06_couplers_to_m06_couplers_ARADDR = S_AXI_araddr;
+  assign m06_couplers_to_m06_couplers_ARPROT = S_AXI_arprot;
   assign m06_couplers_to_m06_couplers_ARREADY = M_AXI_arready;
   assign m06_couplers_to_m06_couplers_ARVALID = S_AXI_arvalid;
   assign m06_couplers_to_m06_couplers_AWADDR = S_AXI_awaddr;
+  assign m06_couplers_to_m06_couplers_AWPROT = S_AXI_awprot;
   assign m06_couplers_to_m06_couplers_AWREADY = M_AXI_awready;
   assign m06_couplers_to_m06_couplers_AWVALID = S_AXI_awvalid;
   assign m06_couplers_to_m06_couplers_BREADY = S_AXI_bready;
@@ -3266,9 +3466,11 @@ module m07_couplers_imp_1YO2N20
    (M_ACLK,
     M_ARESETN,
     M_AXI_araddr,
+    M_AXI_arprot,
     M_AXI_arready,
     M_AXI_arvalid,
     M_AXI_awaddr,
+    M_AXI_awprot,
     M_AXI_awready,
     M_AXI_awvalid,
     M_AXI_bready,
@@ -3285,9 +3487,11 @@ module m07_couplers_imp_1YO2N20
     S_ACLK,
     S_ARESETN,
     S_AXI_araddr,
+    S_AXI_arprot,
     S_AXI_arready,
     S_AXI_arvalid,
     S_AXI_awaddr,
+    S_AXI_awprot,
     S_AXI_awready,
     S_AXI_awvalid,
     S_AXI_bready,
@@ -3304,9 +3508,11 @@ module m07_couplers_imp_1YO2N20
   input M_ACLK;
   input M_ARESETN;
   output M_AXI_araddr;
+  output M_AXI_arprot;
   input M_AXI_arready;
   output M_AXI_arvalid;
   output M_AXI_awaddr;
+  output M_AXI_awprot;
   input M_AXI_awready;
   output M_AXI_awvalid;
   output M_AXI_bready;
@@ -3323,9 +3529,11 @@ module m07_couplers_imp_1YO2N20
   input S_ACLK;
   input S_ARESETN;
   input S_AXI_araddr;
+  input S_AXI_arprot;
   output S_AXI_arready;
   input S_AXI_arvalid;
   input S_AXI_awaddr;
+  input S_AXI_awprot;
   output S_AXI_awready;
   input S_AXI_awvalid;
   input S_AXI_bready;
@@ -3341,9 +3549,11 @@ module m07_couplers_imp_1YO2N20
   input S_AXI_wvalid;
 
   wire m07_couplers_to_m07_couplers_ARADDR;
+  wire m07_couplers_to_m07_couplers_ARPROT;
   wire m07_couplers_to_m07_couplers_ARREADY;
   wire m07_couplers_to_m07_couplers_ARVALID;
   wire m07_couplers_to_m07_couplers_AWADDR;
+  wire m07_couplers_to_m07_couplers_AWPROT;
   wire m07_couplers_to_m07_couplers_AWREADY;
   wire m07_couplers_to_m07_couplers_AWVALID;
   wire m07_couplers_to_m07_couplers_BREADY;
@@ -3359,8 +3569,10 @@ module m07_couplers_imp_1YO2N20
   wire m07_couplers_to_m07_couplers_WVALID;
 
   assign M_AXI_araddr = m07_couplers_to_m07_couplers_ARADDR;
+  assign M_AXI_arprot = m07_couplers_to_m07_couplers_ARPROT;
   assign M_AXI_arvalid = m07_couplers_to_m07_couplers_ARVALID;
   assign M_AXI_awaddr = m07_couplers_to_m07_couplers_AWADDR;
+  assign M_AXI_awprot = m07_couplers_to_m07_couplers_AWPROT;
   assign M_AXI_awvalid = m07_couplers_to_m07_couplers_AWVALID;
   assign M_AXI_bready = m07_couplers_to_m07_couplers_BREADY;
   assign M_AXI_rready = m07_couplers_to_m07_couplers_RREADY;
@@ -3376,9 +3588,11 @@ module m07_couplers_imp_1YO2N20
   assign S_AXI_rvalid = m07_couplers_to_m07_couplers_RVALID;
   assign S_AXI_wready = m07_couplers_to_m07_couplers_WREADY;
   assign m07_couplers_to_m07_couplers_ARADDR = S_AXI_araddr;
+  assign m07_couplers_to_m07_couplers_ARPROT = S_AXI_arprot;
   assign m07_couplers_to_m07_couplers_ARREADY = M_AXI_arready;
   assign m07_couplers_to_m07_couplers_ARVALID = S_AXI_arvalid;
   assign m07_couplers_to_m07_couplers_AWADDR = S_AXI_awaddr;
+  assign m07_couplers_to_m07_couplers_AWPROT = S_AXI_awprot;
   assign m07_couplers_to_m07_couplers_AWREADY = M_AXI_awready;
   assign m07_couplers_to_m07_couplers_AWVALID = S_AXI_awvalid;
   assign m07_couplers_to_m07_couplers_BREADY = S_AXI_bready;

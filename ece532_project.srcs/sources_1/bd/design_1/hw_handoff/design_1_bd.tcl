@@ -243,16 +243,32 @@ proc create_root_design { parentCell } {
   set usb_uart [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:uart_rtl:1.0 usb_uart ]
 
   # Create ports
+  set BTNC [ create_bd_port -dir I BTNC ]
+  set LED [ create_bd_port -dir O LED ]
+  set OV7670_D [ create_bd_port -dir I -from 7 -to 0 OV7670_D ]
+  set OV7670_HREF [ create_bd_port -dir I OV7670_HREF ]
+  set OV7670_PCLK [ create_bd_port -dir I OV7670_PCLK ]
+  set OV7670_SIOC [ create_bd_port -dir O OV7670_SIOC ]
+  set OV7670_SIOD [ create_bd_port -dir IO OV7670_SIOD ]
+  set OV7670_VSYNC [ create_bd_port -dir I OV7670_VSYNC ]
+  set OV7670_XCLK [ create_bd_port -dir O OV7670_XCLK ]
   set eth_ref_clk [ create_bd_port -dir O -type clk eth_ref_clk ]
+  set pwdn [ create_bd_port -dir O pwdn ]
   set reset [ create_bd_port -dir I -type rst reset ]
   set_property -dict [ list \
 CONFIG.POLARITY {ACTIVE_LOW} \
  ] $reset
+  set reset_1 [ create_bd_port -dir O -type rst reset_1 ]
   set sys_clock [ create_bd_port -dir I -type clk sys_clock ]
   set_property -dict [ list \
 CONFIG.FREQ_HZ {100000000} \
 CONFIG.PHASE {0.000} \
  ] $sys_clock
+  set vga_blue [ create_bd_port -dir O -from 3 -to 0 vga_blue ]
+  set vga_green [ create_bd_port -dir O -from 3 -to 0 vga_green ]
+  set vga_hsync [ create_bd_port -dir O vga_hsync ]
+  set vga_red [ create_bd_port -dir O -from 3 -to 0 vga_red ]
+  set vga_vsync [ create_bd_port -dir O vga_vsync ]
 
   # Create instance: axi_ethernetlite_0, and set properties
   set axi_ethernetlite_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_ethernetlite:3.0 axi_ethernetlite_0 ]
@@ -278,6 +294,29 @@ CONFIG.UARTLITE_BOARD_INTERFACE {usb_uart} \
 CONFIG.USE_BOARD_FLOW {true} \
  ] $axi_uartlite_0
 
+  # Create instance: blk_mem_gen_0, and set properties
+  set blk_mem_gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.3 blk_mem_gen_0 ]
+  set_property -dict [ list \
+CONFIG.Byte_Size {9} \
+CONFIG.Enable_32bit_Address {false} \
+CONFIG.Enable_A {Always_Enabled} \
+CONFIG.Enable_B {Always_Enabled} \
+CONFIG.Memory_Type {Simple_Dual_Port_RAM} \
+CONFIG.Operating_Mode_A {NO_CHANGE} \
+CONFIG.Port_B_Clock {100} \
+CONFIG.Port_B_Enable_Rate {100} \
+CONFIG.Read_Width_A {16} \
+CONFIG.Read_Width_B {16} \
+CONFIG.Register_PortA_Output_of_Memory_Primitives {false} \
+CONFIG.Register_PortB_Output_of_Memory_Primitives {true} \
+CONFIG.Use_Byte_Write_Enable {false} \
+CONFIG.Use_RSTA_Pin {false} \
+CONFIG.Write_Depth_A {76800} \
+CONFIG.Write_Width_A {16} \
+CONFIG.Write_Width_B {16} \
+CONFIG.use_bram_block {Stand_Alone} \
+ ] $blk_mem_gen_0
+
   # Create instance: clk_wiz_1, and set properties
   set clk_wiz_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.4 clk_wiz_1 ]
   set_property -dict [ list \
@@ -289,11 +328,16 @@ CONFIG.CLKOUT3_JITTER {151.636} \
 CONFIG.CLKOUT3_PHASE_ERROR {98.575} \
 CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {50.000} \
 CONFIG.CLKOUT3_USED {true} \
+CONFIG.CLKOUT4_JITTER {175.402} \
+CONFIG.CLKOUT4_PHASE_ERROR {98.575} \
+CONFIG.CLKOUT4_REQUESTED_OUT_FREQ {25.000} \
+CONFIG.CLKOUT4_USED {true} \
 CONFIG.CLK_IN1_BOARD_INTERFACE {sys_clock} \
 CONFIG.MMCM_CLKOUT1_DIVIDE {5} \
 CONFIG.MMCM_CLKOUT2_DIVIDE {20} \
+CONFIG.MMCM_CLKOUT3_DIVIDE {40} \
 CONFIG.MMCM_DIVCLK_DIVIDE {1} \
-CONFIG.NUM_OUT_CLKS {3} \
+CONFIG.NUM_OUT_CLKS {4} \
 CONFIG.PRIM_SOURCE {Single_ended_clock_capable_pin} \
 CONFIG.RESET_BOARD_INTERFACE {reset} \
 CONFIG.RESET_PORT {resetn} \
@@ -358,6 +402,12 @@ CONFIG.USE_BOARD_FLOW {true} \
   # Create instance: rst_mig_7series_0_81M, and set properties
   set rst_mig_7series_0_81M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_mig_7series_0_81M ]
 
+  # Create instance: vga444_0, and set properties
+  set vga444_0 [ create_bd_cell -type ip -vlnv utoronto.ca:user:vga444:1.0 vga444_0 ]
+
+  # Create instance: video_in_0, and set properties
+  set video_in_0 [ create_bd_cell -type ip -vlnv utoronto.ca:user:video_in:1.0 video_in_0 ]
+
   # Create interface connections
   connect_bd_intf_net -intf_net axi_ethernetlite_0_MDIO [get_bd_intf_ports eth_mdio_mdc] [get_bd_intf_pins axi_ethernetlite_0/MDIO]
   connect_bd_intf_net -intf_net axi_ethernetlite_0_MII [get_bd_intf_pins axi_ethernetlite_0/MII] [get_bd_intf_pins mii_to_rmii_0/MII]
@@ -378,11 +428,18 @@ CONFIG.USE_BOARD_FLOW {true} \
   connect_bd_intf_net -intf_net mii_to_rmii_0_RMII_PHY_M [get_bd_intf_ports eth_rmii] [get_bd_intf_pins mii_to_rmii_0/RMII_PHY_M]
 
   # Create port connections
+  connect_bd_net -net BTNC_1 [get_bd_ports BTNC] [get_bd_pins video_in_0/BTNC]
+  connect_bd_net -net Net [get_bd_ports OV7670_SIOD] [get_bd_pins video_in_0/OV7670_SIOD]
+  connect_bd_net -net OV7670_D_1 [get_bd_ports OV7670_D] [get_bd_pins video_in_0/OV7670_D]
+  connect_bd_net -net OV7670_HREF_1 [get_bd_ports OV7670_HREF] [get_bd_pins video_in_0/OV7670_HREF]
+  connect_bd_net -net OV7670_PCLK_1 [get_bd_ports OV7670_PCLK] [get_bd_pins blk_mem_gen_0/clka] [get_bd_pins video_in_0/OV7670_PCLK]
+  connect_bd_net -net OV7670_VSYNC_1 [get_bd_ports OV7670_VSYNC] [get_bd_pins video_in_0/OV7670_VSYNC]
   connect_bd_net -net axi_ethernetlite_0_ip2intc_irpt [get_bd_pins axi_ethernetlite_0/ip2intc_irpt] [get_bd_pins microblaze_0_xlconcat/In1]
   connect_bd_net -net axi_timer_0_interrupt [get_bd_pins axi_timer_0/interrupt] [get_bd_pins microblaze_0_xlconcat/In0]
+  connect_bd_net -net blk_mem_gen_0_doutb [get_bd_pins blk_mem_gen_0/doutb] [get_bd_pins vga444_0/frame_pixel]
   connect_bd_net -net clk_wiz_1_clk_out2 [get_bd_pins clk_wiz_1/clk_out2] [get_bd_pins mig_7series_0/sys_clk_i]
-  connect_bd_net -net clk_wiz_1_clk_out3 [get_bd_ports eth_ref_clk] [get_bd_pins clk_wiz_1/clk_out3] [get_bd_pins mii_to_rmii_0/ref_clk]
-  connect_bd_net -net clk_wiz_1_locked [get_bd_pins clk_wiz_1/locked] [get_bd_pins rst_clk_wiz_1_100M/dcm_locked]
+  connect_bd_net -net clk_wiz_1_clk_out3 [get_bd_ports eth_ref_clk] [get_bd_pins clk_wiz_1/clk_out3] [get_bd_pins mii_to_rmii_0/ref_clk] [get_bd_pins video_in_0/CLK50]
+  connect_bd_net -net clk_wiz_1_clk_out4 [get_bd_pins blk_mem_gen_0/clkb] [get_bd_pins clk_wiz_1/clk_out4] [get_bd_pins vga444_0/clk25] [get_bd_pins video_in_0/CLK25]
   connect_bd_net -net mdm_1_debug_sys_rst [get_bd_pins mdm_1/Debug_SYS_Rst] [get_bd_pins rst_clk_wiz_1_100M/mb_debug_sys_rst]
   connect_bd_net -net microblaze_0_Clk [get_bd_pins axi_ethernetlite_0/s_axi_aclk] [get_bd_pins axi_smc/aclk] [get_bd_pins axi_timer_0/s_axi_aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins clk_wiz_1/clk_out1] [get_bd_pins microblaze_0/Clk] [get_bd_pins microblaze_0_axi_intc/processor_clk] [get_bd_pins microblaze_0_axi_intc/s_axi_aclk] [get_bd_pins microblaze_0_axi_periph/ACLK] [get_bd_pins microblaze_0_axi_periph/M00_ACLK] [get_bd_pins microblaze_0_axi_periph/M01_ACLK] [get_bd_pins microblaze_0_axi_periph/M02_ACLK] [get_bd_pins microblaze_0_axi_periph/M03_ACLK] [get_bd_pins microblaze_0_axi_periph/M04_ACLK] [get_bd_pins microblaze_0_axi_periph/M05_ACLK] [get_bd_pins microblaze_0_axi_periph/M06_ACLK] [get_bd_pins microblaze_0_axi_periph/M07_ACLK] [get_bd_pins microblaze_0_axi_periph/M08_ACLK] [get_bd_pins microblaze_0_axi_periph/S00_ACLK] [get_bd_pins microblaze_0_local_memory/LMB_Clk] [get_bd_pins rst_clk_wiz_1_100M/slowest_sync_clk]
   connect_bd_net -net microblaze_0_intr [get_bd_pins microblaze_0_axi_intc/intr] [get_bd_pins microblaze_0_xlconcat/dout]
@@ -396,6 +453,20 @@ CONFIG.USE_BOARD_FLOW {true} \
   connect_bd_net -net rst_clk_wiz_1_100M_peripheral_aresetn [get_bd_pins axi_ethernetlite_0/s_axi_aresetn] [get_bd_pins axi_timer_0/s_axi_aresetn] [get_bd_pins axi_uartlite_0/s_axi_aresetn] [get_bd_pins microblaze_0_axi_intc/s_axi_aresetn] [get_bd_pins microblaze_0_axi_periph/M00_ARESETN] [get_bd_pins microblaze_0_axi_periph/M01_ARESETN] [get_bd_pins microblaze_0_axi_periph/M02_ARESETN] [get_bd_pins microblaze_0_axi_periph/M03_ARESETN] [get_bd_pins microblaze_0_axi_periph/M04_ARESETN] [get_bd_pins microblaze_0_axi_periph/M05_ARESETN] [get_bd_pins microblaze_0_axi_periph/M06_ARESETN] [get_bd_pins microblaze_0_axi_periph/M07_ARESETN] [get_bd_pins microblaze_0_axi_periph/M08_ARESETN] [get_bd_pins microblaze_0_axi_periph/S00_ARESETN] [get_bd_pins rst_clk_wiz_1_100M/peripheral_aresetn]
   connect_bd_net -net rst_mig_7series_0_81M_peripheral_aresetn [get_bd_pins axi_smc/aresetn] [get_bd_pins mig_7series_0/aresetn] [get_bd_pins rst_mig_7series_0_81M/peripheral_aresetn]
   connect_bd_net -net sys_clock_1 [get_bd_ports sys_clock] [get_bd_pins clk_wiz_1/clk_in1]
+  connect_bd_net -net vga444_0_frame_addr [get_bd_pins blk_mem_gen_0/addrb] [get_bd_pins vga444_0/frame_addr]
+  connect_bd_net -net vga444_0_vga_blue [get_bd_ports vga_blue] [get_bd_pins vga444_0/vga_blue]
+  connect_bd_net -net vga444_0_vga_green [get_bd_ports vga_green] [get_bd_pins vga444_0/vga_green]
+  connect_bd_net -net vga444_0_vga_hsync [get_bd_ports vga_hsync] [get_bd_pins vga444_0/vga_hsync]
+  connect_bd_net -net vga444_0_vga_red [get_bd_ports vga_red] [get_bd_pins vga444_0/vga_red]
+  connect_bd_net -net vga444_0_vga_vsync [get_bd_ports vga_vsync] [get_bd_pins vga444_0/vga_vsync]
+  connect_bd_net -net video_in_0_LED [get_bd_ports LED] [get_bd_pins video_in_0/LED]
+  connect_bd_net -net video_in_0_OV7670_SIOC [get_bd_ports OV7670_SIOC] [get_bd_pins video_in_0/OV7670_SIOC]
+  connect_bd_net -net video_in_0_OV7670_XCLK [get_bd_ports OV7670_XCLK] [get_bd_pins video_in_0/OV7670_XCLK]
+  connect_bd_net -net video_in_0_capture_addr [get_bd_pins blk_mem_gen_0/addra] [get_bd_pins video_in_0/capture_addr]
+  connect_bd_net -net video_in_0_data_16 [get_bd_pins blk_mem_gen_0/dina] [get_bd_pins video_in_0/data_16]
+  connect_bd_net -net video_in_0_pwdn [get_bd_ports pwdn] [get_bd_pins video_in_0/pwdn]
+  connect_bd_net -net video_in_0_reset [get_bd_ports reset_1] [get_bd_pins video_in_0/reset]
+  connect_bd_net -net video_in_0_wea [get_bd_pins blk_mem_gen_0/wea] [get_bd_pins video_in_0/wea]
 
   # Create address segments
   create_bd_addr_seg -range 0x00010000 -offset 0x40E00000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs axi_ethernetlite_0/S_AXI/Reg] SEG_axi_ethernetlite_0_Reg

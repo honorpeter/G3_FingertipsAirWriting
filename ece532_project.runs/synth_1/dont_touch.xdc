@@ -66,4 +66,13 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_ilmb_b
 # IP: bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_lmb_bram_0 || ORIG_REF_NAME==design_1_lmb_bram_0}]
 
+# IP: bd/design_1/ip/design_1_vga444_0_0/design_1_vga444_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_vga444_0_0 || ORIG_REF_NAME==design_1_vga444_0_0}]
+
+# IP: bd/design_1/ip/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_blk_mem_gen_0_0 || ORIG_REF_NAME==design_1_blk_mem_gen_0_0}]
+
+# IP: bd/design_1/ip/design_1_video_in_0_0/design_1_video_in_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_video_in_0_0 || ORIG_REF_NAME==design_1_video_in_0_0}]
+
 # XDC: bd/design_1/design_1_ooc.xdc

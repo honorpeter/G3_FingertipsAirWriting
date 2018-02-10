@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-//Date        : Mon Feb  5 16:32:28 2018
+//Date        : Sat Feb 10 15:12:25 2018
 //Host        : SFB520WS02 running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -10,7 +10,8 @@
 `timescale 1 ps / 1 ps
 
 module design_1_wrapper
-   (DDR2_addr,
+   (BTNC,
+    DDR2_addr,
     DDR2_ba,
     DDR2_cas_n,
     DDR2_ck_n,
@@ -24,6 +25,14 @@ module design_1_wrapper
     DDR2_odt,
     DDR2_ras_n,
     DDR2_we_n,
+    LED,
+    OV7670_D,
+    OV7670_HREF,
+    OV7670_PCLK,
+    OV7670_SIOC,
+    OV7670_SIOD,
+    OV7670_VSYNC,
+    OV7670_XCLK,
     eth_mdio_mdc_mdc,
     eth_mdio_mdc_mdio_io,
     eth_ref_clk,
@@ -32,10 +41,18 @@ module design_1_wrapper
     eth_rmii_rxd,
     eth_rmii_tx_en,
     eth_rmii_txd,
+    pwdn,
     reset,
+    reset_1,
     sys_clock,
     usb_uart_rxd,
-    usb_uart_txd);
+    usb_uart_txd,
+    vga_blue,
+    vga_green,
+    vga_hsync,
+    vga_red,
+    vga_vsync);
+  input BTNC;
   output [12:0]DDR2_addr;
   output [2:0]DDR2_ba;
   output DDR2_cas_n;
@@ -50,6 +67,14 @@ module design_1_wrapper
   output [0:0]DDR2_odt;
   output DDR2_ras_n;
   output DDR2_we_n;
+  output LED;
+  input [7:0]OV7670_D;
+  input OV7670_HREF;
+  input OV7670_PCLK;
+  output OV7670_SIOC;
+  inout OV7670_SIOD;
+  input OV7670_VSYNC;
+  output OV7670_XCLK;
   output eth_mdio_mdc_mdc;
   inout eth_mdio_mdc_mdio_io;
   output eth_ref_clk;
@@ -58,11 +83,19 @@ module design_1_wrapper
   input [1:0]eth_rmii_rxd;
   output eth_rmii_tx_en;
   output [1:0]eth_rmii_txd;
+  output pwdn;
   input reset;
+  output reset_1;
   input sys_clock;
   input usb_uart_rxd;
   output usb_uart_txd;
+  output [3:0]vga_blue;
+  output [3:0]vga_green;
+  output vga_hsync;
+  output [3:0]vga_red;
+  output vga_vsync;
 
+  wire BTNC;
   wire [12:0]DDR2_addr;
   wire [2:0]DDR2_ba;
   wire DDR2_cas_n;
@@ -77,6 +110,14 @@ module design_1_wrapper
   wire [0:0]DDR2_odt;
   wire DDR2_ras_n;
   wire DDR2_we_n;
+  wire LED;
+  wire [7:0]OV7670_D;
+  wire OV7670_HREF;
+  wire OV7670_PCLK;
+  wire OV7670_SIOC;
+  wire OV7670_SIOD;
+  wire OV7670_VSYNC;
+  wire OV7670_XCLK;
   wire eth_mdio_mdc_mdc;
   wire eth_mdio_mdc_mdio_i;
   wire eth_mdio_mdc_mdio_io;
@@ -88,13 +129,21 @@ module design_1_wrapper
   wire [1:0]eth_rmii_rxd;
   wire eth_rmii_tx_en;
   wire [1:0]eth_rmii_txd;
+  wire pwdn;
   wire reset;
+  wire reset_1;
   wire sys_clock;
   wire usb_uart_rxd;
   wire usb_uart_txd;
+  wire [3:0]vga_blue;
+  wire [3:0]vga_green;
+  wire vga_hsync;
+  wire [3:0]vga_red;
+  wire vga_vsync;
 
   design_1 design_1_i
-       (.DDR2_addr(DDR2_addr),
+       (.BTNC(BTNC),
+        .DDR2_addr(DDR2_addr),
         .DDR2_ba(DDR2_ba),
         .DDR2_cas_n(DDR2_cas_n),
         .DDR2_ck_n(DDR2_ck_n),
@@ -108,6 +157,14 @@ module design_1_wrapper
         .DDR2_odt(DDR2_odt),
         .DDR2_ras_n(DDR2_ras_n),
         .DDR2_we_n(DDR2_we_n),
+        .LED(LED),
+        .OV7670_D(OV7670_D),
+        .OV7670_HREF(OV7670_HREF),
+        .OV7670_PCLK(OV7670_PCLK),
+        .OV7670_SIOC(OV7670_SIOC),
+        .OV7670_SIOD(OV7670_SIOD),
+        .OV7670_VSYNC(OV7670_VSYNC),
+        .OV7670_XCLK(OV7670_XCLK),
         .eth_mdio_mdc_mdc(eth_mdio_mdc_mdc),
         .eth_mdio_mdc_mdio_i(eth_mdio_mdc_mdio_i),
         .eth_mdio_mdc_mdio_o(eth_mdio_mdc_mdio_o),
@@ -118,10 +175,17 @@ module design_1_wrapper
         .eth_rmii_rxd(eth_rmii_rxd),
         .eth_rmii_tx_en(eth_rmii_tx_en),
         .eth_rmii_txd(eth_rmii_txd),
+        .pwdn(pwdn),
         .reset(reset),
+        .reset_1(reset_1),
         .sys_clock(sys_clock),
         .usb_uart_rxd(usb_uart_rxd),
-        .usb_uart_txd(usb_uart_txd));
+        .usb_uart_txd(usb_uart_txd),
+        .vga_blue(vga_blue),
+        .vga_green(vga_green),
+        .vga_hsync(vga_hsync),
+        .vga_red(vga_red),
+        .vga_vsync(vga_vsync));
   IOBUF eth_mdio_mdc_mdio_iobuf
        (.I(eth_mdio_mdc_mdio_o),
         .IO(eth_mdio_mdc_mdio_io),

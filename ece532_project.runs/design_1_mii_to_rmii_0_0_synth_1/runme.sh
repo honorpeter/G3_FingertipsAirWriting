@@ -6,21 +6,25 @@
 # Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 # 
 
+echo "This script was generated under a different operating system."
+echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executing this script"
+exit
+
 if [ -z "$PATH" ]; then
-  PATH=/cad1/Xilinx/SDK/2017.2/bin:/cad1/Xilinx/Vivado/2017.2/ids_lite/ISE/bin/lin64:/cad1/Xilinx/Vivado/2017.2/bin
+  PATH=C:/Xilinx/SDK/2017.2/bin;C:/Xilinx/Vivado/2017.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2017.2/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2017.2/bin
 else
-  PATH=/cad1/Xilinx/SDK/2017.2/bin:/cad1/Xilinx/Vivado/2017.2/ids_lite/ISE/bin/lin64:/cad1/Xilinx/Vivado/2017.2/bin:$PATH
+  PATH=C:/Xilinx/SDK/2017.2/bin;C:/Xilinx/Vivado/2017.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2017.2/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2017.2/bin:$PATH
 fi
 export PATH
 
 if [ -z "$LD_LIBRARY_PATH" ]; then
-  LD_LIBRARY_PATH=/cad1/Xilinx/Vivado/2017.2/ids_lite/ISE/lib/lin64
+  LD_LIBRARY_PATH=
 else
-  LD_LIBRARY_PATH=/cad1/Xilinx/Vivado/2017.2/ids_lite/ISE/lib/lin64:$LD_LIBRARY_PATH
+  LD_LIBRARY_PATH=:$LD_LIBRARY_PATH
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/nfs/ug/homes-2/c/chenyueq/ECE532/project_warmup/project_warmup.runs/design_1_mii_to_rmii_0_0_synth_1'
+HD_PWD='C:/Users/chenyueq/ece532_project/ece532_project.runs/design_1_mii_to_rmii_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
