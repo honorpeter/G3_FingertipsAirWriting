@@ -644,17 +644,10 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>const_1</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="xlconstant" spirit:vendor="xilinx.com" spirit:version="1.1"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_xlconstant_0_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>frame_average_buffer_0</spirit:instanceName>
         <spirit:componentRef spirit:library="user" spirit:name="frame_average_buffer" spirit:vendor="utoronto.ca" spirit:version="1.0"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_frame_average_buffer_0_1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_frame_average_buffer_0_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -952,26 +945,6 @@
         <spirit:internalPortReference spirit:componentRef="blk_mem_buffer_vga" spirit:portRef="addrb"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>const_1_dout</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="const_1" spirit:portRef="dout"/>
-        <spirit:internalPortReference spirit:componentRef="blk_mem_buffer_vga" spirit:portRef="wea"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>frame_average_buffer_0_avg_data_out</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="frame_average_buffer_0" spirit:portRef="avg_data_out"/>
-        <spirit:internalPortReference spirit:componentRef="blk_mem_buffer_vga" spirit:portRef="dina"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>frame_average_buffer_0_avg_addr_out</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="frame_average_buffer_0" spirit:portRef="avg_addr_out"/>
-        <spirit:internalPortReference spirit:componentRef="blk_mem_buffer_vga" spirit:portRef="addra"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>video_in_0_resend</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="video_in_0" spirit:portRef="resend"/>
-        <spirit:internalPortReference spirit:componentRef="frame_average_buffer_0" spirit:portRef="reset"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>video_in_0_capture_addr</spirit:name>
         <spirit:internalPortReference spirit:componentRef="video_in_0" spirit:portRef="capture_addr"/>
         <spirit:internalPortReference spirit:componentRef="frame_average_buffer_0" spirit:portRef="capture_address"/>
@@ -980,6 +953,26 @@
         <spirit:name>video_in_0_data_16</spirit:name>
         <spirit:internalPortReference spirit:componentRef="video_in_0" spirit:portRef="data_16"/>
         <spirit:internalPortReference spirit:componentRef="frame_average_buffer_0" spirit:portRef="capture_data"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>video_in_0_resend</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="video_in_0" spirit:portRef="resend"/>
+        <spirit:internalPortReference spirit:componentRef="frame_average_buffer_0" spirit:portRef="reset"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>frame_average_buffer_0_avg_addr_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="frame_average_buffer_0" spirit:portRef="avg_addr_out"/>
+        <spirit:internalPortReference spirit:componentRef="blk_mem_buffer_vga" spirit:portRef="addra"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>frame_average_buffer_0_avg_data_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="frame_average_buffer_0" spirit:portRef="avg_data_out"/>
+        <spirit:internalPortReference spirit:componentRef="blk_mem_buffer_vga" spirit:portRef="dina"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>frame_average_buffer_0_avg_data_valid</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="frame_average_buffer_0" spirit:portRef="avg_data_valid"/>
+        <spirit:internalPortReference spirit:componentRef="blk_mem_buffer_vga" spirit:portRef="wea"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>

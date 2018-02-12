@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Product Version: Vivado v2017.2 (64-bit)              -->
-<!-- SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017  -->
+<!-- SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017  -->
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 <!-- Jun 15 2017                                             -->
@@ -12,42 +12,42 @@
   <Processor Endianness="Little" InstPath="design_1_i/microblaze_0">
     <AddressSpace Name="design_1_i_microblaze_0.design_1_i_microblaze_0_local_memory_dlmb_bram_if_cntlr" Begin="0" End="32767">
       <BusBlock>
-        <BitLane MemType="RAMB36" Placement="X0Y10">
+        <BitLane MemType="RAMB36" Placement="X0Y12">
           <DataWidth MSB="7" LSB="4"/>
           <AddressRange Begin="0" End="8191"/>
           <Parity ON="false" NumBits="0"/>
         </BitLane>
-        <BitLane MemType="RAMB36" Placement="X1Y10">
+        <BitLane MemType="RAMB36" Placement="X1Y12">
           <DataWidth MSB="3" LSB="0"/>
           <AddressRange Begin="0" End="8191"/>
           <Parity ON="false" NumBits="0"/>
         </BitLane>
-        <BitLane MemType="RAMB36" Placement="X2Y11">
+        <BitLane MemType="RAMB36" Placement="X0Y14">
           <DataWidth MSB="15" LSB="12"/>
           <AddressRange Begin="0" End="8191"/>
           <Parity ON="false" NumBits="0"/>
         </BitLane>
-        <BitLane MemType="RAMB36" Placement="X2Y10">
+        <BitLane MemType="RAMB36" Placement="X1Y11">
           <DataWidth MSB="11" LSB="8"/>
           <AddressRange Begin="0" End="8191"/>
           <Parity ON="false" NumBits="0"/>
         </BitLane>
-        <BitLane MemType="RAMB36" Placement="X0Y12">
+        <BitLane MemType="RAMB36" Placement="X2Y13">
           <DataWidth MSB="23" LSB="20"/>
           <AddressRange Begin="0" End="8191"/>
           <Parity ON="false" NumBits="0"/>
         </BitLane>
-        <BitLane MemType="RAMB36" Placement="X2Y12">
+        <BitLane MemType="RAMB36" Placement="X0Y11">
           <DataWidth MSB="19" LSB="16"/>
           <AddressRange Begin="0" End="8191"/>
           <Parity ON="false" NumBits="0"/>
         </BitLane>
-        <BitLane MemType="RAMB36" Placement="X0Y11">
+        <BitLane MemType="RAMB36" Placement="X2Y14">
           <DataWidth MSB="31" LSB="28"/>
           <AddressRange Begin="0" End="8191"/>
           <Parity ON="false" NumBits="0"/>
         </BitLane>
-        <BitLane MemType="RAMB36" Placement="X1Y11">
+        <BitLane MemType="RAMB36" Placement="X0Y13">
           <DataWidth MSB="27" LSB="24"/>
           <AddressRange Begin="0" End="8191"/>
           <Parity ON="false" NumBits="0"/>
@@ -57,7 +57,7 @@
   </Processor>
   <MemoryArray InstPath="design_1_i/axi_ethernetlite_0/U0/XEMAC_I/TX_PONG_GEN.TX_PONG_I/xpm_mem_gen.xpm_memory_inst/xpm_memory_base_inst" MemoryPrimitive="block" MemoryConfiguration="asymmetrical">
     <MemoryLayout Name="design_1_i/axi_ethernetlite_0/U0/XEMAC_I/TX_PONG_GEN.TX_PONG_I/xpm_mem_gen.xpm_memory_inst/xpm_memory_base_inst" CoreMemory_Width="4" MemoryType="RAM_TDP">
-      <BRAM MemType="RAMB36" Placement="X0Y8">
+      <BRAM MemType="RAMB36" Placement="X1Y8">
         <DataWidth_PortA MSB="3" LSB="0"/>
         <AddressRange_PortA Begin="0" End="4095"/>
         <BitLayout_PortA pattern="p0_d4"/>
@@ -70,7 +70,7 @@
   </MemoryArray>
   <MemoryArray InstPath="design_1_i/axi_ethernetlite_0/U0/XEMAC_I/TX_PING/xpm_mem_gen.xpm_memory_inst/xpm_memory_base_inst" MemoryPrimitive="block" MemoryConfiguration="asymmetrical">
     <MemoryLayout Name="design_1_i/axi_ethernetlite_0/U0/XEMAC_I/TX_PING/xpm_mem_gen.xpm_memory_inst/xpm_memory_base_inst" CoreMemory_Width="4" MemoryType="RAM_TDP">
-      <BRAM MemType="RAMB36" Placement="X0Y9">
+      <BRAM MemType="RAMB36" Placement="X1Y9">
         <DataWidth_PortA MSB="3" LSB="0"/>
         <AddressRange_PortA Begin="0" End="4095"/>
         <BitLayout_PortA pattern="p0_d4"/>
@@ -83,7 +83,7 @@
   </MemoryArray>
   <MemoryArray InstPath="design_1_i/axi_ethernetlite_0/U0/XEMAC_I/RX_PONG_GEN.RX_PONG_I/xpm_mem_gen.xpm_memory_inst/xpm_memory_base_inst" MemoryPrimitive="block" MemoryConfiguration="asymmetrical">
     <MemoryLayout Name="design_1_i/axi_ethernetlite_0/U0/XEMAC_I/RX_PONG_GEN.RX_PONG_I/xpm_mem_gen.xpm_memory_inst/xpm_memory_base_inst" CoreMemory_Width="4" MemoryType="RAM_TDP">
-      <BRAM MemType="RAMB36" Placement="X0Y6">
+      <BRAM MemType="RAMB36" Placement="X1Y6">
         <DataWidth_PortA MSB="3" LSB="0"/>
         <AddressRange_PortA Begin="0" End="4095"/>
         <BitLayout_PortA pattern="p0_d4"/>
@@ -96,7 +96,7 @@
   </MemoryArray>
   <MemoryArray InstPath="design_1_i/axi_ethernetlite_0/U0/XEMAC_I/RX_PING/xpm_mem_gen.xpm_memory_inst/xpm_memory_base_inst" MemoryPrimitive="block" MemoryConfiguration="asymmetrical">
     <MemoryLayout Name="design_1_i/axi_ethernetlite_0/U0/XEMAC_I/RX_PING/xpm_mem_gen.xpm_memory_inst/xpm_memory_base_inst" CoreMemory_Width="4" MemoryType="RAM_TDP">
-      <BRAM MemType="RAMB36" Placement="X0Y7">
+      <BRAM MemType="RAMB36" Placement="X1Y7">
         <DataWidth_PortA MSB="3" LSB="0"/>
         <AddressRange_PortA Begin="0" End="4095"/>
         <BitLayout_PortA pattern="p0_d4"/>

@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-| Date         : Sun Feb 11 14:22:40 2018
-| Host         : ug241 running 64-bit Debian GNU/Linux 9.3 (stretch)
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Mon Feb 12 12:02:42 2018
+| Host         : BA3155WS07 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
 | Device       : 7a100tcsg324-1
@@ -177,7 +177,6 @@ Table of Contents
 +-----------------------------------+------+
 |              Ref Name             | Used |
 +-----------------------------------+------+
-| design_1_xlconstant_0_0           |    1 |
 | design_1_xbar_0                   |    1 |
 | design_1_video_in_0_0             |    1 |
 | design_1_vga444_0_0               |    1 |
@@ -192,7 +191,7 @@ Table of Contents
 | design_1_lmb_bram_0               |    1 |
 | design_1_ilmb_v10_0               |    1 |
 | design_1_ilmb_bram_if_cntlr_0     |    1 |
-| design_1_frame_average_buffer_0_1 |    1 |
+| design_1_frame_average_buffer_0_0 |    1 |
 | design_1_dlmb_v10_0               |    1 |
 | design_1_dlmb_bram_if_cntlr_0     |    1 |
 | design_1_clk_wiz_1_0              |    1 |

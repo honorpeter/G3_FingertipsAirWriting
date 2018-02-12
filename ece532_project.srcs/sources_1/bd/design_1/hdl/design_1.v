@@ -1,15 +1,15 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-//Date        : Sun Feb 11 14:18:13 2018
-//Host        : ug241 running 64-bit Debian GNU/Linux 9.3 (stretch)
+//Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+//Date        : Mon Feb 12 11:58:24 2018
+//Host        : BA3155WS07 running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target design_1.bd
 //Design      : design_1
 //Purpose     : IP block netlist
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=36,numReposBlks=24,numNonXlnxBlks=3,numHierBlks=12,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=9,da_board_cnt=8,da_mb_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=35,numReposBlks=23,numNonXlnxBlks=3,numHierBlks=12,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=9,da_board_cnt=8,da_mb_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (BTNC,
     DDR2_addr,
@@ -160,9 +160,9 @@ module design_1
   wire clk_wiz_1_clk_out2;
   wire clk_wiz_1_clk_out3;
   wire clk_wiz_1_clk_out4;
-  wire [0:0]const_1_dout;
   wire [16:0]frame_average_buffer_0_avg_addr_out;
   wire [15:0]frame_average_buffer_0_avg_data_out;
+  wire frame_average_buffer_0_avg_data_valid;
   wire mdm_1_debug_sys_rst;
   wire microblaze_0_Clk;
   wire [31:0]microblaze_0_M_AXI_DC_ARADDR;
@@ -588,7 +588,7 @@ module design_1
         .clkb(clk_wiz_1_clk_out4),
         .dina(frame_average_buffer_0_avg_data_out),
         .doutb(blk_mem_buffer_vga_doutb),
-        .wea(const_1_dout));
+        .wea(frame_average_buffer_0_avg_data_valid));
   design_1_clk_wiz_1_0 clk_wiz_1
        (.clk_in1(sys_clock_1),
         .clk_out1(microblaze_0_Clk),
@@ -596,11 +596,10 @@ module design_1
         .clk_out3(clk_wiz_1_clk_out3),
         .clk_out4(clk_wiz_1_clk_out4),
         .resetn(\^reset_1 ));
-  design_1_xlconstant_0_0 const_1
-       (.dout(const_1_dout));
-  design_1_frame_average_buffer_0_1 frame_average_buffer_0
+  design_1_frame_average_buffer_0_0 frame_average_buffer_0
        (.avg_addr_out(frame_average_buffer_0_avg_addr_out),
         .avg_data_out(frame_average_buffer_0_avg_data_out),
+        .avg_data_valid(frame_average_buffer_0_avg_data_valid),
         .capture_address(video_in_0_capture_addr),
         .capture_data(video_in_0_data_16),
         .pclk(OV7670_PCLK_1),

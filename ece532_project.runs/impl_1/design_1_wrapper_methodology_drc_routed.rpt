@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-| Date         : Sun Feb 11 14:25:26 2018
-| Host         : ug241 running 64-bit Debian GNU/Linux 9.3 (stretch)
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Mon Feb 12 12:06:23 2018
+| Host         : BA3155WS07 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -rpx design_1_wrapper_methodology_drc_routed.rpx
 | Design       : design_1_wrapper
 | Device       : xc7a100tcsg324-1
@@ -23,7 +23,7 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 192
+             Violations found: 193
 +-----------+----------+----------------------------------------------------+------------+
 | Rule      | Severity | Description                                        | Violations |
 +-----------+----------+----------------------------------------------------+------------+
@@ -33,7 +33,7 @@ Table of Contents
 | TIMING-6  | Warning  | No common primary clock between related clocks     | 2          |
 | TIMING-7  | Warning  | No common node between related clocks              | 2          |
 | TIMING-9  | Warning  | Unknown CDC Logic                                  | 1          |
-| TIMING-17 | Warning  | Non-clocked sequential cell                        | 137        |
+| TIMING-17 | Warning  | Non-clocked sequential cell                        | 138        |
 | TIMING-18 | Warning  | Missing input or output delay                      | 30         |
 | TIMING-38 | Warning  | Bus skew constraint applied on multiple clocks     | 2          |
 | XDCB-5    | Warning  | Runtime inefficient way to find pin objects        | 2          |
@@ -43,62 +43,62 @@ Table of Contents
 -----------------
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[0] in site SLICE_X42Y116 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[0] in site SLICE_X39Y120 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#2 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[10] in site SLICE_X42Y114 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[10] is not placed in the same (SLICE) site.
+The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[10] in site SLICE_X42Y122 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[10] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#3 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[11] in site SLICE_X40Y115 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[11] is not placed in the same (SLICE) site.
+The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[11] in site SLICE_X40Y120 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[11] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#4 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[1] in site SLICE_X41Y117 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[1] in site SLICE_X39Y122 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#5 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[2] in site SLICE_X43Y113 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[2] in site SLICE_X42Y120 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#6 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[3] in site SLICE_X39Y113 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[3] is not placed in the same (SLICE) site.
+The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[3] in site SLICE_X41Y123 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[3] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#7 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[4] in site SLICE_X38Y113 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[4] is not placed in the same (SLICE) site.
+The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[4] in site SLICE_X38Y120 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[4] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#8 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[5] in site SLICE_X45Y113 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[5] is not placed in the same (SLICE) site.
+The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[5] in site SLICE_X40Y122 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[5] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#9 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[6] in site SLICE_X40Y113 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[6] is not placed in the same (SLICE) site.
+The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[6] in site SLICE_X43Y122 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[6] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#10 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[7] in site SLICE_X44Y113 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[7] is not placed in the same (SLICE) site.
+The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[7] in site SLICE_X43Y120 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[7] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#11 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[8] in site SLICE_X41Y113 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[8] is not placed in the same (SLICE) site.
+The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[8] in site SLICE_X41Y121 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[8] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#12 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[9] in site SLICE_X41Y115 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[9] is not placed in the same (SLICE) site.
+The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[9] in site SLICE_X41Y118 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[9] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 TIMING-2#1 Warning
@@ -573,260 +573,265 @@ Related violations: <none>
 
 TIMING-17#86 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[0]/C is not reached by a timing clock
+The clock pin design_1_i/frame_average_buffer_0/inst/my_frame_average/frame_out_valid_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#87 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[10]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#88 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[11]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#89 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[12]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#90 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[13]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#91 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[14]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#92 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[15]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#93 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[16]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#94 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[1]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[16]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#95 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[2]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#96 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[3]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#97 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[4]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#98 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[5]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#99 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[6]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#100 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[7]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#101 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[8]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#102 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[9]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#103 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_reg[0]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#104 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_reg[10]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#105 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_reg[11]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#106 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_reg[12]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#107 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_reg[13]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#108 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_reg[14]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#109 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_reg[15]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#110 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_reg[16]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#111 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_reg[1]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_reg[16]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#112 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_reg[2]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#113 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_reg[3]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#114 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_reg[4]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#115 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_reg[5]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#116 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_reg[6]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#117 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_reg[7]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#118 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_reg[8]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#119 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/address_reg[9]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#120 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/d_latch_reg[12]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/address_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#121 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/d_latch_reg[13]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/d_latch_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#122 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/d_latch_reg[14]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/d_latch_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#123 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/d_latch_reg[15]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/d_latch_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#124 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/d_latch_reg[4]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/d_latch_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#125 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/d_latch_reg[5]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/d_latch_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#126 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/d_latch_reg[6]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/d_latch_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#127 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/d_latch_reg[7]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/d_latch_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#128 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/dout_reg[12]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/d_latch_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#129 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/dout_reg[13]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/dout_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#130 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/dout_reg[14]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/dout_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#131 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/dout_reg[15]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/dout_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#132 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/dout_reg[4]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/dout_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#133 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/dout_reg[5]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/dout_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#134 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/dout_reg[6]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/dout_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#135 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/dout_reg[7]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/dout_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#136 Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/video_in_0/inst/capture/wr_hold_reg[0]/C is not reached by a timing clock
+The clock pin design_1_i/video_in_0/inst/capture/dout_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#137 Warning
+Non-clocked sequential cell  
+The clock pin design_1_i/video_in_0/inst/capture/wr_hold_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#138 Warning
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/wr_hold_reg[1]/C is not reached by a timing clock
 Related violations: <none>
@@ -994,13 +999,13 @@ Related violations: <none>
 XDCB-5#1 Warning
 Runtime inefficient way to find pin objects  
 The option '-through : [get_pins -hier -filter {NAME =~ */u_iodelay_ctrl/sys_rst}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '22' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
-Current XDC: /nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc (Line: 330)
+Current XDC: c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc (Line: 330)
 Related violations: <none>
 
 XDCB-5#2 Warning
 Runtime inefficient way to find pin objects  
 The option '-to : [get_pins -hierarchical -filter {NAME =~*FIFO*/*rstblk*/*PRE}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '29' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
-Current XDC: /nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/design_1_axi_ethernetlite_0_0.xdc (Line: 55)
+Current XDC: c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/design_1_axi_ethernetlite_0_0.xdc (Line: 55)
 Related violations: <none>
 
 

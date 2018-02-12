@@ -4,43 +4,42 @@
 
 
 ****** Vivado v2017.2 (64-bit)
-  **** SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
   **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 
 source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ip_repository'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad1/Xilinx/Vivado/2017.2/data/ip'.
-WARNING: [IP_Flow 19-3664] IP 'design_1_mig_7series_0_0' generated file not found '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/stats.txt'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_blk_mem_gen_0_0' generated file not found '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0/stats.txt'. Please regenerate to continue.
-add_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1201.742 ; gain = 95.977 ; free physical = 2904 ; free virtual = 34845
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/ece532_project/ip_repository'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'design_1_mig_7series_0_0' generated file not found 'c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_blk_mem_gen_0_0' generated file not found 'c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0/stats.txt'. Please regenerate to continue.
+add_files: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 388.215 ; gain = 106.359
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
-INFO: [Project 1-454] Reading design checkpoint '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/design_1_axi_ethernetlite_0_0.dcp' for cell 'design_1_i/axi_ethernetlite_0'
-INFO: [Project 1-454] Reading design checkpoint '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0.dcp' for cell 'design_1_i/axi_smc'
-INFO: [Project 1-454] Reading design checkpoint '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0.dcp' for cell 'design_1_i/axi_timer_0'
-INFO: [Project 1-454] Reading design checkpoint '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0.dcp' for cell 'design_1_i/axi_uartlite_0'
-INFO: [Project 1-454] Reading design checkpoint '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0.dcp' for cell 'design_1_i/blk_mem_buffer_vga'
-INFO: [Project 1-454] Reading design checkpoint '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.dcp' for cell 'design_1_i/clk_wiz_1'
-INFO: [Project 1-454] Reading design checkpoint '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/design_1_xlconstant_0_0.dcp' for cell 'design_1_i/const_1'
-INFO: [Project 1-454] Reading design checkpoint '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_frame_average_buffer_0_1/design_1_frame_average_buffer_0_1.dcp' for cell 'design_1_i/frame_average_buffer_0'
-INFO: [Project 1-454] Reading design checkpoint '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.dcp' for cell 'design_1_i/mdm_1'
-INFO: [Project 1-454] Reading design checkpoint '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_0/design_1_microblaze_0_0.dcp' for cell 'design_1_i/microblaze_0'
-INFO: [Project 1-454] Reading design checkpoint '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/design_1_microblaze_0_axi_intc_0.dcp' for cell 'design_1_i/microblaze_0_axi_intc'
-INFO: [Project 1-454] Reading design checkpoint '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_xlconcat_0/design_1_microblaze_0_xlconcat_0.dcp' for cell 'design_1_i/microblaze_0_xlconcat'
-INFO: [Project 1-454] Reading design checkpoint '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0.dcp' for cell 'design_1_i/mig_7series_0'
-INFO: [Project 1-454] Reading design checkpoint '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_mii_to_rmii_0_0/design_1_mii_to_rmii_0_0.dcp' for cell 'design_1_i/mii_to_rmii_0'
-INFO: [Project 1-454] Reading design checkpoint '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0.dcp' for cell 'design_1_i/rst_clk_wiz_1_100M'
-INFO: [Project 1-454] Reading design checkpoint '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_rst_mig_7series_0_81M_0/design_1_rst_mig_7series_0_81M_0.dcp' for cell 'design_1_i/rst_mig_7series_0_81M'
-INFO: [Project 1-454] Reading design checkpoint '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_vga444_0_0/design_1_vga444_0_0.dcp' for cell 'design_1_i/vga444_0'
-INFO: [Project 1-454] Reading design checkpoint '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_video_in_0_0/design_1_video_in_0_0.dcp' for cell 'design_1_i/video_in_0'
-INFO: [Project 1-454] Reading design checkpoint '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.dcp' for cell 'design_1_i/microblaze_0_axi_periph/xbar'
-INFO: [Project 1-454] Reading design checkpoint '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0.dcp' for cell 'design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
-INFO: [Project 1-454] Reading design checkpoint '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0.dcp' for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10'
-INFO: [Project 1-454] Reading design checkpoint '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0.dcp' for cell 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
-INFO: [Project 1-454] Reading design checkpoint '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0.dcp' for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10'
-INFO: [Project 1-454] Reading design checkpoint '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0.dcp' for cell 'design_1_i/microblaze_0_local_memory/lmb_bram'
+INFO: [Project 1-454] Reading design checkpoint 'c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/design_1_axi_ethernetlite_0_0.dcp' for cell 'design_1_i/axi_ethernetlite_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0.dcp' for cell 'design_1_i/axi_smc'
+INFO: [Project 1-454] Reading design checkpoint 'c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0.dcp' for cell 'design_1_i/axi_timer_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0.dcp' for cell 'design_1_i/axi_uartlite_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0.dcp' for cell 'design_1_i/blk_mem_buffer_vga'
+INFO: [Project 1-454] Reading design checkpoint 'c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.dcp' for cell 'design_1_i/clk_wiz_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_frame_average_buffer_0_0_1/design_1_frame_average_buffer_0_0.dcp' for cell 'design_1_i/frame_average_buffer_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.dcp' for cell 'design_1_i/mdm_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_0/design_1_microblaze_0_0.dcp' for cell 'design_1_i/microblaze_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/design_1_microblaze_0_axi_intc_0.dcp' for cell 'design_1_i/microblaze_0_axi_intc'
+INFO: [Project 1-454] Reading design checkpoint 'c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_xlconcat_0/design_1_microblaze_0_xlconcat_0.dcp' for cell 'design_1_i/microblaze_0_xlconcat'
+INFO: [Project 1-454] Reading design checkpoint 'c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0.dcp' for cell 'design_1_i/mig_7series_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_mii_to_rmii_0_0/design_1_mii_to_rmii_0_0.dcp' for cell 'design_1_i/mii_to_rmii_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0.dcp' for cell 'design_1_i/rst_clk_wiz_1_100M'
+INFO: [Project 1-454] Reading design checkpoint 'c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_rst_mig_7series_0_81M_0/design_1_rst_mig_7series_0_81M_0.dcp' for cell 'design_1_i/rst_mig_7series_0_81M'
+INFO: [Project 1-454] Reading design checkpoint 'c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_vga444_0_0/design_1_vga444_0_0.dcp' for cell 'design_1_i/vga444_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_video_in_0_0/design_1_video_in_0_0.dcp' for cell 'design_1_i/video_in_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.dcp' for cell 'design_1_i/microblaze_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0.dcp' for cell 'design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+INFO: [Project 1-454] Reading design checkpoint 'c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0.dcp' for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10'
+INFO: [Project 1-454] Reading design checkpoint 'c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0.dcp' for cell 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+INFO: [Project 1-454] Reading design checkpoint 'c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0.dcp' for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10'
+INFO: [Project 1-454] Reading design checkpoint 'c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0.dcp' for cell 'design_1_i/microblaze_0_local_memory/lmb_bram'
 INFO: [Netlist 29-17] Analyzing 999 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2017.2
@@ -50,110 +49,110 @@ WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a t
 Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
 WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/axi_ethernetlite_0/U0/NO_LOOPBACK_GEN.INCLUDE_BUFG_GEN.TX_IBUF_INST 
 Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
-WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'design_1_i/axi_ethernetlite_0/phy_rx_clk' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.runs/impl_1/.Xil/Vivado-3874-ug241/dcp25/design_1_axi_ethernetlite_0_0.edf:48488]
-WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'design_1_i/axi_ethernetlite_0/phy_tx_clk' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.runs/impl_1/.Xil/Vivado-3874-ug241/dcp25/design_1_axi_ethernetlite_0_0.edf:48500]
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_0/design_1_microblaze_0_0.xdc] for cell 'design_1_i/microblaze_0/U0'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_0/design_1_microblaze_0_0.xdc] for cell 'design_1_i/microblaze_0/U0'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/design_1_microblaze_0_axi_intc_0.xdc] for cell 'design_1_i/microblaze_0_axi_intc/U0'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/design_1_microblaze_0_axi_intc_0.xdc] for cell 'design_1_i/microblaze_0_axi_intc/U0'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc] for cell 'design_1_i/mdm_1/U0'
-INFO: [Timing 38-35] Done setting XDC timing constraints. [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc:50]
-get_clocks: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2265.828 ; gain = 555.449 ; free physical = 2225 ; free virtual = 34241
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc] for cell 'design_1_i/mdm_1/U0'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_board.xdc] for cell 'design_1_i/clk_wiz_1/inst'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_board.xdc] for cell 'design_1_i/clk_wiz_1/inst'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.xdc] for cell 'design_1_i/clk_wiz_1/inst'
-INFO: [Timing 38-2] Deriving generated clocks [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.xdc:57]
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.xdc] for cell 'design_1_i/clk_wiz_1/inst'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0_board.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M/U0'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0_board.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M/U0'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M/U0'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M/U0'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc] for cell 'design_1_i/mig_7series_0'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc] for cell 'design_1_i/mig_7series_0'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0_board.xdc] for cell 'design_1_i/mig_7series_0'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0_board.xdc] for cell 'design_1_i/mig_7series_0'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_mii_to_rmii_0_0/design_1_mii_to_rmii_0_0_board.xdc] for cell 'design_1_i/mii_to_rmii_0/U0'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_mii_to_rmii_0_0/design_1_mii_to_rmii_0_0_board.xdc] for cell 'design_1_i/mii_to_rmii_0/U0'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0_board.xdc] for cell 'design_1_i/axi_uartlite_0/U0'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0_board.xdc] for cell 'design_1_i/axi_uartlite_0/U0'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0.xdc] for cell 'design_1_i/axi_uartlite_0/U0'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0.xdc] for cell 'design_1_i/axi_uartlite_0/U0'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/design_1_axi_ethernetlite_0_0_board.xdc] for cell 'design_1_i/axi_ethernetlite_0/U0'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/design_1_axi_ethernetlite_0_0_board.xdc] for cell 'design_1_i/axi_ethernetlite_0/U0'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/design_1_axi_ethernetlite_0_0.xdc] for cell 'design_1_i/axi_ethernetlite_0/U0'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/design_1_axi_ethernetlite_0_0.xdc] for cell 'design_1_i/axi_ethernetlite_0/U0'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0.xdc] for cell 'design_1_i/axi_timer_0/U0'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0.xdc] for cell 'design_1_i/axi_timer_0/U0'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr0_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr0/U0'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr0_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr0/U0'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr0_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr0/U0'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr0_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr0/U0'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/bd_afc3_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/bd_afc3_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/bd_afc3_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/bd_afc3_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/bd_afc3_psr_aclk1_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk1/U0'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/bd_afc3_psr_aclk1_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk1/U0'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/bd_afc3_psr_aclk1_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk1/U0'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/bd_afc3_psr_aclk1_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk1/U0'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_rst_mig_7series_0_81M_0/design_1_rst_mig_7series_0_81M_0_board.xdc] for cell 'design_1_i/rst_mig_7series_0_81M/U0'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_rst_mig_7series_0_81M_0/design_1_rst_mig_7series_0_81M_0_board.xdc] for cell 'design_1_i/rst_mig_7series_0_81M/U0'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_rst_mig_7series_0_81M_0/design_1_rst_mig_7series_0_81M_0.xdc] for cell 'design_1_i/rst_mig_7series_0_81M/U0'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_rst_mig_7series_0_81M_0/design_1_rst_mig_7series_0_81M_0.xdc] for cell 'design_1_i/rst_mig_7series_0_81M/U0'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10/U0'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10/U0'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10/U0'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10/U0'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/constrs_1/new/eth_ref_clk.xdc]
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/constrs_1/new/eth_ref_clk.xdc]
-INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0.dcp'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/design_1_microblaze_0_axi_intc_0_clocks.xdc] for cell 'design_1_i/microblaze_0_axi_intc/U0'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/design_1_microblaze_0_axi_intc_0_clocks.xdc] for cell 'design_1_i/microblaze_0_axi_intc/U0'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/design_1_axi_ethernetlite_0_0_clocks.xdc] for cell 'design_1_i/axi_ethernetlite_0/U0'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/design_1_axi_ethernetlite_0_0_clocks.xdc] for cell 'design_1_i/axi_ethernetlite_0/U0'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_25/bd_afc3_m00arn_0/bd_afc3_m00arn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_ar_node/inst'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_25/bd_afc3_m00arn_0/bd_afc3_m00arn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_ar_node/inst'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_26/bd_afc3_m00rn_0/bd_afc3_m00rn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_r_node/inst'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_26/bd_afc3_m00rn_0/bd_afc3_m00rn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_r_node/inst'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_27/bd_afc3_m00awn_0/bd_afc3_m00awn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_aw_node/inst'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_27/bd_afc3_m00awn_0/bd_afc3_m00awn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_aw_node/inst'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_28/bd_afc3_m00wn_0/bd_afc3_m00wn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_28/bd_afc3_m00wn_0/bd_afc3_m00wn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst'
-Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_29/bd_afc3_m00bn_0/bd_afc3_m00bn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst'
-Finished Parsing XDC File [/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_29/bd_afc3_m00bn_0/bd_afc3_m00bn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'design_1_i/axi_ethernetlite_0/phy_rx_clk' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [C:/ece532_project/ece532_project.runs/impl_1/.Xil/Vivado-4668-BA3155WS07/dcp25/design_1_axi_ethernetlite_0_0.edf:48488]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'design_1_i/axi_ethernetlite_0/phy_tx_clk' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [C:/ece532_project/ece532_project.runs/impl_1/.Xil/Vivado-4668-BA3155WS07/dcp25/design_1_axi_ethernetlite_0_0.edf:48500]
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_0/design_1_microblaze_0_0.xdc] for cell 'design_1_i/microblaze_0/U0'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_0/design_1_microblaze_0_0.xdc] for cell 'design_1_i/microblaze_0/U0'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/design_1_microblaze_0_axi_intc_0.xdc] for cell 'design_1_i/microblaze_0_axi_intc/U0'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/design_1_microblaze_0_axi_intc_0.xdc] for cell 'design_1_i/microblaze_0_axi_intc/U0'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc] for cell 'design_1_i/mdm_1/U0'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc:50]
+get_clocks: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1343.141 ; gain = 534.906
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc] for cell 'design_1_i/mdm_1/U0'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_board.xdc] for cell 'design_1_i/clk_wiz_1/inst'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_board.xdc] for cell 'design_1_i/clk_wiz_1/inst'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.xdc] for cell 'design_1_i/clk_wiz_1/inst'
+INFO: [Timing 38-2] Deriving generated clocks [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.xdc:57]
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.xdc] for cell 'design_1_i/clk_wiz_1/inst'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0_board.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M/U0'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0_board.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M/U0'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M/U0'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M/U0'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc] for cell 'design_1_i/mig_7series_0'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc] for cell 'design_1_i/mig_7series_0'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0_board.xdc] for cell 'design_1_i/mig_7series_0'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0_board.xdc] for cell 'design_1_i/mig_7series_0'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_mii_to_rmii_0_0/design_1_mii_to_rmii_0_0_board.xdc] for cell 'design_1_i/mii_to_rmii_0/U0'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_mii_to_rmii_0_0/design_1_mii_to_rmii_0_0_board.xdc] for cell 'design_1_i/mii_to_rmii_0/U0'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0_board.xdc] for cell 'design_1_i/axi_uartlite_0/U0'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0_board.xdc] for cell 'design_1_i/axi_uartlite_0/U0'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0.xdc] for cell 'design_1_i/axi_uartlite_0/U0'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0.xdc] for cell 'design_1_i/axi_uartlite_0/U0'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/design_1_axi_ethernetlite_0_0_board.xdc] for cell 'design_1_i/axi_ethernetlite_0/U0'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/design_1_axi_ethernetlite_0_0_board.xdc] for cell 'design_1_i/axi_ethernetlite_0/U0'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/design_1_axi_ethernetlite_0_0.xdc] for cell 'design_1_i/axi_ethernetlite_0/U0'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/design_1_axi_ethernetlite_0_0.xdc] for cell 'design_1_i/axi_ethernetlite_0/U0'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0.xdc] for cell 'design_1_i/axi_timer_0/U0'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0.xdc] for cell 'design_1_i/axi_timer_0/U0'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr0_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr0_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr0/U0'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr0_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr0_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr0/U0'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/bd_afc3_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/bd_afc3_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/bd_afc3_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/bd_afc3_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/bd_afc3_psr_aclk1_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/bd_afc3_psr_aclk1_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/bd_afc3_psr_aclk1_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/bd_afc3_psr_aclk1_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_rst_mig_7series_0_81M_0/design_1_rst_mig_7series_0_81M_0_board.xdc] for cell 'design_1_i/rst_mig_7series_0_81M/U0'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_rst_mig_7series_0_81M_0/design_1_rst_mig_7series_0_81M_0_board.xdc] for cell 'design_1_i/rst_mig_7series_0_81M/U0'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_rst_mig_7series_0_81M_0/design_1_rst_mig_7series_0_81M_0.xdc] for cell 'design_1_i/rst_mig_7series_0_81M/U0'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_rst_mig_7series_0_81M_0/design_1_rst_mig_7series_0_81M_0.xdc] for cell 'design_1_i/rst_mig_7series_0_81M/U0'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10/U0'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10/U0'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10/U0'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10/U0'
+Parsing XDC File [C:/ece532_project/ece532_project.srcs/constrs_1/new/eth_ref_clk.xdc]
+Finished Parsing XDC File [C:/ece532_project/ece532_project.srcs/constrs_1/new/eth_ref_clk.xdc]
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0.dcp'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/design_1_microblaze_0_axi_intc_0_clocks.xdc] for cell 'design_1_i/microblaze_0_axi_intc/U0'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/design_1_microblaze_0_axi_intc_0_clocks.xdc] for cell 'design_1_i/microblaze_0_axi_intc/U0'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/design_1_axi_ethernetlite_0_0_clocks.xdc] for cell 'design_1_i/axi_ethernetlite_0/U0'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/design_1_axi_ethernetlite_0_0_clocks.xdc] for cell 'design_1_i/axi_ethernetlite_0/U0'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_25/bd_afc3_m00arn_0/bd_afc3_m00arn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_ar_node/inst'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_25/bd_afc3_m00arn_0/bd_afc3_m00arn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_ar_node/inst'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_26/bd_afc3_m00rn_0/bd_afc3_m00rn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_r_node/inst'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_26/bd_afc3_m00rn_0/bd_afc3_m00rn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_r_node/inst'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_27/bd_afc3_m00awn_0/bd_afc3_m00awn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_aw_node/inst'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_27/bd_afc3_m00awn_0/bd_afc3_m00awn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_aw_node/inst'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_28/bd_afc3_m00wn_0/bd_afc3_m00wn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_28/bd_afc3_m00wn_0/bd_afc3_m00wn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst'
+Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_29/bd_afc3_m00bn_0/bd_afc3_m00bn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst'
+Finished Parsing XDC File [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_29/bd_afc3_m00bn_0/bd_afc3_m00bn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
 INFO: [Opt 31-141] Inserted 1 OBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 Generating merged BMM file for the design top 'design_1_wrapper'...
-INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: /nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_0/data/mb_bootloop_le.elf 
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_0/data/mb_bootloop_le.elf 
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 564 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 1 instances
@@ -166,7 +165,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 383 instances
   RAM32X1D => RAM32X1D (RAMD32, RAMD32): 35 instances
 
-link_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 2302.512 ; gain = 1100.770 ; free physical = 2274 ; free virtual = 34222
+link_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 1382.344 ; gain = 994.129
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t-csg324'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t-csg324'
@@ -174,12 +173,12 @@ Running DRC as a precondition to command opt_design
 
 Starting DRC Task
 Command: report_drc (run_mandatory_drcs) for: opt_checks
-INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [DRC 23-27] Running DRC with 2 threads
 report_drc (run_mandatory_drcs) completed successfully
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.59 . Memory (MB): peak = 2366.531 ; gain = 64.020 ; free physical = 2270 ; free virtual = 34218
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.912 . Memory (MB): peak = 1382.344 ; gain = 0.000
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Starting Logic Optimization Task
@@ -187,44 +186,44 @@ Starting Logic Optimization Task
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 25 inverter(s) to 122 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 1c762db12
+Phase 1 Retarget | Checksum: 20056be9f
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2366.531 ; gain = 0.000 ; free physical = 2271 ; free virtual = 34219
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1382.344 ; gain = 0.000
 INFO: [Opt 31-389] Phase Retarget created 2 cells and removed 242 cells
 
 Phase 2 Constant propagation
-INFO: [Opt 31-138] Pushed 6 inverter(s) to 32 load pin(s).
-Phase 2 Constant propagation | Checksum: 1747a8db6
+INFO: [Opt 31-138] Pushed 5 inverter(s) to 18 load pin(s).
+Phase 2 Constant propagation | Checksum: 1cbc35ef0
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2366.531 ; gain = 0.000 ; free physical = 2262 ; free virtual = 34211
-INFO: [Opt 31-389] Phase Constant propagation created 412 cells and removed 1338 cells
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1382.344 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 390 cells and removed 1315 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 20f49dd9d
+Phase 3 Sweep | Checksum: 25b759767
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2366.531 ; gain = 0.000 ; free physical = 2263 ; free virtual = 34211
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1382.344 ; gain = 0.000
 INFO: [Opt 31-389] Phase Sweep created 1 cells and removed 2311 cells
 
 Phase 4 BUFG optimization
-INFO: [Opt 31-194] Inserted BUFG OV7670_PCLK_IBUF_BUFG_inst to drive 136 load(s) on clock net OV7670_PCLK_IBUF_BUFG
+INFO: [Opt 31-194] Inserted BUFG OV7670_PCLK_IBUF_BUFG_inst to drive 137 load(s) on clock net OV7670_PCLK_IBUF_BUFG
 INFO: [Opt 31-193] Inserted 1 BUFG(s) on clock nets
-Phase 4 BUFG optimization | Checksum: 252e77850
+Phase 4 BUFG optimization | Checksum: 19c362599
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2366.531 ; gain = 0.000 ; free physical = 2262 ; free virtual = 34211
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1382.344 ; gain = 0.000
 INFO: [Opt 31-389] Phase BUFG optimization created 1 cells and removed 0 cells
 
 Phase 5 Shift Register Optimization
-Phase 5 Shift Register Optimization | Checksum: 252e77850
+Phase 5 Shift Register Optimization | Checksum: 19c362599
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2366.531 ; gain = 0.000 ; free physical = 2262 ; free virtual = 34211
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1382.344 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2366.531 ; gain = 0.000 ; free physical = 2262 ; free virtual = 34211
-Ending Logic Optimization Task | Checksum: 252e77850
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 1382.344 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 19c362599
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2366.531 ; gain = 0.000 ; free physical = 2262 ; free virtual = 34211
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1382.344 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -244,24 +243,24 @@ INFO: [Pwropt 34-201] Structural ODC has moved 6 WE to EN ports
 Number of BRAM Ports augmented: 76 newly gated: 56 Total Ports: 136
 Number of Flops added for Enable Generation: 2
 
-Ending PowerOpt Patch Enables Task | Checksum: 1d0d6078c
+Ending PowerOpt Patch Enables Task | Checksum: 1d92f6d36
 
-Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2199 ; free virtual = 34147
-Ending Power Optimization Task | Checksum: 1d0d6078c
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.208 . Memory (MB): peak = 1909.934 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 1d92f6d36
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 2952.930 ; gain = 586.398 ; free physical = 2218 ; free virtual = 34166
-60 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:12 . Memory (MB): peak = 1909.934 ; gain = 527.590
+59 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:15 . Memory (MB): peak = 2952.930 ; gain = 650.418 ; free physical = 2218 ; free virtual = 34166
+opt_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:24 . Memory (MB): peak = 1909.934 ; gain = 527.590
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2215 ; free virtual = 34167
-INFO: [Common 17-1381] The checkpoint '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.runs/impl_1/design_1_wrapper_opt.dcp' has been generated.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.073 . Memory (MB): peak = 1909.934 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/ece532_project/ece532_project.runs/impl_1/design_1_wrapper_opt.dcp' has been generated.
 Command: report_drc -file design_1_wrapper_drc_opted.rpt
-INFO: [DRC 23-27] Running DRC with 8 threads
-INFO: [Coretcl 2-168] The results of DRC are in file /nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.runs/impl_1/design_1_wrapper_drc_opted.rpt.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/ece532_project/ece532_project.runs/impl_1/design_1_wrapper_drc_opted.rpt.
 report_drc completed successfully
 INFO: [Chipscope 16-241] No debug cores found in the current design.
 Before running the implement_debug_core command, either use the Set Up Debug wizard (GUI mode)
@@ -270,13 +269,13 @@ Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t-csg324'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t-csg324'
 Command: report_drc (run_mandatory_drcs) for: incr_eco_checks
-INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [DRC 23-27] Running DRC with 2 threads
 report_drc (run_mandatory_drcs) completed successfully
 INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 Running DRC as a precondition to command place_design
 Command: report_drc (run_mandatory_drcs) for: placer_checks
-INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [DRC 23-27] Running DRC with 2 threads
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/axi_ethernetlite_0/U0/XEMAC_I/RX_PING/xpm_mem_gen.xpm_memory_inst/xpm_memory_base_inst/gen_wr_b.gen_word_wide.mem_reg has an input control pin design_1_i/axi_ethernetlite_0/U0/XEMAC_I/RX_PING/xpm_mem_gen.xpm_memory_inst/xpm_memory_base_inst/gen_wr_b.gen_word_wide.mem_reg/ENARDEN (net: design_1_i/axi_ethernetlite_0/U0/XEMAC_I/RX_PING/xpm_mem_gen.xpm_memory_inst/xpm_memory_base_inst/gen_wr_b.gen_word_wide.mem_reg_i_3_n_0) which is driven by a register (design_1_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grhf.rhf/gv.ram_valid_d1_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/axi_ethernetlite_0/U0/XEMAC_I/RX_PONG_GEN.RX_PONG_I/xpm_mem_gen.xpm_memory_inst/xpm_memory_base_inst/gen_wr_b.gen_word_wide.mem_reg has an input control pin design_1_i/axi_ethernetlite_0/U0/XEMAC_I/RX_PONG_GEN.RX_PONG_I/xpm_mem_gen.xpm_memory_inst/xpm_memory_base_inst/gen_wr_b.gen_word_wide.mem_reg/ENARDEN (net: design_1_i/axi_ethernetlite_0/U0/XEMAC_I/RX_PONG_GEN.RX_PONG_I/xpm_mem_gen.xpm_memory_inst/xpm_memory_base_inst/gen_wr_b.gen_word_wide.mem_reg_i_3_n_0) which is driven by a register (design_1_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grhf.rhf/gv.ram_valid_d1_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 report_drc (run_mandatory_drcs) completed successfully
@@ -284,18 +283,18 @@ INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 2 Warnings
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 
 Starting Placer Task
-INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2205 ; free virtual = 34161
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 18f30e43b
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.100 . Memory (MB): peak = 1909.934 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 107ec5949
 
-Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2205 ; free virtual = 34161
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.108 . Memory (MB): peak = 1909.934 ; gain = 0.000
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2218 ; free virtual = 34173
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 CRITICAL WARNING: [Place 30-73] Invalid constraint on register 'design_1_i/axi_ethernetlite_0/U0/IOFFS_GEN2.DVD_FF'. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
@@ -315,82 +314,82 @@ WARNING: [Place 30-574] Poor placement for routing between an IO pin and BUFG. T
 	OV7670_PCLK_IBUF_inst (IBUF.O) is locked to IOB_X0Y121
 	OV7670_PCLK_IBUF_BUFG_inst (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y2
 Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 108cfb3a
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 9c20c57d
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2188 ; free virtual = 34143
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 14ad16cd2
+Phase 1.3 Build Placer Netlist Model | Checksum: b2cf0fa3
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:08 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2147 ; free virtual = 34103
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 14ad16cd2
+Phase 1.4 Constrain Clocks/Macros | Checksum: b2cf0fa3
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:08 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2148 ; free virtual = 34103
-Phase 1 Placer Initialization | Checksum: 14ad16cd2
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 1909.934 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: b2cf0fa3
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:08 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2148 ; free virtual = 34103
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 2 Global Placement
-Phase 2 Global Placement | Checksum: 1eb415ada
+Phase 2 Global Placement | Checksum: 22798ade7
 
-Time (s): cpu = 00:00:45 ; elapsed = 00:00:19 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2121 ; free virtual = 34076
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:29 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 1eb415ada
+Phase 3.1 Commit Multi Column Macros | Checksum: 22798ade7
 
-Time (s): cpu = 00:00:45 ; elapsed = 00:00:20 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2121 ; free virtual = 34077
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:29 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1e839d5a7
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1c1c794ac
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:22 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2115 ; free virtual = 34070
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:32 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 179f0f80e
+Phase 3.3 Area Swap Optimization | Checksum: 12b357362
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:22 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2115 ; free virtual = 34071
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:32 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 213551898
+Phase 3.4 Pipeline Register Optimization | Checksum: 166105c32
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:22 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2115 ; free virtual = 34071
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:32 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 3.5 Timing Path Optimizer
-Phase 3.5 Timing Path Optimizer | Checksum: 1dddf2d1d
+Phase 3.5 Timing Path Optimizer | Checksum: fa243b1e
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:23 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2116 ; free virtual = 34071
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:33 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 3.6 Fast Optimization
-Phase 3.6 Fast Optimization | Checksum: 1dddf2d1d
+Phase 3.6 Fast Optimization | Checksum: fa243b1e
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:23 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2118 ; free virtual = 34073
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:34 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 3.7 Small Shape Detail Placement
-Phase 3.7 Small Shape Detail Placement | Checksum: 1dc2d051d
+Phase 3.7 Small Shape Detail Placement | Checksum: 1996eaecc
 
-Time (s): cpu = 00:00:59 ; elapsed = 00:00:27 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2104 ; free virtual = 34059
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:40 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 3.8 Re-assign LUT pins
-Phase 3.8 Re-assign LUT pins | Checksum: 2703b7a84
+Phase 3.8 Re-assign LUT pins | Checksum: 213c35ed4
 
-Time (s): cpu = 00:01:00 ; elapsed = 00:00:28 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2105 ; free virtual = 34060
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:41 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 3.9 Pipeline Register Optimization
-Phase 3.9 Pipeline Register Optimization | Checksum: 2703b7a84
+Phase 3.9 Pipeline Register Optimization | Checksum: c699cc2f
 
-Time (s): cpu = 00:01:00 ; elapsed = 00:00:28 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2105 ; free virtual = 34060
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:41 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 3.10 Fast Optimization
-Phase 3.10 Fast Optimization | Checksum: 2703b7a84
+Phase 3.10 Fast Optimization | Checksum: c699cc2f
 
-Time (s): cpu = 00:01:04 ; elapsed = 00:00:29 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2111 ; free virtual = 34066
-Phase 3 Detail Placement | Checksum: 2703b7a84
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:42 . Memory (MB): peak = 1909.934 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: c699cc2f
 
-Time (s): cpu = 00:01:04 ; elapsed = 00:00:29 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2111 ; free virtual = 34066
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:42 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -398,61 +397,61 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 1f2e1f061
+Post Placement Optimization Initialization | Checksum: 1d72cc2f4
 
 Phase 4.1.1.1 BUFG Insertion
-INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
 INFO: [Place 46-41] BUFG insertion identified 0 candidate nets, 0 success, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
-Phase 4.1.1.1 BUFG Insertion | Checksum: 1f2e1f061
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1d72cc2f4
 
-Time (s): cpu = 00:01:13 ; elapsed = 00:00:32 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2117 ; free virtual = 34072
-INFO: [Place 30-746] Post Placement Timing Summary WNS=1.124. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 197459b0b
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:47 . Memory (MB): peak = 1909.934 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=1.311. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 11f32c221
 
-Time (s): cpu = 00:01:13 ; elapsed = 00:00:32 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2117 ; free virtual = 34072
-Phase 4.1 Post Commit Optimization | Checksum: 197459b0b
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:48 . Memory (MB): peak = 1909.934 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 11f32c221
 
-Time (s): cpu = 00:01:13 ; elapsed = 00:00:32 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2117 ; free virtual = 34072
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:48 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 197459b0b
+Phase 4.2 Post Placement Cleanup | Checksum: 11f32c221
 
-Time (s): cpu = 00:01:13 ; elapsed = 00:00:33 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2118 ; free virtual = 34073
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:48 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 197459b0b
+Phase 4.3 Placer Reporting | Checksum: 11f32c221
 
-Time (s): cpu = 00:01:14 ; elapsed = 00:00:33 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2119 ; free virtual = 34074
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:48 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Phase 4.4 Final Placement Cleanup | Checksum: 19037b58f
+Phase 4.4 Final Placement Cleanup | Checksum: d66c14aa
 
-Time (s): cpu = 00:01:14 ; elapsed = 00:00:33 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2119 ; free virtual = 34074
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 19037b58f
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:48 . Memory (MB): peak = 1909.934 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: d66c14aa
 
-Time (s): cpu = 00:01:14 ; elapsed = 00:00:33 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2119 ; free virtual = 34074
-Ending Placer Task | Checksum: 13491b288
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:48 . Memory (MB): peak = 1909.934 ; gain = 0.000
+Ending Placer Task | Checksum: a7518038
 
-Time (s): cpu = 00:01:14 ; elapsed = 00:00:33 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2144 ; free virtual = 34099
-79 Infos, 11 Warnings, 11 Critical Warnings and 0 Errors encountered.
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:49 . Memory (MB): peak = 1909.934 ; gain = 0.000
+78 Infos, 11 Warnings, 11 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:01:18 ; elapsed = 00:00:35 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2144 ; free virtual = 34099
+place_design: Time (s): cpu = 00:01:08 ; elapsed = 00:00:51 . Memory (MB): peak = 1909.934 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2101 ; free virtual = 34090
-INFO: [Common 17-1381] The checkpoint '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.runs/impl_1/design_1_wrapper_placed.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2132 ; free virtual = 34096
-report_io: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2125 ; free virtual = 34090
-report_utilization: Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.32 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2131 ; free virtual = 34095
-report_control_sets: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.19 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 2131 ; free virtual = 34096
+Write XDEF Complete: Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 1909.934 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/ece532_project/ece532_project.runs/impl_1/design_1_wrapper_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 1909.934 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 1909.934 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.224 . Memory (MB): peak = 1909.934 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.090 . Memory (MB): peak = 1909.934 ; gain = 0.000
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t-csg324'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t-csg324'
 Running DRC as a precondition to command route_design
 Command: report_drc (run_mandatory_drcs) for: router_checks
-INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [DRC 23-27] Running DRC with 2 threads
 WARNING: [DRC PLCK-12] Clock Placer Checks: Poor placement for routing between an IO pin and BUFG. 
 Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
  This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
@@ -476,130 +475,128 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 
 Starting Routing Task
-INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
-Checksum: PlaceDB: faf48cfe ConstDB: 0 ShapeSum: 399d258a RouteDB: 0
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: dad4732 ConstDB: 0 ShapeSum: 99a43906 RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 1dee82abe
+Phase 1 Build RT Design | Checksum: 1087af360
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:17 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 1122 ; free virtual = 33158
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:21 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 1dee82abe
+Phase 2.1 Create Timer | Checksum: 1087af360
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:17 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 1151 ; free virtual = 33149
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:22 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 1dee82abe
+Phase 2.2 Fix Topology Constraints | Checksum: 1087af360
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:18 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 1116 ; free virtual = 33113
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:22 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 1dee82abe
+Phase 2.3 Pre Route Cleanup | Checksum: 1087af360
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:18 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 1118 ; free virtual = 33114
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:22 . Memory (MB): peak = 1909.934 ; gain = 0.000
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 1c6fdf32a
+Phase 2.4 Update Timing | Checksum: f28a60c7
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:23 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 775 ; free virtual = 32776
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.240  | TNS=0.000  | WHS=-1.960 | THS=-664.615|
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:28 . Memory (MB): peak = 1909.934 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.308  | TNS=0.000  | WHS=-2.379 | THS=-722.592|
 
 
 Phase 2.5 Update Timing for Bus Skew
 
 Phase 2.5.1 Update Timing
-Phase 2.5.1 Update Timing | Checksum: 149da46d5
+Phase 2.5.1 Update Timing | Checksum: 16dd34ac1
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:25 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 217 ; free virtual = 32225
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.240  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:31 . Memory (MB): peak = 1909.934 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.308  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 2.5 Update Timing for Bus Skew | Checksum: 15d2f51dc
+Phase 2.5 Update Timing for Bus Skew | Checksum: 10d6a3823
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:25 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 210 ; free virtual = 32216
-Phase 2 Router Initialization | Checksum: 1bbb0074f
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:32 . Memory (MB): peak = 1909.934 ; gain = 0.000
+Phase 2 Router Initialization | Checksum: cba715f8
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:25 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 201 ; free virtual = 32207
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:32 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 16a02cf82
+Phase 3 Initial Routing | Checksum: 148035f0b
 
-Time (s): cpu = 00:00:59 ; elapsed = 00:00:28 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 1364 ; free virtual = 33216
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:36 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 1919
- Number of Nodes with overlaps = 153
- Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 1884
+ Number of Nodes with overlaps = 107
+ Number of Nodes with overlaps = 3
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.216  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.201  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 12972dcbd
+Phase 4.1 Global Iteration 0 | Checksum: 95201094
 
-Time (s): cpu = 00:01:32 ; elapsed = 00:00:35 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 1426 ; free virtual = 33259
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:43 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 7
- Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 8
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.216  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.201  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: 76ced3bc
+Phase 4.2 Global Iteration 1 | Checksum: 90164052
 
-Time (s): cpu = 00:01:35 ; elapsed = 00:00:37 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 1426 ; free virtual = 33259
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:43 . Memory (MB): peak = 1909.934 ; gain = 0.000
+Phase 4 Rip-up And Reroute | Checksum: 90164052
 
-Phase 4.3 Global Iteration 2
- Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.216  | TNS=0.000  | WHS=N/A    | THS=N/A    |
-
-Phase 4.3 Global Iteration 2 | Checksum: 3bd206d5
-
-Time (s): cpu = 00:01:36 ; elapsed = 00:00:37 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 1426 ; free virtual = 33259
-Phase 4 Rip-up And Reroute | Checksum: 3bd206d5
-
-Time (s): cpu = 00:01:36 ; elapsed = 00:00:37 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 1426 ; free virtual = 33259
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:43 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
-Phase 5.1 Delay CleanUp | Checksum: 3bd206d5
 
-Time (s): cpu = 00:01:36 ; elapsed = 00:00:37 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 1426 ; free virtual = 33259
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 14dfd0bf3
+
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:44 . Memory (MB): peak = 1909.934 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.280  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: 86d20814
+
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:44 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 3bd206d5
+Phase 5.2 Clock Skew Optimization | Checksum: 86d20814
 
-Time (s): cpu = 00:01:36 ; elapsed = 00:00:37 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 1426 ; free virtual = 33259
-Phase 5 Delay and Skew Optimization | Checksum: 3bd206d5
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:44 . Memory (MB): peak = 1909.934 ; gain = 0.000
+Phase 5 Delay and Skew Optimization | Checksum: 86d20814
 
-Time (s): cpu = 00:01:36 ; elapsed = 00:00:37 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 1426 ; free virtual = 33259
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:44 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: f0123faa
+Phase 6.1.1 Update Timing | Checksum: a5e29ca2
 
-Time (s): cpu = 00:01:38 ; elapsed = 00:00:38 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 1426 ; free virtual = 33259
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.223  | TNS=0.000  | WHS=0.012  | THS=0.000  |
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:45 . Memory (MB): peak = 1909.934 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.280  | TNS=0.000  | WHS=0.014  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 6e396e12
+Phase 6.1 Hold Fix Iter | Checksum: d7a5ebd0
 
-Time (s): cpu = 00:01:38 ; elapsed = 00:00:38 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 1426 ; free virtual = 33259
-Phase 6 Post Hold Fix | Checksum: 6e396e12
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:45 . Memory (MB): peak = 1909.934 ; gain = 0.000
+Phase 6 Post Hold Fix | Checksum: d7a5ebd0
 
-Time (s): cpu = 00:01:38 ; elapsed = 00:00:38 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 1426 ; free virtual = 33259
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:45 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 3.70845 %
-  Global Horizontal Routing Utilization  = 4.7971 %
+  Global Vertical Routing Utilization    = 3.78905 %
+  Global Horizontal Routing Utilization  = 4.68393 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -608,54 +605,54 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 5c23a705
+Phase 7 Route finalize | Checksum: fa018381
 
-Time (s): cpu = 00:01:39 ; elapsed = 00:00:38 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 1426 ; free virtual = 33259
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:46 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 5c23a705
+Phase 8 Verifying routed nets | Checksum: fa018381
 
-Time (s): cpu = 00:01:39 ; elapsed = 00:00:38 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 1426 ; free virtual = 33259
+Time (s): cpu = 00:01:07 ; elapsed = 00:00:46 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 9e68cf2f
+Phase 9 Depositing Routes | Checksum: f08d83f3
 
-Time (s): cpu = 00:01:40 ; elapsed = 00:00:39 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 1424 ; free virtual = 33257
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:47 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=1.223  | TNS=0.000  | WHS=0.012  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=1.280  | TNS=0.000  | WHS=0.014  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 9e68cf2f
+Phase 10 Post Router Timing | Checksum: f08d83f3
 
-Time (s): cpu = 00:01:40 ; elapsed = 00:00:39 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 1427 ; free virtual = 33259
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:47 . Memory (MB): peak = 1909.934 ; gain = 0.000
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:01:40 ; elapsed = 00:00:40 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 1470 ; free virtual = 33303
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:47 . Memory (MB): peak = 1909.934 ; gain = 0.000
 
 Routing Is Done.
-94 Infos, 23 Warnings, 11 Critical Warnings and 0 Errors encountered.
+93 Infos, 23 Warnings, 11 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:01:45 ; elapsed = 00:00:42 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 1470 ; free virtual = 33303
+route_design: Time (s): cpu = 00:01:13 ; elapsed = 00:00:50 . Memory (MB): peak = 1909.934 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 1409 ; free virtual = 33284
-INFO: [Common 17-1381] The checkpoint '/nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.runs/impl_1/design_1_wrapper_routed.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 1455 ; free virtual = 33299
+Write XDEF Complete: Time (s): cpu = 00:00:08 ; elapsed = 00:00:02 . Memory (MB): peak = 1909.934 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/ece532_project/ece532_project.runs/impl_1/design_1_wrapper_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 1909.934 ; gain = 0.000
 Command: report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
-INFO: [DRC 23-27] Running DRC with 8 threads
-INFO: [Coretcl 2-168] The results of DRC are in file /nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.runs/impl_1/design_1_wrapper_drc_routed.rpt.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/ece532_project/ece532_project.runs/impl_1/design_1_wrapper_drc_routed.rpt.
 report_drc completed successfully
 Command: report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -rpx design_1_wrapper_methodology_drc_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [DRC 23-133] Running Methodology with 8 threads
-INFO: [Coretcl 2-1520] The results of Report Methodology are in file /nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.runs/impl_1/design_1_wrapper_methodology_drc_routed.rpt.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/ece532_project/ece532_project.runs/impl_1/design_1_wrapper_methodology_drc_routed.rpt.
 report_methodology completed successfully
-report_methodology: Time (s): cpu = 00:00:28 ; elapsed = 00:00:06 . Memory (MB): peak = 2952.930 ; gain = 0.000 ; free physical = 1320 ; free virtual = 33164
+report_methodology: Time (s): cpu = 00:00:18 ; elapsed = 00:00:10 . Memory (MB): peak = 1909.934 ; gain = 0.000
 Command: report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
@@ -665,10 +662,11 @@ WARNING: [Designutils 20-266] Invalid Voltage Source VCCINTIO for the family art
 WARNING: [Designutils 20-266] Invalid Voltage Source VCCINTIO for the family artix7. Ignoring the voltage setting.
 WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
 Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
-101 Infos, 26 Warnings, 11 Critical Warnings and 0 Errors encountered.
+100 Infos, 26 Warnings, 11 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
+report_power: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1909.934 ; gain = 0.000
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
-INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
 WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
 WARNING: [Memdata 28-169] Found XPM memory block design_1_i/axi_smc/inst/s01_nodes/s01_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
 WARNING: [Memdata 28-169] Found XPM memory block design_1_i/axi_smc/inst/s01_nodes/s01_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory with a MEM.ADDRESS_SPACE property. However, the P_MEMORY_PRIMITIVE property is required and should be set to block.
@@ -689,7 +687,7 @@ Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t-csg324'
 Running DRC as a precondition to command write_bitstream
 Command: report_drc (run_mandatory_drcs) for: bitstream_checks
-INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [DRC 23-27] Running DRC with 2 threads
 WARNING: [DRC CFGBVS-1] Missing CFGBVS and CONFIG_VOLTAGE Design Properties: Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
 
  set_property CFGBVS value1 [current_design]
@@ -703,12 +701,12 @@ WARNING: [DRC REQP-1709] Clock output buffering: PLLE2_ADV connectivity violatio
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/axi_ethernetlite_0/U0/XEMAC_I/RX_PING/xpm_mem_gen.xpm_memory_inst/xpm_memory_base_inst/gen_wr_b.gen_word_wide.mem_reg has an input control pin design_1_i/axi_ethernetlite_0/U0/XEMAC_I/RX_PING/xpm_mem_gen.xpm_memory_inst/xpm_memory_base_inst/gen_wr_b.gen_word_wide.mem_reg/ENARDEN (net: design_1_i/axi_ethernetlite_0/U0/XEMAC_I/RX_PING/xpm_mem_gen.xpm_memory_inst/xpm_memory_base_inst/gen_wr_b.gen_word_wide.mem_reg_i_3_n_0) which is driven by a register (design_1_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grhf.rhf/gv.ram_valid_d1_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/axi_ethernetlite_0/U0/XEMAC_I/RX_PONG_GEN.RX_PONG_I/xpm_mem_gen.xpm_memory_inst/xpm_memory_base_inst/gen_wr_b.gen_word_wide.mem_reg has an input control pin design_1_i/axi_ethernetlite_0/U0/XEMAC_I/RX_PONG_GEN.RX_PONG_I/xpm_mem_gen.xpm_memory_inst/xpm_memory_base_inst/gen_wr_b.gen_word_wide.mem_reg/ENARDEN (net: design_1_i/axi_ethernetlite_0/U0/XEMAC_I/RX_PONG_GEN.RX_PONG_I/xpm_mem_gen.xpm_memory_inst/xpm_memory_base_inst/gen_wr_b.gen_word_wide.mem_reg_i_3_n_0) which is driven by a register (design_1_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grhf.rhf/gv.ram_valid_d1_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port OV7670_SIOD expects both input and output buffering but the buffers are incomplete.
-WARNING: [DRC RTSTAT-10] No routable loads: 4 net(s) have no routable loads. The problem bus(es) and/or net(s) are design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst/s_sc_areset, design_1_i/axi_smc/inst/m00_nodes/m00_r_node/inst/s_sc_areset, design_1_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/LEGACY_COREGEN_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg[2], and design_1_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg[2].
+WARNING: [DRC RTSTAT-10] No routable loads: 4 net(s) have no routable loads. The problem bus(es) and/or net(s) are design_1_i/axi_smc/inst/m00_nodes/m00_r_node/inst/s_sc_areset, design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst/s_sc_areset, design_1_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/LEGACY_COREGEN_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg[2], and design_1_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg[2].
 report_drc (run_mandatory_drcs) completed successfully
 INFO: [Vivado 12-3199] DRC finished with 0 Errors, 6 Warnings
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 INFO: [Project 1-821] Please set project.enableDesignId to be 'true'.
-INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
 Loading data files...
 Loading site data...
 Loading route data...
@@ -717,7 +715,9 @@ Creating bitmap...
 Creating bitstream...
 Writing bitstream ./design_1_wrapper.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
-110 Infos, 47 Warnings, 11 Critical Warnings and 0 Errors encountered.
+INFO: [Project 1-118] WebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
+INFO: [Common 17-186] 'C:/ece532_project/ece532_project.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Mon Feb 12 12:07:00 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
+111 Infos, 47 Warnings, 11 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:33 ; elapsed = 00:00:12 . Memory (MB): peak = 3129.664 ; gain = 176.734 ; free physical = 1319 ; free virtual = 33175
-INFO: [Common 17-206] Exiting Vivado at Sun Feb 11 14:25:46 2018...
+write_bitstream: Time (s): cpu = 00:00:33 ; elapsed = 00:00:27 . Memory (MB): peak = 2239.160 ; gain = 329.227
+INFO: [Common 17-206] Exiting Vivado at Mon Feb 12 12:07:00 2018...

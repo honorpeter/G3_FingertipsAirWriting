@@ -345,9 +345,6 @@ CONFIG.RESET_TYPE {ACTIVE_LOW} \
 CONFIG.USE_BOARD_FLOW {true} \
  ] $clk_wiz_1
 
-  # Create instance: const_1, and set properties
-  set const_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 const_1 ]
-
   # Create instance: frame_average_buffer_0, and set properties
   set frame_average_buffer_0 [ create_bd_cell -type ip -vlnv utoronto.ca:user:frame_average_buffer:1.0 frame_average_buffer_0 ]
 
@@ -446,9 +443,9 @@ CONFIG.USE_BOARD_FLOW {true} \
   connect_bd_net -net clk_wiz_1_clk_out2 [get_bd_pins clk_wiz_1/clk_out2] [get_bd_pins mig_7series_0/sys_clk_i]
   connect_bd_net -net clk_wiz_1_clk_out3 [get_bd_ports eth_ref_clk] [get_bd_pins clk_wiz_1/clk_out3] [get_bd_pins mii_to_rmii_0/ref_clk] [get_bd_pins video_in_0/CLK50]
   connect_bd_net -net clk_wiz_1_clk_out4 [get_bd_pins blk_mem_buffer_vga/clkb] [get_bd_pins clk_wiz_1/clk_out4] [get_bd_pins vga444_0/clk25] [get_bd_pins video_in_0/CLK25]
-  connect_bd_net -net const_1_dout [get_bd_pins blk_mem_buffer_vga/wea] [get_bd_pins const_1/dout]
   connect_bd_net -net frame_average_buffer_0_avg_addr_out [get_bd_pins blk_mem_buffer_vga/addra] [get_bd_pins frame_average_buffer_0/avg_addr_out]
   connect_bd_net -net frame_average_buffer_0_avg_data_out [get_bd_pins blk_mem_buffer_vga/dina] [get_bd_pins frame_average_buffer_0/avg_data_out]
+  connect_bd_net -net frame_average_buffer_0_avg_data_valid [get_bd_pins blk_mem_buffer_vga/wea] [get_bd_pins frame_average_buffer_0/avg_data_valid]
   connect_bd_net -net mdm_1_debug_sys_rst [get_bd_pins mdm_1/Debug_SYS_Rst] [get_bd_pins rst_clk_wiz_1_100M/mb_debug_sys_rst]
   connect_bd_net -net microblaze_0_Clk [get_bd_pins axi_ethernetlite_0/s_axi_aclk] [get_bd_pins axi_smc/aclk] [get_bd_pins axi_timer_0/s_axi_aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins clk_wiz_1/clk_out1] [get_bd_pins microblaze_0/Clk] [get_bd_pins microblaze_0_axi_intc/processor_clk] [get_bd_pins microblaze_0_axi_intc/s_axi_aclk] [get_bd_pins microblaze_0_axi_periph/ACLK] [get_bd_pins microblaze_0_axi_periph/M00_ACLK] [get_bd_pins microblaze_0_axi_periph/M01_ACLK] [get_bd_pins microblaze_0_axi_periph/M02_ACLK] [get_bd_pins microblaze_0_axi_periph/M03_ACLK] [get_bd_pins microblaze_0_axi_periph/M04_ACLK] [get_bd_pins microblaze_0_axi_periph/M05_ACLK] [get_bd_pins microblaze_0_axi_periph/M06_ACLK] [get_bd_pins microblaze_0_axi_periph/M07_ACLK] [get_bd_pins microblaze_0_axi_periph/M08_ACLK] [get_bd_pins microblaze_0_axi_periph/S00_ACLK] [get_bd_pins microblaze_0_local_memory/LMB_Clk] [get_bd_pins rst_clk_wiz_1_100M/slowest_sync_clk]
   connect_bd_net -net microblaze_0_intr [get_bd_pins microblaze_0_axi_intc/intr] [get_bd_pins microblaze_0_xlconcat/dout]
