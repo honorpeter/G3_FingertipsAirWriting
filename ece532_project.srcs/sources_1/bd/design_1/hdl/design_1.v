@@ -1,15 +1,15 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-//Date        : Sat Feb 10 16:35:01 2018
-//Host        : SFB520WS02 running 64-bit Service Pack 1  (build 7601)
+//Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
+//Date        : Sun Feb 11 14:18:13 2018
+//Host        : ug241 running 64-bit Debian GNU/Linux 9.3 (stretch)
 //Command     : generate_target design_1.bd
 //Design      : design_1
 //Purpose     : IP block netlist
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=34,numReposBlks=22,numNonXlnxBlks=3,numHierBlks=12,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=9,da_board_cnt=8,da_mb_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=36,numReposBlks=24,numNonXlnxBlks=3,numHierBlks=12,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=9,da_board_cnt=8,da_mb_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (BTNC,
     DDR2_addr,
@@ -156,10 +156,13 @@ module design_1
   wire axi_timer_0_interrupt;
   wire axi_uartlite_0_UART_RxD;
   wire axi_uartlite_0_UART_TxD;
+  wire [15:0]blk_mem_buffer_vga_doutb;
   wire clk_wiz_1_clk_out2;
   wire clk_wiz_1_clk_out3;
   wire clk_wiz_1_clk_out4;
-  wire [15:0]frame_average_buffer_0_request_data;
+  wire [0:0]const_1_dout;
+  wire [16:0]frame_average_buffer_0_avg_addr_out;
+  wire [15:0]frame_average_buffer_0_avg_data_out;
   wire mdm_1_debug_sys_rst;
   wire microblaze_0_Clk;
   wire [31:0]microblaze_0_M_AXI_DC_ARADDR;
@@ -578,6 +581,14 @@ module design_1
         .s_axi_wstrb(microblaze_0_axi_periph_M01_AXI_WSTRB),
         .s_axi_wvalid(microblaze_0_axi_periph_M01_AXI_WVALID),
         .tx(axi_uartlite_0_UART_TxD));
+  design_1_blk_mem_gen_0_0 blk_mem_buffer_vga
+       (.addra(frame_average_buffer_0_avg_addr_out),
+        .addrb(vga444_0_frame_addr),
+        .clka(OV7670_PCLK_1),
+        .clkb(clk_wiz_1_clk_out4),
+        .dina(frame_average_buffer_0_avg_data_out),
+        .doutb(blk_mem_buffer_vga_doutb),
+        .wea(const_1_dout));
   design_1_clk_wiz_1_0 clk_wiz_1
        (.clk_in1(sys_clock_1),
         .clk_out1(microblaze_0_Clk),
@@ -585,13 +596,14 @@ module design_1
         .clk_out3(clk_wiz_1_clk_out3),
         .clk_out4(clk_wiz_1_clk_out4),
         .resetn(\^reset_1 ));
-  design_1_frame_average_buffer_0_0 frame_average_buffer_0
-       (.capture_address(video_in_0_capture_addr),
+  design_1_xlconstant_0_0 const_1
+       (.dout(const_1_dout));
+  design_1_frame_average_buffer_0_1 frame_average_buffer_0
+       (.avg_addr_out(frame_average_buffer_0_avg_addr_out),
+        .avg_data_out(frame_average_buffer_0_avg_data_out),
+        .capture_address(video_in_0_capture_addr),
         .capture_data(video_in_0_data_16),
-        .clk_25(clk_wiz_1_clk_out4),
         .pclk(OV7670_PCLK_1),
-        .request_address(vga444_0_frame_addr),
-        .request_data(frame_average_buffer_0_request_data),
         .reset(video_in_0_resend),
         .vsync(OV7670_VSYNC_1));
   design_1_mdm_1_0 mdm_1
@@ -1012,7 +1024,7 @@ module design_1
   design_1_vga444_0_0 vga444_0
        (.clk25(clk_wiz_1_clk_out4),
         .frame_addr(vga444_0_frame_addr),
-        .frame_pixel(frame_average_buffer_0_request_data),
+        .frame_pixel(blk_mem_buffer_vga_doutb),
         .vga_blue(vga444_0_vga_blue),
         .vga_green(vga444_0_vga_green),
         .vga_hsync(vga444_0_vga_hsync),

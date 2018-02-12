@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
 # Vivado v2017.2 (64-bit)
-# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Sat Feb 10 16:39:18 2018
-# Process ID: 3664
-# Current directory: C:/Users/chenyueq/ece532_project/ece532_project.runs/synth_1
-# Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
-# Log file: C:/Users/chenyueq/ece532_project/ece532_project.runs/synth_1/design_1_wrapper.vds
-# Journal file: C:/Users/chenyueq/ece532_project/ece532_project.runs/synth_1\vivado.jou
+# Start of session at: Sun Feb 11 14:21:35 2018
+# Process ID: 3611
+# Current directory: /nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.runs/synth_1
+# Command line: vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+# Log file: /nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.runs/synth_1/design_1_wrapper.vds
+# Journal file: /nfs/ug/homes-5/l/lingujia/ECE532/ece532_project/ece532_project.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace
