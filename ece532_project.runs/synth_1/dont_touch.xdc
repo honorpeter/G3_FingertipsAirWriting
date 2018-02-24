@@ -78,4 +78,22 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_blk_me
 # IP: bd/design_1/ip/design_1_frame_average_buffer_0_1/design_1_frame_average_buffer_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_frame_average_buffer_0_1 || ORIG_REF_NAME==design_1_frame_average_buffer_0_1}]
 
+# IP: bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_0_1 || ORIG_REF_NAME==design_1_axi_gpio_0_1}]
+
+# IP: bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_0_2 || ORIG_REF_NAME==design_1_axi_gpio_0_2}]
+
+# IP: bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_0_0 || ORIG_REF_NAME==design_1_axi_gpio_0_0}]
+
+# IP: bd/design_1/ip/design_1_axi_gpio_0_3/design_1_axi_gpio_0_3.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_0_3 || ORIG_REF_NAME==design_1_axi_gpio_0_3}]
+
+# IP: bd/design_1/ip/design_1_axi_gpio_0_4/design_1_axi_gpio_0_4.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_0_4 || ORIG_REF_NAME==design_1_axi_gpio_0_4}]
+
+# IP: bd/design_1/ip/design_1_ftps_locator_0_1/design_1_ftps_locator_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_ftps_locator_0_1 || ORIG_REF_NAME==design_1_ftps_locator_0_1}]
+
 # XDC: bd/design_1/design_1_ooc.xdc

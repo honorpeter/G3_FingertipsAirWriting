@@ -1,1277 +1,446 @@
-23:56:08 **** Incremental Build of configuration Debug for project warm_up ****
+13:24:44 **** Build of project test_data_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_1/src"
+make -C microblaze_0/libsrc/bram_v4_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_6/src"
+make -C microblaze_0/libsrc/cpu_v2_6/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/emaclite_v4_3/src"
+make -C microblaze_0/libsrc/emaclite_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_6/src"
+make -C microblaze_0/libsrc/intc_v3_6/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_3/src"
+make -C microblaze_0/libsrc/standalone_v6_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_3/src"
+make -C microblaze_0/libsrc/tmrctr_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_1/src"
+make -C microblaze_0/libsrc/bram_v4_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_6/src"
+make -C microblaze_0/libsrc/cpu_v2_6/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/emaclite_v4_3/src"
+make -C microblaze_0/libsrc/emaclite_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling emaclite"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_6/src"
+make -C microblaze_0/libsrc/intc_v3_6/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_3/src"
+make -C microblaze_0/libsrc/standalone_v6_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+"Running Make libs in microblaze_0/libsrc/tmrctr_v4_3/src"
+make -C microblaze_0/libsrc/tmrctr_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling tmrctr"
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+13:24:53 **** Auto Build of project test_data_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_1/src"
+make -C microblaze_0/libsrc/bram_v4_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_6/src"
+make -C microblaze_0/libsrc/cpu_v2_6/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/emaclite_v4_3/src"
+make -C microblaze_0/libsrc/emaclite_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_6/src"
+make -C microblaze_0/libsrc/intc_v3_6/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_3/src"
+make -C microblaze_0/libsrc/standalone_v6_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_3/src"
+make -C microblaze_0/libsrc/tmrctr_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_1/src"
+make -C microblaze_0/libsrc/bram_v4_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+"Running Make libs in microblaze_0/libsrc/cpu_v2_6/src"
+make -C microblaze_0/libsrc/cpu_v2_6/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/emaclite_v4_3/src"
+make -C microblaze_0/libsrc/emaclite_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling emaclite"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_6/src"
+make -C microblaze_0/libsrc/intc_v3_6/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_3/src"
+make -C microblaze_0/libsrc/standalone_v6_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+"Running Make libs in microblaze_0/libsrc/tmrctr_v4_3/src"
+make -C microblaze_0/libsrc/tmrctr_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling tmrctr"
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+13:25:00 **** Build of configuration Debug for project test_data ****
 make all 
-make: Nothing to be done for 'all'.
-23:56:10 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for 'all'.
-23:57:22 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-Building file: ../src/echo.c
-Invoking: MicroBlaze gcc compiler
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-Finished building: ../src/echo.c
- 
-Building target: warm_up.elf
-Invoking: MicroBlaze gcc linker
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-Finished building target: warm_up.elf
- 
-Invoking: MicroBlaze Print Size
-mb-size warm_up.elf  |tee "warm_up.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 125244	   1452	 750672	 877368	  d6338	warm_up.elf
-Finished building: warm_up.elf.size
- 
-23:57:24 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for 'all'.
-23:57:47 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-Building file: ../src/echo.c
-Invoking: MicroBlaze gcc compiler
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-Finished building: ../src/echo.c
- 
-Building target: warm_up.elf
-Invoking: MicroBlaze gcc linker
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-Finished building target: warm_up.elf
- 
-Invoking: MicroBlaze Print Size
-mb-size warm_up.elf  |tee "warm_up.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 125244	   1452	 750672	 877368	  d6338	warm_up.elf
-Finished building: warm_up.elf.size
- 
-23:57:48 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for 'all'.
-23:57:51 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for 'all'.
-14:17:47 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/main.c'
+'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:188:6: warning: unused variable 'input_ready' [-Wunused-variable]
-  int input_ready= 0;
-      ^~~~~~~~~~~
-../src/main.c:187:6: warning: unused variable 'flag_low' [-Wunused-variable]
-  int flag_low = 0;
-      ^~~~~~~~
-../src/main.c:186:6: warning: unused variable 'input' [-Wunused-variable]
-  int input = 0;
-      ^~~~~
-../src/main.c:185:41: warning: unused variable 'num8' [-Wunused-variable]
-  int num1,num2,num3,num4,num5,num6,num7,num8;
-                                         ^~~~
-../src/main.c:185:36: warning: unused variable 'num7' [-Wunused-variable]
-  int num1,num2,num3,num4,num5,num6,num7,num8;
-                                    ^~~~
-../src/main.c:185:31: warning: unused variable 'num6' [-Wunused-variable]
-  int num1,num2,num3,num4,num5,num6,num7,num8;
-                               ^~~~
-../src/main.c:185:26: warning: unused variable 'num5' [-Wunused-variable]
-  int num1,num2,num3,num4,num5,num6,num7,num8;
-                          ^~~~
-../src/main.c:185:21: warning: unused variable 'num4' [-Wunused-variable]
-  int num1,num2,num3,num4,num5,num6,num7,num8;
-                     ^~~~
-../src/main.c:185:16: warning: unused variable 'num3' [-Wunused-variable]
-  int num1,num2,num3,num4,num5,num6,num7,num8;
-                ^~~~
-../src/main.c:185:11: warning: unused variable 'num2' [-Wunused-variable]
-  int num1,num2,num3,num4,num5,num6,num7,num8;
-           ^~~~
-../src/main.c:185:6: warning: unused variable 'num1' [-Wunused-variable]
-  int num1,num2,num3,num4,num5,num6,num7,num8;
-      ^~~~
-../src/main.c:184:6: warning: unused variable 'return_value' [-Wunused-variable]
-  int return_value;
-      ^~~~~~~~~~~~
-'Finished building: ../src/main.c'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
 ' '
-'Building target: warm_up.elf'
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: test_data.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_data_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test_data.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test_data.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
+mb-size test_data.elf  |tee "test_data.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 122904	   1432	 750664	 875000	  d59f8	warm_up.elf
-'Finished building: warm_up.elf.size'
+   3216	    316	   3108	   6640	   19f0	test_data.elf
+'Finished building: test_data.elf.size'
 ' '
-14:18:05 **** Auto Build of configuration Debug for project warm_up ****
+13:25:02 **** Auto Build of configuration Debug for project test_data ****
 make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-'Finished building: ../src/main.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 122892	   1432	 750668	 874992	  d59f0	warm_up.elf
-'Finished building: warm_up.elf.size'
-' '
-14:24:01 **** Auto Build of configuration Debug for project warm_up ****
+make: Nothing to be done for `all'.
+13:26:14 **** Auto Build of configuration Debug for project test_data ****
 make all 
-'Building file: ../src/echo.c'
+'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-'Finished building: ../src/echo.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 122896	   1436	 750668	 875000	  d59f8	warm_up.elf
-'Finished building: warm_up.elf.size'
-' '
-14:28:31 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/echo.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-'Finished building: ../src/echo.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 122780	   1436	 750672	 874888	  d5988	warm_up.elf
-'Finished building: warm_up.elf.size'
-' '
-14:28:42 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/echo.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-'Finished building: ../src/echo.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 122780	   1436	 750672	 874888	  d5988	warm_up.elf
-'Finished building: warm_up.elf.size'
-' '
-14:29:29 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-'Finished building: ../src/main.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 122780	   1436	 750672	 874888	  d5988	warm_up.elf
-'Finished building: warm_up.elf.size'
-' '
-14:30:11 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/echo.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-'Finished building: ../src/echo.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-./src/main.o: In function `main':
-C:\Users\lingujia\ece532_project\ece532_project.sdk\warm_up\Debug/../src/main.c:182: undefined reference to `start_application'
-collect2.exe: error: ld returned 1 exit status
-make: *** [warm_up.elf] Error 1
-14:30:14 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:182:2: warning: implicit declaration of function 'data_transmission' [-Wimplicit-function-declaration]
-  data_transmission(1,NULL,0);
-  ^~~~~~~~~~~~~~~~~
-'Finished building: ../src/main.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 122780	   1436	 750672	 874888	  d5988	warm_up.elf
-'Finished building: warm_up.elf.size'
-' '
-14:30:49 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/echo.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-'Finished building: ../src/echo.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-./src/main.o: In function `main':
-C:\Users\lingujia\ece532_project\ece532_project.sdk\warm_up\Debug/../src/main.c:182: undefined reference to `data_transmission'
-collect2.exe: error: ld returned 1 exit status
-make: *** [warm_up.elf] Error 1
-14:30:51 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:182:2: warning: implicit declaration of function 'start_data_trans' [-Wimplicit-function-declaration]
-  start_data_trans(1,NULL,0);
-  ^~~~~~~~~~~~~~~~
-'Finished building: ../src/main.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 122780	   1436	 750672	 874888	  d5988	warm_up.elf
-'Finished building: warm_up.elf.size'
-' '
-14:31:07 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-'Finished building: ../src/main.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-./src/main.o: In function `main':
-C:\Users\lingujia\ece532_project\ece532_project.sdk\warm_up\Debug/../src/main.c:182: undefined reference to `start_application'
-collect2.exe: error: ld returned 1 exit status
-make: *** [warm_up.elf] Error 1
-14:31:10 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/echo.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-'Finished building: ../src/echo.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 122780	   1436	 750672	 874888	  d5988	warm_up.elf
-'Finished building: warm_up.elf.size'
-' '
-14:32:31 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:183:2: warning: 'write_data' may be used uninitialized in this function [-Wmaybe-uninitialized]
-  start_application(1,NULL,write_data);
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/main.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 122780	   1436	 750672	 874888	  d5988	warm_up.elf
-'Finished building: warm_up.elf.size'
-' '
-14:33:00 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:184:2: warning: 'write_data_high' may be used uninitialized in this function [-Wmaybe-uninitialized]
-  start_application(1,NULL,write_data_high,write_data_low);
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:184:2: warning: 'write_data_low' may be used uninitialized in this function [-Wmaybe-uninitialized]
-'Finished building: ../src/main.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 122784	   1436	 750668	 874888	  d5988	warm_up.elf
-'Finished building: warm_up.elf.size'
-' '
-14:33:27 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/echo.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-../src/echo.c: In function 'start_application':
-../src/echo.c:91:21: error: 'write_data' undeclared (first use in this function)
-  tcp_write_data[4]=(write_data>>24)&0xff;
-                     ^~~~~~~~~~
-../src/echo.c:91:21: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [src/echo.o] Error 1
-14:33:45 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/echo.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-'Finished building: ../src/echo.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 122788	   1436	 750672	 874896	  d5990	warm_up.elf
-'Finished building: warm_up.elf.size'
-' '
-14:35:00 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/echo.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-'Finished building: ../src/echo.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 122520	   1436	 750668	 874624	  d5880	warm_up.elf
-'Finished building: warm_up.elf.size'
-' '
-14:36:30 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/echo.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-'Finished building: ../src/echo.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 122520	   1436	 750668	 874624	  d5880	warm_up.elf
-'Finished building: warm_up.elf.size'
-' '
-14:36:53 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/echo.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-'Finished building: ../src/echo.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 123120	   1436	 750668	 875224	  d5ad8	warm_up.elf
-'Finished building: warm_up.elf.size'
-' '
-14:37:09 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/echo.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-'Finished building: ../src/echo.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 123120	   1436	 750668	 875224	  d5ad8	warm_up.elf
-'Finished building: warm_up.elf.size'
-' '
-14:37:57 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/echo.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-../src/echo.c: In function 'start_application':
-../src/echo.c:106:2: warning: implicit declaration of function 'set_tcp_data' [-Wimplicit-function-declaration]
-  set_tcp_data(tcp_write_in,write_data_in_hihg,write_data_in_low);
-  ^~~~~~~~~~~~
-'Finished building: ../src/echo.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-./src/echo.o: In function `start_application':
-C:\Users\lingujia\ece532_project\ece532_project.sdk\warm_up\Debug/../src/echo.c:106: undefined reference to `set_tcp_data'
-collect2.exe: error: ld returned 1 exit status
-make: *** [warm_up.elf] Error 1
-14:38:29 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/echo.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-'Finished building: ../src/echo.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 123132	   1436	 750672	 875240	  d5ae8	warm_up.elf
-'Finished building: warm_up.elf.size'
-' '
-14:39:29 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:184:2: warning: 'write_data_high' may be used uninitialized in this function [-Wmaybe-uninitialized]
-  start_application(1,NULL,write_data_high,write_data_low);
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:184:2: warning: 'write_data_low' may be used uninitialized in this function [-Wmaybe-uninitialized]
-'Finished building: ../src/main.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 123132	   1436	 750672	 875240	  d5ae8	warm_up.elf
-'Finished building: warm_up.elf.size'
-' '
-14:48:21 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'char_to_writedata':
-../src/main.c:79:9: error: 'return_cal' undeclared (first use in this function)
-  return return_cal;
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:62:9: warning: variable 'ftps_y' set but not used [-Wunused-but-set-variable]
+     int ftps_y;
+         ^~~~~~
+../src/helloworld.c:61:9: warning: variable 'ftps_x' set but not used [-Wunused-but-set-variable]
+     int ftps_x;
+         ^~~~~~
+../src/helloworld.c:60:9: warning: variable 'ftps_valid' set but not used [-Wunused-but-set-variable]
+     int ftps_valid;
          ^~~~~~~~~~
-../src/main.c:79:9: note: each undeclared identifier is reported only once for each function it appears in
-../src/main.c: In function 'main':
-../src/main.c:190:16: error: redefinition of 'display_char_high'
-  unsigned char display_char_high[4] ="ial ";
-                ^~~~~~~~~~~~~~~~~
-../src/main.c:189:16: note: previous definition of 'display_char_high' was here
-  unsigned char display_char_high[4] ="Init";
-                ^~~~~~~~~~~~~~~~~
-../src/main.c:192:50: error: 'display_char_low' undeclared (first use in this function)
-  unsigned int write_data_low = char_to_writedata(display_char_low);
-                                                  ^~~~~~~~~~~~~~~~
-../src/main.c: In function 'char_to_writedata':
-../src/main.c:80:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-make: *** [src/main.o] Error 1
-14:48:38 **** Auto Build of configuration Debug for project warm_up ****
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: test_data.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_data_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test_data.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test_data.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test_data.elf  |tee "test_data.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3048	    328	   3104	   6480	   1950	test_data.elf
+'Finished building: test_data.elf.size'
+' '
+13:26:32 **** Auto Build of configuration Debug for project test_data ****
 make all 
-'Building file: ../src/main.c'
+'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'char_to_writedata':
-../src/main.c:79:9: error: 'return_cal' undeclared (first use in this function)
-  return return_cal;
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:62:9: warning: unused variable 'ftps_y' [-Wunused-variable]
+     int ftps_y;
+         ^~~~~~
+../src/helloworld.c:61:9: warning: unused variable 'ftps_x' [-Wunused-variable]
+     int ftps_x;
+         ^~~~~~
+../src/helloworld.c:60:9: warning: unused variable 'ftps_valid' [-Wunused-variable]
+     int ftps_valid;
          ^~~~~~~~~~
-../src/main.c:79:9: note: each undeclared identifier is reported only once for each function it appears in
-../src/main.c:80:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-make: *** [src/main.o] Error 1
-14:48:50 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-'Finished building: ../src/main.c'
+../src/helloworld.c:59:9: warning: unused variable 'ftps_data' [-Wunused-variable]
+     int ftps_data;
+         ^~~~~~~~~
+../src/helloworld.c:58:9: warning: variable 'total_control' set but not used [-Wunused-but-set-variable]
+     int total_control;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
 ' '
-'Building target: warm_up.elf'
+'Building target: test_data.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_data_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test_data.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test_data.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
+mb-size test_data.elf  |tee "test_data.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 123344	   1436	 750668	 875448	  d5bb8	warm_up.elf
-'Finished building: warm_up.elf.size'
+   2820	    324	   3112	   6256	   1870	test_data.elf
+'Finished building: test_data.elf.size'
 ' '
-14:50:03 **** Auto Build of configuration Debug for project warm_up ****
+13:26:45 **** Incremental Build of configuration Debug for project test_data ****
 make all 
-'Building file: ../src/main.c'
+make: Nothing to be done for `all'.
+13:27:48 **** Auto Build of configuration Debug for project test_data ****
+make all 
+'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:189:16: warning: unused variable 'display_char_1' [-Wunused-variable]
-  unsigned char display_char_1;
-                ^~~~~~~~~~~~~~
-'Finished building: ../src/main.c'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:61:9: warning: unused variable 'ftps_y' [-Wunused-variable]
+     int ftps_y;
+         ^~~~~~
+../src/helloworld.c:60:9: warning: unused variable 'ftps_x' [-Wunused-variable]
+     int ftps_x;
+         ^~~~~~
+../src/helloworld.c:59:9: warning: variable 'ftps_valid' set but not used [-Wunused-but-set-variable]
+     int ftps_valid;
+         ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
 ' '
-'Building target: warm_up.elf'
+'Building target: test_data.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_data_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test_data.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test_data.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
+mb-size test_data.elf  |tee "test_data.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 123344	   1436	 750668	 875448	  d5bb8	warm_up.elf
-'Finished building: warm_up.elf.size'
+   2848	    328	   3104	   6280	   1888	test_data.elf
+'Finished building: test_data.elf.size'
 ' '
-14:51:47 **** Auto Build of configuration Debug for project warm_up ****
+13:28:12 **** Auto Build of configuration Debug for project test_data ****
 make all 
-'Building file: ../src/main.c'
+'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-'Finished building: ../src/main.c'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:68:7: error: too many arguments to function 'print'
+       print ("valid: %d",ftps_valid );
+       ^~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2017.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: declared here
+ void    _EXFUN(print, (const char* ));
+         ^
+../src/helloworld.c:61:9: warning: unused variable 'ftps_y' [-Wunused-variable]
+     int ftps_y;
+         ^~~~~~
+../src/helloworld.c:60:9: warning: unused variable 'ftps_x' [-Wunused-variable]
+     int ftps_x;
+         ^~~~~~
+make: *** [src/helloworld.o] Error 1
+13:28:24 **** Auto Build of configuration Debug for project test_data ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:68:7: error: too many arguments to function 'print'
+       print ("valid: %d\n",ftps_valid );
+       ^~~~~
+In file included from c:\xilinx\sdk\2017.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+c:\xilinx\sdk\2017.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: declared here
+ void    _EXFUN(print, (const char* ));
+         ^
+../src/helloworld.c:61:9: warning: unused variable 'ftps_y' [-Wunused-variable]
+     int ftps_y;
+         ^~~~~~
+../src/helloworld.c:60:9: warning: unused variable 'ftps_x' [-Wunused-variable]
+     int ftps_x;
+         ^~~~~~
+make: *** [src/helloworld.o] Error 1
+13:29:11 **** Auto Build of configuration Debug for project test_data ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:61:9: warning: unused variable 'ftps_y' [-Wunused-variable]
+     int ftps_y;
+         ^~~~~~
+../src/helloworld.c:60:9: warning: unused variable 'ftps_x' [-Wunused-variable]
+     int ftps_x;
+         ^~~~~~
+'Finished building: ../src/helloworld.c'
 ' '
-'Building target: warm_up.elf'
+'Building target: test_data.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_data_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test_data.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test_data.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
+mb-size test_data.elf  |tee "test_data.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 123424	   1436	 750668	 875528	  d5c08	warm_up.elf
-'Finished building: warm_up.elf.size'
+  90500	   1496	   3188	  95184	  173d0	test_data.elf
+'Finished building: test_data.elf.size'
 ' '
-14:52:46 **** Auto Build of configuration Debug for project warm_up ****
+13:29:15 **** Incremental Build of configuration Debug for project test_data ****
 make all 
-'Building file: ../src/echo.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-../src/echo.c: In function 'start_application':
-../src/echo.c:107:2: error: too many arguments to function 'set_tcp_data'
-  set_tcp_data(tcp_write_in,write_data_in_0,write_data_in_1,write_data_in_2,write_data_in_3);
-  ^~~~~~~~~~~~
-../src/echo.c:22:6: note: declared here
- void set_tcp_data (unsigned int tcp_mode,unsigned int write_data_in_hihg, unsigned int write_data_in_low) {
-      ^~~~~~~~~~~~
-make: *** [src/echo.o] Error 1
-14:53:18 **** Auto Build of configuration Debug for project warm_up ****
+make: Nothing to be done for `all'.
+13:30:00 **** Auto Build of configuration Debug for project test_data ****
 make all 
-'Building file: ../src/echo.c'
+'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-../src/echo.c: In function 'set_tcp_data':
-../src/echo.c:24:21: error: 'write_data_in_hihg' undeclared (first use in this function)
-  tcp_write_data[4]=(write_data_in_hihg>>24)&0xff;
-                     ^~~~~~~~~~~~~~~~~~
-../src/echo.c:24:21: note: each undeclared identifier is reported only once for each function it appears in
-../src/echo.c:28:21: error: 'write_data_in_low' undeclared (first use in this function)
-  tcp_write_data[8]=(write_data_in_low>>24)&0xff;
-                     ^~~~~~~~~~~~~~~~~
-make: *** [src/echo.o] Error 1
-14:53:38 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/echo.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-'Finished building: ../src/echo.c'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:61:9: warning: unused variable 'ftps_y' [-Wunused-variable]
+     int ftps_y;
+         ^~~~~~
+../src/helloworld.c:60:9: warning: unused variable 'ftps_x' [-Wunused-variable]
+     int ftps_x;
+         ^~~~~~
+'Finished building: ../src/helloworld.c'
 ' '
-'Building target: warm_up.elf'
+'Building target: test_data.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_data_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test_data.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test_data.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
+mb-size test_data.elf  |tee "test_data.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 123448	   1436	 750668	 875552	  d5c20	warm_up.elf
-'Finished building: warm_up.elf.size'
+  90508	   1496	   3188	  95192	  173d8	test_data.elf
+'Finished building: test_data.elf.size'
 ' '
-14:54:16 **** Auto Build of configuration Debug for project warm_up ****
+13:30:04 **** Incremental Build of configuration Debug for project test_data ****
 make all 
-'Building file: ../src/echo.c'
+make: Nothing to be done for `all'.
+13:30:56 **** Auto Build of configuration Debug for project test_data ****
+make all 
+'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-'Finished building: ../src/echo.c'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:61:9: warning: unused variable 'ftps_y' [-Wunused-variable]
+     int ftps_y;
+         ^~~~~~
+../src/helloworld.c:60:9: warning: unused variable 'ftps_x' [-Wunused-variable]
+     int ftps_x;
+         ^~~~~~
+'Finished building: ../src/helloworld.c'
 ' '
-'Building target: warm_up.elf'
+'Building target: test_data.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_data_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test_data.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test_data.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
+mb-size test_data.elf  |tee "test_data.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 123984	   1436	 750668	 876088	  d5e38	warm_up.elf
-'Finished building: warm_up.elf.size'
+  90540	   1496	   3188	  95224	  173f8	test_data.elf
+'Finished building: test_data.elf.size'
 ' '
-14:54:50 **** Auto Build of configuration Debug for project warm_up ****
+13:31:43 **** Auto Build of configuration Debug for project test_data ****
 make all 
-'Building file: ../src/echo.c'
+'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-'Finished building: ../src/echo.c'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:63:9: warning: unused variable 'ftps_y' [-Wunused-variable]
+     int ftps_y;
+         ^~~~~~
+../src/helloworld.c:62:9: warning: unused variable 'ftps_x' [-Wunused-variable]
+     int ftps_x;
+         ^~~~~~
+'Finished building: ../src/helloworld.c'
 ' '
-'Building target: warm_up.elf'
+'Building target: test_data.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_data_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test_data.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test_data.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
+mb-size test_data.elf  |tee "test_data.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 123992	   1444	 750668	 876104	  d5e48	warm_up.elf
-'Finished building: warm_up.elf.size'
+  90540	   1496	   3188	  95224	  173f8	test_data.elf
+'Finished building: test_data.elf.size'
 ' '
-15:09:06 **** Incremental Build of configuration Debug for project warm_up ****
+13:32:19 **** Auto Build of configuration Debug for project test_data ****
 make all 
-make: Nothing to be done for `all'.
-15:13:24 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-15:16:47 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-15:18:21 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-15:19:30 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-15:23:19 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-15:25:00 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-15:26:02 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-15:30:20 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-15:33:11 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-15:35:16 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-15:36:15 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-15:36:51 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-15:37:43 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-15:38:07 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-15:40:08 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-15:41:04 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/main.c'
+'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-'Finished building: ../src/main.c'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:63:9: warning: variable 'ftps_y' set but not used [-Wunused-but-set-variable]
+     int ftps_y;
+         ^~~~~~
+../src/helloworld.c:62:9: warning: variable 'ftps_x' set but not used [-Wunused-but-set-variable]
+     int ftps_x;
+         ^~~~~~
+'Finished building: ../src/helloworld.c'
 ' '
-'Building target: warm_up.elf'
+'Building target: test_data.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_data_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test_data.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test_data.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
+mb-size test_data.elf  |tee "test_data.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 124008	   1444	 750668	 876120	  d5e58	warm_up.elf
-'Finished building: warm_up.elf.size'
+  90628	   1504	   3188	  95320	  17458	test_data.elf
+'Finished building: test_data.elf.size'
 ' '
-15:41:17 **** Incremental Build of configuration Debug for project warm_up ****
+13:32:24 **** Auto Build of configuration Debug for project test_data ****
 make all 
-make: Nothing to be done for `all'.
-15:43:41 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-15:45:48 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-15:49:03 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-15:53:14 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-15:55:13 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/main.c'
+'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:187:1: warning: statement with no effect [-Wunused-value]
- system initialed
- ^~~~~~
-../src/main.c:187:8: error: expected ';' before 'initialed'
- system initialed
-        ^~~~~~~~~
-make: *** [src/main.o] Error 1
-15:55:17 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-'Finished building: ../src/main.c'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:63:9: warning: variable 'ftps_y' set but not used [-Wunused-but-set-variable]
+     int ftps_y;
+         ^~~~~~
+../src/helloworld.c:62:9: warning: variable 'ftps_x' set but not used [-Wunused-but-set-variable]
+     int ftps_x;
+         ^~~~~~
+'Finished building: ../src/helloworld.c'
 ' '
-'Building target: warm_up.elf'
+'Building target: test_data.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_data_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test_data.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test_data.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
+mb-size test_data.elf  |tee "test_data.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 124008	   1444	 750668	 876120	  d5e58	warm_up.elf
-'Finished building: warm_up.elf.size'
+  90580	   1504	   3188	  95272	  17428	test_data.elf
+'Finished building: test_data.elf.size'
 ' '
-15:55:18 **** Incremental Build of configuration Debug for project warm_up ****
+13:33:01 **** Auto Build of configuration Debug for project test_data ****
 make all 
-make: Nothing to be done for `all'.
-15:56:52 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-15:58:18 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-15:58:51 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-16:00:34 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-16:02:41 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-16:03:22 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-16:04:24 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-16:19:46 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/echo.c'
+'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-'Finished building: ../src/echo.c'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
 ' '
-'Building target: warm_up.elf'
+'Building target: test_data.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_data_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test_data.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test_data.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
+mb-size test_data.elf  |tee "test_data.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 124040	   1444	 750668	 876152	  d5e78	warm_up.elf
-'Finished building: warm_up.elf.size'
+  90588	   1504	   3188	  95280	  17430	test_data.elf
+'Finished building: test_data.elf.size'
 ' '
-16:19:50 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/echo.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-'Finished building: ../src/echo.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 124040	   1444	 750668	 876152	  d5e78	warm_up.elf
-'Finished building: warm_up.elf.size'
-' '
-16:20:09 **** Incremental Build of configuration Debug for project warm_up ****
+13:33:04 **** Incremental Build of configuration Debug for project test_data ****
 make all 
 make: Nothing to be done for `all'.
-16:21:05 **** Auto Build of configuration Debug for project warm_up ****
+13:34:20 **** Auto Build of configuration Debug for project test_data ****
 make all 
-'Building file: ../src/main.c'
+'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-'Finished building: ../src/main.c'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
 ' '
-'Building target: warm_up.elf'
+'Building target: test_data.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_data_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test_data.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test_data.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
+mb-size test_data.elf  |tee "test_data.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 124068	   1444	 750672	 876184	  d5e98	warm_up.elf
-'Finished building: warm_up.elf.size'
+  90628	   1504	   3188	  95320	  17458	test_data.elf
+'Finished building: test_data.elf.size'
 ' '
-16:21:46 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/echo.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-../src/echo.c: In function 'transfer_data':
-../src/echo.c:12:8: warning: unused variable 'write_error' [-Wunused-variable]
-  err_t write_error = tcp_write(pcb,tcp_write_data, BUFF_SIZE,TCP_WRITE_FLAG_COPY);
-        ^~~~~~~~~~~
-'Finished building: ../src/echo.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 124120	   1444	 750668	 876232	  d5ec8	warm_up.elf
-'Finished building: warm_up.elf.size'
-' '
-16:21:50 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-16:23:01 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/echo.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-'Finished building: ../src/echo.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 124036	   1444	 750672	 876152	  d5e78	warm_up.elf
-'Finished building: warm_up.elf.size'
-' '
-16:25:09 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:192:48: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
-  unsigned int write_data_0 = char_to_writedata("SYST");
-                                                ^~~~~~
-../src/main.c:72:14: note: expected 'unsigned char *' but argument is of type 'char *'
- unsigned int char_to_writedata (unsigned char* input_char)
-              ^~~~~~~~~~~~~~~~~
-../src/main.c:193:48: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
-  unsigned int write_data_1 = char_to_writedata("EM I");
-                                                ^~~~~~
-../src/main.c:72:14: note: expected 'unsigned char *' but argument is of type 'char *'
- unsigned int char_to_writedata (unsigned char* input_char)
-              ^~~~~~~~~~~~~~~~~
-../src/main.c:194:48: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
-  unsigned int write_data_2 = char_to_writedata("NITI");
-                                                ^~~~~~
-../src/main.c:72:14: note: expected 'unsigned char *' but argument is of type 'char *'
- unsigned int char_to_writedata (unsigned char* input_char)
-              ^~~~~~~~~~~~~~~~~
-../src/main.c:195:48: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
-  unsigned int write_data_3 = char_to_writedata("ALED");
-                                                ^~~~~~
-../src/main.c:72:14: note: expected 'unsigned char *' but argument is of type 'char *'
- unsigned int char_to_writedata (unsigned char* input_char)
-              ^~~~~~~~~~~~~~~~~
-../src/main.c:191:16: warning: unused variable 'display_char_3' [-Wunused-variable]
-  unsigned char display_char_3[4] ="ALED";
-                ^~~~~~~~~~~~~~
-../src/main.c:190:16: warning: unused variable 'display_char_2' [-Wunused-variable]
-  unsigned char display_char_2[4] ="NITI";
-                ^~~~~~~~~~~~~~
-../src/main.c:189:16: warning: unused variable 'display_char_1' [-Wunused-variable]
-  unsigned char display_char_1[4] ="EM I";
-                ^~~~~~~~~~~~~~
-../src/main.c:188:16: warning: unused variable 'display_char_0' [-Wunused-variable]
-  unsigned char display_char_0[4] ="SYST";
-                ^~~~~~~~~~~~~~
-'Finished building: ../src/main.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 123992	   1444	 750668	 876104	  d5e48	warm_up.elf
-'Finished building: warm_up.elf.size'
-' '
-16:25:21 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:192:48: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
-  unsigned int write_data_0 = char_to_writedata("SYST");
-                                                ^~~~~~
-../src/main.c:72:14: note: expected 'unsigned char *' but argument is of type 'char *'
- unsigned int char_to_writedata (unsigned char* input_char)
-              ^~~~~~~~~~~~~~~~~
-../src/main.c:193:48: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
-  unsigned int write_data_1 = char_to_writedata("EM I");
-                                                ^~~~~~
-../src/main.c:72:14: note: expected 'unsigned char *' but argument is of type 'char *'
- unsigned int char_to_writedata (unsigned char* input_char)
-              ^~~~~~~~~~~~~~~~~
-../src/main.c:194:48: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
-  unsigned int write_data_2 = char_to_writedata("NITI");
-                                                ^~~~~~
-../src/main.c:72:14: note: expected 'unsigned char *' but argument is of type 'char *'
- unsigned int char_to_writedata (unsigned char* input_char)
-              ^~~~~~~~~~~~~~~~~
-../src/main.c:195:48: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
-  unsigned int write_data_3 = char_to_writedata("ALED");
-                                                ^~~~~~
-../src/main.c:72:14: note: expected 'unsigned char *' but argument is of type 'char *'
- unsigned int char_to_writedata (unsigned char* input_char)
-              ^~~~~~~~~~~~~~~~~
-'Finished building: ../src/main.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 123944	   1444	 750668	 876056	  d5e18	warm_up.elf
-'Finished building: warm_up.elf.size'
-' '
-16:25:59 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:211:7: error: 'i' undeclared (first use in this function)
-   if (i==500000) {
-       ^
-../src/main.c:211:7: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [src/main.o] Error 1
-16:26:39 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:211:7: error: 'i' undeclared (first use in this function)
-   if (i==500000) {
-       ^
-../src/main.c:211:7: note: each undeclared identifier is reported only once for each function it appears in
-../src/main.c:213:22: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
-    display_char_0[4] ="This";
-                      ^
-../src/main.c:214:22: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
-    display_char_1[4] =" is ";
-                      ^
-../src/main.c:215:22: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
-    display_char_2[4] ="Temp";
-                      ^
-../src/main.c:216:22: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
-    display_char_3[4] ="Test";
-                      ^
-make: *** [src/main.o] Error 1
-16:26:59 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:211:7: error: 'i' undeclared (first use in this function)
-   if (i==500000) {
-       ^
-../src/main.c:211:7: note: each undeclared identifier is reported only once for each function it appears in
-../src/main.c:213:19: error: assignment to expression with array type
-    display_char_0 ="This";
-                   ^
-../src/main.c:214:19: error: assignment to expression with array type
-    display_char_1 =" is ";
-                   ^
-../src/main.c:215:19: error: assignment to expression with array type
-    display_char_2 ="Temp";
-                   ^
-../src/main.c:216:19: error: assignment to expression with array type
-    display_char_3 ="Test";
-                   ^
-make: *** [src/main.o] Error 1
-16:28:15 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:214:9: error: redefinition of 'test_sting_0'
-    char test_sting_0 [4] =" is ";
-         ^~~~~~~~~~~~
-../src/main.c:213:9: note: previous definition of 'test_sting_0' was here
-    char test_sting_0 [4] ="This";
-         ^~~~~~~~~~~~
-../src/main.c:215:9: error: redefinition of 'test_sting_0'
-    char test_sting_0 [4] ="Temp";
-         ^~~~~~~~~~~~
-../src/main.c:214:9: note: previous definition of 'test_sting_0' was here
-    char test_sting_0 [4] =" is ";
-         ^~~~~~~~~~~~
-../src/main.c:216:9: error: redefinition of 'test_sting_0'
-    char test_sting_0 [4] ="Test";
-         ^~~~~~~~~~~~
-../src/main.c:215:9: note: previous definition of 'test_sting_0' was here
-    char test_sting_0 [4] ="Temp";
-         ^~~~~~~~~~~~
-../src/main.c:216:9: warning: unused variable 'test_sting_0' [-Wunused-variable]
-    char test_sting_0 [4] ="Test";
-         ^~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-16:28:22 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:216:9: warning: unused variable 'test_sting_3' [-Wunused-variable]
-    char test_sting_3 [4] ="Test";
-         ^~~~~~~~~~~~
-../src/main.c:215:9: warning: unused variable 'test_sting_2' [-Wunused-variable]
-    char test_sting_2 [4] ="Temp";
-         ^~~~~~~~~~~~
-../src/main.c:214:9: warning: unused variable 'test_sting_1' [-Wunused-variable]
-    char test_sting_1 [4] =" is ";
-         ^~~~~~~~~~~~
-../src/main.c:213:9: warning: unused variable 'test_sting_0' [-Wunused-variable]
-    char test_sting_0 [4] ="This";
-         ^~~~~~~~~~~~
-'Finished building: ../src/main.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 124180	   1444	 750672	 876296	  d5f08	warm_up.elf
-'Finished building: warm_up.elf.size'
-' '
-16:28:43 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:217:37: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
-    write_data_0 = char_to_writedata(test_sting_0);
-                                     ^~~~~~~~~~~~
-../src/main.c:72:14: note: expected 'unsigned char *' but argument is of type 'char *'
- unsigned int char_to_writedata (unsigned char* input_char)
-              ^~~~~~~~~~~~~~~~~
-../src/main.c:218:37: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
-    write_data_1 = char_to_writedata(test_sting_1);
-                                     ^~~~~~~~~~~~
-../src/main.c:72:14: note: expected 'unsigned char *' but argument is of type 'char *'
- unsigned int char_to_writedata (unsigned char* input_char)
-              ^~~~~~~~~~~~~~~~~
-../src/main.c:219:37: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
-    write_data_2 = char_to_writedata(test_sting_2);
-                                     ^~~~~~~~~~~~
-../src/main.c:72:14: note: expected 'unsigned char *' but argument is of type 'char *'
- unsigned int char_to_writedata (unsigned char* input_char)
-              ^~~~~~~~~~~~~~~~~
-../src/main.c:220:37: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
-    write_data_3 = char_to_writedata(test_sting_3);
-                                     ^~~~~~~~~~~~
-../src/main.c:72:14: note: expected 'unsigned char *' but argument is of type 'char *'
- unsigned int char_to_writedata (unsigned char* input_char)
-              ^~~~~~~~~~~~~~~~~
-'Finished building: ../src/main.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 124180	   1444	 750672	 876296	  d5f08	warm_up.elf
-'Finished building: warm_up.elf.size'
-' '
-16:28:46 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-16:29:15 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:218:37: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
-    write_data_0 = char_to_writedata(test_sting_0);
-                                     ^~~~~~~~~~~~
-../src/main.c:72:14: note: expected 'unsigned char *' but argument is of type 'char *'
- unsigned int char_to_writedata (unsigned char* input_char)
-              ^~~~~~~~~~~~~~~~~
-../src/main.c:219:37: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
-    write_data_1 = char_to_writedata(test_sting_1);
-                                     ^~~~~~~~~~~~
-../src/main.c:72:14: note: expected 'unsigned char *' but argument is of type 'char *'
- unsigned int char_to_writedata (unsigned char* input_char)
-              ^~~~~~~~~~~~~~~~~
-../src/main.c:220:37: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
-    write_data_2 = char_to_writedata(test_sting_2);
-                                     ^~~~~~~~~~~~
-../src/main.c:72:14: note: expected 'unsigned char *' but argument is of type 'char *'
- unsigned int char_to_writedata (unsigned char* input_char)
-              ^~~~~~~~~~~~~~~~~
-../src/main.c:221:37: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
-    write_data_3 = char_to_writedata(test_sting_3);
-                                     ^~~~~~~~~~~~
-../src/main.c:72:14: note: expected 'unsigned char *' but argument is of type 'char *'
- unsigned int char_to_writedata (unsigned char* input_char)
-              ^~~~~~~~~~~~~~~~~
-'Finished building: ../src/main.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 124180	   1444	 750672	 876296	  d5f08	warm_up.elf
-'Finished building: warm_up.elf.size'
-' '
-16:29:16 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-16:29:21 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-16:29:49 **** Auto Build of configuration Debug for project warm_up ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../warm_up_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:218:37: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
-    write_data_0 = char_to_writedata(test_sting_0);
-                                     ^~~~~~~~~~~~
-../src/main.c:72:14: note: expected 'unsigned char *' but argument is of type 'char *'
- unsigned int char_to_writedata (unsigned char* input_char)
-              ^~~~~~~~~~~~~~~~~
-../src/main.c:219:37: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
-    write_data_1 = char_to_writedata(test_sting_1);
-                                     ^~~~~~~~~~~~
-../src/main.c:72:14: note: expected 'unsigned char *' but argument is of type 'char *'
- unsigned int char_to_writedata (unsigned char* input_char)
-              ^~~~~~~~~~~~~~~~~
-../src/main.c:220:37: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
-    write_data_2 = char_to_writedata(test_sting_2);
-                                     ^~~~~~~~~~~~
-../src/main.c:72:14: note: expected 'unsigned char *' but argument is of type 'char *'
- unsigned int char_to_writedata (unsigned char* input_char)
-              ^~~~~~~~~~~~~~~~~
-../src/main.c:221:37: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
-    write_data_3 = char_to_writedata(test_sting_3);
-                                     ^~~~~~~~~~~~
-../src/main.c:72:14: note: expected 'unsigned char *' but argument is of type 'char *'
- unsigned int char_to_writedata (unsigned char* input_char)
-              ^~~~~~~~~~~~~~~~~
-'Finished building: ../src/main.c'
-' '
-'Building target: warm_up.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../warm_up_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "warm_up.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: warm_up.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size warm_up.elf  |tee "warm_up.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 124180	   1444	 750672	 876296	  d5f08	warm_up.elf
-'Finished building: warm_up.elf.size'
-' '
-16:30:11 **** Incremental Build of configuration Debug for project warm_up ****
-make all 
-make: Nothing to be done for `all'.
-16:41:35 **** Incremental Build of configuration Debug for project warm_up ****
+13:34:23 **** Incremental Build of configuration Debug for project test_data ****
 make all 
 make: Nothing to be done for `all'.

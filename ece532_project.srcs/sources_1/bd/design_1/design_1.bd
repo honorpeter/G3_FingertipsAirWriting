@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x67262502A85596C5" bd:device="xc7a100tcsg324-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2017.2" bd:top="design_1" bd:version="1.00.a">
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xDF4874677F428777" bd:device="xc7a100tcsg324-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2017.2" bd:top="design_1" bd:version="1.00.a">
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -450,6 +450,26 @@
             <spirit:direction>out</spirit:direction>
           </spirit:wire>
         </spirit:port>
+        <spirit:port>
+          <spirit:name>SW_15</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>0</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>LED_15</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>0</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
       </spirit:ports>
     </spirit:model>
   </spirit:component>
@@ -650,6 +670,58 @@
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_frame_average_buffer_0_1</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>axi_SW_total_control</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="axi_gpio" spirit:vendor="xilinx.com" spirit:version="2.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_axi_gpio_0_1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_GPIO_WIDTH">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_ALL_INPUTS">1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>axi_LED_total_control</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="axi_gpio" spirit:vendor="xilinx.com" spirit:version="2.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_axi_gpio_0_2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_GPIO_WIDTH">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_ALL_OUTPUTS">1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>axi_ftps_valid</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="axi_gpio" spirit:vendor="xilinx.com" spirit:version="2.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_axi_gpio_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_GPIO_WIDTH">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_ALL_INPUTS">1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>axi_ftps_x</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="axi_gpio" spirit:vendor="xilinx.com" spirit:version="2.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_axi_gpio_0_3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_GPIO_WIDTH">9</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_ALL_INPUTS">1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>axi_ftps_y</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="axi_gpio" spirit:vendor="xilinx.com" spirit:version="2.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_axi_gpio_0_4</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_GPIO_WIDTH">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_ALL_INPUTS">1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>ftps_locator_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="ftps_locator" spirit:vendor="utoronto.ca" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_ftps_locator_0_1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
     </spirit:componentInstances>
     <spirit:interconnections>
       <spirit:interconnection>
@@ -717,6 +789,31 @@
         <spirit:activeInterface spirit:busRef="M03_AXI" spirit:componentRef="microblaze_0_axi_periph"/>
         <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="axi_timer_0"/>
       </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>microblaze_0_axi_periph_M05_AXI</spirit:name>
+        <spirit:activeInterface spirit:busRef="M05_AXI" spirit:componentRef="microblaze_0_axi_periph"/>
+        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="axi_SW_total_control"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>microblaze_0_axi_periph_M06_AXI</spirit:name>
+        <spirit:activeInterface spirit:busRef="M06_AXI" spirit:componentRef="microblaze_0_axi_periph"/>
+        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="axi_LED_total_control"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>microblaze_0_axi_periph_M04_AXI</spirit:name>
+        <spirit:activeInterface spirit:busRef="M04_AXI" spirit:componentRef="microblaze_0_axi_periph"/>
+        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="axi_ftps_valid"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>microblaze_0_axi_periph_M07_AXI</spirit:name>
+        <spirit:activeInterface spirit:busRef="M07_AXI" spirit:componentRef="microblaze_0_axi_periph"/>
+        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="axi_ftps_x"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>microblaze_0_axi_periph_M08_AXI</spirit:name>
+        <spirit:activeInterface spirit:busRef="M08_AXI" spirit:componentRef="microblaze_0_axi_periph"/>
+        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="axi_ftps_y"/>
+      </spirit:interconnection>
     </spirit:interconnections>
     <spirit:adHocConnections>
       <spirit:adHocConnection>
@@ -747,6 +844,11 @@
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M06_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M07_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M08_ACLK"/>
+        <spirit:internalPortReference spirit:componentRef="axi_SW_total_control" spirit:portRef="s_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_LED_total_control" spirit:portRef="s_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_ftps_valid" spirit:portRef="s_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_ftps_x" spirit:portRef="s_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_ftps_y" spirit:portRef="s_axi_aclk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>rst_clk_wiz_1_100M_mb_reset</spirit:name>
@@ -781,6 +883,11 @@
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M06_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M07_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M08_ARESETN"/>
+        <spirit:internalPortReference spirit:componentRef="axi_SW_total_control" spirit:portRef="s_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="axi_LED_total_control" spirit:portRef="s_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="axi_ftps_valid" spirit:portRef="s_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="axi_ftps_x" spirit:portRef="s_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="axi_ftps_y" spirit:portRef="s_axi_aresetn"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>mdm_1_debug_sys_rst</spirit:name>
@@ -849,6 +956,7 @@
         <spirit:internalPortReference spirit:componentRef="video_in_0" spirit:portRef="OV7670_PCLK"/>
         <spirit:internalPortReference spirit:componentRef="blk_mem_buffer_vga" spirit:portRef="clka"/>
         <spirit:internalPortReference spirit:componentRef="frame_average_buffer_0" spirit:portRef="pclk"/>
+        <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="pclk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>vga444_0_vga_red</spirit:name>
@@ -880,6 +988,7 @@
         <spirit:externalPortReference spirit:portRef="OV7670_VSYNC"/>
         <spirit:internalPortReference spirit:componentRef="video_in_0" spirit:portRef="OV7670_VSYNC"/>
         <spirit:internalPortReference spirit:componentRef="frame_average_buffer_0" spirit:portRef="vsync"/>
+        <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="vsync"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>OV7670_HREF_1</spirit:name>
@@ -935,19 +1044,16 @@
         <spirit:externalPortReference spirit:portRef="pwdn"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>blk_mem_buffer_vga_doutb</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="blk_mem_buffer_vga" spirit:portRef="doutb"/>
-        <spirit:internalPortReference spirit:componentRef="vga444_0" spirit:portRef="frame_pixel"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>vga444_0_frame_addr</spirit:name>
         <spirit:internalPortReference spirit:componentRef="vga444_0" spirit:portRef="frame_addr"/>
         <spirit:internalPortReference spirit:componentRef="blk_mem_buffer_vga" spirit:portRef="addrb"/>
+        <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="request_addr"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>video_in_0_resend</spirit:name>
         <spirit:internalPortReference spirit:componentRef="video_in_0" spirit:portRef="resend"/>
         <spirit:internalPortReference spirit:componentRef="frame_average_buffer_0" spirit:portRef="reset"/>
+        <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="reset"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>video_in_0_capture_addr</spirit:name>
@@ -963,16 +1069,54 @@
         <spirit:name>frame_average_buffer_0_avg_addr_out</spirit:name>
         <spirit:internalPortReference spirit:componentRef="frame_average_buffer_0" spirit:portRef="avg_addr_out"/>
         <spirit:internalPortReference spirit:componentRef="blk_mem_buffer_vga" spirit:portRef="addra"/>
+        <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="capture_address"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>frame_average_buffer_0_avg_data_out</spirit:name>
         <spirit:internalPortReference spirit:componentRef="frame_average_buffer_0" spirit:portRef="avg_data_out"/>
         <spirit:internalPortReference spirit:componentRef="blk_mem_buffer_vga" spirit:portRef="dina"/>
+        <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="capture_data"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>frame_average_buffer_0_avg_data_valid</spirit:name>
         <spirit:internalPortReference spirit:componentRef="frame_average_buffer_0" spirit:portRef="avg_data_valid"/>
         <spirit:internalPortReference spirit:componentRef="blk_mem_buffer_vga" spirit:portRef="wea"/>
+        <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="capture_data_valid"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>gpio_io_i_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="SW_15"/>
+        <spirit:internalPortReference spirit:componentRef="axi_SW_total_control" spirit:portRef="gpio_io_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>axi_gpio_0_gpio_io_o</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="axi_LED_total_control" spirit:portRef="gpio_io_o"/>
+        <spirit:externalPortReference spirit:portRef="LED_15"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>blk_mem_buffer_vga_doutb</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="blk_mem_buffer_vga" spirit:portRef="doutb"/>
+        <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="request_data"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>ftps_locator_0_locate_data</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="locate_data"/>
+        <spirit:internalPortReference spirit:componentRef="vga444_0" spirit:portRef="frame_pixel"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>ftps_locator_0_y_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="y_out"/>
+        <spirit:internalPortReference spirit:componentRef="axi_ftps_y" spirit:portRef="gpio_io_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>ftps_locator_0_x_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="x_out"/>
+        <spirit:internalPortReference spirit:componentRef="axi_ftps_x" spirit:portRef="gpio_io_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>ftps_locator_0_ftps_valid</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="ftps_valid"/>
+        <spirit:internalPortReference spirit:componentRef="axi_ftps_valid" spirit:portRef="gpio_io_i"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>
@@ -3792,6 +3936,36 @@
             <spirit:name>SEG_axi_ethernetlite_0_Reg</spirit:name>
             <spirit:displayName>/axi_ethernetlite_0/S_AXI/Reg</spirit:displayName>
             <spirit:addressOffset>0x40E00000</spirit:addressOffset>
+            <spirit:range>64K</spirit:range>
+          </spirit:segment>
+          <spirit:segment>
+            <spirit:name>SEG_axi_ftps_valid_Reg</spirit:name>
+            <spirit:displayName>/axi_ftps_valid/S_AXI/Reg</spirit:displayName>
+            <spirit:addressOffset>0x40020000</spirit:addressOffset>
+            <spirit:range>64K</spirit:range>
+          </spirit:segment>
+          <spirit:segment>
+            <spirit:name>SEG_axi_ftps_x_Reg</spirit:name>
+            <spirit:displayName>/axi_ftps_x/S_AXI/Reg</spirit:displayName>
+            <spirit:addressOffset>0x40030000</spirit:addressOffset>
+            <spirit:range>64K</spirit:range>
+          </spirit:segment>
+          <spirit:segment>
+            <spirit:name>SEG_axi_ftps_y_Reg</spirit:name>
+            <spirit:displayName>/axi_ftps_y/S_AXI/Reg</spirit:displayName>
+            <spirit:addressOffset>0x40040000</spirit:addressOffset>
+            <spirit:range>64K</spirit:range>
+          </spirit:segment>
+          <spirit:segment>
+            <spirit:name>SEG_axi_gpio_0_Reg</spirit:name>
+            <spirit:displayName>/axi_SW_total_control/S_AXI/Reg</spirit:displayName>
+            <spirit:addressOffset>0x40000000</spirit:addressOffset>
+            <spirit:range>64K</spirit:range>
+          </spirit:segment>
+          <spirit:segment>
+            <spirit:name>SEG_axi_gpio_0_Reg1</spirit:name>
+            <spirit:displayName>/axi_LED_total_control/S_AXI/Reg</spirit:displayName>
+            <spirit:addressOffset>0x40010000</spirit:addressOffset>
             <spirit:range>64K</spirit:range>
           </spirit:segment>
           <spirit:segment>

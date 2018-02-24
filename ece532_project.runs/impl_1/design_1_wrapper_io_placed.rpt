@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date                      : Sat Feb 24 11:14:42 2018
+| Date                      : Sat Feb 24 13:47:00 2018
 | Host                      : SFB520WS13 running 64-bit Service Pack 1  (build 7601)
 | Command                   : report_io -file design_1_wrapper_io_placed.rpt
 | Design                    : design_1_wrapper
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            92 |
+|            94 |
 +---------------+
 
 
@@ -350,8 +350,8 @@ Table of Contents
 | V7         | DDR2_dq[4]           | High Range | IO_L20P_T3_34                | BIDIR       | SSTL18_II      |      34 |            | FAST |    UNTUNED_SPLIT_50 |  NP_VTT_50_FP_VTT_50 |         | FIXED      |           |          | Internal | NONE             |
 | V8         |                      | High Range | VCCO_34                      | VCCO        |                |      34 |            |      |                     |                      |    1.80 |            |           |          |          |                  |
 | V9         | DDR2_dqs_n[0]        | High Range | IO_L21N_T3_DQS_34            | BIDIR       | DIFF_SSTL18_II |      34 |            | FAST |    UNTUNED_SPLIT_50 |  NP_VTT_50_FP_VTT_50 |         | FIXED      |           |          |          | NONE             |
-| V10        |                      | High Range | IO_L21P_T3_DQS_14            | User IO     |                |      14 |            |      |                     |                      |         |            |           |          |          |                  |
-| V11        |                      | High Range | IO_L21N_T3_DQS_A06_D22_14    | User IO     |                |      14 |            |      |                     |                      |         |            |           |          |          |                  |
+| V10        | SW_15[0]             | High Range | IO_L21P_T3_DQS_14            | INPUT       | LVCMOS33       |      14 |            |      |                     |                 NONE |         | FIXED      |           |          |          | NONE             |
+| V11        | LED_15[0]            | High Range | IO_L21N_T3_DQS_A06_D22_14    | OUTPUT      | LVCMOS33       |      14 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |          | NONE             |
 | V12        |                      | High Range | IO_L20N_T3_A07_D23_14        | User IO     |                |      14 |            |      |                     |                      |         |            |           |          |          |                  |
 | V13        |                      |            | GND                          | GND         |                |         |            |      |                     |                      |     0.0 |            |           |          |          |                  |
 | V14        |                      | High Range | IO_L22N_T3_A04_D20_14        | User IO     |                |      14 |            |      |                     |                      |         |            |           |          |          |                  |
