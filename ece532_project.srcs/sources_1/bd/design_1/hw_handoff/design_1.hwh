@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Feb 12 11:59:29 2018" VIVADOVERSION="2017.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Feb 24 11:04:08 2018" VIVADOVERSION="2017.2">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys4_ddr:part0:1.1" DEVICE="7a100t" NAME="design_1" PACKAGE="csg324" SPEEDGRADE="-1"/>
 
@@ -3128,10 +3128,10 @@
     <MODULE FULLNAME="/frame_average_buffer_0" HWVERSION="1.0" INSTANCE="frame_average_buffer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="frame_average_buffer" VLNV="utoronto.ca:user:frame_average_buffer:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="WHITE_TH" VALUE="&quot;10000000&quot;"/>
+        <PARAMETER NAME="WHITE_TH" VALUE="&quot;10110000&quot;"/>
         <PARAMETER NAME="AVG_TH" VALUE="&quot;000&quot;"/>
         <PARAMETER NAME="FRAME_NUMBER" VALUE="&quot;010&quot;"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_frame_average_buffer_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_frame_average_buffer_0_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
