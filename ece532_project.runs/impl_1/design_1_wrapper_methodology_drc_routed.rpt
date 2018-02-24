@@ -1,11 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-<<<<<<< HEAD
 | Date         : Sat Feb 24 13:48:20 2018
-=======
-| Date         : Sat Feb 24 11:47:31 2018
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 | Host         : SFB520WS13 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -rpx design_1_wrapper_methodology_drc_routed.rpx
 | Design       : design_1_wrapper
@@ -27,11 +23,7 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-<<<<<<< HEAD
              Violations found: 338
-=======
-             Violations found: 335
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 +-----------+----------+----------------------------------------------------+------------+
 | Rule      | Severity | Description                                        | Violations |
 +-----------+----------+----------------------------------------------------+------------+
@@ -41,13 +33,8 @@ Table of Contents
 | TIMING-6  | Warning  | No common primary clock between related clocks     | 2          |
 | TIMING-7  | Warning  | No common node between related clocks              | 2          |
 | TIMING-9  | Warning  | Unknown CDC Logic                                  | 1          |
-<<<<<<< HEAD
 | TIMING-17 | Warning  | Non-clocked sequential cell                        | 281        |
 | TIMING-18 | Warning  | Missing input or output delay                      | 32         |
-=======
-| TIMING-17 | Warning  | Non-clocked sequential cell                        | 280        |
-| TIMING-18 | Warning  | Missing input or output delay                      | 30         |
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 | TIMING-38 | Warning  | Bus skew constraint applied on multiple clocks     | 2          |
 | XDCB-5    | Warning  | Runtime inefficient way to find pin objects        | 2          |
 +-----------+----------+----------------------------------------------------+------------+
@@ -56,110 +43,62 @@ Table of Contents
 -----------------
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-<<<<<<< HEAD
 The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[0] in site SLICE_X66Y106 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[0] is not placed in the same (SLICE) site.
-=======
-The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[0] in site SLICE_X63Y103 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[0] is not placed in the same (SLICE) site.
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Related violations: <none>
 
 PDRC-190#2 Warning
 Suboptimally placed synchronized register chain  
-<<<<<<< HEAD
 The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[10] in site SLICE_X64Y106 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[10] is not placed in the same (SLICE) site.
-=======
-The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[10] in site SLICE_X62Y101 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[10] is not placed in the same (SLICE) site.
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Related violations: <none>
 
 PDRC-190#3 Warning
 Suboptimally placed synchronized register chain  
-<<<<<<< HEAD
 The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[11] in site SLICE_X69Y104 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[11] is not placed in the same (SLICE) site.
-=======
-The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[11] in site SLICE_X66Y99 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[11] is not placed in the same (SLICE) site.
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Related violations: <none>
 
 PDRC-190#4 Warning
 Suboptimally placed synchronized register chain  
-<<<<<<< HEAD
 The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[1] in site SLICE_X65Y102 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[1] is not placed in the same (SLICE) site.
-=======
-The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[1] in site SLICE_X63Y101 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[1] is not placed in the same (SLICE) site.
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Related violations: <none>
 
 PDRC-190#5 Warning
 Suboptimally placed synchronized register chain  
-<<<<<<< HEAD
 The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[2] in site SLICE_X67Y106 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[2] is not placed in the same (SLICE) site.
-=======
-The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[2] in site SLICE_X62Y99 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[2] is not placed in the same (SLICE) site.
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Related violations: <none>
 
 PDRC-190#6 Warning
 Suboptimally placed synchronized register chain  
-<<<<<<< HEAD
 The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[3] in site SLICE_X65Y105 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[3] is not placed in the same (SLICE) site.
-=======
-The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[3] in site SLICE_X65Y101 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[3] is not placed in the same (SLICE) site.
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Related violations: <none>
 
 PDRC-190#7 Warning
 Suboptimally placed synchronized register chain  
-<<<<<<< HEAD
 The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[4] in site SLICE_X67Y104 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[4] is not placed in the same (SLICE) site.
-=======
-The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[4] in site SLICE_X62Y97 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[4] is not placed in the same (SLICE) site.
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Related violations: <none>
 
 PDRC-190#8 Warning
 Suboptimally placed synchronized register chain  
-<<<<<<< HEAD
 The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[5] in site SLICE_X63Y104 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[5] is not placed in the same (SLICE) site.
-=======
-The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[5] in site SLICE_X67Y99 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[5] is not placed in the same (SLICE) site.
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Related violations: <none>
 
 PDRC-190#9 Warning
 Suboptimally placed synchronized register chain  
-<<<<<<< HEAD
 The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[6] in site SLICE_X65Y107 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[6] is not placed in the same (SLICE) site.
-=======
-The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[6] in site SLICE_X63Y97 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[6] is not placed in the same (SLICE) site.
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Related violations: <none>
 
 PDRC-190#10 Warning
 Suboptimally placed synchronized register chain  
-<<<<<<< HEAD
 The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[7] in site SLICE_X64Y104 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[7] is not placed in the same (SLICE) site.
-=======
-The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[7] in site SLICE_X61Y99 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[7] is not placed in the same (SLICE) site.
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Related violations: <none>
 
 PDRC-190#11 Warning
 Suboptimally placed synchronized register chain  
-<<<<<<< HEAD
 The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[8] in site SLICE_X62Y104 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[8] is not placed in the same (SLICE) site.
-=======
-The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[8] in site SLICE_X65Y99 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[8] is not placed in the same (SLICE) site.
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Related violations: <none>
 
 PDRC-190#12 Warning
 Suboptimally placed synchronized register chain  
-<<<<<<< HEAD
 The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[9] in site SLICE_X66Y104 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[9] is not placed in the same (SLICE) site.
-=======
-The FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[9] in site SLICE_X63Y95 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[9] is not placed in the same (SLICE) site.
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Related violations: <none>
 
 TIMING-2#1 Warning
@@ -784,7 +723,6 @@ Related violations: <none>
 
 TIMING-17#116 Warning
 Non-clocked sequential cell  
-<<<<<<< HEAD
 The clock pin design_1_i/ftps_locator_0/inst/ftps_valid_reg/C is not reached by a timing clock
 Related violations: <none>
 
@@ -794,1479 +732,821 @@ The clock pin design_1_i/ftps_locator_0/inst/left_cover_reg/C is not reached by 
 Related violations: <none>
 
 TIMING-17#118 Warning
-=======
-The clock pin design_1_i/ftps_locator_0/inst/left_cover_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#117 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/left_sum_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#119 Warning
-=======
-TIMING-17#118 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/left_sum_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#120 Warning
-=======
-TIMING-17#119 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/left_sum_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#121 Warning
-=======
-TIMING-17#120 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/left_sum_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#122 Warning
-=======
-TIMING-17#121 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/left_sum_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#123 Warning
-=======
-TIMING-17#122 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/left_sum_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#124 Warning
-=======
-TIMING-17#123 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/left_sum_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#125 Warning
-=======
-TIMING-17#124 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/left_sum_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#126 Warning
-=======
-TIMING-17#125 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/lf_x_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#127 Warning
-=======
-TIMING-17#126 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/lf_x_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#128 Warning
-=======
-TIMING-17#127 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/lf_x_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#129 Warning
-=======
-TIMING-17#128 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/lf_x_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#130 Warning
-=======
-TIMING-17#129 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/lf_x_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#131 Warning
-=======
-TIMING-17#130 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/lf_x_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#132 Warning
-=======
-TIMING-17#131 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/lf_x_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#133 Warning
-=======
-TIMING-17#132 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/lf_x_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#134 Warning
-=======
-TIMING-17#133 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/lf_x_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#135 Warning
-=======
-TIMING-17#134 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/lf_y_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#136 Warning
-=======
-TIMING-17#135 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/lf_y_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#137 Warning
-=======
-TIMING-17#136 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/lf_y_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#138 Warning
-=======
-TIMING-17#137 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/lf_y_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#139 Warning
-=======
-TIMING-17#138 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/lf_y_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#140 Warning
-=======
-TIMING-17#139 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/lf_y_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#141 Warning
-=======
-TIMING-17#140 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/lf_y_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#142 Warning
-=======
-TIMING-17#141 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/lf_y_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#143 Warning
-=======
-TIMING-17#142 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/right_cover_reg/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#144 Warning
-=======
-TIMING-17#143 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/right_sum_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#145 Warning
-=======
-TIMING-17#144 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/right_sum_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#146 Warning
-=======
-TIMING-17#145 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/right_sum_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#147 Warning
-=======
-TIMING-17#146 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/right_sum_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#148 Warning
-=======
-TIMING-17#147 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/right_sum_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#149 Warning
-=======
-TIMING-17#148 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/right_sum_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#150 Warning
-=======
-TIMING-17#149 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/right_sum_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#151 Warning
-=======
-TIMING-17#150 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/right_sum_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#152 Warning
-=======
-TIMING-17#151 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/rt_x_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#153 Warning
-=======
-TIMING-17#152 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/rt_x_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#154 Warning
-=======
-TIMING-17#153 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/rt_x_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#155 Warning
-=======
-TIMING-17#154 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/rt_x_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#156 Warning
-=======
-TIMING-17#155 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/rt_x_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#157 Warning
-=======
-TIMING-17#156 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/rt_x_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#158 Warning
-=======
-TIMING-17#157 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/rt_x_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#159 Warning
-=======
-TIMING-17#158 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/rt_x_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#160 Warning
-=======
-TIMING-17#159 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/rt_x_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#161 Warning
-=======
-TIMING-17#160 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/rt_y_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#162 Warning
-=======
-TIMING-17#161 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/rt_y_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#163 Warning
-=======
-TIMING-17#162 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/rt_y_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#164 Warning
-=======
-TIMING-17#163 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/rt_y_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#165 Warning
-=======
-TIMING-17#164 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/rt_y_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#166 Warning
-=======
-TIMING-17#165 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/rt_y_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#167 Warning
-=======
-TIMING-17#166 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/rt_y_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#168 Warning
-=======
-TIMING-17#167 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/rt_y_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#169 Warning
-=======
-TIMING-17#168 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/top_cover_reg/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#170 Warning
-=======
-TIMING-17#169 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/top_sum_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#171 Warning
-=======
-TIMING-17#170 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/top_sum_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#172 Warning
-=======
-TIMING-17#171 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/top_sum_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#173 Warning
-=======
-TIMING-17#172 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/top_sum_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#174 Warning
-=======
-TIMING-17#173 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/top_sum_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#175 Warning
-=======
-TIMING-17#174 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/top_sum_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#176 Warning
-=======
-TIMING-17#175 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/top_sum_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#177 Warning
-=======
-TIMING-17#176 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/top_sum_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#178 Warning
-=======
-TIMING-17#177 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/top_sum_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#179 Warning
-=======
-TIMING-17#178 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/tp_x_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#180 Warning
-=======
-TIMING-17#179 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/tp_x_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#181 Warning
-=======
-TIMING-17#180 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/tp_x_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#182 Warning
-=======
-TIMING-17#181 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/tp_x_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#183 Warning
-=======
-TIMING-17#182 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/tp_x_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#184 Warning
-=======
-TIMING-17#183 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/tp_x_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#185 Warning
-=======
-TIMING-17#184 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/tp_x_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#186 Warning
-=======
-TIMING-17#185 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/tp_x_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#187 Warning
-=======
-TIMING-17#186 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/tp_x_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#188 Warning
-=======
-TIMING-17#187 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/tp_y_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#189 Warning
-=======
-TIMING-17#188 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/tp_y_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#190 Warning
-=======
-TIMING-17#189 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/tp_y_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#191 Warning
-=======
-TIMING-17#190 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/tp_y_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#192 Warning
-=======
-TIMING-17#191 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/tp_y_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#193 Warning
-=======
-TIMING-17#192 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/tp_y_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#194 Warning
-=======
-TIMING-17#193 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/tp_y_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#195 Warning
-=======
-TIMING-17#194 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/tp_y_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#196 Warning
-=======
-TIMING-17#195 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/x_out_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#197 Warning
-=======
-TIMING-17#196 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/x_out_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#198 Warning
-=======
-TIMING-17#197 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/x_out_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#199 Warning
-=======
-TIMING-17#198 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/x_out_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#200 Warning
-=======
-TIMING-17#199 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/x_out_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#201 Warning
-=======
-TIMING-17#200 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/x_out_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#202 Warning
-=======
-TIMING-17#201 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/x_out_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#203 Warning
-=======
-TIMING-17#202 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/x_out_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#204 Warning
-=======
-TIMING-17#203 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/x_out_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#205 Warning
-=======
-TIMING-17#204 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/x_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#206 Warning
-=======
-TIMING-17#205 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/x_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#207 Warning
-=======
-TIMING-17#206 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/x_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#208 Warning
-=======
-TIMING-17#207 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/x_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#209 Warning
-=======
-TIMING-17#208 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/x_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#210 Warning
-=======
-TIMING-17#209 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/x_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#211 Warning
-=======
-TIMING-17#210 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/x_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#212 Warning
-=======
-TIMING-17#211 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/x_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#213 Warning
-=======
-TIMING-17#212 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/x_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#214 Warning
-=======
-TIMING-17#213 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/y_out_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#215 Warning
-=======
-TIMING-17#214 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/y_out_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#216 Warning
-=======
-TIMING-17#215 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/y_out_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#217 Warning
-=======
-TIMING-17#216 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/y_out_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#218 Warning
-=======
-TIMING-17#217 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/y_out_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#219 Warning
-=======
-TIMING-17#218 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/y_out_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#220 Warning
-=======
-TIMING-17#219 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/y_out_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#221 Warning
-=======
-TIMING-17#220 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/y_out_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#222 Warning
-=======
-TIMING-17#221 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/y_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#223 Warning
-=======
-TIMING-17#222 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/y_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#224 Warning
-=======
-TIMING-17#223 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/y_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#225 Warning
-=======
-TIMING-17#224 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/y_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#226 Warning
-=======
-TIMING-17#225 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/y_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#227 Warning
-=======
-TIMING-17#226 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/y_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#228 Warning
-=======
-TIMING-17#227 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/y_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#229 Warning
-=======
-TIMING-17#228 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/ftps_locator_0/inst/y_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#230 Warning
-=======
-TIMING-17#229 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#231 Warning
-=======
-TIMING-17#230 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#232 Warning
-=======
-TIMING-17#231 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#233 Warning
-=======
-TIMING-17#232 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#234 Warning
-=======
-TIMING-17#233 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#235 Warning
-=======
-TIMING-17#234 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#236 Warning
-=======
-TIMING-17#235 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#237 Warning
-=======
-TIMING-17#236 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[16]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#238 Warning
-=======
-TIMING-17#237 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#239 Warning
-=======
-TIMING-17#238 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#240 Warning
-=======
-TIMING-17#239 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#241 Warning
-=======
-TIMING-17#240 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#242 Warning
-=======
-TIMING-17#241 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#243 Warning
-=======
-TIMING-17#242 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#244 Warning
-=======
-TIMING-17#243 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#245 Warning
-=======
-TIMING-17#244 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#246 Warning
-=======
-TIMING-17#245 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_next_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#247 Warning
-=======
-TIMING-17#246 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#248 Warning
-=======
-TIMING-17#247 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#249 Warning
-=======
-TIMING-17#248 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#250 Warning
-=======
-TIMING-17#249 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#251 Warning
-=======
-TIMING-17#250 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#252 Warning
-=======
-TIMING-17#251 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#253 Warning
-=======
-TIMING-17#252 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#254 Warning
-=======
-TIMING-17#253 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_reg[16]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#255 Warning
-=======
-TIMING-17#254 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#256 Warning
-=======
-TIMING-17#255 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#257 Warning
-=======
-TIMING-17#256 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#258 Warning
-=======
-TIMING-17#257 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#259 Warning
-=======
-TIMING-17#258 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#260 Warning
-=======
-TIMING-17#259 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#261 Warning
-=======
-TIMING-17#260 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#262 Warning
-=======
-TIMING-17#261 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#263 Warning
-=======
-TIMING-17#262 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/address_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#264 Warning
-=======
-TIMING-17#263 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/d_latch_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#265 Warning
-=======
-TIMING-17#264 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/d_latch_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#266 Warning
-=======
-TIMING-17#265 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/d_latch_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#267 Warning
-=======
-TIMING-17#266 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/d_latch_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#268 Warning
-=======
-TIMING-17#267 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/d_latch_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#269 Warning
-=======
-TIMING-17#268 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/d_latch_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#270 Warning
-=======
-TIMING-17#269 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/d_latch_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#271 Warning
-=======
-TIMING-17#270 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/d_latch_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#272 Warning
-=======
-TIMING-17#271 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/dout_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#273 Warning
-=======
-TIMING-17#272 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/dout_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#274 Warning
-=======
-TIMING-17#273 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/dout_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#275 Warning
-=======
-TIMING-17#274 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/dout_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#276 Warning
-=======
-TIMING-17#275 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/dout_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#277 Warning
-=======
-TIMING-17#276 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/dout_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#278 Warning
-=======
-TIMING-17#277 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/dout_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#279 Warning
-=======
-TIMING-17#278 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/dout_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#280 Warning
-=======
-TIMING-17#279 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/wr_hold_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
-<<<<<<< HEAD
 TIMING-17#281 Warning
-=======
-TIMING-17#280 Warning
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 Non-clocked sequential cell  
 The clock pin design_1_i/video_in_0/inst/capture/wr_hold_reg[1]/C is not reached by a timing clock
 Related violations: <none>

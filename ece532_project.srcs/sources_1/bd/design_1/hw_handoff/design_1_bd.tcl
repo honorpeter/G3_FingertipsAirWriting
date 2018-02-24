@@ -493,15 +493,11 @@ CONFIG.USE_BOARD_FLOW {true} \
   connect_bd_net -net frame_average_buffer_0_avg_addr_out [get_bd_pins blk_mem_buffer_vga/addra] [get_bd_pins frame_average_buffer_0/avg_addr_out] [get_bd_pins ftps_locator_0/capture_address]
   connect_bd_net -net frame_average_buffer_0_avg_data_out [get_bd_pins blk_mem_buffer_vga/dina] [get_bd_pins frame_average_buffer_0/avg_data_out] [get_bd_pins ftps_locator_0/capture_data]
   connect_bd_net -net frame_average_buffer_0_avg_data_valid [get_bd_pins blk_mem_buffer_vga/wea] [get_bd_pins frame_average_buffer_0/avg_data_valid] [get_bd_pins ftps_locator_0/capture_data_valid]
-<<<<<<< HEAD
   connect_bd_net -net ftps_locator_0_ftps_valid [get_bd_pins axi_ftps_valid/gpio_io_i] [get_bd_pins ftps_locator_0/ftps_valid]
   connect_bd_net -net ftps_locator_0_locate_data [get_bd_pins ftps_locator_0/locate_data] [get_bd_pins vga444_0/frame_pixel]
   connect_bd_net -net ftps_locator_0_x_out [get_bd_pins axi_ftps_x/gpio_io_i] [get_bd_pins ftps_locator_0/x_out]
   connect_bd_net -net ftps_locator_0_y_out [get_bd_pins axi_ftps_y/gpio_io_i] [get_bd_pins ftps_locator_0/y_out]
   connect_bd_net -net gpio_io_i_1 [get_bd_ports SW_15] [get_bd_pins axi_SW_total_control/gpio_io_i]
-=======
-  connect_bd_net -net ftps_locator_0_locate_data [get_bd_pins ftps_locator_0/locate_data] [get_bd_pins vga444_0/frame_pixel]
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
   connect_bd_net -net mdm_1_debug_sys_rst [get_bd_pins mdm_1/Debug_SYS_Rst] [get_bd_pins rst_clk_wiz_1_100M/mb_debug_sys_rst]
   connect_bd_net -net microblaze_0_Clk [get_bd_pins axi_LED_total_control/s_axi_aclk] [get_bd_pins axi_SW_total_control/s_axi_aclk] [get_bd_pins axi_ethernetlite_0/s_axi_aclk] [get_bd_pins axi_ftps_valid/s_axi_aclk] [get_bd_pins axi_ftps_x/s_axi_aclk] [get_bd_pins axi_ftps_y/s_axi_aclk] [get_bd_pins axi_smc/aclk] [get_bd_pins axi_timer_0/s_axi_aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins clk_wiz_1/clk_out1] [get_bd_pins microblaze_0/Clk] [get_bd_pins microblaze_0_axi_intc/processor_clk] [get_bd_pins microblaze_0_axi_intc/s_axi_aclk] [get_bd_pins microblaze_0_axi_periph/ACLK] [get_bd_pins microblaze_0_axi_periph/M00_ACLK] [get_bd_pins microblaze_0_axi_periph/M01_ACLK] [get_bd_pins microblaze_0_axi_periph/M02_ACLK] [get_bd_pins microblaze_0_axi_periph/M03_ACLK] [get_bd_pins microblaze_0_axi_periph/M04_ACLK] [get_bd_pins microblaze_0_axi_periph/M05_ACLK] [get_bd_pins microblaze_0_axi_periph/M06_ACLK] [get_bd_pins microblaze_0_axi_periph/M07_ACLK] [get_bd_pins microblaze_0_axi_periph/M08_ACLK] [get_bd_pins microblaze_0_axi_periph/S00_ACLK] [get_bd_pins microblaze_0_local_memory/LMB_Clk] [get_bd_pins rst_clk_wiz_1_100M/slowest_sync_clk]
   connect_bd_net -net microblaze_0_intr [get_bd_pins microblaze_0_axi_intc/intr] [get_bd_pins microblaze_0_xlconcat/dout]

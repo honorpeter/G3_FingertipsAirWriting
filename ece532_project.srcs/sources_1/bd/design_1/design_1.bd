@@ -671,7 +671,6 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-<<<<<<< HEAD
         <spirit:instanceName>axi_SW_total_control</spirit:instanceName>
         <spirit:componentRef spirit:library="ip" spirit:name="axi_gpio" spirit:vendor="xilinx.com" spirit:version="2.0"/>
         <spirit:configurableElementValues>
@@ -721,12 +720,6 @@
         <spirit:componentRef spirit:library="user" spirit:name="ftps_locator" spirit:vendor="utoronto.ca" spirit:version="1.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_ftps_locator_0_1</spirit:configurableElementValue>
-=======
-        <spirit:instanceName>ftps_locator_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="ftps_locator" spirit:vendor="utoronto.ca" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_ftps_locator_0_0</spirit:configurableElementValue>
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -1091,7 +1084,6 @@
         <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="capture_data_valid"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-<<<<<<< HEAD
         <spirit:name>gpio_io_i_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="SW_15"/>
         <spirit:internalPortReference spirit:componentRef="axi_SW_total_control" spirit:portRef="gpio_io_i"/>
@@ -1102,8 +1094,6 @@
         <spirit:externalPortReference spirit:portRef="LED_15"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-=======
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
         <spirit:name>blk_mem_buffer_vga_doutb</spirit:name>
         <spirit:internalPortReference spirit:componentRef="blk_mem_buffer_vga" spirit:portRef="doutb"/>
         <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="request_data"/>
@@ -1112,7 +1102,6 @@
         <spirit:name>ftps_locator_0_locate_data</spirit:name>
         <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="locate_data"/>
         <spirit:internalPortReference spirit:componentRef="vga444_0" spirit:portRef="frame_pixel"/>
-<<<<<<< HEAD
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>ftps_locator_0_y_out</spirit:name>
@@ -1128,8 +1117,6 @@
         <spirit:name>ftps_locator_0_ftps_valid</spirit:name>
         <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="ftps_valid"/>
         <spirit:internalPortReference spirit:componentRef="axi_ftps_valid" spirit:portRef="gpio_io_i"/>
-=======
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>

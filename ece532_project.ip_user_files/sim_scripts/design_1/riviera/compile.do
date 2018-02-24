@@ -29,11 +29,8 @@ vlib riviera/axi_data_fifo_v2_1_12
 vlib riviera/axi_crossbar_v2_1_14
 vlib riviera/lmb_v10_v3_0_9
 vlib riviera/lmb_bram_if_cntlr_v4_0_12
-<<<<<<< HEAD
 vlib riviera/interrupt_control_v3_1_4
 vlib riviera/axi_gpio_v2_0_15
-=======
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 
 vmap xil_defaultlib riviera/xil_defaultlib
 vmap xpm riviera/xpm
@@ -63,11 +60,8 @@ vmap axi_data_fifo_v2_1_12 riviera/axi_data_fifo_v2_1_12
 vmap axi_crossbar_v2_1_14 riviera/axi_crossbar_v2_1_14
 vmap lmb_v10_v3_0_9 riviera/lmb_v10_v3_0_9
 vmap lmb_bram_if_cntlr_v4_0_12 riviera/lmb_bram_if_cntlr_v4_0_12
-<<<<<<< HEAD
 vmap interrupt_control_v3_1_4 riviera/interrupt_control_v3_1_4
 vmap axi_gpio_v2_0_15 riviera/axi_gpio_v2_0_15
-=======
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 
 vlog -work xil_defaultlib  -sv2k12 "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/9c7f" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/39ca/hdl/verilog" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/f80f/hdl/verilog" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/7e3a/hdl" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/9c7f" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/39ca/hdl/verilog" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/f80f/hdl/verilog" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/7e3a/hdl" \
 "C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
@@ -404,7 +398,6 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../ece532_project.srcs/source
 "../../../bd/design_1/ipshared/1a35/imports/video_cam/frame_average.v" \
 "../../../bd/design_1/ipshared/1a35/imports/new/frame_average_buffer.v" \
 "../../../bd/design_1/ip/design_1_frame_average_buffer_0_1/sim/design_1_frame_average_buffer_0_1.v" \
-<<<<<<< HEAD
 
 vcom -work interrupt_control_v3_1_4 -93 \
 "../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/e956/hdl/interrupt_control_v3_1_vh_rfs.vhd" \
@@ -422,10 +415,6 @@ vcom -work xil_defaultlib -93 \
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/9c7f" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/39ca/hdl/verilog" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/f80f/hdl/verilog" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/7e3a/hdl" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/9c7f" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/39ca/hdl/verilog" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/f80f/hdl/verilog" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/7e3a/hdl" \
 "../../../bd/design_1/ipshared/68d4/src/ftps_locator.v" \
 "../../../bd/design_1/ip/design_1_ftps_locator_0_1/sim/design_1_ftps_locator_0_1.v" \
-=======
-"../../../bd/design_1/ipshared/4348/src/ftps_locator.v" \
-"../../../bd/design_1/ip/design_1_ftps_locator_0_0/sim/design_1_ftps_locator_0_0.v" \
->>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 
 vlog -work xil_defaultlib \
 "glbl.v"
