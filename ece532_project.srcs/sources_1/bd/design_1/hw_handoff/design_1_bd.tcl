@@ -348,6 +348,9 @@ CONFIG.USE_BOARD_FLOW {true} \
   # Create instance: frame_average_buffer_0, and set properties
   set frame_average_buffer_0 [ create_bd_cell -type ip -vlnv utoronto.ca:user:frame_average_buffer:1.0 frame_average_buffer_0 ]
 
+  # Create instance: ftps_locator_0, and set properties
+  set ftps_locator_0 [ create_bd_cell -type ip -vlnv utoronto.ca:user:ftps_locator:1.0 ftps_locator_0 ]
+
   # Create instance: mdm_1, and set properties
   set mdm_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:mdm:3.2 mdm_1 ]
 
@@ -435,17 +438,18 @@ CONFIG.USE_BOARD_FLOW {true} \
   connect_bd_net -net Net [get_bd_ports OV7670_SIOD] [get_bd_pins video_in_0/OV7670_SIOD]
   connect_bd_net -net OV7670_D_1 [get_bd_ports OV7670_D] [get_bd_pins video_in_0/OV7670_D]
   connect_bd_net -net OV7670_HREF_1 [get_bd_ports OV7670_HREF] [get_bd_pins video_in_0/OV7670_HREF]
-  connect_bd_net -net OV7670_PCLK_1 [get_bd_ports OV7670_PCLK] [get_bd_pins blk_mem_buffer_vga/clka] [get_bd_pins frame_average_buffer_0/pclk] [get_bd_pins video_in_0/OV7670_PCLK]
-  connect_bd_net -net OV7670_VSYNC_1 [get_bd_ports OV7670_VSYNC] [get_bd_pins frame_average_buffer_0/vsync] [get_bd_pins video_in_0/OV7670_VSYNC]
+  connect_bd_net -net OV7670_PCLK_1 [get_bd_ports OV7670_PCLK] [get_bd_pins blk_mem_buffer_vga/clka] [get_bd_pins frame_average_buffer_0/pclk] [get_bd_pins ftps_locator_0/pclk] [get_bd_pins video_in_0/OV7670_PCLK]
+  connect_bd_net -net OV7670_VSYNC_1 [get_bd_ports OV7670_VSYNC] [get_bd_pins frame_average_buffer_0/vsync] [get_bd_pins ftps_locator_0/vsync] [get_bd_pins video_in_0/OV7670_VSYNC]
   connect_bd_net -net axi_ethernetlite_0_ip2intc_irpt [get_bd_pins axi_ethernetlite_0/ip2intc_irpt] [get_bd_pins microblaze_0_xlconcat/In1]
   connect_bd_net -net axi_timer_0_interrupt [get_bd_pins axi_timer_0/interrupt] [get_bd_pins microblaze_0_xlconcat/In0]
-  connect_bd_net -net blk_mem_buffer_vga_doutb [get_bd_pins blk_mem_buffer_vga/doutb] [get_bd_pins vga444_0/frame_pixel]
+  connect_bd_net -net blk_mem_buffer_vga_doutb [get_bd_pins blk_mem_buffer_vga/doutb] [get_bd_pins ftps_locator_0/request_data]
   connect_bd_net -net clk_wiz_1_clk_out2 [get_bd_pins clk_wiz_1/clk_out2] [get_bd_pins mig_7series_0/sys_clk_i]
   connect_bd_net -net clk_wiz_1_clk_out3 [get_bd_ports eth_ref_clk] [get_bd_pins clk_wiz_1/clk_out3] [get_bd_pins mii_to_rmii_0/ref_clk] [get_bd_pins video_in_0/CLK50]
   connect_bd_net -net clk_wiz_1_clk_out4 [get_bd_pins blk_mem_buffer_vga/clkb] [get_bd_pins clk_wiz_1/clk_out4] [get_bd_pins vga444_0/clk25] [get_bd_pins video_in_0/CLK25]
-  connect_bd_net -net frame_average_buffer_0_avg_addr_out [get_bd_pins blk_mem_buffer_vga/addra] [get_bd_pins frame_average_buffer_0/avg_addr_out]
-  connect_bd_net -net frame_average_buffer_0_avg_data_out [get_bd_pins blk_mem_buffer_vga/dina] [get_bd_pins frame_average_buffer_0/avg_data_out]
-  connect_bd_net -net frame_average_buffer_0_avg_data_valid [get_bd_pins blk_mem_buffer_vga/wea] [get_bd_pins frame_average_buffer_0/avg_data_valid]
+  connect_bd_net -net frame_average_buffer_0_avg_addr_out [get_bd_pins blk_mem_buffer_vga/addra] [get_bd_pins frame_average_buffer_0/avg_addr_out] [get_bd_pins ftps_locator_0/capture_address]
+  connect_bd_net -net frame_average_buffer_0_avg_data_out [get_bd_pins blk_mem_buffer_vga/dina] [get_bd_pins frame_average_buffer_0/avg_data_out] [get_bd_pins ftps_locator_0/capture_data]
+  connect_bd_net -net frame_average_buffer_0_avg_data_valid [get_bd_pins blk_mem_buffer_vga/wea] [get_bd_pins frame_average_buffer_0/avg_data_valid] [get_bd_pins ftps_locator_0/capture_data_valid]
+  connect_bd_net -net ftps_locator_0_locate_data [get_bd_pins ftps_locator_0/locate_data] [get_bd_pins vga444_0/frame_pixel]
   connect_bd_net -net mdm_1_debug_sys_rst [get_bd_pins mdm_1/Debug_SYS_Rst] [get_bd_pins rst_clk_wiz_1_100M/mb_debug_sys_rst]
   connect_bd_net -net microblaze_0_Clk [get_bd_pins axi_ethernetlite_0/s_axi_aclk] [get_bd_pins axi_smc/aclk] [get_bd_pins axi_timer_0/s_axi_aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins clk_wiz_1/clk_out1] [get_bd_pins microblaze_0/Clk] [get_bd_pins microblaze_0_axi_intc/processor_clk] [get_bd_pins microblaze_0_axi_intc/s_axi_aclk] [get_bd_pins microblaze_0_axi_periph/ACLK] [get_bd_pins microblaze_0_axi_periph/M00_ACLK] [get_bd_pins microblaze_0_axi_periph/M01_ACLK] [get_bd_pins microblaze_0_axi_periph/M02_ACLK] [get_bd_pins microblaze_0_axi_periph/M03_ACLK] [get_bd_pins microblaze_0_axi_periph/M04_ACLK] [get_bd_pins microblaze_0_axi_periph/M05_ACLK] [get_bd_pins microblaze_0_axi_periph/M06_ACLK] [get_bd_pins microblaze_0_axi_periph/M07_ACLK] [get_bd_pins microblaze_0_axi_periph/M08_ACLK] [get_bd_pins microblaze_0_axi_periph/S00_ACLK] [get_bd_pins microblaze_0_local_memory/LMB_Clk] [get_bd_pins rst_clk_wiz_1_100M/slowest_sync_clk]
   connect_bd_net -net microblaze_0_intr [get_bd_pins microblaze_0_axi_intc/intr] [get_bd_pins microblaze_0_xlconcat/dout]
@@ -459,7 +463,7 @@ CONFIG.USE_BOARD_FLOW {true} \
   connect_bd_net -net rst_clk_wiz_1_100M_peripheral_aresetn [get_bd_pins axi_ethernetlite_0/s_axi_aresetn] [get_bd_pins axi_timer_0/s_axi_aresetn] [get_bd_pins axi_uartlite_0/s_axi_aresetn] [get_bd_pins microblaze_0_axi_intc/s_axi_aresetn] [get_bd_pins microblaze_0_axi_periph/M00_ARESETN] [get_bd_pins microblaze_0_axi_periph/M01_ARESETN] [get_bd_pins microblaze_0_axi_periph/M02_ARESETN] [get_bd_pins microblaze_0_axi_periph/M03_ARESETN] [get_bd_pins microblaze_0_axi_periph/M04_ARESETN] [get_bd_pins microblaze_0_axi_periph/M05_ARESETN] [get_bd_pins microblaze_0_axi_periph/M06_ARESETN] [get_bd_pins microblaze_0_axi_periph/M07_ARESETN] [get_bd_pins microblaze_0_axi_periph/M08_ARESETN] [get_bd_pins microblaze_0_axi_periph/S00_ARESETN] [get_bd_pins rst_clk_wiz_1_100M/peripheral_aresetn]
   connect_bd_net -net rst_mig_7series_0_81M_peripheral_aresetn [get_bd_pins axi_smc/aresetn] [get_bd_pins mig_7series_0/aresetn] [get_bd_pins rst_mig_7series_0_81M/peripheral_aresetn]
   connect_bd_net -net sys_clock_1 [get_bd_ports sys_clock] [get_bd_pins clk_wiz_1/clk_in1]
-  connect_bd_net -net vga444_0_frame_addr [get_bd_pins blk_mem_buffer_vga/addrb] [get_bd_pins vga444_0/frame_addr]
+  connect_bd_net -net vga444_0_frame_addr [get_bd_pins blk_mem_buffer_vga/addrb] [get_bd_pins ftps_locator_0/request_addr] [get_bd_pins vga444_0/frame_addr]
   connect_bd_net -net vga444_0_vga_blue [get_bd_ports vga_blue] [get_bd_pins vga444_0/vga_blue]
   connect_bd_net -net vga444_0_vga_green [get_bd_ports vga_green] [get_bd_pins vga444_0/vga_green]
   connect_bd_net -net vga444_0_vga_hsync [get_bd_ports vga_hsync] [get_bd_pins vga444_0/vga_hsync]
@@ -471,7 +475,7 @@ CONFIG.USE_BOARD_FLOW {true} \
   connect_bd_net -net video_in_0_capture_addr [get_bd_pins frame_average_buffer_0/capture_address] [get_bd_pins video_in_0/capture_addr]
   connect_bd_net -net video_in_0_data_16 [get_bd_pins frame_average_buffer_0/capture_data] [get_bd_pins video_in_0/data_16]
   connect_bd_net -net video_in_0_pwdn [get_bd_ports pwdn] [get_bd_pins video_in_0/pwdn]
-  connect_bd_net -net video_in_0_resend [get_bd_pins frame_average_buffer_0/reset] [get_bd_pins video_in_0/resend]
+  connect_bd_net -net video_in_0_resend [get_bd_pins frame_average_buffer_0/reset] [get_bd_pins ftps_locator_0/reset] [get_bd_pins video_in_0/resend]
   connect_bd_net -net video_in_0_reset [get_bd_ports reset_1] [get_bd_pins video_in_0/reset]
 
   # Create address segments
