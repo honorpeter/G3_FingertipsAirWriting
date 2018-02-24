@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<<<<<<< HEAD
 <EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Feb 24 13:42:35 2018" VIVADOVERSION="2017.2">
+=======
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Feb 24 11:41:49 2018" VIVADOVERSION="2017.2">
+>>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys4_ddr:part0:1.1" DEVICE="7a100t" NAME="design_1" PACKAGE="csg324" SPEEDGRADE="-1"/>
 
@@ -4977,7 +4981,11 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="X_SIZE" VALUE="320"/>
+<<<<<<< HEAD
         <PARAMETER NAME="Component_Name" VALUE="design_1_ftps_locator_0_1"/>
+=======
+        <PARAMETER NAME="Component_Name" VALUE="design_1_ftps_locator_0_0"/>
+>>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -5011,6 +5019,7 @@
             <CONNECTION INSTANCE="frame_average_buffer_0" PORT="avg_data_valid"/>
           </CONNECTIONS>
         </PORT>
+<<<<<<< HEAD
         <PORT DIR="O" LEFT="8" NAME="x_out" RIGHT="0" SIGIS="undef" SIGNAME="ftps_locator_0_x_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_ftps_x" PORT="gpio_io_i"/>
@@ -5026,6 +5035,11 @@
             <CONNECTION INSTANCE="axi_ftps_valid" PORT="gpio_io_i"/>
           </CONNECTIONS>
         </PORT>
+=======
+        <PORT DIR="O" LEFT="8" NAME="x_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="y_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="ftps_valid" SIGIS="undef"/>
+>>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
         <PORT DIR="I" LEFT="16" NAME="request_addr" RIGHT="0" SIGIS="undef" SIGNAME="vga444_0_frame_addr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="vga444_0" PORT="frame_addr"/>

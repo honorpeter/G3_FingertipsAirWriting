@@ -2,8 +2,13 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+<<<<<<< HEAD
 # Start of session at: Sat Feb 24 13:44:24 2018
 # Process ID: 5520
+=======
+# Start of session at: Sat Feb 24 11:43:52 2018
+# Process ID: 4424
+>>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 # Current directory: C:/ece532_project/ece532_project.runs/impl_1
 # Command line: vivado.exe -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
 # Log file: C:/ece532_project/ece532_project.runs/impl_1/design_1_wrapper.vdi

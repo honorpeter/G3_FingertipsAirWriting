@@ -14,9 +14,12 @@ vhdl xil_defaultlib "../../../bd/design_1/ip/design_1_dlmb_v10_0/sim/design_1_dl
 vhdl xil_defaultlib "../../../bd/design_1/ip/design_1_ilmb_v10_0/sim/design_1_ilmb_v10_0.vhd" 
 vhdl xil_defaultlib "../../../bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/sim/design_1_dlmb_bram_if_cntlr_0.vhd" 
 vhdl xil_defaultlib "../../../bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/sim/design_1_ilmb_bram_if_cntlr_0.vhd" 
+<<<<<<< HEAD
 vhdl xil_defaultlib "../../../bd/design_1/ip/design_1_axi_gpio_0_1/sim/design_1_axi_gpio_0_1.vhd" 
 vhdl xil_defaultlib "../../../bd/design_1/ip/design_1_axi_gpio_0_2/sim/design_1_axi_gpio_0_2.vhd" 
 vhdl xil_defaultlib "../../../bd/design_1/ip/design_1_axi_gpio_0_0/sim/design_1_axi_gpio_0_0.vhd" 
 vhdl xil_defaultlib "../../../bd/design_1/ip/design_1_axi_gpio_0_3/sim/design_1_axi_gpio_0_3.vhd" 
 vhdl xil_defaultlib "../../../bd/design_1/ip/design_1_axi_gpio_0_4/sim/design_1_axi_gpio_0_4.vhd" 
+=======
+>>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 nosort

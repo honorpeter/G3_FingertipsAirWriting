@@ -333,6 +333,7 @@
   "../../../bd/design_1/ipshared/1a35/imports/video_cam/frame_average.v" \
   "../../../bd/design_1/ipshared/1a35/imports/new/frame_average_buffer.v" \
   "../../../bd/design_1/ip/design_1_frame_average_buffer_0_1/sim/design_1_frame_average_buffer_0_1.v" \
+<<<<<<< HEAD
 -endlib
 -makelib ies/interrupt_control_v3_1_4 \
   "../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/e956/hdl/interrupt_control_v3_1_vh_rfs.vhd" \
@@ -350,6 +351,10 @@
 -makelib ies/xil_defaultlib \
   "../../../bd/design_1/ipshared/68d4/src/ftps_locator.v" \
   "../../../bd/design_1/ip/design_1_ftps_locator_0_1/sim/design_1_ftps_locator_0_1.v" \
+=======
+  "../../../bd/design_1/ipshared/4348/src/ftps_locator.v" \
+  "../../../bd/design_1/ip/design_1_ftps_locator_0_0/sim/design_1_ftps_locator_0_0.v" \
+>>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 -endlib
 -makelib ies/xil_defaultlib \
   glbl.v

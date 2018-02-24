@@ -1,7 +1,11 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+<<<<<<< HEAD
 //Date        : Sat Feb 24 13:42:24 2018
+=======
+//Date        : Sat Feb 24 11:41:40 2018
+>>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 //Host        : SFB520WS13 running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper

@@ -1,7 +1,11 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+<<<<<<< HEAD
 //Date        : Sat Feb 24 13:42:24 2018
+=======
+//Date        : Sat Feb 24 11:41:40 2018
+>>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 //Host        : SFB520WS13 running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,7 +13,11 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
+<<<<<<< HEAD
 (* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=41,numReposBlks=29,numNonXlnxBlks=4,numHierBlks=12,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=16,da_board_cnt=9,da_mb_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+=======
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=36,numReposBlks=24,numNonXlnxBlks=4,numHierBlks=12,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=9,da_board_cnt=8,da_mb_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+>>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
 module design_1
    (BTNC,
     DDR2_addr,
@@ -168,11 +176,15 @@ module design_1
   wire [16:0]frame_average_buffer_0_avg_addr_out;
   wire [15:0]frame_average_buffer_0_avg_data_out;
   wire frame_average_buffer_0_avg_data_valid;
+<<<<<<< HEAD
   wire ftps_locator_0_ftps_valid;
   wire [15:0]ftps_locator_0_locate_data;
   wire [8:0]ftps_locator_0_x_out;
   wire [7:0]ftps_locator_0_y_out;
   wire [0:0]gpio_io_i_1;
+=======
+  wire [15:0]ftps_locator_0_locate_data;
+>>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
   wire mdm_1_debug_sys_rst;
   wire microblaze_0_Clk;
   wire [31:0]microblaze_0_M_AXI_DC_ARADDR;
@@ -807,19 +819,30 @@ module design_1
         .pclk(OV7670_PCLK_1),
         .reset(video_in_0_resend),
         .vsync(OV7670_VSYNC_1));
+<<<<<<< HEAD
   design_1_ftps_locator_0_1 ftps_locator_0
        (.capture_address(frame_average_buffer_0_avg_addr_out),
         .capture_data(frame_average_buffer_0_avg_data_out),
         .capture_data_valid(frame_average_buffer_0_avg_data_valid),
         .ftps_valid(ftps_locator_0_ftps_valid),
+=======
+  design_1_ftps_locator_0_0 ftps_locator_0
+       (.capture_address(frame_average_buffer_0_avg_addr_out),
+        .capture_data(frame_average_buffer_0_avg_data_out),
+        .capture_data_valid(frame_average_buffer_0_avg_data_valid),
+>>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
         .locate_data(ftps_locator_0_locate_data),
         .pclk(OV7670_PCLK_1),
         .request_addr(vga444_0_frame_addr),
         .request_data(blk_mem_buffer_vga_doutb),
         .reset(video_in_0_resend),
+<<<<<<< HEAD
         .vsync(OV7670_VSYNC_1),
         .x_out(ftps_locator_0_x_out),
         .y_out(ftps_locator_0_y_out));
+=======
+        .vsync(OV7670_VSYNC_1));
+>>>>>>> 6b48905cb4a678a9d86edfd9a73b92f2aa3ab0af
   design_1_mdm_1_0 mdm_1
        (.Dbg_Capture_0(microblaze_0_debug_CAPTURE),
         .Dbg_Clk_0(microblaze_0_debug_CLK),
