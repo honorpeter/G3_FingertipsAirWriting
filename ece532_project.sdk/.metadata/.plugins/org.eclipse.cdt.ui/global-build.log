@@ -1,4 +1,7 @@
-13:24:44 **** Build of project test_data_bsp ****
+16:10:16 **** Incremental Build of configuration Debug for project ftps_locator ****
+make all 
+make: Nothing to be done for `all'.
+16:10:50 **** Build of project test_bsp ****
 make -k all 
 "Running Make include in microblaze_0/libsrc/bram_v4_1/src"
 make -C microblaze_0/libsrc/bram_v4_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
@@ -42,7 +45,39 @@ make -C microblaze_0/libsrc/tmrctr_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gc
 make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling uartlite"
 'Finished building libraries'
-13:24:53 **** Auto Build of project test_data_bsp ****
+16:11:04 **** Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3216	    316	   3108	   6640	   19f0	test.elf
+'Finished building: test.elf.size'
+' '
+16:11:06 **** Auto Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+16:11:18 **** Incremental Build of configuration Debug for project ftps_locator ****
+make all 
+make: Nothing to be done for `all'.
+16:11:19 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+16:11:50 **** Build of project test_bsp ****
 make -k all 
 "Running Make include in microblaze_0/libsrc/bram_v4_1/src"
 make -C microblaze_0/libsrc/bram_v4_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
@@ -54,6 +89,8 @@ make -C microblaze_0/libsrc/emaclite_v4_3/src -s include  "SHELL=CMD" "COMPILER=
 make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Running Make include in microblaze_0/libsrc/intc_v3_6/src"
 make -C microblaze_0/libsrc/intc_v3_6/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/lwip141_v1_8/src"
+make -C microblaze_0/libsrc/lwip141_v1_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Running Make include in microblaze_0/libsrc/standalone_v6_3/src"
 make -C microblaze_0/libsrc/standalone_v6_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Running Make include in microblaze_0/libsrc/tmrctr_v4_3/src"
@@ -63,6 +100,7 @@ make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=
 "Running Make libs in microblaze_0/libsrc/bram_v4_1/src"
 make -C microblaze_0/libsrc/bram_v4_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
 "Running Make libs in microblaze_0/libsrc/cpu_v2_6/src"
 make -C microblaze_0/libsrc/cpu_v2_6/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling cpu"
@@ -75,6 +113,35 @@ make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc"
 "Running Make libs in microblaze_0/libsrc/intc_v3_6/src"
 make -C microblaze_0/libsrc/intc_v3_6/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling intc"
+"Running Make libs in microblaze_0/libsrc/lwip141_v1_8/src"
+make -C microblaze_0/libsrc/lwip141_v1_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling lwip src and adapter files"
+In file included from ../../../include/lwip/ip.h:39:0,
+                 from lwip-1.4.1/src/core/ipv4/ip.c:42:
+lwip-1.4.1/src/core/ipv4/ip.c: In function 'ip_input':
+../../../include/lwip/ip_addr.h:200:39: warning: the comparison will always evaluate as 'false' for the address of 'current_iphdr_src' will never be NULL [-Waddress]
+ #define ip_addr_isany(addr1) ((addr1) == NULL || (addr1)->addr == IPADDR_ANY)
+                                       ^
+lwip-1.4.1/src/core/ipv4/ip.c:473:24: note: in expansion of macro 'ip_addr_isany'
+   if (check_ip_src && !ip_addr_isany(&current_iphdr_src))
+                        ^~~~~~~~~~~~~
+In file included from ../../../include/lwip/netif.h:41:0,
+                 from ../../../include/lwip/udp.h:40,
+                 from lwip-1.4.1/src/core/dhcp.c:75:
+lwip-1.4.1/src/core/dhcp.c: In function 'dhcp_bind':
+../../../include/lwip/ip_addr.h:200:39: warning: the comparison will always evaluate as 'false' for the address of 'gw_addr' will never be NULL [-Waddress]
+ #define ip_addr_isany(addr1) ((addr1) == NULL || (addr1)->addr == IPADDR_ANY)
+                                       ^
+lwip-1.4.1/src/core/dhcp.c:987:7: note: in expansion of macro 'ip_addr_isany'
+   if (ip_addr_isany(&gw_addr)) {
+       ^~~~~~~~~~~~~
+contrib/ports/xilinx/netif/xemacliteif.c: In function 'configure_IEEE_phy_speed_emaclite':
+contrib/ports/xilinx/netif/xemacliteif.c:790:6: warning: unused variable 'phylinkspeed' [-Wunused-variable]
+  u16 phylinkspeed;
+      ^~~~~~~~~~~~
+contrib/ports/xilinx/netif/xemacliteif.c:789:6: warning: unused variable 'status' [-Wunused-variable]
+  u16 status;
+      ^~~~~~
 "Running Make libs in microblaze_0/libsrc/standalone_v6_3/src"
 make -C microblaze_0/libsrc/standalone_v6_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling standalone";
@@ -85,362 +152,485 @@ make -C microblaze_0/libsrc/tmrctr_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gc
 make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling uartlite"
 'Finished building libraries'
-13:25:00 **** Build of configuration Debug for project test_data ****
+16:12:14 **** Auto Build of project test_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_1/src"
+make -C microblaze_0/libsrc/bram_v4_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_6/src"
+make -C microblaze_0/libsrc/cpu_v2_6/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/emaclite_v4_3/src"
+make -C microblaze_0/libsrc/emaclite_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_6/src"
+make -C microblaze_0/libsrc/intc_v3_6/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/lwip141_v1_8/src"
+make -C microblaze_0/libsrc/lwip141_v1_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_3/src"
+make -C microblaze_0/libsrc/standalone_v6_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_3/src"
+make -C microblaze_0/libsrc/tmrctr_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_1/src"
+make -C microblaze_0/libsrc/bram_v4_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_6/src"
+make -C microblaze_0/libsrc/cpu_v2_6/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/emaclite_v4_3/src"
+make -C microblaze_0/libsrc/emaclite_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling emaclite"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_6/src"
+make -C microblaze_0/libsrc/intc_v3_6/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/lwip141_v1_8/src"
+make -C microblaze_0/libsrc/lwip141_v1_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling lwip src and adapter files"
+In file included from ../../../include/lwip/ip.h:39:0,
+                 from lwip-1.4.1/src/core/ipv4/ip.c:42:
+lwip-1.4.1/src/core/ipv4/ip.c: In function 'ip_input':
+../../../include/lwip/ip_addr.h:200:39: warning: the comparison will always evaluate as 'false' for the address of 'current_iphdr_src' will never be NULL [-Waddress]
+ #define ip_addr_isany(addr1) ((addr1) == NULL || (addr1)->addr == IPADDR_ANY)
+                                       ^
+lwip-1.4.1/src/core/ipv4/ip.c:473:24: note: in expansion of macro 'ip_addr_isany'
+   if (check_ip_src && !ip_addr_isany(&current_iphdr_src))
+                        ^~~~~~~~~~~~~
+In file included from ../../../include/lwip/netif.h:41:0,
+                 from ../../../include/lwip/udp.h:40,
+                 from lwip-1.4.1/src/core/dhcp.c:75:
+lwip-1.4.1/src/core/dhcp.c: In function 'dhcp_bind':
+../../../include/lwip/ip_addr.h:200:39: warning: the comparison will always evaluate as 'false' for the address of 'gw_addr' will never be NULL [-Waddress]
+ #define ip_addr_isany(addr1) ((addr1) == NULL || (addr1)->addr == IPADDR_ANY)
+                                       ^
+lwip-1.4.1/src/core/dhcp.c:987:7: note: in expansion of macro 'ip_addr_isany'
+   if (ip_addr_isany(&gw_addr)) {
+       ^~~~~~~~~~~~~
+contrib/ports/xilinx/netif/xemacliteif.c: In function 'configure_IEEE_phy_speed_emaclite':
+contrib/ports/xilinx/netif/xemacliteif.c:790:6: warning: unused variable 'phylinkspeed' [-Wunused-variable]
+  u16 phylinkspeed;
+      ^~~~~~~~~~~~
+contrib/ports/xilinx/netif/xemacliteif.c:789:6: warning: unused variable 'status' [-Wunused-variable]
+  u16 status;
+      ^~~~~~
+"Running Make libs in microblaze_0/libsrc/standalone_v6_3/src"
+make -C microblaze_0/libsrc/standalone_v6_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+"Running Make libs in microblaze_0/libsrc/tmrctr_v4_3/src"
+make -C microblaze_0/libsrc/tmrctr_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling tmrctr"
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+16:12:24 **** Build of configuration Debug for project test ****
 make all 
-'Building file: ../src/helloworld.c'
+'Building file: ../src/echo.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-'Finished building: ../src/helloworld.c'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
+'Finished building: ../src/echo.c'
+' '
+'Building file: ../src/i2c_access.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c_access.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c_access.d" -MT"src/i2c_access.o" -o "src/i2c_access.o" "../src/i2c_access.c"
+'Finished building: ../src/i2c_access.c'
+' '
+'Building file: ../src/iic_phyreset.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/iic_phyreset.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/iic_phyreset.d" -MT"src/iic_phyreset.o" -o "src/iic_phyreset.o" "../src/iic_phyreset.c"
+'Finished building: ../src/iic_phyreset.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
 ' '
 'Building file: ../src/platform.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
 'Finished building: ../src/platform.c'
 ' '
-'Building target: test_data.elf'
+'Building file: ../src/platform_mb.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform_mb.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform_mb.d" -MT"src/platform_mb.o" -o "src/platform_mb.o" "../src/platform_mb.c"
+'Finished building: ../src/platform_mb.c'
+' '
+'Building file: ../src/platform_ppc.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform_ppc.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform_ppc.d" -MT"src/platform_ppc.o" -o "src/platform_ppc.o" "../src/platform_ppc.c"
+'Finished building: ../src/platform_ppc.c'
+' '
+'Building file: ../src/platform_zynq.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform_zynq.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform_zynq.d" -MT"src/platform_zynq.o" -o "src/platform_zynq.o" "../src/platform_zynq.c"
+'Finished building: ../src/platform_zynq.c'
+' '
+'Building file: ../src/platform_zynqmp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform_zynqmp.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform_zynqmp.d" -MT"src/platform_zynqmp.o" -o "src/platform_zynqmp.o" "../src/platform_zynqmp.c"
+'Finished building: ../src/platform_zynqmp.c'
+' '
+'Building file: ../src/sfp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sfp.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/sfp.d" -MT"src/sfp.o" -o "src/sfp.o" "../src/sfp.c"
+'Finished building: ../src/sfp.c'
+' '
+'Building file: ../src/si5324.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/si5324.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/si5324.d" -MT"src/si5324.o" -o "src/si5324.o" "../src/si5324.c"
+'Finished building: ../src/si5324.c'
+' '
+'Building target: test.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_data_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test_data.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: test_data.elf'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
-mb-size test_data.elf  |tee "test_data.elf.size"
+mb-size test.elf  |tee "test.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   3216	    316	   3108	   6640	   19f0	test_data.elf
-'Finished building: test_data.elf.size'
+ 107816	   1428	 750676	 859920	  d1f10	test.elf
+'Finished building: test.elf.size'
 ' '
-13:25:02 **** Auto Build of configuration Debug for project test_data ****
+16:12:27 **** Auto Build of configuration Debug for project test ****
 make all 
 make: Nothing to be done for `all'.
-13:26:14 **** Auto Build of configuration Debug for project test_data ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:62:9: warning: variable 'ftps_y' set but not used [-Wunused-but-set-variable]
-     int ftps_y;
-         ^~~~~~
-../src/helloworld.c:61:9: warning: variable 'ftps_x' set but not used [-Wunused-but-set-variable]
-     int ftps_x;
-         ^~~~~~
-../src/helloworld.c:60:9: warning: variable 'ftps_valid' set but not used [-Wunused-but-set-variable]
-     int ftps_valid;
-         ^~~~~~~~~~
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: test_data.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_data_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test_data.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: test_data.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size test_data.elf  |tee "test_data.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   3048	    328	   3104	   6480	   1950	test_data.elf
-'Finished building: test_data.elf.size'
-' '
-13:26:32 **** Auto Build of configuration Debug for project test_data ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:62:9: warning: unused variable 'ftps_y' [-Wunused-variable]
-     int ftps_y;
-         ^~~~~~
-../src/helloworld.c:61:9: warning: unused variable 'ftps_x' [-Wunused-variable]
-     int ftps_x;
-         ^~~~~~
-../src/helloworld.c:60:9: warning: unused variable 'ftps_valid' [-Wunused-variable]
-     int ftps_valid;
-         ^~~~~~~~~~
-../src/helloworld.c:59:9: warning: unused variable 'ftps_data' [-Wunused-variable]
-     int ftps_data;
-         ^~~~~~~~~
-../src/helloworld.c:58:9: warning: variable 'total_control' set but not used [-Wunused-but-set-variable]
-     int total_control;
-         ^~~~~~~~~~~~~
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: test_data.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_data_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test_data.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: test_data.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size test_data.elf  |tee "test_data.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   2820	    324	   3112	   6256	   1870	test_data.elf
-'Finished building: test_data.elf.size'
-' '
-13:26:45 **** Incremental Build of configuration Debug for project test_data ****
+16:13:14 **** Incremental Build of configuration Debug for project ftps_locator ****
 make all 
 make: Nothing to be done for `all'.
-13:27:48 **** Auto Build of configuration Debug for project test_data ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:61:9: warning: unused variable 'ftps_y' [-Wunused-variable]
-     int ftps_y;
-         ^~~~~~
-../src/helloworld.c:60:9: warning: unused variable 'ftps_x' [-Wunused-variable]
-     int ftps_x;
-         ^~~~~~
-../src/helloworld.c:59:9: warning: variable 'ftps_valid' set but not used [-Wunused-but-set-variable]
-     int ftps_valid;
-         ^~~~~~~~~~
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: test_data.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_data_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test_data.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: test_data.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size test_data.elf  |tee "test_data.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   2848	    328	   3104	   6280	   1888	test_data.elf
-'Finished building: test_data.elf.size'
-' '
-13:28:12 **** Auto Build of configuration Debug for project test_data ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:68:7: error: too many arguments to function 'print'
-       print ("valid: %d",ftps_valid );
-       ^~~~~
-In file included from c:\xilinx\sdk\2017.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
-                 from ../src/helloworld.c:48:
-c:\xilinx\sdk\2017.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: declared here
- void    _EXFUN(print, (const char* ));
-         ^
-../src/helloworld.c:61:9: warning: unused variable 'ftps_y' [-Wunused-variable]
-     int ftps_y;
-         ^~~~~~
-../src/helloworld.c:60:9: warning: unused variable 'ftps_x' [-Wunused-variable]
-     int ftps_x;
-         ^~~~~~
-make: *** [src/helloworld.o] Error 1
-13:28:24 **** Auto Build of configuration Debug for project test_data ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:68:7: error: too many arguments to function 'print'
-       print ("valid: %d\n",ftps_valid );
-       ^~~~~
-In file included from c:\xilinx\sdk\2017.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
-                 from ../src/helloworld.c:48:
-c:\xilinx\sdk\2017.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: declared here
- void    _EXFUN(print, (const char* ));
-         ^
-../src/helloworld.c:61:9: warning: unused variable 'ftps_y' [-Wunused-variable]
-     int ftps_y;
-         ^~~~~~
-../src/helloworld.c:60:9: warning: unused variable 'ftps_x' [-Wunused-variable]
-     int ftps_x;
-         ^~~~~~
-make: *** [src/helloworld.o] Error 1
-13:29:11 **** Auto Build of configuration Debug for project test_data ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:61:9: warning: unused variable 'ftps_y' [-Wunused-variable]
-     int ftps_y;
-         ^~~~~~
-../src/helloworld.c:60:9: warning: unused variable 'ftps_x' [-Wunused-variable]
-     int ftps_x;
-         ^~~~~~
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: test_data.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_data_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test_data.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: test_data.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size test_data.elf  |tee "test_data.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  90500	   1496	   3188	  95184	  173d0	test_data.elf
-'Finished building: test_data.elf.size'
-' '
-13:29:15 **** Incremental Build of configuration Debug for project test_data ****
+16:13:15 **** Incremental Build of configuration Debug for project test ****
 make all 
 make: Nothing to be done for `all'.
-13:30:00 **** Auto Build of configuration Debug for project test_data ****
+16:13:36 **** Auto Build of configuration Debug for project test ****
 make all 
-'Building file: ../src/helloworld.c'
+'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:61:9: warning: unused variable 'ftps_y' [-Wunused-variable]
-     int ftps_y;
-         ^~~~~~
-../src/helloworld.c:60:9: warning: unused variable 'ftps_x' [-Wunused-variable]
-     int ftps_x;
-         ^~~~~~
-'Finished building: ../src/helloworld.c'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:286:39: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
+      write_data_0 = char_to_writedata(test_sting_0);
+                                       ^~~~~~~~~~~~
+../src/main.c:78:14: note: expected 'unsigned char *' but argument is of type 'char *'
+ unsigned int char_to_writedata (unsigned char* input_char)
+              ^~~~~~~~~~~~~~~~~
+../src/main.c:287:39: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
+      write_data_1 = char_to_writedata(test_sting_1);
+                                       ^~~~~~~~~~~~
+../src/main.c:78:14: note: expected 'unsigned char *' but argument is of type 'char *'
+ unsigned int char_to_writedata (unsigned char* input_char)
+              ^~~~~~~~~~~~~~~~~
+../src/main.c:288:39: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
+      write_data_2 = char_to_writedata(test_sting_2);
+                                       ^~~~~~~~~~~~
+../src/main.c:78:14: note: expected 'unsigned char *' but argument is of type 'char *'
+ unsigned int char_to_writedata (unsigned char* input_char)
+              ^~~~~~~~~~~~~~~~~
+../src/main.c:289:39: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
+      write_data_3 = char_to_writedata(test_sting_3);
+                                       ^~~~~~~~~~~~
+../src/main.c:78:14: note: expected 'unsigned char *' but argument is of type 'char *'
+ unsigned int char_to_writedata (unsigned char* input_char)
+              ^~~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
 ' '
-'Building target: test_data.elf'
+'Building target: test.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_data_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test_data.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: test_data.elf'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
-mb-size test_data.elf  |tee "test_data.elf.size"
+mb-size test.elf  |tee "test.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  90508	   1496	   3188	  95192	  173d8	test_data.elf
-'Finished building: test_data.elf.size'
+ 186788	   1576	 750668	 939032	  e5418	test.elf
+'Finished building: test.elf.size'
 ' '
-13:30:04 **** Incremental Build of configuration Debug for project test_data ****
+16:13:42 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/echo.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
+'Finished building: ../src/echo.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 188416	   1592	 750664	 940672	  e5a80	test.elf
+'Finished building: test.elf.size'
+' '
+16:13:46 **** Incremental Build of configuration Debug for project ftps_locator ****
 make all 
 make: Nothing to be done for `all'.
-13:30:56 **** Auto Build of configuration Debug for project test_data ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:61:9: warning: unused variable 'ftps_y' [-Wunused-variable]
-     int ftps_y;
-         ^~~~~~
-../src/helloworld.c:60:9: warning: unused variable 'ftps_x' [-Wunused-variable]
-     int ftps_x;
-         ^~~~~~
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: test_data.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_data_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test_data.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: test_data.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size test_data.elf  |tee "test_data.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  90540	   1496	   3188	  95224	  173f8	test_data.elf
-'Finished building: test_data.elf.size'
-' '
-13:31:43 **** Auto Build of configuration Debug for project test_data ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:63:9: warning: unused variable 'ftps_y' [-Wunused-variable]
-     int ftps_y;
-         ^~~~~~
-../src/helloworld.c:62:9: warning: unused variable 'ftps_x' [-Wunused-variable]
-     int ftps_x;
-         ^~~~~~
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: test_data.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_data_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test_data.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: test_data.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size test_data.elf  |tee "test_data.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  90540	   1496	   3188	  95224	  173f8	test_data.elf
-'Finished building: test_data.elf.size'
-' '
-13:32:19 **** Auto Build of configuration Debug for project test_data ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:63:9: warning: variable 'ftps_y' set but not used [-Wunused-but-set-variable]
-     int ftps_y;
-         ^~~~~~
-../src/helloworld.c:62:9: warning: variable 'ftps_x' set but not used [-Wunused-but-set-variable]
-     int ftps_x;
-         ^~~~~~
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: test_data.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_data_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test_data.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: test_data.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size test_data.elf  |tee "test_data.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  90628	   1504	   3188	  95320	  17458	test_data.elf
-'Finished building: test_data.elf.size'
-' '
-13:32:24 **** Auto Build of configuration Debug for project test_data ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:63:9: warning: variable 'ftps_y' set but not used [-Wunused-but-set-variable]
-     int ftps_y;
-         ^~~~~~
-../src/helloworld.c:62:9: warning: variable 'ftps_x' set but not used [-Wunused-but-set-variable]
-     int ftps_x;
-         ^~~~~~
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: test_data.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_data_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test_data.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: test_data.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size test_data.elf  |tee "test_data.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  90580	   1504	   3188	  95272	  17428	test_data.elf
-'Finished building: test_data.elf.size'
-' '
-13:33:01 **** Auto Build of configuration Debug for project test_data ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: test_data.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_data_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test_data.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: test_data.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size test_data.elf  |tee "test_data.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  90588	   1504	   3188	  95280	  17430	test_data.elf
-'Finished building: test_data.elf.size'
-' '
-13:33:04 **** Incremental Build of configuration Debug for project test_data ****
+16:13:47 **** Incremental Build of configuration Debug for project test ****
 make all 
 make: Nothing to be done for `all'.
-13:34:20 **** Auto Build of configuration Debug for project test_data ****
+16:15:17 **** Auto Build of configuration Debug for project test ****
 make all 
-'Building file: ../src/helloworld.c'
+'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_data_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-'Finished building: ../src/helloworld.c'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:77:25: error: redefinition of 'FTPS_X'
+ volatile unsigned int * FTPS_X   = (unsigned int *)0x40050000;
+                         ^~~~~~
+../src/main.c:75:25: note: previous definition of 'FTPS_X' was here
+ volatile unsigned int * FTPS_X   = (unsigned int *)0x40030000;
+                         ^~~~~~
+../src/main.c:78:25: error: redefinition of 'FTPS_Y'
+ volatile unsigned int * FTPS_Y   = (unsigned int *)0x40060000;
+                         ^~~~~~
+../src/main.c:76:25: note: previous definition of 'FTPS_Y' was here
+ volatile unsigned int * FTPS_Y   = (unsigned int *)0x40040000;
+                         ^~~~~~
+../src/main.c: In function 'main':
+../src/main.c:288:39: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
+      write_data_0 = char_to_writedata(test_sting_0);
+                                       ^~~~~~~~~~~~
+../src/main.c:80:14: note: expected 'unsigned char *' but argument is of type 'char *'
+ unsigned int char_to_writedata (unsigned char* input_char)
+              ^~~~~~~~~~~~~~~~~
+../src/main.c:289:39: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
+      write_data_1 = char_to_writedata(test_sting_1);
+                                       ^~~~~~~~~~~~
+../src/main.c:80:14: note: expected 'unsigned char *' but argument is of type 'char *'
+ unsigned int char_to_writedata (unsigned char* input_char)
+              ^~~~~~~~~~~~~~~~~
+../src/main.c:290:39: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
+      write_data_2 = char_to_writedata(test_sting_2);
+                                       ^~~~~~~~~~~~
+../src/main.c:80:14: note: expected 'unsigned char *' but argument is of type 'char *'
+ unsigned int char_to_writedata (unsigned char* input_char)
+              ^~~~~~~~~~~~~~~~~
+../src/main.c:291:39: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
+      write_data_3 = char_to_writedata(test_sting_3);
+                                       ^~~~~~~~~~~~
+../src/main.c:80:14: note: expected 'unsigned char *' but argument is of type 'char *'
+ unsigned int char_to_writedata (unsigned char* input_char)
+              ^~~~~~~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+16:15:26 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:77:25: error: redefinition of 'FTPS_X'
+ volatile unsigned int * FTPS_X   = (unsigned int *)0x40050000;
+                         ^~~~~~
+../src/main.c:75:25: note: previous definition of 'FTPS_X' was here
+ volatile unsigned int * FTPS_X   = (unsigned int *)0x40030000;
+                         ^~~~~~
+../src/main.c:78:25: error: redefinition of 'FTPS_Y'
+ volatile unsigned int * FTPS_Y   = (unsigned int *)0x40060000;
+                         ^~~~~~
+../src/main.c:76:25: note: previous definition of 'FTPS_Y' was here
+ volatile unsigned int * FTPS_Y   = (unsigned int *)0x40040000;
+                         ^~~~~~
+../src/main.c: In function 'main':
+../src/main.c:281:12: error: 'send_data' undeclared (first use in this function)
+        if (send_data) {
+            ^~~~~~~~~
+../src/main.c:281:12: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:286:39: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
+      write_data_0 = char_to_writedata(test_sting_0);
+                                       ^~~~~~~~~~~~
+../src/main.c:80:14: note: expected 'unsigned char *' but argument is of type 'char *'
+ unsigned int char_to_writedata (unsigned char* input_char)
+              ^~~~~~~~~~~~~~~~~
+../src/main.c:287:39: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
+      write_data_1 = char_to_writedata(test_sting_1);
+                                       ^~~~~~~~~~~~
+../src/main.c:80:14: note: expected 'unsigned char *' but argument is of type 'char *'
+ unsigned int char_to_writedata (unsigned char* input_char)
+              ^~~~~~~~~~~~~~~~~
+../src/main.c:288:39: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
+      write_data_2 = char_to_writedata(test_sting_2);
+                                       ^~~~~~~~~~~~
+../src/main.c:80:14: note: expected 'unsigned char *' but argument is of type 'char *'
+ unsigned int char_to_writedata (unsigned char* input_char)
+              ^~~~~~~~~~~~~~~~~
+../src/main.c:289:39: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
+      write_data_3 = char_to_writedata(test_sting_3);
+                                       ^~~~~~~~~~~~
+../src/main.c:80:14: note: expected 'unsigned char *' but argument is of type 'char *'
+ unsigned int char_to_writedata (unsigned char* input_char)
+              ^~~~~~~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+16:16:06 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:285:39: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
+      write_data_0 = char_to_writedata(test_sting_0);
+                                       ^~~~~~~~~~~~
+../src/main.c:80:14: note: expected 'unsigned char *' but argument is of type 'char *'
+ unsigned int char_to_writedata (unsigned char* input_char)
+              ^~~~~~~~~~~~~~~~~
+../src/main.c:286:39: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
+      write_data_1 = char_to_writedata(test_sting_1);
+                                       ^~~~~~~~~~~~
+../src/main.c:80:14: note: expected 'unsigned char *' but argument is of type 'char *'
+ unsigned int char_to_writedata (unsigned char* input_char)
+              ^~~~~~~~~~~~~~~~~
+../src/main.c:287:39: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
+      write_data_2 = char_to_writedata(test_sting_2);
+                                       ^~~~~~~~~~~~
+../src/main.c:80:14: note: expected 'unsigned char *' but argument is of type 'char *'
+ unsigned int char_to_writedata (unsigned char* input_char)
+              ^~~~~~~~~~~~~~~~~
+../src/main.c:288:39: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
+      write_data_3 = char_to_writedata(test_sting_3);
+                                       ^~~~~~~~~~~~
+../src/main.c:80:14: note: expected 'unsigned char *' but argument is of type 'char *'
+ unsigned int char_to_writedata (unsigned char* input_char)
+              ^~~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
 ' '
-'Building target: test_data.elf'
+'Building target: test.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_data_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test_data.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: test_data.elf'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
-mb-size test_data.elf  |tee "test_data.elf.size"
+mb-size test.elf  |tee "test.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  90628	   1504	   3188	  95320	  17458	test_data.elf
-'Finished building: test_data.elf.size'
+ 188400	   1592	 750664	 940656	  e5a70	test.elf
+'Finished building: test.elf.size'
 ' '
-13:34:23 **** Incremental Build of configuration Debug for project test_data ****
+16:17:31 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:283:12: error: 'btnr' undeclared (first use in this function)
+       if (*btnr == 1)
+            ^~~~
+../src/main.c:283:12: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:291:39: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
+      write_data_0 = char_to_writedata(test_sting_0);
+                                       ^~~~~~~~~~~~
+../src/main.c:80:14: note: expected 'unsigned char *' but argument is of type 'char *'
+ unsigned int char_to_writedata (unsigned char* input_char)
+              ^~~~~~~~~~~~~~~~~
+../src/main.c:292:39: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
+      write_data_1 = char_to_writedata(test_sting_1);
+                                       ^~~~~~~~~~~~
+../src/main.c:80:14: note: expected 'unsigned char *' but argument is of type 'char *'
+ unsigned int char_to_writedata (unsigned char* input_char)
+              ^~~~~~~~~~~~~~~~~
+../src/main.c:293:39: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
+      write_data_2 = char_to_writedata(test_sting_2);
+                                       ^~~~~~~~~~~~
+../src/main.c:80:14: note: expected 'unsigned char *' but argument is of type 'char *'
+ unsigned int char_to_writedata (unsigned char* input_char)
+              ^~~~~~~~~~~~~~~~~
+../src/main.c:294:39: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
+      write_data_3 = char_to_writedata(test_sting_3);
+                                       ^~~~~~~~~~~~
+../src/main.c:80:14: note: expected 'unsigned char *' but argument is of type 'char *'
+ unsigned int char_to_writedata (unsigned char* input_char)
+              ^~~~~~~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+16:17:36 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:291:39: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
+      write_data_0 = char_to_writedata(test_sting_0);
+                                       ^~~~~~~~~~~~
+../src/main.c:80:14: note: expected 'unsigned char *' but argument is of type 'char *'
+ unsigned int char_to_writedata (unsigned char* input_char)
+              ^~~~~~~~~~~~~~~~~
+../src/main.c:292:39: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
+      write_data_1 = char_to_writedata(test_sting_1);
+                                       ^~~~~~~~~~~~
+../src/main.c:80:14: note: expected 'unsigned char *' but argument is of type 'char *'
+ unsigned int char_to_writedata (unsigned char* input_char)
+              ^~~~~~~~~~~~~~~~~
+../src/main.c:293:39: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
+      write_data_2 = char_to_writedata(test_sting_2);
+                                       ^~~~~~~~~~~~
+../src/main.c:80:14: note: expected 'unsigned char *' but argument is of type 'char *'
+ unsigned int char_to_writedata (unsigned char* input_char)
+              ^~~~~~~~~~~~~~~~~
+../src/main.c:294:39: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
+      write_data_3 = char_to_writedata(test_sting_3);
+                                       ^~~~~~~~~~~~
+../src/main.c:80:14: note: expected 'unsigned char *' but argument is of type 'char *'
+ unsigned int char_to_writedata (unsigned char* input_char)
+              ^~~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 188484	   1596	 750672	 940752	  e5ad0	test.elf
+'Finished building: test.elf.size'
+' '
+16:17:39 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+16:19:28 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+16:21:01 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:291:39: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
+      write_data_0 = char_to_writedata(test_sting_0);
+                                       ^~~~~~~~~~~~
+../src/main.c:80:14: note: expected 'unsigned char *' but argument is of type 'char *'
+ unsigned int char_to_writedata (unsigned char* input_char)
+              ^~~~~~~~~~~~~~~~~
+../src/main.c:292:39: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
+      write_data_1 = char_to_writedata(test_sting_1);
+                                       ^~~~~~~~~~~~
+../src/main.c:80:14: note: expected 'unsigned char *' but argument is of type 'char *'
+ unsigned int char_to_writedata (unsigned char* input_char)
+              ^~~~~~~~~~~~~~~~~
+../src/main.c:293:39: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
+      write_data_2 = char_to_writedata(test_sting_2);
+                                       ^~~~~~~~~~~~
+../src/main.c:80:14: note: expected 'unsigned char *' but argument is of type 'char *'
+ unsigned int char_to_writedata (unsigned char* input_char)
+              ^~~~~~~~~~~~~~~~~
+../src/main.c:294:39: warning: pointer targets in passing argument 1 of 'char_to_writedata' differ in signedness [-Wpointer-sign]
+      write_data_3 = char_to_writedata(test_sting_3);
+                                       ^~~~~~~~~~~~
+../src/main.c:80:14: note: expected 'unsigned char *' but argument is of type 'char *'
+ unsigned int char_to_writedata (unsigned char* input_char)
+              ^~~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 188540	   1596	 750672	 940808	  e5b08	test.elf
+'Finished building: test.elf.size'
+' '
+16:21:11 **** Incremental Build of configuration Debug for project test ****
 make all 
 make: Nothing to be done for `all'.

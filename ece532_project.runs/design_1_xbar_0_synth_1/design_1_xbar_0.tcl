@@ -4,8 +4,6 @@
 
 set_param xicom.use_bs_reader 1
 set_msg_config -id {HDL-1065} -limit 10000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 create_project -in_memory -part xc7a100tcsg324-1
@@ -20,10 +18,7 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
-set_property ip_repo_paths {
-  c:/ip_repo/ftps_data_gpio_1.0
-  c:/ece532_project/ip_repository
-} [current_project]
+set_property ip_repo_paths c:/ece532_project/ip_repository [current_project]
 set_property ip_output_repo c:/ece532_project/ece532_project.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_ip -quiet C:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.xci

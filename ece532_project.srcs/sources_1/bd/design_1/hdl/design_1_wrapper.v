@@ -1,8 +1,8 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-//Date        : Sat Feb 24 13:42:24 2018
-//Host        : SFB520WS13 running 64-bit Service Pack 1  (build 7601)
+//Date        : Sat Mar  3 15:36:12 2018
+//Host        : SFB520WS12 running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
 //Purpose     : IP block netlist
@@ -10,7 +10,8 @@
 `timescale 1 ps / 1 ps
 
 module design_1_wrapper
-   (BTNC,
+   (BTNL,
+    BTNR,
     DDR2_addr,
     DDR2_ba,
     DDR2_cas_n,
@@ -26,6 +27,7 @@ module design_1_wrapper
     DDR2_ras_n,
     DDR2_we_n,
     LED,
+    LED1,
     LED_15,
     OV7670_D,
     OV7670_HREF,
@@ -54,7 +56,8 @@ module design_1_wrapper
     vga_hsync,
     vga_red,
     vga_vsync);
-  input BTNC;
+  input BTNL;
+  input [0:0]BTNR;
   output [12:0]DDR2_addr;
   output [2:0]DDR2_ba;
   output DDR2_cas_n;
@@ -70,6 +73,7 @@ module design_1_wrapper
   output DDR2_ras_n;
   output DDR2_we_n;
   output LED;
+  output [0:0]LED1;
   output [0:0]LED_15;
   input [7:0]OV7670_D;
   input OV7670_HREF;
@@ -99,7 +103,8 @@ module design_1_wrapper
   output [3:0]vga_red;
   output vga_vsync;
 
-  wire BTNC;
+  wire BTNL;
+  wire [0:0]BTNR;
   wire [12:0]DDR2_addr;
   wire [2:0]DDR2_ba;
   wire DDR2_cas_n;
@@ -115,6 +120,7 @@ module design_1_wrapper
   wire DDR2_ras_n;
   wire DDR2_we_n;
   wire LED;
+  wire [0:0]LED1;
   wire [0:0]LED_15;
   wire [7:0]OV7670_D;
   wire OV7670_HREF;
@@ -148,7 +154,8 @@ module design_1_wrapper
   wire vga_vsync;
 
   design_1 design_1_i
-       (.BTNC(BTNC),
+       (.BTNL(BTNL),
+        .BTNR(BTNR),
         .DDR2_addr(DDR2_addr),
         .DDR2_ba(DDR2_ba),
         .DDR2_cas_n(DDR2_cas_n),
@@ -164,6 +171,7 @@ module design_1_wrapper
         .DDR2_ras_n(DDR2_ras_n),
         .DDR2_we_n(DDR2_we_n),
         .LED(LED),
+        .LED1(LED1),
         .LED_15(LED_15),
         .OV7670_D(OV7670_D),
         .OV7670_HREF(OV7670_HREF),

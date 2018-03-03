@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Sat Feb 24 13:18:09 2018
-| Host         : SFB520WS13 running 64-bit Service Pack 1  (build 7601)
+| Date         : Sat Mar  3 15:31:30 2018
+| Host         : SFB520WS12 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_utilization -file design_1_xbar_0_utilization_synth.rpt -pb design_1_xbar_0_utilization_synth.pb
 | Design       : design_1_xbar_0
 | Device       : 7a100tcsg324-1
@@ -30,14 +30,14 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  306 |     0 |     63400 |  0.48 |
-|   LUT as Logic          |  306 |     0 |     63400 |  0.48 |
+| Slice LUTs*             |  384 |     0 |     63400 |  0.61 |
+|   LUT as Logic          |  384 |     0 |     63400 |  0.61 |
 |   LUT as Memory         |    0 |     0 |     19000 |  0.00 |
-| Slice Registers         |  139 |     0 |    126800 |  0.11 |
-|   Register as Flip Flop |  139 |     0 |    126800 |  0.11 |
+| Slice Registers         |  141 |     0 |    126800 |  0.11 |
+|   Register as Flip Flop |  141 |     0 |    126800 |  0.11 |
 |   Register as Latch     |    0 |     0 |    126800 |  0.00 |
-| F7 Muxes                |   17 |     0 |     31700 |  0.05 |
-| F8 Muxes                |    4 |     0 |     15850 |  0.03 |
+| F7 Muxes                |    0 |     0 |     31700 |  0.00 |
+| F8 Muxes                |    0 |     0 |     15850 |  0.00 |
 +-------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 139   |          Yes |       Reset |            - |
+| 141   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -146,14 +146,12 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     |  158 |                 LUT |
-| FDRE     |  139 |        Flop & Latch |
-| LUT4     |   68 |                 LUT |
-| LUT3     |   57 |                 LUT |
-| LUT5     |   53 |                 LUT |
-| LUT2     |   19 |                 LUT |
-| MUXF7    |   17 |               MuxFx |
-| MUXF8    |    4 |               MuxFx |
+| LUT6     |  249 |                 LUT |
+| FDRE     |  141 |        Flop & Latch |
+| LUT4     |   85 |                 LUT |
+| LUT3     |   41 |                 LUT |
+| LUT5     |   40 |                 LUT |
+| LUT2     |   20 |                 LUT |
 | LUT1     |    2 |                 LUT |
 +----------+------+---------------------+
 

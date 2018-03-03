@@ -348,8 +348,12 @@
   "../../../bd/design_1/ip/design_1_axi_gpio_0_4/sim/design_1_axi_gpio_0_4.vhd" \
 -endlib
 -makelib ies/xil_defaultlib \
-  "../../../bd/design_1/ipshared/68d4/src/ftps_locator.v" \
-  "../../../bd/design_1/ip/design_1_ftps_locator_0_1/sim/design_1_ftps_locator_0_1.v" \
+  "../../../bd/design_1/ipshared/24bf/src/ftps_locator.v" \
+  "../../../bd/design_1/ip/design_1_ftps_locator_0_0/sim/design_1_ftps_locator_0_0.v" \
+-endlib
+-makelib ies/xil_defaultlib \
+  "../../../bd/design_1/ip/design_1_axi_gpio_0_5/sim/design_1_axi_gpio_0_5.vhd" \
+  "../../../bd/design_1/ip/design_1_axi_gpio_0_6/sim/design_1_axi_gpio_0_6.vhd" \
 -endlib
 -makelib ies/xil_defaultlib \
   glbl.v

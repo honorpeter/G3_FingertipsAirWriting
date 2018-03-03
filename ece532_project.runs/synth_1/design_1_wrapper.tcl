@@ -3,6 +3,7 @@
 # 
 
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
@@ -116,6 +117,12 @@ set_property used_in_implementation false [get_files -all c:/ece532_project/ece5
 set_property used_in_implementation false [get_files -all c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_4/design_1_axi_gpio_0_4_board.xdc]
 set_property used_in_implementation false [get_files -all c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_4/design_1_axi_gpio_0_4_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_4/design_1_axi_gpio_0_4.xdc]
+set_property used_in_implementation false [get_files -all c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_5/design_1_axi_gpio_0_5_board.xdc]
+set_property used_in_implementation false [get_files -all c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_5/design_1_axi_gpio_0_5_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_5/design_1_axi_gpio_0_5.xdc]
+set_property used_in_implementation false [get_files -all c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_6/design_1_axi_gpio_0_6_board.xdc]
+set_property used_in_implementation false [get_files -all c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_6/design_1_axi_gpio_0_6_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_6/design_1_axi_gpio_0_6.xdc]
 set_property used_in_implementation false [get_files -all C:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 set_property is_locked true [get_files C:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/design_1.bd]
 

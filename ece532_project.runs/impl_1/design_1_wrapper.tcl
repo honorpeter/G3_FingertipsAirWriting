@@ -42,6 +42,7 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
@@ -57,7 +58,7 @@ set rc [catch {
   set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir C:/ece532_project/ece532_project.cache/wt [current_project]
   set_property parent.project_path C:/ece532_project/ece532_project.xpr [current_project]
-  set_property ip_repo_paths c:/ece532_project/ip_repository [current_project]
+  set_property ip_repo_paths C:/ece532_project/ip_repository [current_project]
   set_property ip_output_repo C:/ece532_project/ece532_project.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
