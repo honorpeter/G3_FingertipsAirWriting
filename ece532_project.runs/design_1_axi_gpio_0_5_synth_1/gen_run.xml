@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="design_1_axi_gpio_0_5_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1520109109">
-  <File Type="RDS-PROPCONSTRS" Name="design_1_axi_gpio_0_5_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="design_1_axi_gpio_0_5.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="design_1_axi_gpio_0_5_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="design_1_axi_gpio_0_5.vds"/>
   <File Type="RDS-UTIL" Name="design_1_axi_gpio_0_5_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="design_1_axi_gpio_0_5_utilization_synth.pb"/>
