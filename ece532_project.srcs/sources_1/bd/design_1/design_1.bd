@@ -736,13 +736,6 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>ftps_locator_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="ftps_locator" spirit:vendor="utoronto.ca" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_ftps_locator_0_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>axi_send_message</spirit:instanceName>
         <spirit:componentRef spirit:library="ip" spirit:name="axi_gpio" spirit:vendor="xilinx.com" spirit:version="2.0"/>
         <spirit:configurableElementValues>
@@ -758,6 +751,13 @@
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_axi_gpio_0_6</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_GPIO_WIDTH">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_ALL_OUTPUTS">1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>ftps_locator_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="ftps_locator" spirit:vendor="utoronto.ca" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_ftps_locator_0_1</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -885,6 +885,8 @@
         <spirit:internalPortReference spirit:componentRef="axi_ftps_valid" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_ftps_x" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_ftps_y" spirit:portRef="s_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_send_message" spirit:portRef="s_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_LED1_indicator" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="ACLK"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M00_ACLK"/>
@@ -897,9 +899,7 @@
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M06_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M07_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M08_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="axi_send_message" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M09_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="axi_LED1_indicator" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M10_ACLK"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
@@ -930,6 +930,8 @@
         <spirit:internalPortReference spirit:componentRef="axi_ftps_valid" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_ftps_x" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_ftps_y" spirit:portRef="s_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="axi_send_message" spirit:portRef="s_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="axi_LED1_indicator" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="S00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M01_ARESETN"/>
@@ -940,9 +942,7 @@
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M06_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M07_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M08_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="axi_send_message" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M09_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="axi_LED1_indicator" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M10_ARESETN"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
@@ -1150,6 +1150,16 @@
         <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="capture_data"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
+        <spirit:name>gpio_io_i_2</spirit:name>
+        <spirit:externalPortReference spirit:portRef="BTNR"/>
+        <spirit:internalPortReference spirit:componentRef="axi_send_message" spirit:portRef="gpio_io_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>axi_LED1_indicator_gpio_io_o</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="axi_LED1_indicator" spirit:portRef="gpio_io_o"/>
+        <spirit:externalPortReference spirit:portRef="LED1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
         <spirit:name>blk_mem_buffer_vga_doutb</spirit:name>
         <spirit:internalPortReference spirit:componentRef="blk_mem_buffer_vga" spirit:portRef="doutb"/>
         <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="request_data"/>
@@ -1160,9 +1170,9 @@
         <spirit:internalPortReference spirit:componentRef="vga444_0" spirit:portRef="frame_pixel"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>ftps_locator_0_x_out</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="x_out"/>
-        <spirit:internalPortReference spirit:componentRef="axi_ftps_x" spirit:portRef="gpio_io_i"/>
+        <spirit:name>ftps_locator_0_ftps_valid</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="ftps_valid"/>
+        <spirit:internalPortReference spirit:componentRef="axi_ftps_valid" spirit:portRef="gpio_io_i"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>ftps_locator_0_y_out</spirit:name>
@@ -1170,19 +1180,9 @@
         <spirit:internalPortReference spirit:componentRef="axi_ftps_y" spirit:portRef="gpio_io_i"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>ftps_locator_0_ftps_valid</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="ftps_valid"/>
-        <spirit:internalPortReference spirit:componentRef="axi_ftps_valid" spirit:portRef="gpio_io_i"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>gpio_io_i_2</spirit:name>
-        <spirit:externalPortReference spirit:portRef="BTNR"/>
-        <spirit:internalPortReference spirit:componentRef="axi_send_message" spirit:portRef="gpio_io_i"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>axi_LED1_indicator_gpio_io_o</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="axi_LED1_indicator" spirit:portRef="gpio_io_o"/>
-        <spirit:externalPortReference spirit:portRef="LED1"/>
+        <spirit:name>ftps_locator_0_x_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="x_out"/>
+        <spirit:internalPortReference spirit:componentRef="axi_ftps_x" spirit:portRef="gpio_io_i"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>
