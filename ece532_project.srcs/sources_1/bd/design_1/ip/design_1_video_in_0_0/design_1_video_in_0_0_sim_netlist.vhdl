@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
 -- Date        : Sat Feb 10 16:32:16 2018
 -- Host        : SFB520WS02 running 64-bit Service Pack 1  (build 7601)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Users/chenyueq/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_video_in_0_0/design_1_video_in_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_1_video_in_0_0 -prefix
+--               design_1_video_in_0_0_ design_1_video_in_0_0_sim_netlist.vhdl
 -- Design      : design_1_video_in_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -46,8 +46,6 @@ entity design_1_video_in_0_0_I2C_Controller is
     \Config_Done1__6\ : in STD_LOGIC;
     mI2C_CTRL_CLK : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_video_in_0_0_I2C_Controller : entity is "I2C_Controller";
 end design_1_video_in_0_0_I2C_Controller;
 
 architecture STRUCTURE of design_1_video_in_0_0_I2C_Controller is
@@ -1332,8 +1330,6 @@ entity design_1_video_in_0_0_I2C_OV7670_RGB444_Config is
     data14 : out STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_video_in_0_0_I2C_OV7670_RGB444_Config : entity is "I2C_OV7670_RGB444_Config";
 end design_1_video_in_0_0_I2C_OV7670_RGB444_Config;
 
 architecture STRUCTURE of design_1_video_in_0_0_I2C_OV7670_RGB444_Config is
@@ -2524,8 +2520,6 @@ entity design_1_video_in_0_0_debounce is
     CLK50 : in STD_LOGIC;
     BTNC : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_video_in_0_0_debounce : entity is "debounce";
 end design_1_video_in_0_0_debounce;
 
 architecture STRUCTURE of design_1_video_in_0_0_debounce is
@@ -3267,8 +3261,6 @@ entity design_1_video_in_0_0_ov7670_capture is
     OV7670_PCLK : in STD_LOGIC;
     OV7670_D : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_video_in_0_0_ov7670_capture : entity is "ov7670_capture";
 end design_1_video_in_0_0_ov7670_capture;
 
 architecture STRUCTURE of design_1_video_in_0_0_ov7670_capture is
@@ -4371,8 +4363,6 @@ entity design_1_video_in_0_0_I2C_AV_Config is
     CLK25 : in STD_LOGIC;
     o_reg : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_video_in_0_0_I2C_AV_Config : entity is "I2C_AV_Config";
 end design_1_video_in_0_0_I2C_AV_Config;
 
 architecture STRUCTURE of design_1_video_in_0_0_I2C_AV_Config is
@@ -5204,8 +5194,6 @@ entity design_1_video_in_0_0_video_in is
     CLK50 : in STD_LOGIC;
     BTNC : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_video_in_0_0_video_in : entity is "video_in";
 end design_1_video_in_0_0_video_in;
 
 architecture STRUCTURE of design_1_video_in_0_0_video_in is

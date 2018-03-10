@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-// Date        : Sat Feb 10 11:11:08 2018
-// Host        : SFB520WS02 running 64-bit Service Pack 1  (build 7601)
-// Command     : write_verilog -force -mode funcsim -rename_top design_1_vga444_0_0 -prefix
-//               design_1_vga444_0_0_ design_1_vga444_0_0_sim_netlist.v
+// Date        : Sat Mar 10 14:22:09 2018
+// Host        : SFB520WS12 running 64-bit Service Pack 1  (build 7601)
+// Command     : write_verilog -force -mode funcsim
+//               C:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_vga444_0_0/design_1_vga444_0_0_sim_netlist.v
 // Design      : design_1_vga444_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -78,6 +78,7 @@ module design_1_vga444_0_0
         .vga_vsync(vga_vsync));
 endmodule
 
+(* ORIG_REF_NAME = "vga444" *) 
 module design_1_vga444_0_0_vga444
    (\HCnt[6] ,
     \HCnt[5] ,

@@ -45,11 +45,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Feb 24 16:03:58 UTC 2018</spirit:value>
+            <spirit:value>Sat Mar 10 16:19:58 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:1b30f3a1</spirit:value>
+            <spirit:value>7:4fe1a105</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -64,11 +64,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Feb 24 16:03:58 UTC 2018</spirit:value>
+            <spirit:value>Sat Mar 10 19:54:11 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:1b30f3a1</spirit:value>
+            <spirit:value>7:4fe1a105</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -82,11 +82,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Feb 24 16:03:58 UTC 2018</spirit:value>
+            <spirit:value>Sat Mar 10 16:19:58 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:0b6e10ae</spirit:value>
+            <spirit:value>7:f9a2b84d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -101,11 +101,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Feb 24 16:03:58 UTC 2018</spirit:value>
+            <spirit:value>Sat Mar 10 19:54:11 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:0b6e10ae</spirit:value>
+            <spirit:value>7:f9a2b84d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -119,11 +119,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Feb 24 16:07:18 UTC 2018</spirit:value>
+            <spirit:value>Sat Mar 10 19:56:45 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:1b30f3a1</spirit:value>
+            <spirit:value>7:4fe1a105</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -254,7 +254,7 @@
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
         <spirit:name>WHITE_TH</spirit:name>
         <spirit:displayName>White Th</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.WHITE_TH" spirit:bitStringLength="8">&quot;10110000&quot;</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.WHITE_TH" spirit:bitStringLength="8">&quot;10011000&quot;</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>AVG_TH</spirit:name>
@@ -357,7 +357,7 @@
     <spirit:parameter>
       <spirit:name>WHITE_TH</spirit:name>
       <spirit:displayName>White Th</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.WHITE_TH" spirit:bitStringLength="8">&quot;10110000&quot;</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.WHITE_TH" spirit:bitStringLength="8">&quot;10011000&quot;</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>AVG_TH</spirit:name>
@@ -381,6 +381,9 @@
       <xilinx:tags>
         <xilinx:tag xilinx:name="utoronto.ca:user:frame_average_buffer:1.0_ARCHIVE_LOCATION">w:/ECE532/ece532_project/ip_repository/utoronto.ca_user_frame_average_buffer_1.0</xilinx:tag>
       </xilinx:tags>
+      <xilinx:configElementInfos>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.WHITE_TH" xilinx:valueSource="user"/>
+      </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2017.2</xilinx:xilinxVersion>

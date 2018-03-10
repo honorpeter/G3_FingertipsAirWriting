@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
 // Date        : Sat Feb 10 16:32:16 2018
 // Host        : SFB520WS02 running 64-bit Service Pack 1  (build 7601)
-// Command     : write_verilog -force -mode funcsim
-//               C:/Users/chenyueq/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_video_in_0_0/design_1_video_in_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_video_in_0_0 -prefix
+//               design_1_video_in_0_0_ design_1_video_in_0_0_sim_netlist.v
 // Design      : design_1_video_in_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,85 +12,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_video_in_0_0,video_in,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "video_in,Vivado 2017.2" *) 
-(* NotValidForBitStream *)
-module design_1_video_in_0_0
-   (CLK50,
-    CLK25,
-    OV7670_VSYNC,
-    OV7670_HREF,
-    OV7670_PCLK,
-    OV7670_XCLK,
-    OV7670_SIOC,
-    OV7670_SIOD,
-    OV7670_D,
-    LED,
-    BTNC,
-    capture_addr,
-    data_16,
-    pwdn,
-    reset,
-    wea,
-    resend);
-  input CLK50;
-  input CLK25;
-  input OV7670_VSYNC;
-  input OV7670_HREF;
-  input OV7670_PCLK;
-  output OV7670_XCLK;
-  output OV7670_SIOC;
-  inout OV7670_SIOD;
-  input [7:0]OV7670_D;
-  output LED;
-  input BTNC;
-  output [16:0]capture_addr;
-  output [15:0]data_16;
-  output pwdn;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *) output reset;
-  output wea;
-  output resend;
-
-  wire \<const0> ;
-  wire \<const1> ;
-  wire BTNC;
-  wire CLK25;
-  wire CLK50;
-  wire LED;
-  wire [7:0]OV7670_D;
-  wire OV7670_HREF;
-  wire OV7670_PCLK;
-  wire OV7670_SIOC;
-  wire OV7670_SIOD;
-  wire OV7670_VSYNC;
-  wire [16:0]capture_addr;
-  wire [15:0]data_16;
-  wire resend;
-
-  assign OV7670_XCLK = CLK25;
-  assign pwdn = \<const0> ;
-  assign reset = \<const1> ;
-  assign wea = \<const1> ;
-  GND GND
-       (.G(\<const0> ));
-  VCC VCC
-       (.P(\<const1> ));
-  design_1_video_in_0_0_video_in inst
-       (.BTNC(BTNC),
-        .CLK25(CLK25),
-        .CLK50(CLK50),
-        .LED(LED),
-        .OV7670_D(OV7670_D),
-        .OV7670_HREF(OV7670_HREF),
-        .OV7670_PCLK(OV7670_PCLK),
-        .OV7670_SIOC(OV7670_SIOC),
-        .OV7670_SIOD(OV7670_SIOD),
-        .OV7670_VSYNC(OV7670_VSYNC),
-        .Q(capture_addr),
-        .data_16(data_16),
-        .resend(resend));
-endmodule
-
-(* ORIG_REF_NAME = "I2C_AV_Config" *) 
 module design_1_video_in_0_0_I2C_AV_Config
    (LED,
     OV7670_SIOC,
@@ -735,7 +656,6 @@ module design_1_video_in_0_0_I2C_AV_Config
         .data9(data9));
 endmodule
 
-(* ORIG_REF_NAME = "I2C_Controller" *) 
 module design_1_video_in_0_0_I2C_Controller
    (D,
     E,
@@ -1800,7 +1720,6 @@ module design_1_video_in_0_0_I2C_Controller
         .O(ACK0__1));
 endmodule
 
-(* ORIG_REF_NAME = "I2C_OV7670_RGB444_Config" *) 
 module design_1_video_in_0_0_I2C_OV7670_RGB444_Config
    (data17,
     data13,
@@ -2765,7 +2684,6 @@ module design_1_video_in_0_0_I2C_OV7670_RGB444_Config
         .S(Q[7]));
 endmodule
 
-(* ORIG_REF_NAME = "debounce" *) 
 module design_1_video_in_0_0_debounce
    (resend,
     CLK50,
@@ -3273,7 +3191,84 @@ module design_1_video_in_0_0_debounce
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "ov7670_capture" *) 
+(* CHECK_LICENSE_TYPE = "design_1_video_in_0_0,video_in,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "video_in,Vivado 2017.2" *) 
+(* NotValidForBitStream *)
+module design_1_video_in_0_0
+   (CLK50,
+    CLK25,
+    OV7670_VSYNC,
+    OV7670_HREF,
+    OV7670_PCLK,
+    OV7670_XCLK,
+    OV7670_SIOC,
+    OV7670_SIOD,
+    OV7670_D,
+    LED,
+    BTNC,
+    capture_addr,
+    data_16,
+    pwdn,
+    reset,
+    wea,
+    resend);
+  input CLK50;
+  input CLK25;
+  input OV7670_VSYNC;
+  input OV7670_HREF;
+  input OV7670_PCLK;
+  output OV7670_XCLK;
+  output OV7670_SIOC;
+  inout OV7670_SIOD;
+  input [7:0]OV7670_D;
+  output LED;
+  input BTNC;
+  output [16:0]capture_addr;
+  output [15:0]data_16;
+  output pwdn;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *) output reset;
+  output wea;
+  output resend;
+
+  wire \<const0> ;
+  wire \<const1> ;
+  wire BTNC;
+  wire CLK25;
+  wire CLK50;
+  wire LED;
+  wire [7:0]OV7670_D;
+  wire OV7670_HREF;
+  wire OV7670_PCLK;
+  wire OV7670_SIOC;
+  wire OV7670_SIOD;
+  wire OV7670_VSYNC;
+  wire [16:0]capture_addr;
+  wire [15:0]data_16;
+  wire resend;
+
+  assign OV7670_XCLK = CLK25;
+  assign pwdn = \<const0> ;
+  assign reset = \<const1> ;
+  assign wea = \<const1> ;
+  GND GND
+       (.G(\<const0> ));
+  VCC VCC
+       (.P(\<const1> ));
+  design_1_video_in_0_0_video_in inst
+       (.BTNC(BTNC),
+        .CLK25(CLK25),
+        .CLK50(CLK50),
+        .LED(LED),
+        .OV7670_D(OV7670_D),
+        .OV7670_HREF(OV7670_HREF),
+        .OV7670_PCLK(OV7670_PCLK),
+        .OV7670_SIOC(OV7670_SIOC),
+        .OV7670_SIOD(OV7670_SIOD),
+        .OV7670_VSYNC(OV7670_VSYNC),
+        .Q(capture_addr),
+        .data_16(data_16),
+        .resend(resend));
+endmodule
+
 module design_1_video_in_0_0_ov7670_capture
    (Q,
     data_16,
@@ -4066,7 +4061,6 @@ module design_1_video_in_0_0_ov7670_capture
         .R(OV7670_VSYNC));
 endmodule
 
-(* ORIG_REF_NAME = "video_in" *) 
 module design_1_video_in_0_0_video_in
    (Q,
     data_16,

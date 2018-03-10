@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
--- Date        : Sat Feb 24 13:17:18 2018
+-- Date        : Sat Feb 24 13:17:17 2018
 -- Host        : SFB520WS13 running 64-bit Service Pack 1  (build 7601)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_4/design_1_axi_gpio_0_4_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_axi_gpio_0_4 -prefix
+--               design_1_axi_gpio_0_4_ design_1_axi_gpio_0_4_stub.vhdl
 -- Design      : design_1_axi_gpio_0_4
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tcsg324-1

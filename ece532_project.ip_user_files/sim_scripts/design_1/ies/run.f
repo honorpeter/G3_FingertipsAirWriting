@@ -320,7 +320,6 @@
   "../../../bd/design_1/ip/design_1_lmb_bram_0/sim/design_1_lmb_bram_0.v" \
   "../../../bd/design_1/ipshared/df56/vga444.v" \
   "../../../bd/design_1/ip/design_1_vga444_0_0/sim/design_1_vga444_0_0.v" \
-  "../../../bd/design_1/hdl/design_1.v" \
   "../../../bd/design_1/ipshared/6f77/I2C_AV_Config.v" \
   "../../../bd/design_1/ipshared/6f77/I2C_Controller.v" \
   "../../../bd/design_1/ipshared/6f77/I2C_OV7670_RGB444_Config.v" \
@@ -350,8 +349,9 @@
   "../../../bd/design_1/ip/design_1_axi_gpio_0_6/sim/design_1_axi_gpio_0_6.vhd" \
 -endlib
 -makelib ies/xil_defaultlib \
-  "../../../bd/design_1/ipshared/fd29/src/ftps_locator.v" \
-  "../../../bd/design_1/ip/design_1_ftps_locator_0_1/sim/design_1_ftps_locator_0_1.v" \
+  "../../../bd/design_1/hdl/design_1.v" \
+  "../../../bd/design_1/ipshared/48db/src/ftps_locator.v" \
+  "../../../bd/design_1/ip/design_1_ftps_locator_0_0/sim/design_1_ftps_locator_0_0.v" \
 -endlib
 -makelib ies/xil_defaultlib \
   glbl.v

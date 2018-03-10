@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
 -- Date        : Sat Feb 24 12:41:27 2018
 -- Host        : SFB520WS13 running 64-bit Service Pack 1  (build 7601)
--- Command     : write_vhdl -force -mode funcsim
---               c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_1_axi_gpio_0_2 -prefix
+--               design_1_axi_gpio_0_2_ design_1_axi_gpio_0_2_sim_netlist.vhdl
 -- Design      : design_1_axi_gpio_0_2
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -28,8 +28,6 @@ entity design_1_axi_gpio_0_2_GPIO_Core is
     \bus2ip_addr_i_reg[2]_0\ : in STD_LOGIC;
     bus2ip_rnw : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_axi_gpio_0_2_GPIO_Core : entity is "GPIO_Core";
 end design_1_axi_gpio_0_2_GPIO_Core;
 
 architecture STRUCTURE of design_1_axi_gpio_0_2_GPIO_Core is
@@ -157,8 +155,6 @@ entity design_1_axi_gpio_0_2_address_decoder is
     ip2bus_wrack_i_D1 : in STD_LOGIC;
     is_write_reg : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_axi_gpio_0_2_address_decoder : entity is "address_decoder";
 end design_1_axi_gpio_0_2_address_decoder;
 
 architecture STRUCTURE of design_1_axi_gpio_0_2_address_decoder is
@@ -296,8 +292,6 @@ entity design_1_axi_gpio_0_2_slave_attachment is
     ip2bus_rdack_i_D1 : in STD_LOGIC;
     ip2bus_wrack_i_D1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_axi_gpio_0_2_slave_attachment : entity is "slave_attachment";
 end design_1_axi_gpio_0_2_slave_attachment;
 
 architecture STRUCTURE of design_1_axi_gpio_0_2_slave_attachment is
@@ -793,8 +787,6 @@ entity design_1_axi_gpio_0_2_axi_lite_ipif is
     ip2bus_rdack_i_D1 : in STD_LOGIC;
     ip2bus_wrack_i_D1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_axi_gpio_0_2_axi_lite_ipif : entity is "axi_lite_ipif";
 end design_1_axi_gpio_0_2_axi_lite_ipif;
 
 architecture STRUCTURE of design_1_axi_gpio_0_2_axi_lite_ipif is
@@ -891,8 +883,6 @@ entity design_1_axi_gpio_0_2_axi_gpio is
   attribute C_TRI_DEFAULT of design_1_axi_gpio_0_2_axi_gpio : entity is -1;
   attribute C_TRI_DEFAULT_2 : integer;
   attribute C_TRI_DEFAULT_2 of design_1_axi_gpio_0_2_axi_gpio : entity is -1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_axi_gpio_0_2_axi_gpio : entity is "axi_gpio";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of design_1_axi_gpio_0_2_axi_gpio : entity is "yes";
   attribute ip_group : string;

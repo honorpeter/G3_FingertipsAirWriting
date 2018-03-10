@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
--- Date        : Sat Feb 24 11:07:17 2018
--- Host        : SFB520WS13 running 64-bit Service Pack 1  (build 7601)
+-- Date        : Sat Mar 10 14:56:45 2018
+-- Host        : SFB520WS12 running 64-bit Service Pack 1  (build 7601)
 -- Command     : write_vhdl -force -mode funcsim
---               w:/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_frame_average_buffer_0_1/design_1_frame_average_buffer_0_1_sim_netlist.vhdl
+--               C:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_frame_average_buffer_0_1/design_1_frame_average_buffer_0_1_sim_netlist.vhdl
 -- Design      : design_1_frame_average_buffer_0_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -254,22 +254,22 @@ begin
         port map (
       I0 => capture_data(7),
       I1 => \data_out[0]_i_2_n_0\,
-      I2 => capture_data(6),
+      I2 => capture_data(5),
       I3 => doutb(0),
       I4 => frame_out_i_2_n_0,
       O => data_out0_in(0)
     );
 \data_out[0]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"8888888888888880"
+      INIT => X"FFFFFFFFFE000000"
     )
         port map (
-      I0 => capture_data(5),
-      I1 => capture_data(4),
-      I2 => capture_data(2),
+      I0 => capture_data(2),
+      I1 => capture_data(1),
+      I2 => capture_data(0),
       I3 => capture_data(3),
-      I4 => capture_data(0),
-      I5 => capture_data(1),
+      I4 => capture_data(4),
+      I5 => capture_data(6),
       O => \data_out[0]_i_2_n_0\
     );
 \data_out[1]_i_1\: unisim.vcomponents.LUT6
@@ -279,7 +279,7 @@ begin
         port map (
       I0 => doutb(1),
       I1 => \data_out[1]_i_2_n_0\,
-      I2 => capture_data(6),
+      I2 => capture_data(5),
       I3 => \data_out[0]_i_2_n_0\,
       I4 => frame_out_i_2_n_0,
       I5 => reset,
@@ -304,7 +304,7 @@ begin
         port map (
       I0 => doutb(2),
       I1 => \data_out[2]_i_2_n_0\,
-      I2 => capture_data(6),
+      I2 => capture_data(5),
       I3 => \data_out[0]_i_2_n_0\,
       I4 => frame_out_i_2_n_0,
       I5 => reset,

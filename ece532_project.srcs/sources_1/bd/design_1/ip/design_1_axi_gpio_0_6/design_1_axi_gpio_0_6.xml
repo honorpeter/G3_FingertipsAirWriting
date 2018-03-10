@@ -1025,10 +1025,6 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Mar 03 20:32:14 UTC 2018</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>7:2ba5debd</spirit:value>
           </spirit:parameter>
@@ -1790,6 +1786,11 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
         <spirit:name>design_1_axi_gpio_0_6_stub.vhdl</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>stats.txt</spirit:name>
+        <spirit:userFileType>text</spirit:userFileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>

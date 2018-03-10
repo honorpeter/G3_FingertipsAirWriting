@@ -75,7 +75,7 @@ output wire [15 : 0] avg_data_out;
 output wire avg_data_valid;
 
   frame_average_buffer #(
-    .WHITE_TH(8'B10110000),
+    .WHITE_TH(8'B10011000),
     .AVG_TH(3'B000),
     .FRAME_NUMBER(3'B010)
   ) inst (

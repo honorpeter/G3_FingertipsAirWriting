@@ -401,6 +401,9 @@ CONFIG.USE_BOARD_FLOW {true} \
 
   # Create instance: frame_average_buffer_0, and set properties
   set frame_average_buffer_0 [ create_bd_cell -type ip -vlnv utoronto.ca:user:frame_average_buffer:1.0 frame_average_buffer_0 ]
+  set_property -dict [ list \
+CONFIG.WHITE_TH {"10011000"} \
+ ] $frame_average_buffer_0
 
   # Create instance: ftps_locator_0, and set properties
   set ftps_locator_0 [ create_bd_cell -type ip -vlnv utoronto.ca:user:ftps_locator:1.0 ftps_locator_0 ]

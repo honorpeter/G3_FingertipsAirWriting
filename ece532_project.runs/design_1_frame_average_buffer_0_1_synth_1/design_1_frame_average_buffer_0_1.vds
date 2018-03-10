@@ -2,12 +2,12 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Sat Feb 24 11:05:39 2018
-# Process ID: 5016
-# Current directory: W:/ECE532/ece532_project/ece532_project.runs/design_1_frame_average_buffer_0_1_synth_1
+# Start of session at: Sat Mar 10 14:55:29 2018
+# Process ID: 4372
+# Current directory: C:/ece532_project/ece532_project.runs/design_1_frame_average_buffer_0_1_synth_1
 # Command line: vivado.exe -log design_1_frame_average_buffer_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_frame_average_buffer_0_1.tcl
-# Log file: W:/ECE532/ece532_project/ece532_project.runs/design_1_frame_average_buffer_0_1_synth_1/design_1_frame_average_buffer_0_1.vds
-# Journal file: W:/ECE532/ece532_project/ece532_project.runs/design_1_frame_average_buffer_0_1_synth_1\vivado.jou
+# Log file: C:/ece532_project/ece532_project.runs/design_1_frame_average_buffer_0_1_synth_1/design_1_frame_average_buffer_0_1.vds
+# Journal file: C:/ece532_project/ece532_project.runs/design_1_frame_average_buffer_0_1_synth_1\vivado.jou
 #-----------------------------------------------------------
 source design_1_frame_average_buffer_0_1.tcl -notrace
 Command: synth_design -top design_1_frame_average_buffer_0_1 -part xc7a100tcsg324-1 -mode out_of_context
@@ -15,21 +15,21 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t-csg324'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t-csg324'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 4056 
+INFO: Helper process launched with PID 3716 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 378.820 ; gain = 82.598
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 379.848 ; gain = 82.902
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_frame_average_buffer_0_1' [w:/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_frame_average_buffer_0_1/synth/design_1_frame_average_buffer_0_1.v:56]
-INFO: [Synth 8-638] synthesizing module 'frame_average_buffer' [w:/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ipshared/1a35/imports/new/frame_average_buffer.v:23]
-	Parameter WHITE_TH bound to: 8'b10110000 
+INFO: [Synth 8-638] synthesizing module 'design_1_frame_average_buffer_0_1' [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_frame_average_buffer_0_1/synth/design_1_frame_average_buffer_0_1.v:56]
+INFO: [Synth 8-638] synthesizing module 'frame_average_buffer' [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ipshared/1a35/imports/new/frame_average_buffer.v:23]
+	Parameter WHITE_TH bound to: 8'b10011000 
 	Parameter AVG_TH bound to: 3'b000 
 	Parameter FRAME_NUMBER bound to: 3'b010 
-INFO: [Synth 8-638] synthesizing module 'frame_average' [w:/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ipshared/1a35/imports/video_cam/frame_average.v:23]
-	Parameter WHITE_TH bound to: 8'b10110000 
+INFO: [Synth 8-638] synthesizing module 'frame_average' [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ipshared/1a35/imports/video_cam/frame_average.v:23]
+	Parameter WHITE_TH bound to: 8'b10011000 
 	Parameter AVG_TH bound to: 3'b000 
 	Parameter FRAME_NUMBER bound to: 3'b010 
-INFO: [Synth 8-256] done synthesizing module 'frame_average' (1#1) [w:/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ipshared/1a35/imports/video_cam/frame_average.v:23]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_average_buffer' [w:/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_frame_average_buffer_0_1/ip/blk_mem_average_buffer/synth/blk_mem_average_buffer.vhd:71]
+INFO: [Synth 8-256] done synthesizing module 'frame_average' (1#1) [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ipshared/1a35/imports/video_cam/frame_average.v:23]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_average_buffer' [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_frame_average_buffer_0_1/ip/blk_mem_average_buffer/synth/blk_mem_average_buffer.vhd:71]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -103,12 +103,12 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_average_buffer' [w:/ECE532/ece5
 	Parameter C_COUNT_36K_BRAM bound to: 7 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     11.629255 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_3_6' declared at 'w:/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_frame_average_buffer_0_1/ip/blk_mem_average_buffer/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:195260' bound to instance 'U0' of component 'blk_mem_gen_v8_3_6' [w:/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_frame_average_buffer_0_1/ip/blk_mem_average_buffer/synth/blk_mem_average_buffer.vhd:234]
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_3_6' declared at 'c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_frame_average_buffer_0_1/ip/blk_mem_average_buffer/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:195260' bound to instance 'U0' of component 'blk_mem_gen_v8_3_6' [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_frame_average_buffer_0_1/ip/blk_mem_average_buffer/synth/blk_mem_average_buffer.vhd:234]
 WARNING: [Synth 8-6014] Unused sequential element i_reg was removed. 
 WARNING: [Synth 8-6014] Unused sequential element i_reg was removed. 
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_average_buffer' (12#1) [w:/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_frame_average_buffer_0_1/ip/blk_mem_average_buffer/synth/blk_mem_average_buffer.vhd:71]
-INFO: [Synth 8-256] done synthesizing module 'frame_average_buffer' (13#1) [w:/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ipshared/1a35/imports/new/frame_average_buffer.v:23]
-INFO: [Synth 8-256] done synthesizing module 'design_1_frame_average_buffer_0_1' (14#1) [w:/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_frame_average_buffer_0_1/synth/design_1_frame_average_buffer_0_1.v:56]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_average_buffer' (12#1) [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_frame_average_buffer_0_1/ip/blk_mem_average_buffer/synth/blk_mem_average_buffer.vhd:71]
+INFO: [Synth 8-256] done synthesizing module 'frame_average_buffer' (13#1) [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ipshared/1a35/imports/new/frame_average_buffer.v:23]
+INFO: [Synth 8-256] done synthesizing module 'design_1_frame_average_buffer_0_1' (14#1) [c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_frame_average_buffer_0_1/synth/design_1_frame_average_buffer_0_1.v:56]
 WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port MUX_RST[0]
 WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port MEM_LAT_RST
 WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port MUX_REGCE[0]
@@ -211,7 +211,7 @@ WARNING: [Synth 8-3331] design blk_mem_gen_mux has unconnected port SBITERRIN[16
 WARNING: [Synth 8-3331] design blk_mem_gen_mux has unconnected port SBITERRIN[15]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 585.902 ; gain = 289.680
+Finished RTL Elaboration : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 587.180 ; gain = 290.234
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -221,7 +221,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:43 ; elapsed = 00:00:49 . Memory (MB): peak = 585.902 ; gain = 289.680
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 587.180 ; gain = 290.234
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -230,36 +230,36 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [W:/ECE532/ece532_project/ece532_project.runs/design_1_frame_average_buffer_0_1_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [W:/ECE532/ece532_project/ece532_project.runs/design_1_frame_average_buffer_0_1_synth_1/dont_touch.xdc]
+Parsing XDC File [C:/ece532_project/ece532_project.runs/design_1_frame_average_buffer_0_1_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/ece532_project/ece532_project.runs/design_1_frame_average_buffer_0_1_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.194 . Memory (MB): peak = 682.820 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 684.414 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:50 ; elapsed = 00:01:06 . Memory (MB): peak = 682.820 ; gain = 386.598
+Finished Constraint Validation : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 684.414 ; gain = 387.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:50 ; elapsed = 00:01:06 . Memory (MB): peak = 682.820 ; gain = 386.598
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 684.414 ; gain = 387.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for inst/frame_avg_buffer. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:01:06 . Memory (MB): peak = 682.820 ; gain = 386.598
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 684.414 ; gain = 387.469
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "data_out" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "frame_out" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "frame_out_valid" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:51 ; elapsed = 00:01:07 . Memory (MB): peak = 682.820 ; gain = 386.598
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:51 ; elapsed = 00:00:57 . Memory (MB): peak = 684.414 ; gain = 387.469
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -343,7 +343,7 @@ INFO: [Synth 8-5544] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/
 INFO: [Synth 8-5544] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/ENOUT" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/ENOUT" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:01:07 . Memory (MB): peak = 682.820 ; gain = 386.598
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:00:58 . Memory (MB): peak = 684.414 ; gain = 387.469
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -355,13 +355,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:00 ; elapsed = 00:01:17 . Memory (MB): peak = 692.934 ; gain = 396.711
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:00 ; elapsed = 00:01:07 . Memory (MB): peak = 693.754 ; gain = 396.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:17 . Memory (MB): peak = 694.938 ; gain = 398.715
+Finished Timing Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:07 . Memory (MB): peak = 693.754 ; gain = 396.809
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -373,7 +373,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:00 ; elapsed = 00:01:17 . Memory (MB): peak = 714.219 ; gain = 417.996
+Finished Technology Mapping : Time (s): cpu = 00:01:00 ; elapsed = 00:01:07 . Memory (MB): peak = 714.043 ; gain = 417.098
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -397,7 +397,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:00 ; elapsed = 00:01:17 . Memory (MB): peak = 714.219 ; gain = 417.996
+Finished IO Insertion : Time (s): cpu = 00:01:01 ; elapsed = 00:01:08 . Memory (MB): peak = 714.043 ; gain = 417.098
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -410,7 +410,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:00 ; elapsed = 00:01:17 . Memory (MB): peak = 714.219 ; gain = 417.996
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:01 ; elapsed = 00:01:08 . Memory (MB): peak = 714.043 ; gain = 417.098
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -422,25 +422,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:01 ; elapsed = 00:01:17 . Memory (MB): peak = 714.219 ; gain = 417.996
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:01 ; elapsed = 00:01:08 . Memory (MB): peak = 714.043 ; gain = 417.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:01 ; elapsed = 00:01:17 . Memory (MB): peak = 714.219 ; gain = 417.996
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:01 ; elapsed = 00:01:08 . Memory (MB): peak = 714.043 ; gain = 417.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:01 ; elapsed = 00:01:17 . Memory (MB): peak = 714.219 ; gain = 417.996
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:01 ; elapsed = 00:01:08 . Memory (MB): peak = 714.043 ; gain = 417.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:01 ; elapsed = 00:01:17 . Memory (MB): peak = 714.219 ; gain = 417.996
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:01 ; elapsed = 00:01:08 . Memory (MB): peak = 714.043 ; gain = 417.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -496,11 +496,11 @@ Report Instance Areas:
 |21    |    my_frame_average                             |frame_average                            |    37|
 +------+-------------------------------------------------+-----------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:01 ; elapsed = 00:01:18 . Memory (MB): peak = 714.219 ; gain = 417.996
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:01 ; elapsed = 00:01:08 . Memory (MB): peak = 714.043 ; gain = 417.098
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 135 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:01:05 . Memory (MB): peak = 714.219 ; gain = 321.078
-Synthesis Optimization Complete : Time (s): cpu = 00:01:01 ; elapsed = 00:01:18 . Memory (MB): peak = 714.219 ; gain = 417.996
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:58 . Memory (MB): peak = 714.043 ; gain = 319.863
+Synthesis Optimization Complete : Time (s): cpu = 00:01:01 ; elapsed = 00:01:08 . Memory (MB): peak = 714.043 ; gain = 417.098
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -511,10 +511,10 @@ No Unisim elements were transformed.
 
 33 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:20 . Memory (MB): peak = 715.629 ; gain = 422.035
-INFO: [Common 17-1381] The checkpoint 'W:/ECE532/ece532_project/ece532_project.runs/design_1_frame_average_buffer_0_1_synth_1/design_1_frame_average_buffer_0_1.dcp' has been generated.
-INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP w:/ECE532/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_frame_average_buffer_0_1/design_1_frame_average_buffer_0_1.xci
+synth_design: Time (s): cpu = 00:01:02 ; elapsed = 00:01:09 . Memory (MB): peak = 716.891 ; gain = 422.574
+INFO: [Common 17-1381] The checkpoint 'C:/ece532_project/ece532_project.runs/design_1_frame_average_buffer_0_1_synth_1/design_1_frame_average_buffer_0_1.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_frame_average_buffer_0_1/design_1_frame_average_buffer_0_1.xci
 INFO: [Coretcl 2-1174] Renamed 20 cell refs.
-INFO: [Common 17-1381] The checkpoint 'W:/ECE532/ece532_project/ece532_project.runs/design_1_frame_average_buffer_0_1_synth_1/design_1_frame_average_buffer_0_1.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 715.629 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Feb 24 11:07:18 2018...
+INFO: [Common 17-1381] The checkpoint 'C:/ece532_project/ece532_project.runs/design_1_frame_average_buffer_0_1_synth_1/design_1_frame_average_buffer_0_1.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 716.891 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Mar 10 14:56:45 2018...

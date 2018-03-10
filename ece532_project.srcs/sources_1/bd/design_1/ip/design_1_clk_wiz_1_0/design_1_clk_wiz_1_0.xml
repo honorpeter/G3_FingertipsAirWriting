@@ -931,10 +931,6 @@
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Feb 10 17:04:31 UTC 2018</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>7:1881138b</spirit:value>
           </spirit:parameter>
@@ -3415,6 +3411,11 @@
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_externalfiles_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>stats.txt</spirit:name>
+        <spirit:userFileType>text</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
       <spirit:file>
         <spirit:name>design_1_clk_wiz_1_0.dcp</spirit:name>
         <spirit:userFileType>dcp</spirit:userFileType>
