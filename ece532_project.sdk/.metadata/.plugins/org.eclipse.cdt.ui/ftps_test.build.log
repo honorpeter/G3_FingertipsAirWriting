@@ -1,6 +1,6 @@
-13:35:36 **** Auto Build of configuration Debug for project ftps_test ****
+17:04:05 **** Incremental Build of configuration Debug for project ftps_test ****
 make all 
 make: Nothing to be done for `all'.
 
-13:35:36 Build Finished (took 120ms)
+17:04:05 Build Finished (took 199ms)
 
