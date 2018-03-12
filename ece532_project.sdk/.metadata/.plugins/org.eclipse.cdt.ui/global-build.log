@@ -1,4 +1,4 @@
-16:54:13 **** Build of project ftps_test_bsp ****
+17:39:27 **** Build of project ftps_test_bsp ****
 make -k all 
 "Running Make include in microblaze_0/libsrc/bram_v4_1/src"
 make -C microblaze_0/libsrc/bram_v4_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
@@ -73,7 +73,7 @@ make -C microblaze_0/libsrc/tmrctr_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gc
 make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling uartlite"
 'Finished building libraries'
-16:55:03 **** Build of configuration Debug for project ftps_test ****
+17:40:16 **** Build of configuration Debug for project ftps_test ****
 make all 
 'Building file: ../src/echo.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -141,10 +141,10 @@ mb-size ftps_test.elf  |tee "ftps_test.elf.size"
  108028	   1428	 750680	 860136	  d1fe8	ftps_test.elf
 'Finished building: ftps_test.elf.size'
 ' '
-16:55:10 **** Auto Build of configuration Debug for project ftps_test ****
+17:40:25 **** Auto Build of configuration Debug for project ftps_test ****
 make all 
 make: Nothing to be done for `all'.
-16:56:12 **** Auto Build of project ftps_test_bsp ****
+17:41:41 **** Auto Build of project ftps_test_bsp ****
 make -k all 
 "Running Make include in microblaze_0/libsrc/bram_v4_1/src"
 make -C microblaze_0/libsrc/bram_v4_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
@@ -219,7 +219,7 @@ make -C microblaze_0/libsrc/tmrctr_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gc
 make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling uartlite"
 'Finished building libraries'
-16:57:05 **** Auto Build of configuration Debug for project ftps_test ****
+17:42:34 **** Auto Build of configuration Debug for project ftps_test ****
 make all 
 'Building file: ../src/echo.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -272,10 +272,24 @@ mb-size ftps_test.elf  |tee "ftps_test.elf.size"
  107816	   1428	 750676	 859920	  d1f10	ftps_test.elf
 'Finished building: ftps_test.elf.size'
 ' '
-16:57:12 **** Incremental Build of configuration Debug for project ftps_test ****
+17:42:42 **** Incremental Build of configuration Debug for project ftps_test ****
 make all 
 make: Nothing to be done for `all'.
-16:58:03 **** Auto Build of configuration Debug for project ftps_test ****
+17:43:10 **** Auto Build of configuration Debug for project ftps_test ****
+make all 
+'Building file: ../src/echo.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../ftps_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
+'Finished building: ../src/echo.c'
+' '
+'Building target: ftps_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ftps_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ftps_test.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+W:\ece532_project\ece532_project.sdk\ftps_test\Debug/../src/main.c:135: undefined reference to `print_app_header'
+collect2.exe: error: ld returned 1 exit status
+make: *** [ftps_test.elf] Error 1
+17:43:19 **** Auto Build of configuration Debug for project ftps_test ****
 make all 
 'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -289,20 +303,6 @@ mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ftps_test_bsp
 'Building target: ftps_test.elf'
 'Invoking: MicroBlaze gcc linker'
 mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ftps_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ftps_test.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-./src/main.o: In function `main':
-W:\ece532_project\ece532_project.sdk\ftps_test\Debug/../src/main.c:290: undefined reference to `char_recognition'
-collect2.exe: error: ld returned 1 exit status
-make: *** [ftps_test.elf] Error 1
-16:58:13 **** Auto Build of configuration Debug for project ftps_test ****
-make all 
-'Building file: ../src/echo.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../ftps_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-'Finished building: ../src/echo.c'
-' '
-'Building target: ftps_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ftps_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ftps_test.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
 'Finished building target: ftps_test.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
@@ -311,6 +311,6 @@ mb-size ftps_test.elf  |tee "ftps_test.elf.size"
  199656	   5348	 750668	 955672	  e9518	ftps_test.elf
 'Finished building: ftps_test.elf.size'
 ' '
-16:58:25 **** Incremental Build of configuration Debug for project ftps_test ****
+17:43:25 **** Incremental Build of configuration Debug for project ftps_test ****
 make all 
 make: Nothing to be done for `all'.

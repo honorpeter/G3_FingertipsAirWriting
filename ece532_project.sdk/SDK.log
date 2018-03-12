@@ -1,10 +1,13 @@
-16:52:50 INFO  : Registering command handlers for SDK TCF services
-16:52:50 INFO  : Launching XSCT server: xsct.bat -interactive W:\ece532_project\ece532_project.sdk\temp_xsdb_launch_script.tcl
-16:52:52 INFO  : XSCT server has started successfully.
-16:52:52 INFO  : Successfully done setting XSCT server connection channel  
-16:52:55 INFO  : Processing command line option -hwspec W:/ece532_project/ece532_project.sdk/design_1_wrapper.hdf.
-16:52:56 INFO  : Successfully done setting SDK workspace  
-16:56:12 INFO  : Refreshed build settings on project ftps_test
-16:57:29 INFO  : Processor reset is completed for microblaze_0
-16:58:35 INFO  : Processor reset is completed for microblaze_0
-16:58:54 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+17:38:12 INFO  : Registering command handlers for SDK TCF services
+17:38:13 INFO  : Launching XSCT server: xsct.bat -interactive W:\ece532_project\ece532_project.sdk\temp_xsdb_launch_script.tcl
+17:38:14 INFO  : XSCT server has started successfully.
+17:38:14 INFO  : Successfully done setting XSCT server connection channel  
+17:38:17 INFO  : Processing command line option -hwspec W:/ece532_project/ece532_project.sdk/design_1_wrapper.hdf.
+17:38:17 INFO  : Successfully done setting SDK workspace  
+17:40:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:40:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292645861A" && level==0} -index 0' command is executed.
+17:40:18 INFO  : FPGA configured successfully with bitstream "W:/ece532_project/ece532_project.sdk/design_1_wrapper_hw_platform_0/download.bit"
+17:41:41 INFO  : Refreshed build settings on project ftps_test
+17:42:48 INFO  : Processor reset is completed for microblaze_0
+17:43:27 INFO  : Processor reset is completed for microblaze_0
+17:44:31 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

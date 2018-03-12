@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="com.xilinx.sdk.debug.ui.launchConfigurationWrapper">
-<stringAttribute key="com.xilinx.sdk.gdb.launch.BitStreamPath" value="design_1_wrapper.bit"/>
+<stringAttribute key="com.xilinx.sdk.gdb.launch.BitStreamPath" value="download.bit"/>
 <stringAttribute key="com.xilinx.sdk.gdb.launch.DataFiles" value=""/>
 <stringAttribute key="com.xilinx.sdk.gdb.launch.DebugType" value="STANDALONE_DEBUG"/>
 <booleanAttribute key="com.xilinx.sdk.gdb.launch.ElfNoDownload" value="false"/>

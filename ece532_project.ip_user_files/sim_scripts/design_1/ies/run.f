@@ -350,8 +350,8 @@
 -endlib
 -makelib ies/xil_defaultlib \
   "../../../bd/design_1/hdl/design_1.v" \
-  "../../../bd/design_1/ipshared/48db/src/ftps_locator.v" \
-  "../../../bd/design_1/ip/design_1_ftps_locator_0_0/sim/design_1_ftps_locator_0_0.v" \
+  "../../../bd/design_1/ipshared/b282/src/ftps_locator.v" \
+  "../../../bd/design_1/ip/design_1_ftps_locator_0_1/sim/design_1_ftps_locator_0_1.v" \
 -endlib
 -makelib ies/xil_defaultlib \
   glbl.v

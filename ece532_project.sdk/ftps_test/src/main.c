@@ -247,7 +247,7 @@ int main()
     				trans_x = 27- (ftps_y);//should have range 0-25
     				trans_y = ftps_x -2;	//should have range 0-35
     				if ((trans_x>25) ||(trans_x<0)||(trans_y>35) ||(trans_y<0))
-    					printf("Error: X = %d and Y = %d is out of range",trans_x,trans_y);
+    					printf("Error: X = %d and Y = %d is out of range\n",trans_x,trans_y);
 
     				ftps_data[trans_y] = (1<<trans_x)| ftps_data[trans_y];
     				if (trans_x>0) {

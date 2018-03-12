@@ -2,9 +2,9 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="design_1" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1520711651"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1520711651"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1520711651"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1520889206"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1520889206"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1520889206"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\design_1_microblaze_0_0\design_1_microblaze_0_0.xci" Type="IP">
         <Instance HierarchyPath="microblaze_0"/>
@@ -261,7 +261,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\design_1_ftps_locator_0_0\design_1_ftps_locator_0_0.xci" Type="IP">
+      <File Name="ip\design_1_ftps_locator_0_1\design_1_ftps_locator_0_1.xci" Type="IP">
         <Instance HierarchyPath="ftps_locator_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>

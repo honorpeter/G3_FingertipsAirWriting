@@ -1,8 +1,8 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-//Date        : Sat Mar 10 14:54:03 2018
-//Host        : SFB520WS12 running 64-bit Service Pack 1  (build 7601)
+//Date        : Mon Mar 12 17:13:17 2018
+//Host        : SFB520WS18 running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target bd_afc3_wrapper.bd
 //Design      : bd_afc3_wrapper
 //Purpose     : IP block netlist

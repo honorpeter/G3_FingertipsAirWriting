@@ -1,8 +1,8 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-//Date        : Sat Mar 10 14:54:01 2018
-//Host        : SFB520WS12 running 64-bit Service Pack 1  (build 7601)
+//Date        : Mon Mar 12 17:12:31 2018
+//Host        : SFB520WS18 running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target design_1.bd
 //Design      : design_1
 //Purpose     : IP block netlist
@@ -891,7 +891,7 @@ module design_1
         .pclk(OV7670_PCLK_1),
         .reset(video_in_0_resend),
         .vsync(OV7670_VSYNC_1));
-  design_1_ftps_locator_0_0 ftps_locator_0
+  design_1_ftps_locator_0_1 ftps_locator_0
        (.capture_address(frame_average_buffer_0_avg_addr_out),
         .capture_data(frame_average_buffer_0_avg_data_out),
         .capture_data_valid(frame_average_buffer_0_avg_data_valid),
@@ -901,7 +901,6 @@ module design_1
         .request_addr(vga444_0_frame_addr),
         .request_data(blk_mem_buffer_vga_doutb),
         .reset(video_in_0_resend),
-        .vsync(OV7670_VSYNC_1),
         .x_out(ftps_locator_0_x_out),
         .y_out(ftps_locator_0_y_out));
   design_1_mdm_1_0 mdm_1

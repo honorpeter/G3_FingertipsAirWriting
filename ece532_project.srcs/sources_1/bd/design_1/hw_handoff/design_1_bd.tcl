@@ -503,7 +503,7 @@ CONFIG.USE_BOARD_FLOW {true} \
   connect_bd_net -net OV7670_D_1 [get_bd_ports OV7670_D] [get_bd_pins video_in_0/OV7670_D]
   connect_bd_net -net OV7670_HREF_1 [get_bd_ports OV7670_HREF] [get_bd_pins video_in_0/OV7670_HREF]
   connect_bd_net -net OV7670_PCLK_1 [get_bd_ports OV7670_PCLK] [get_bd_pins blk_mem_buffer_vga/clka] [get_bd_pins frame_average_buffer_0/pclk] [get_bd_pins ftps_locator_0/pclk] [get_bd_pins video_in_0/OV7670_PCLK]
-  connect_bd_net -net OV7670_VSYNC_1 [get_bd_ports OV7670_VSYNC] [get_bd_pins frame_average_buffer_0/vsync] [get_bd_pins ftps_locator_0/vsync] [get_bd_pins video_in_0/OV7670_VSYNC]
+  connect_bd_net -net OV7670_VSYNC_1 [get_bd_ports OV7670_VSYNC] [get_bd_pins frame_average_buffer_0/vsync] [get_bd_pins video_in_0/OV7670_VSYNC]
   connect_bd_net -net axi_LED1_indicator_gpio_io_o [get_bd_ports LED1] [get_bd_pins axi_LED1_indicator/gpio_io_o]
   connect_bd_net -net axi_ethernetlite_0_ip2intc_irpt [get_bd_pins axi_ethernetlite_0/ip2intc_irpt] [get_bd_pins microblaze_0_xlconcat/In1]
   connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_ports LED_15] [get_bd_pins axi_LED_total_control/gpio_io_o]

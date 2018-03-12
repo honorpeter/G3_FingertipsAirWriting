@@ -758,7 +758,7 @@
         <spirit:instanceName>ftps_locator_0</spirit:instanceName>
         <spirit:componentRef spirit:library="user" spirit:name="ftps_locator" spirit:vendor="utoronto.ca" spirit:version="1.0"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_ftps_locator_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_ftps_locator_0_1</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -1045,7 +1045,6 @@
         <spirit:externalPortReference spirit:portRef="OV7670_VSYNC"/>
         <spirit:internalPortReference spirit:componentRef="video_in_0" spirit:portRef="OV7670_VSYNC"/>
         <spirit:internalPortReference spirit:componentRef="frame_average_buffer_0" spirit:portRef="vsync"/>
-        <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="vsync"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>OV7670_HREF_1</spirit:name>
@@ -1166,14 +1165,9 @@
         <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="request_data"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>ftps_locator_0_ftps_valid</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="ftps_valid"/>
-        <spirit:internalPortReference spirit:componentRef="axi_ftps_valid" spirit:portRef="gpio_io_i"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>ftps_locator_0_y_out</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="y_out"/>
-        <spirit:internalPortReference spirit:componentRef="axi_ftps_y" spirit:portRef="gpio_io_i"/>
+        <spirit:name>ftps_locator_0_locate_data</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="locate_data"/>
+        <spirit:internalPortReference spirit:componentRef="vga444_0" spirit:portRef="frame_pixel"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>ftps_locator_0_x_out</spirit:name>
@@ -1181,9 +1175,14 @@
         <spirit:internalPortReference spirit:componentRef="axi_ftps_x" spirit:portRef="gpio_io_i"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>ftps_locator_0_locate_data</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="locate_data"/>
-        <spirit:internalPortReference spirit:componentRef="vga444_0" spirit:portRef="frame_pixel"/>
+        <spirit:name>ftps_locator_0_y_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="y_out"/>
+        <spirit:internalPortReference spirit:componentRef="axi_ftps_y" spirit:portRef="gpio_io_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>ftps_locator_0_ftps_valid</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="ftps_valid"/>
+        <spirit:internalPortReference spirit:componentRef="axi_ftps_valid" spirit:portRef="gpio_io_i"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>
