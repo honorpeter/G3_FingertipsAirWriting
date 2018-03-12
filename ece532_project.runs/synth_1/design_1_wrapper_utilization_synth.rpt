@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Mon Mar 12 11:54:59 2018
+| Date         : Mon Mar 12 11:24:43 2018
 | Host         : BA3155WS07 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -191,7 +191,7 @@ Table of Contents
 | design_1_lmb_bram_0               |    1 |
 | design_1_ilmb_v10_0               |    1 |
 | design_1_ilmb_bram_if_cntlr_0     |    1 |
-| design_1_ftps_locator_0_0         |    1 |
+| design_1_ftps_locator_0_1         |    1 |
 | design_1_frame_average_buffer_0_1 |    1 |
 | design_1_dlmb_v10_0               |    1 |
 | design_1_dlmb_bram_if_cntlr_0     |    1 |
