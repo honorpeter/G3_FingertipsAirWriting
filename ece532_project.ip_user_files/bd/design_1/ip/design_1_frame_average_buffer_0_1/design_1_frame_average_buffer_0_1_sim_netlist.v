@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-// Date        : Sat Mar 10 14:56:45 2018
-// Host        : SFB520WS12 running 64-bit Service Pack 1  (build 7601)
-// Command     : write_verilog -force -mode funcsim
-//               C:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_frame_average_buffer_0_1/design_1_frame_average_buffer_0_1_sim_netlist.v
+// Date        : Sat Feb 24 11:07:14 2018
+// Host        : SFB520WS13 running 64-bit Service Pack 1  (build 7601)
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_frame_average_buffer_0_1 -prefix
+//               design_1_frame_average_buffer_0_1_ design_1_frame_average_buffer_0_1_sim_netlist.v
 // Design      : design_1_frame_average_buffer_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,64 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_frame_average_buffer_0_1,frame_average_buffer,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "frame_average_buffer,Vivado 2017.2" *) 
-(* NotValidForBitStream *)
-module design_1_frame_average_buffer_0_1
-   (pclk,
-    reset,
-    vsync,
-    capture_address,
-    capture_data,
-    avg_addr_out,
-    avg_data_out,
-    avg_data_valid);
-  input pclk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *) input reset;
-  input vsync;
-  input [16:0]capture_address;
-  input [15:0]capture_data;
-  output [16:0]avg_addr_out;
-  output [15:0]avg_data_out;
-  output avg_data_valid;
-
-  wire [16:0]avg_addr_out;
-  wire [0:0]\^avg_data_out ;
-  wire avg_data_valid;
-  wire [16:0]capture_address;
-  wire [15:0]capture_data;
-  wire pclk;
-  wire reset;
-  wire vsync;
-
-  assign avg_data_out[15] = \^avg_data_out [0];
-  assign avg_data_out[14] = \^avg_data_out [0];
-  assign avg_data_out[13] = \^avg_data_out [0];
-  assign avg_data_out[12] = \^avg_data_out [0];
-  assign avg_data_out[11] = \^avg_data_out [0];
-  assign avg_data_out[10] = \^avg_data_out [0];
-  assign avg_data_out[9] = \^avg_data_out [0];
-  assign avg_data_out[8] = \^avg_data_out [0];
-  assign avg_data_out[7] = \^avg_data_out [0];
-  assign avg_data_out[6] = \^avg_data_out [0];
-  assign avg_data_out[5] = \^avg_data_out [0];
-  assign avg_data_out[4] = \^avg_data_out [0];
-  assign avg_data_out[3] = \^avg_data_out [0];
-  assign avg_data_out[2] = \^avg_data_out [0];
-  assign avg_data_out[1] = \^avg_data_out [0];
-  assign avg_data_out[0] = \^avg_data_out [0];
-  design_1_frame_average_buffer_0_1_frame_average_buffer inst
-       (.avg_addr_out(avg_addr_out),
-        .avg_data_out(\^avg_data_out ),
-        .avg_data_valid(avg_data_valid),
-        .capture_address(capture_address),
-        .capture_data({capture_data[15:12],capture_data[7:4]}),
-        .pclk(pclk),
-        .reset(reset),
-        .vsync(vsync));
-endmodule
-
-(* CHECK_LICENSE_TYPE = "blk_mem_average_buffer,blk_mem_gen_v8_3_6,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "blk_mem_average_buffer" *) 
-(* X_CORE_INFO = "blk_mem_gen_v8_3_6,Vivado 2017.2" *) 
+(* CHECK_LICENSE_TYPE = "blk_mem_average_buffer,blk_mem_gen_v8_3_6,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "blk_mem_gen_v8_3_6,Vivado 2017.2" *) 
 module design_1_frame_average_buffer_0_1_blk_mem_average_buffer
    (clka,
     wea,
@@ -254,7 +197,62 @@ module design_1_frame_average_buffer_0_1_blk_mem_average_buffer
         .web(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "frame_average" *) 
+(* CHECK_LICENSE_TYPE = "design_1_frame_average_buffer_0_1,frame_average_buffer,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "frame_average_buffer,Vivado 2017.2" *) 
+(* NotValidForBitStream *)
+module design_1_frame_average_buffer_0_1
+   (pclk,
+    reset,
+    vsync,
+    capture_address,
+    capture_data,
+    avg_addr_out,
+    avg_data_out,
+    avg_data_valid);
+  input pclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *) input reset;
+  input vsync;
+  input [16:0]capture_address;
+  input [15:0]capture_data;
+  output [16:0]avg_addr_out;
+  output [15:0]avg_data_out;
+  output avg_data_valid;
+
+  wire [16:0]avg_addr_out;
+  wire [0:0]\^avg_data_out ;
+  wire avg_data_valid;
+  wire [16:0]capture_address;
+  wire [15:0]capture_data;
+  wire pclk;
+  wire reset;
+  wire vsync;
+
+  assign avg_data_out[15] = \^avg_data_out [0];
+  assign avg_data_out[14] = \^avg_data_out [0];
+  assign avg_data_out[13] = \^avg_data_out [0];
+  assign avg_data_out[12] = \^avg_data_out [0];
+  assign avg_data_out[11] = \^avg_data_out [0];
+  assign avg_data_out[10] = \^avg_data_out [0];
+  assign avg_data_out[9] = \^avg_data_out [0];
+  assign avg_data_out[8] = \^avg_data_out [0];
+  assign avg_data_out[7] = \^avg_data_out [0];
+  assign avg_data_out[6] = \^avg_data_out [0];
+  assign avg_data_out[5] = \^avg_data_out [0];
+  assign avg_data_out[4] = \^avg_data_out [0];
+  assign avg_data_out[3] = \^avg_data_out [0];
+  assign avg_data_out[2] = \^avg_data_out [0];
+  assign avg_data_out[1] = \^avg_data_out [0];
+  assign avg_data_out[0] = \^avg_data_out [0];
+  design_1_frame_average_buffer_0_1_frame_average_buffer inst
+       (.avg_addr_out(avg_addr_out),
+        .avg_data_out(\^avg_data_out ),
+        .avg_data_valid(avg_data_valid),
+        .capture_address(capture_address),
+        .capture_data({capture_data[15:12],capture_data[7:4]}),
+        .pclk(pclk),
+        .reset(reset),
+        .vsync(vsync));
+endmodule
+
 module design_1_frame_average_buffer_0_1_frame_average
    (avg_data_valid,
     avg_addr_out,
@@ -453,26 +451,26 @@ module design_1_frame_average_buffer_0_1_frame_average
     \data_out[0]_i_1 
        (.I0(capture_data[7]),
         .I1(\data_out[0]_i_2_n_0 ),
-        .I2(capture_data[5]),
+        .I2(capture_data[6]),
         .I3(doutb[0]),
         .I4(frame_out_i_2_n_0),
         .O(data_out0_in));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFE000000)) 
+    .INIT(64'h8888888888888880)) 
     \data_out[0]_i_2 
-       (.I0(capture_data[2]),
-        .I1(capture_data[1]),
-        .I2(capture_data[0]),
+       (.I0(capture_data[5]),
+        .I1(capture_data[4]),
+        .I2(capture_data[2]),
         .I3(capture_data[3]),
-        .I4(capture_data[4]),
-        .I5(capture_data[6]),
+        .I4(capture_data[0]),
+        .I5(capture_data[1]),
         .O(\data_out[0]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'h00000000666A0000)) 
     \data_out[1]_i_1 
        (.I0(doutb[1]),
         .I1(\data_out[1]_i_2_n_0 ),
-        .I2(capture_data[5]),
+        .I2(capture_data[6]),
         .I3(\data_out[0]_i_2_n_0 ),
         .I4(frame_out_i_2_n_0),
         .I5(reset),
@@ -491,7 +489,7 @@ module design_1_frame_average_buffer_0_1_frame_average
     \data_out[2]_i_1 
        (.I0(doutb[2]),
         .I1(\data_out[2]_i_2_n_0 ),
-        .I2(capture_data[5]),
+        .I2(capture_data[6]),
         .I3(\data_out[0]_i_2_n_0 ),
         .I4(frame_out_i_2_n_0),
         .I5(reset),
@@ -565,7 +563,6 @@ module design_1_frame_average_buffer_0_1_frame_average
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "frame_average_buffer" *) 
 module design_1_frame_average_buffer_0_1_frame_average_buffer
    (avg_data_valid,
     avg_addr_out,
@@ -619,7 +616,6 @@ module design_1_frame_average_buffer_0_1_frame_average_buffer
         .vsync(vsync));
 endmodule
 
-(* ORIG_REF_NAME = "bindec" *) 
 module design_1_frame_average_buffer_0_1_bindec
    (ena_array,
     addra,
@@ -661,7 +657,6 @@ module design_1_frame_average_buffer_0_1_bindec_0
         .O(enb_array));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module design_1_frame_average_buffer_0_1_blk_mem_gen_generic_cstr
    (doutb,
     clka,
@@ -877,7 +872,6 @@ module design_1_frame_average_buffer_0_1_blk_mem_gen_mux__parameterized0
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module design_1_frame_average_buffer_0_1_blk_mem_gen_prim_width
    (DOUTB,
     clka,
@@ -1072,7 +1066,6 @@ module design_1_frame_average_buffer_0_1_blk_mem_gen_prim_width__parameterized3
         .dina(dina));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
 module design_1_frame_average_buffer_0_1_blk_mem_gen_prim_wrapper
    (DOUTB,
     clka,
@@ -2890,7 +2883,6 @@ module design_1_frame_average_buffer_0_1_blk_mem_gen_prim_wrapper__parameterized
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module design_1_frame_average_buffer_0_1_blk_mem_gen_top
    (doutb,
     clka,
@@ -2949,7 +2941,7 @@ endmodule
 (* C_USE_URAM = "0" *) (* C_WEA_WIDTH = "1" *) (* C_WEB_WIDTH = "1" *) 
 (* C_WRITE_DEPTH_A = "76800" *) (* C_WRITE_DEPTH_B = "76800" *) (* C_WRITE_MODE_A = "NO_CHANGE" *) 
 (* C_WRITE_MODE_B = "WRITE_FIRST" *) (* C_WRITE_WIDTH_A = "3" *) (* C_WRITE_WIDTH_B = "3" *) 
-(* C_XDEVICEFAMILY = "artix7" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "blk_mem_gen_v8_3_6" *) 
+(* C_XDEVICEFAMILY = "artix7" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
 module design_1_frame_average_buffer_0_1_blk_mem_gen_v8_3_6
    (clka,
     rsta,
@@ -3163,7 +3155,6 @@ module design_1_frame_average_buffer_0_1_blk_mem_gen_v8_3_6
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_3_6_synth" *) 
 module design_1_frame_average_buffer_0_1_blk_mem_gen_v8_3_6_synth
    (doutb,
     clka,

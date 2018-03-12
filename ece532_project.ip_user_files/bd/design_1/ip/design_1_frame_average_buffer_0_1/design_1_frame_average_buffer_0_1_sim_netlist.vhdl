@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
--- Date        : Sat Mar 10 14:56:45 2018
--- Host        : SFB520WS12 running 64-bit Service Pack 1  (build 7601)
--- Command     : write_vhdl -force -mode funcsim
---               C:/ece532_project/ece532_project.srcs/sources_1/bd/design_1/ip/design_1_frame_average_buffer_0_1/design_1_frame_average_buffer_0_1_sim_netlist.vhdl
+-- Date        : Sat Feb 24 11:07:14 2018
+-- Host        : SFB520WS13 running 64-bit Service Pack 1  (build 7601)
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_1_frame_average_buffer_0_1 -prefix
+--               design_1_frame_average_buffer_0_1_ design_1_frame_average_buffer_0_1_sim_netlist.vhdl
 -- Design      : design_1_frame_average_buffer_0_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -27,8 +27,6 @@ entity design_1_frame_average_buffer_0_1_frame_average is
     doutb : in STD_LOGIC_VECTOR ( 2 downto 0 );
     capture_data : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_frame_average_buffer_0_1_frame_average : entity is "frame_average";
 end design_1_frame_average_buffer_0_1_frame_average;
 
 architecture STRUCTURE of design_1_frame_average_buffer_0_1_frame_average is
@@ -254,22 +252,22 @@ begin
         port map (
       I0 => capture_data(7),
       I1 => \data_out[0]_i_2_n_0\,
-      I2 => capture_data(5),
+      I2 => capture_data(6),
       I3 => doutb(0),
       I4 => frame_out_i_2_n_0,
       O => data_out0_in(0)
     );
 \data_out[0]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFFFE000000"
+      INIT => X"8888888888888880"
     )
         port map (
-      I0 => capture_data(2),
-      I1 => capture_data(1),
-      I2 => capture_data(0),
+      I0 => capture_data(5),
+      I1 => capture_data(4),
+      I2 => capture_data(2),
       I3 => capture_data(3),
-      I4 => capture_data(4),
-      I5 => capture_data(6),
+      I4 => capture_data(0),
+      I5 => capture_data(1),
       O => \data_out[0]_i_2_n_0\
     );
 \data_out[1]_i_1\: unisim.vcomponents.LUT6
@@ -279,7 +277,7 @@ begin
         port map (
       I0 => doutb(1),
       I1 => \data_out[1]_i_2_n_0\,
-      I2 => capture_data(5),
+      I2 => capture_data(6),
       I3 => \data_out[0]_i_2_n_0\,
       I4 => frame_out_i_2_n_0,
       I5 => reset,
@@ -304,7 +302,7 @@ begin
         port map (
       I0 => doutb(2),
       I1 => \data_out[2]_i_2_n_0\,
-      I2 => capture_data(5),
+      I2 => capture_data(6),
       I3 => \data_out[0]_i_2_n_0\,
       I4 => frame_out_i_2_n_0,
       I5 => reset,
@@ -408,8 +406,6 @@ entity design_1_frame_average_buffer_0_1_bindec is
     addra : in STD_LOGIC_VECTOR ( 2 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_frame_average_buffer_0_1_bindec : entity is "bindec";
 end design_1_frame_average_buffer_0_1_bindec;
 
 architecture STRUCTURE of design_1_frame_average_buffer_0_1_bindec is
@@ -593,8 +589,6 @@ entity design_1_frame_average_buffer_0_1_blk_mem_gen_prim_wrapper is
     addrb : in STD_LOGIC_VECTOR ( 15 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_frame_average_buffer_0_1_blk_mem_gen_prim_wrapper : entity is "blk_mem_gen_prim_wrapper";
 end design_1_frame_average_buffer_0_1_blk_mem_gen_prim_wrapper;
 
 architecture STRUCTURE of design_1_frame_average_buffer_0_1_blk_mem_gen_prim_wrapper is
@@ -2417,8 +2411,6 @@ entity design_1_frame_average_buffer_0_1_blk_mem_gen_prim_width is
     addrb : in STD_LOGIC_VECTOR ( 15 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_frame_average_buffer_0_1_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end design_1_frame_average_buffer_0_1_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of design_1_frame_average_buffer_0_1_blk_mem_gen_prim_width is
@@ -2581,8 +2573,6 @@ entity design_1_frame_average_buffer_0_1_blk_mem_gen_generic_cstr is
     dina : in STD_LOGIC_VECTOR ( 2 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_frame_average_buffer_0_1_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end design_1_frame_average_buffer_0_1_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of design_1_frame_average_buffer_0_1_blk_mem_gen_generic_cstr is
@@ -2708,8 +2698,6 @@ entity design_1_frame_average_buffer_0_1_blk_mem_gen_top is
     dina : in STD_LOGIC_VECTOR ( 2 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_frame_average_buffer_0_1_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end design_1_frame_average_buffer_0_1_blk_mem_gen_top;
 
 architecture STRUCTURE of design_1_frame_average_buffer_0_1_blk_mem_gen_top is
@@ -2739,8 +2727,6 @@ entity design_1_frame_average_buffer_0_1_blk_mem_gen_v8_3_6_synth is
     dina : in STD_LOGIC_VECTOR ( 2 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_frame_average_buffer_0_1_blk_mem_gen_v8_3_6_synth : entity is "blk_mem_gen_v8_3_6_synth";
 end design_1_frame_average_buffer_0_1_blk_mem_gen_v8_3_6_synth;
 
 architecture STRUCTURE of design_1_frame_average_buffer_0_1_blk_mem_gen_v8_3_6_synth is
@@ -2974,8 +2960,6 @@ entity design_1_frame_average_buffer_0_1_blk_mem_gen_v8_3_6 is
   attribute C_XDEVICEFAMILY of design_1_frame_average_buffer_0_1_blk_mem_gen_v8_3_6 : entity is "artix7";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of design_1_frame_average_buffer_0_1_blk_mem_gen_v8_3_6 : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_frame_average_buffer_0_1_blk_mem_gen_v8_3_6 : entity is "blk_mem_gen_v8_3_6";
 end design_1_frame_average_buffer_0_1_blk_mem_gen_v8_3_6;
 
 architecture STRUCTURE of design_1_frame_average_buffer_0_1_blk_mem_gen_v8_3_6 is
@@ -3078,8 +3062,6 @@ entity design_1_frame_average_buffer_0_1_blk_mem_average_buffer is
   attribute CHECK_LICENSE_TYPE of design_1_frame_average_buffer_0_1_blk_mem_average_buffer : entity is "blk_mem_average_buffer,blk_mem_gen_v8_3_6,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of design_1_frame_average_buffer_0_1_blk_mem_average_buffer : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_frame_average_buffer_0_1_blk_mem_average_buffer : entity is "blk_mem_average_buffer";
   attribute X_CORE_INFO : string;
   attribute X_CORE_INFO of design_1_frame_average_buffer_0_1_blk_mem_average_buffer : entity is "blk_mem_gen_v8_3_6,Vivado 2017.2";
 end design_1_frame_average_buffer_0_1_blk_mem_average_buffer;
@@ -3335,8 +3317,6 @@ entity design_1_frame_average_buffer_0_1_frame_average_buffer is
     vsync : in STD_LOGIC;
     capture_data : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_frame_average_buffer_0_1_frame_average_buffer : entity is "frame_average_buffer";
 end design_1_frame_average_buffer_0_1_frame_average_buffer;
 
 architecture STRUCTURE of design_1_frame_average_buffer_0_1_frame_average_buffer is
