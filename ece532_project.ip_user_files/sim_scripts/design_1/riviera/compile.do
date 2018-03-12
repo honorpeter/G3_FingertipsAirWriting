@@ -415,8 +415,8 @@ vcom -work xil_defaultlib -93 \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/9c7f" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/39ca/hdl/verilog" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/f80f/hdl/verilog" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/7e3a/hdl" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/9c7f" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/39ca/hdl/verilog" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/f80f/hdl/verilog" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/7e3a/hdl" \
 "../../../bd/design_1/hdl/design_1.v" \
-"../../../bd/design_1/ipshared/48db/src/ftps_locator.v" \
-"../../../bd/design_1/ip/design_1_ftps_locator_0_0/sim/design_1_ftps_locator_0_0.v" \
+"../../../bd/design_1/ipshared/ed0d/src/ftps_locator.v" \
+"../../../bd/design_1/ip/design_1_ftps_locator_0_1/sim/design_1_ftps_locator_0_1.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

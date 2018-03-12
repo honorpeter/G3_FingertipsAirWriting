@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Mar 10 14:54:11 2018" VIVADOVERSION="2017.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Mar 12 11:09:53 2018" VIVADOVERSION="2017.2">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys4_ddr:part0:1.1" DEVICE="7a100t" NAME="design_1" PACKAGE="csg324" SPEEDGRADE="-1"/>
 
@@ -5701,7 +5701,7 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="X_SIZE" VALUE="320"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_ftps_locator_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_ftps_locator_0_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
