@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Sat Mar 10 15:02:20 2018'>
+<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Mon Mar 12 16:48:05 2018'>
 <section name="__ROOT__" level="0" order="1" description="">
  <section name="software_version_and_target_device" level="1" order="1" description="">
   <keyValuePair key="beta" value="FALSE" description="" />
   <keyValuePair key="build_version" value="1909853" description="" />
-  <keyValuePair key="date_generated" value="Sat Mar 10 15:02:19 2018" description="" />
+  <keyValuePair key="date_generated" value="Mon Mar 12 16:48:04 2018" description="" />
   <keyValuePair key="os_platform" value="WIN64" description="" />
   <keyValuePair key="product_version" value="Vivado v2017.2 (64-bit)" description="" />
   <keyValuePair key="project_id" value="80968a64d6c84d1a9b992ce79ff541b2" description="" />
-  <keyValuePair key="project_iteration" value="18" description="" />
-  <keyValuePair key="random_id" value="c58299981a7b5539a861b9a3f195c9d5" description="" />
+  <keyValuePair key="project_iteration" value="19" description="" />
+  <keyValuePair key="random_id" value="eb539a6eb35b58698b7e898d18bf362d" description="" />
   <keyValuePair key="registration_id" value="174112640_179741397_210594766_948" description="" />
   <keyValuePair key="route_design" value="TRUE" description="" />
   <keyValuePair key="target_device" value="xc7a100t" description="" />
@@ -2016,7 +2016,7 @@
    <keyValuePair key="output_load" value="5.000000" description="" />
    <keyValuePair key="output_toggle" value="12.500000" description="" />
    <keyValuePair key="package" value="csg324" description="" />
-   <keyValuePair key="pct_clock_constrained" value="13.000000" description="" />
+   <keyValuePair key="pct_clock_constrained" value="11.000000" description="" />
    <keyValuePair key="pct_inputs_defined" value="2" description="" />
    <keyValuePair key="phaser" value="0.110381" description="" />
    <keyValuePair key="platform" value="nt64" description="" />
@@ -2460,10 +2460,10 @@
    <keyValuePair key="-verilog_define" value="default::[not_specified]" description="" />
   </section>
   <section name="usage" level="2" order="2" description="">
-   <keyValuePair key="elapsed" value="00:00:35s" description="" />
+   <keyValuePair key="elapsed" value="00:00:36s" description="" />
    <keyValuePair key="hls_ip" value="0" description="" />
-   <keyValuePair key="memory_gain" value="413.020MB" description="" />
-   <keyValuePair key="memory_peak" value="802.773MB" description="" />
+   <keyValuePair key="memory_gain" value="413.992MB" description="" />
+   <keyValuePair key="memory_peak" value="803.305MB" description="" />
   </section>
  </section>
  <section name="unisim_transformation" level="1" order="11" description="">
@@ -2588,19 +2588,19 @@
    <keyValuePair key="editproperties" value="3" description="" />
    <keyValuePair key="editredo" value="1" description="" />
    <keyValuePair key="editundo" value="7" description="" />
-   <keyValuePair key="launchprogramfpga" value="17" description="" />
+   <keyValuePair key="launchprogramfpga" value="18" description="" />
    <keyValuePair key="managecompositetargets" value="27" description="" />
-   <keyValuePair key="newexporthardware" value="10" description="" />
-   <keyValuePair key="newlaunchhardware" value="15" description="" />
+   <keyValuePair key="newexporthardware" value="11" description="" />
+   <keyValuePair key="newlaunchhardware" value="17" description="" />
    <keyValuePair key="newproject" value="1" description="" />
    <keyValuePair key="openblockdesign" value="28" description="" />
-   <keyValuePair key="openhardwaremanager" value="19" description="" />
-   <keyValuePair key="openproject" value="15" description="" />
+   <keyValuePair key="openhardwaremanager" value="20" description="" />
+   <keyValuePair key="openproject" value="16" description="" />
    <keyValuePair key="openrecenttarget" value="3" description="" />
    <keyValuePair key="recustomizecore" value="4" description="" />
    <keyValuePair key="regeneratersblayout" value="20" description="" />
    <keyValuePair key="reportipstatus" value="1" description="" />
-   <keyValuePair key="runbitgen" value="31" description="" />
+   <keyValuePair key="runbitgen" value="32" description="" />
    <keyValuePair key="runimplementation" value="2" description="" />
    <keyValuePair key="runschematic" value="5" description="" />
    <keyValuePair key="runsynthesis" value="3" description="" />
@@ -2619,7 +2619,7 @@
    <keyValuePair key="zoomout" value="8" description="" />
   </section>
   <section name="other_data" level="2" order="2" description="">
-   <keyValuePair key="guimode" value="31" description="" />
+   <keyValuePair key="guimode" value="33" description="" />
   </section>
   <section name="project_data" level="2" order="3" description="">
    <keyValuePair key="constraintsetcount" value="1" description="" />

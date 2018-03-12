@@ -272,10 +272,10 @@ int main()
     					ftps_data[trans_y-1] = (1<<trans_x)| ftps_data[trans_y-1];
     				}
     				if (trans_y<35) {
-    					ftps_data[trans_y+1] = (1<<(trans_x +1))| ftps_data[trans_y+1];
+    					ftps_data[trans_y+1] = (1<<(trans_x))| ftps_data[trans_y+1];
     				}
 //    				printf("Get fingertips X1=%d ; Y1=%d ",ftps_x,ftps_y );
-//					printf("Get fingertips X=%d ; Y=%d \n",trans_x,trans_y );
+					printf("Get fingertips X=%d ; Y=%d \n",trans_x,trans_y );
     			} else {
     				if (zero_input_count < 5 && last_valid) {
     					zero_input_count++;
