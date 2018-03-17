@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Sat Mar 17 14:15:35 2018
+| Date         : Sat Mar 17 14:55:30 2018
 | Host         : SFB520WS13 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -109,7 +109,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   51 |     0 |       210 | 24.29 |
+| Bonded IOB                  |   59 |     0 |       210 | 28.10 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         6 |  0.00 |
 | PHASER_REF                  |    0 |     0 |         6 |  0.00 |
@@ -165,9 +165,9 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
+| IBUF     |   30 |                  IO |
 | OBUF     |   29 |                  IO |
-| IBUF     |   22 |                  IO |
-| OBUFT    |    1 |                  IO |
+| OBUFT    |    9 |                  IO |
 +----------+------+---------------------+
 
 
@@ -209,6 +209,7 @@ Table of Contents
 | design_1_axi_gpio_0_1             |    1 |
 | design_1_axi_gpio_0_0             |    1 |
 | design_1_axi_ethernetlite_0_0     |    1 |
+| design_1_PmodOLEDrgb_0_0          |    1 |
 +-----------------------------------+------+
 
 

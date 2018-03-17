@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-//Date        : Sat Mar 17 14:13:44 2018
+//Date        : Sat Mar 17 14:52:01 2018
 //Host        : SFB520WS13 running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -46,6 +46,14 @@ module design_1_wrapper
     eth_rmii_rxd,
     eth_rmii_tx_en,
     eth_rmii_txd,
+    jc_pin10_io,
+    jc_pin1_io,
+    jc_pin2_io,
+    jc_pin3_io,
+    jc_pin4_io,
+    jc_pin7_io,
+    jc_pin8_io,
+    jc_pin9_io,
     pwdn,
     reset,
     reset_1,
@@ -93,6 +101,14 @@ module design_1_wrapper
   input [1:0]eth_rmii_rxd;
   output eth_rmii_tx_en;
   output [1:0]eth_rmii_txd;
+  inout jc_pin10_io;
+  inout jc_pin1_io;
+  inout jc_pin2_io;
+  inout jc_pin3_io;
+  inout jc_pin4_io;
+  inout jc_pin7_io;
+  inout jc_pin8_io;
+  inout jc_pin9_io;
   output pwdn;
   input reset;
   output reset_1;
@@ -144,6 +160,38 @@ module design_1_wrapper
   wire [1:0]eth_rmii_rxd;
   wire eth_rmii_tx_en;
   wire [1:0]eth_rmii_txd;
+  wire jc_pin10_i;
+  wire jc_pin10_io;
+  wire jc_pin10_o;
+  wire jc_pin10_t;
+  wire jc_pin1_i;
+  wire jc_pin1_io;
+  wire jc_pin1_o;
+  wire jc_pin1_t;
+  wire jc_pin2_i;
+  wire jc_pin2_io;
+  wire jc_pin2_o;
+  wire jc_pin2_t;
+  wire jc_pin3_i;
+  wire jc_pin3_io;
+  wire jc_pin3_o;
+  wire jc_pin3_t;
+  wire jc_pin4_i;
+  wire jc_pin4_io;
+  wire jc_pin4_o;
+  wire jc_pin4_t;
+  wire jc_pin7_i;
+  wire jc_pin7_io;
+  wire jc_pin7_o;
+  wire jc_pin7_t;
+  wire jc_pin8_i;
+  wire jc_pin8_io;
+  wire jc_pin8_o;
+  wire jc_pin8_t;
+  wire jc_pin9_i;
+  wire jc_pin9_io;
+  wire jc_pin9_o;
+  wire jc_pin9_t;
   wire pwdn;
   wire reset;
   wire reset_1;
@@ -195,6 +243,30 @@ module design_1_wrapper
         .eth_rmii_rxd(eth_rmii_rxd),
         .eth_rmii_tx_en(eth_rmii_tx_en),
         .eth_rmii_txd(eth_rmii_txd),
+        .jc_pin10_i(jc_pin10_i),
+        .jc_pin10_o(jc_pin10_o),
+        .jc_pin10_t(jc_pin10_t),
+        .jc_pin1_i(jc_pin1_i),
+        .jc_pin1_o(jc_pin1_o),
+        .jc_pin1_t(jc_pin1_t),
+        .jc_pin2_i(jc_pin2_i),
+        .jc_pin2_o(jc_pin2_o),
+        .jc_pin2_t(jc_pin2_t),
+        .jc_pin3_i(jc_pin3_i),
+        .jc_pin3_o(jc_pin3_o),
+        .jc_pin3_t(jc_pin3_t),
+        .jc_pin4_i(jc_pin4_i),
+        .jc_pin4_o(jc_pin4_o),
+        .jc_pin4_t(jc_pin4_t),
+        .jc_pin7_i(jc_pin7_i),
+        .jc_pin7_o(jc_pin7_o),
+        .jc_pin7_t(jc_pin7_t),
+        .jc_pin8_i(jc_pin8_i),
+        .jc_pin8_o(jc_pin8_o),
+        .jc_pin8_t(jc_pin8_t),
+        .jc_pin9_i(jc_pin9_i),
+        .jc_pin9_o(jc_pin9_o),
+        .jc_pin9_t(jc_pin9_t),
         .pwdn(pwdn),
         .reset(reset),
         .reset_1(reset_1),
@@ -211,4 +283,44 @@ module design_1_wrapper
         .IO(eth_mdio_mdc_mdio_io),
         .O(eth_mdio_mdc_mdio_i),
         .T(eth_mdio_mdc_mdio_t));
+  IOBUF jc_pin10_iobuf
+       (.I(jc_pin10_o),
+        .IO(jc_pin10_io),
+        .O(jc_pin10_i),
+        .T(jc_pin10_t));
+  IOBUF jc_pin1_iobuf
+       (.I(jc_pin1_o),
+        .IO(jc_pin1_io),
+        .O(jc_pin1_i),
+        .T(jc_pin1_t));
+  IOBUF jc_pin2_iobuf
+       (.I(jc_pin2_o),
+        .IO(jc_pin2_io),
+        .O(jc_pin2_i),
+        .T(jc_pin2_t));
+  IOBUF jc_pin3_iobuf
+       (.I(jc_pin3_o),
+        .IO(jc_pin3_io),
+        .O(jc_pin3_i),
+        .T(jc_pin3_t));
+  IOBUF jc_pin4_iobuf
+       (.I(jc_pin4_o),
+        .IO(jc_pin4_io),
+        .O(jc_pin4_i),
+        .T(jc_pin4_t));
+  IOBUF jc_pin7_iobuf
+       (.I(jc_pin7_o),
+        .IO(jc_pin7_io),
+        .O(jc_pin7_i),
+        .T(jc_pin7_t));
+  IOBUF jc_pin8_iobuf
+       (.I(jc_pin8_o),
+        .IO(jc_pin8_io),
+        .O(jc_pin8_i),
+        .T(jc_pin8_t));
+  IOBUF jc_pin9_iobuf
+       (.I(jc_pin9_o),
+        .IO(jc_pin9_io),
+        .O(jc_pin9_i),
+        .T(jc_pin9_t));
 endmodule

@@ -1,0 +1,392 @@
+#include "lwip/err.h"
+#include "lwip/tcp.h"
+#include <math.h>
+
+#include "PmodOLEDrgb.h"
+#include "sleep.h"
+#include "xil_cache.h"
+#include "xparameters.h"
+
+
+#if defined (__arm__) || defined (__aarch64__)
+#include "xil_printf.h"
+#endif
+
+#define BUFF_SIZE 	20
+int is_tcp_write = 0;
+unsigned char tcp_write_data[BUFF_SIZE] = {0x50,0x4f,0x53,0x54,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20};
+
+int template[26][36] =
+		{{64512,64512,65024,65024,130560,130560,130816,130816,261888,261888,257920,520064,511872,511936,509920,509920,1017824,2066400,2065392,4162544,4129776,4129264,4194296,4194296,8388600,8388604,8388604,8388604,16646396,16515324,16515198,33030206,32505918,32505919,32505887,32505887},
+		{67108608,67108832,67108848,67108856,67108860,67108862,66585598,66060542,66060542,66060542,66060542,66060542,66060542,66060540,66585592,67108856,67108848,67108848,67108860,67108860,67108862,66060543,66060415,66060351,66060319,66060319,66060319,66060351,66060415,66584831,67108862,67108862,67108862,67108856,67108848,67108832},
+		{15872,262080,524256,2097136,2097148,8388604,8374270,16711934,16646270,16515135,33292350,33030240,32505856,32505856,32505856,66060288,66060288,66060288,66060288,66060288,66060288,66060288,32505856,32505880,32505916,33030207,16515135,16515198,16711934,8356862,8388604,4194300,2097136,1048560,131008,65280},
+		{67107840,67108800,67108832,67108848,67108856,67108860,66588668,66060798,66060542,66060542,66060414,66060351,66060351,66060351,66060319,66060319,66060319,66060319,66060319,66060319,66060319,66060319,66060319,66060351,66060351,66060351,66060414,66060542,66060542,66585596,67108860,67108856,67108848,67108832,67108736,67108608},
+		{67108863,67108863,67108863,67108863,67108863,67108863,66584576,66060288,66060288,66060288,66060288,66060288,66060288,66584576,67108860,67108860,67108860,67108860,67108860,67108860,66060288,66060288,66060288,66060288,66060288,66060288,66060288,66060288,66060288,66584576,67108863,67108863,67108863,67108863,67108863,67108863},
+		{67108863,67108863,67108863,67108863,67108863,67108863,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,67108856,67108860,67108860,67108860,67108860,67108860,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720},
+		{32256,262080,524272,2097144,2097148,8388604,8356350,8323326,16646271,33292351,33030204,32505872,32505856,32505856,32505856,65011712,65011712,65015807,65015807,65015807,65015807,32509951,32505919,32505887,32505887,33030175,33292319,16515135,16646207,8356351,8388607,2097151,2097150,1048568,131040,65472},
+		{66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66584703,67108863,67108863,67108863,67108863,67108863,67108863,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351},
+		{67108863,67108863,67108863,67108863,63488,63488,63488,63488,63488,63488,63488,63488,63488,63488,63488,63488,63488,63488,63488,63488,63488,63488,63488,63488,63488,63488,63488,63488,63488,63488,63488,63488,67108863,67108863,67108863,67108863},
+		{255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,3932415,66846975,66846975,33423615,33489407,33522686,33554430,16777214,8388600,4194288,2097120,261888},
+		{66060543,66060798,66060798,66061304,66062328,66064368,66068448,66068416,66076544,66092928,66092800,66125312,66190336,66321408,67106816,67107840,67107840,67107840,67108352,67108608,67059456,66985856,66985856,66854848,66588640,66064352,66062320,66061296,66061304,66061304,66060796,66060540,66060542,66060542,66060415,66060351},
+		{66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,66846720,67108863,67108863,67108863,67108863,67108863,67108863},
+		{66978047,66978303,66978303,67043839,67043839,67044351,67044351,67077119,67077119,67077119,67077103,67078127,67078127,65505263,65521615,65521551,65521551,65259407,65261455,65261455,65261455,65269647,65269519,65273615,65142543,65142543,65142543,65142543,65142543,65142287,65142287,65076751,65076751,65076239,65076239,65043471},
+		{66584607,66846751,66846751,66977823,66977823,67043359,67043359,67076127,67076127,67092511,67100703,67100703,67100703,66318367,66318367,66320415,66190367,66124831,66125343,66125599,66092831,66076447,66076447,66068383,66068479,66068479,66064383,66062335,66061311,66061311,66061311,66060799,66060543,66060543,66060543,66060415},
+		{31744,524160,1048512,2097136,4194296,8388600,8324092,16711932,16515198,33292350,33030207,32505887,32505887,32505887,32505887,65011743,65011743,65011743,65011743,65011743,65011743,66060319,32505887,32505887,32505887,33030207,33292351,16515198,16646396,8324092,8388604,8388600,2097136,1048544,524224,130560},
+		{67108608,67108848,67108848,67108856,67108862,67108862,66586622,66060543,66060415,66060351,66060351,66060351,66060351,66060415,66060543,66060543,66062334,67108862,67108860,67108860,67108848,67108800,67108352,66584576,66060288,66060288,66060288,66060288,66060288,66060288,66060288,66060288,66060288,66060288,66060288,66060288},
+		{30720,524160,2097088,2097120,8388592,8357880,16712696,16515580,16253180,32505982,32505918,32505918,31457342,31457342,65011742,65011742,65011742,65011742,65011742,65011774,65011774,31457342,32510014,32521342,33045758,33308412,16531448,16650232,8388592,4194296,4194302,1048575,524287,62,30,6},
+		{67108352,67108832,67108832,67108848,67108856,67108856,66585596,66060540,66060540,66060540,66060540,66060540,66060540,66060796,66061304,67108856,67108856,67108848,67108832,67108736,67108352,66617088,66076416,66068352,66068448,66064352,66064368,66062320,66061304,66061304,66061308,66060796,66060540,66060542,66060542,66060415},
+		{64512,524224,1048544,4194288,8388600,16777212,16712700,16515580,16515324,16515326,16515312,16646144,16744448,16769024,8386560,8388544,4194272,2097148,524284,131068,32766,1023,255,127,66060351,66060351,33030207,33292351,33423487,16712190,16777214,16777214,8388604,2097144,1048544,262080},
+		{67108863,67108863,67108863,67108863,67108863,67108863,64512,64512,64512,64512,64512,64512,64512,64512,64512,64512,64512,64512,64512,64512,64512,64512,64512,64512,64512,64512,64512,64512,64512,64512,64512,64512,64512,64512,64512,64512},
+		{66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,66060351,33030207,33292351,33292415,33423615,33489406,16777214,16777212,4194296,4194296,1048544,262080},
+		{66060319,32505919,33030207,33292351,33292350,16515198,16515326,16515324,8257788,8257788,8258044,8323576,8323576,4129272,4129776,4129776,2065392,2066416,2066416,2082784,1034208,509920,511936,511872,257920,257920,257920,262016,261888,130816,130560,130560,65024,65024,64512,64512},
+		{62946311,29391887,29424655,29424655,29424655,31522319,31522319,31522319,31522319,31522318,14745118,14806558,14806558,15855390,15855390,15847196,15847196,7458588,7456540,7456540,7587644,7587644,8374076,8374268,8374264,8357880,4163576,4162552,4162552,4162552,4162552,4162552,4129776,4129776,4129264,4129264},
+		{33292542,16646398,8258044,8323576,8324088,4162552,4163568,2082784,2084832,1044448,524224,262016,261888,261888,130816,130560,64512,64512,130560,261888,261888,262016,262016,524224,2084832,2084832,2082800,2066416,8324088,8324088,8323580,8323324,16515326,33292542,33292415,66846783},
+		{66584639,33292351,33292415,16515326,16515324,8323580,8323580,8323576,4129776,2065392,2082800,2082784,1036256,520064,257920,262016,261888,130560,65024,65024,64512,31744,31744,31744,31744,31744,31744,31744,31744,31744,31744,31744,31744,31744,31744,31744},
+		{16777215,16777215,16777215,16777215,16777215,16777215,511,510,1020,2040,2040,4080,8160,16320,16256,32640,65280,65024,130048,261120,522240,520192,1044480,2088960,4177920,8355840,16744448,16711680,33423360,66977792,67108863,67108863,67108863,67108863,67108863,67108863}};
+
+
+
+
+int transfer_data() {
+	return 0;
+}
+
+/*void delay(int delays){
+
+	int i = 0;
+	int j = 0;
+	for(; i < delays; ++i)j++;
+	return;
+}*/
+
+void set_tcp_data (unsigned int tcp_mode,unsigned int write_data_in_0,unsigned int write_data_in_1,unsigned int write_data_in_2 ,unsigned int write_data_in_3){
+	is_tcp_write = tcp_mode;
+	tcp_write_data[4]=(write_data_in_0>>24)&0xff;
+	tcp_write_data[5]=(write_data_in_0>>16)&0xff;
+	tcp_write_data[6]=(write_data_in_0>>8)&0xff;
+	tcp_write_data[7]=(write_data_in_0>>0)&0xff;
+	tcp_write_data[8]=(write_data_in_1>>24)&0xff;
+	tcp_write_data[9]=(write_data_in_1>>16)&0xff;
+	tcp_write_data[10]=(write_data_in_1>>8)&0xff;
+	tcp_write_data[11]=(write_data_in_1>>0)&0xff;
+	tcp_write_data[12]=(write_data_in_2>>24)&0xff;
+	tcp_write_data[13]=(write_data_in_2>>16)&0xff;
+	tcp_write_data[14]=(write_data_in_2>>8)&0xff;
+	tcp_write_data[15]=(write_data_in_2>>0)&0xff;
+	tcp_write_data[16]=(write_data_in_3>>24)&0xff;
+	tcp_write_data[17]=(write_data_in_3>>16)&0xff;
+	tcp_write_data[18]=(write_data_in_3>>8)&0xff;
+	tcp_write_data[19]=(write_data_in_3>>0)&0xff;
+}
+err_t recv_callback(void *arg, struct tcp_pcb *tpcb,
+                               struct pbuf *p, err_t err)
+{
+	/* do not read the packet if we are not in ESTABLISHED state */
+	if (!p) {
+		tcp_close(tpcb);
+		tcp_recv(tpcb, NULL);
+		return ERR_OK;
+	}
+
+	/* indicate that the packet has been received */
+	tcp_recved(tpcb, p->len);
+
+	/* echo back the payload */
+	/* in this case, we assume that the payload is < TCP_SND_BUF */
+	if (tcp_sndbuf(tpcb) > p->len) {
+		err = tcp_write(tpcb, p->payload, p->len, 1);
+	} else
+		xil_printf("no space in tcp_sndbuf\n\r");
+	char *result=(char *)p->payload;
+	int tcp_readback_data = (int)((result[0]<<24)+(result[1]<<16)+(result[2]<<8)+(result[3]));
+	*(int*)arg =  tcp_readback_data;
+	xil_printf("get value: %x \n\r",tcp_readback_data);
+	/* free the received pbuf */
+	pbuf_free(p);
+
+	return ERR_OK;
+}
+
+ err_t connect_callback (void *arg, struct tcp_pcb *tpcb, err_t err){
+
+ 	printf("Connected callback called\n");
+	if(is_tcp_write){
+		err_t write_error = tcp_write(tpcb,tcp_write_data, BUFF_SIZE,TCP_WRITE_FLAG_COPY);
+		if(write_error != ERR_OK){
+			xil_printf("Error: failed to write data to pcb buffer");
+		}
+		else{
+
+			if(tcp_output(tpcb) != ERR_OK){
+				xil_printf("Error: failed to send data to server\n");
+				//delay(1000);
+			}
+			else{
+				xil_printf("Send String:");
+				for(int char_index = 0; char_index < BUFF_SIZE-4; char_index++){
+					xil_printf("%c",tcp_write_data[char_index+4]);
+				}
+				xil_printf("\n");
+			}
+		}
+
+	}
+	if(is_tcp_write==0){
+
+			unsigned char command[BUFF_SIZE] = {71,69,84};
+			err_t write_error = tcp_write(tpcb,command, 3,TCP_WRITE_FLAG_COPY);
+			if(write_error != ERR_OK){
+				xil_printf("Error: failed to write data to pcb buffer");
+			}
+
+	}
+	return 0;
+ }
+
+
+int start_application(int tcp_write_in, int *data,unsigned int write_data_in_0, unsigned int write_data_in_1, unsigned int write_data_in_2, unsigned int write_data_in_3){
+	struct tcp_pcb *pcb;
+	err_t connect_err;
+	u16_t port = 9090;
+	struct ip_addr ipaddr;
+
+	set_tcp_data(tcp_write_in,write_data_in_0,write_data_in_1,write_data_in_2,write_data_in_3);
+
+	/* create new TCP PCB structure */
+	pcb = tcp_new();
+	if (!pcb) {
+		xil_printf("Error creating PCB. Out of Memory\n\r");
+		return -1;
+	}
+	tcp_arg(pcb, (void*) data);
+	tcp_recv(pcb, recv_callback);
+	IP4_ADDR(&ipaddr,  192, 168,   1, 102); //set up the server IP address
+	connect_err = tcp_connect(pcb, &ipaddr, port,connect_callback);
+	if(connect_err == ERR_OK){
+		xil_printf("Connect request has been sent from client\n");
+		//connectecd = true;
+	}
+	else if(connect_err == ERR_VAL){
+		xil_printf("Error: Invalid argumens passed\n");
+	}
+	else{
+		xil_printf("Error: failed to send connect request\n");
+	}
+	xil_printf("client should be connected and starts sending data\n");
+
+	return 0;
+}
+
+float average(int *temparr){
+	int i,j,temp,sum;
+	sum = 0;
+	for(i=0;i<36;i++){
+		temp = *(temparr+i);
+		//xil_printf("temp: %d\n\r",temp);
+		//convert each integer to binary and sum it up
+		for(j=0;temp>0;j++){
+			sum += temp%2;
+			temp = temp/2;
+		}
+	}
+	return (sum/936.0);
+}
+char find_char_from_index(int index) {
+    if (index == 0) {
+        return 'A';
+    } else if (index == 1) {
+        return 'B';
+    } else if (index == 2) {
+        return 'C';
+    } else if (index == 3) {
+        return 'D';
+    } else if (index == 4) {
+        return 'E';
+    } else if (index == 5) {
+        return 'F';
+    } else if (index == 6) {
+        return 'G';
+    } else if (index == 7) {
+        return 'H';
+    } else if (index == 8) {
+        return 'I';
+    } else if (index == 9) {
+        return 'J';
+    } else if (index == 10) {
+        return 'K';
+    } else if (index == 11) {
+        return 'L';
+    } else if (index == 12) {
+        return 'M';
+    } else if (index == 13) {
+        return 'N';
+    } else if (index == 14) {
+        return 'O';
+    } else if (index == 15) {
+        return 'P';
+    } else if (index == 16) {
+        return 'Q';
+    } else if (index == 17) {
+        return 'R';
+    } else if (index == 18) {
+        return 'S';
+    } else if (index == 19) {
+        return 'T';
+    } else if (index == 20) {
+        return 'U';
+    } else if (index == 21) {
+        return 'V';
+    } else if (index == 22) {
+        return 'W';
+    } else if (index == 23) {
+        return 'X';
+    } else if (index == 24) {
+        return 'Y';
+    } else if (index == 25) {
+        return 'Z';
+    } else {
+        return -1;
+    }
+}
+
+char char_recognition(int *temp1){
+	float corr_max;
+	corr_max = -100;
+	int index = 0;
+	for(int char_index=0;char_index<26;char_index++){
+		float corr;
+		float A_mean = average(temp1);
+		float B_mean = average(template[char_index]);
+		//printf("%f\n", A_mean);
+		float top = 0, bot1 = 0, bot2 = 0;
+		int A[26] = {0};
+		int B[26] = {0};
+		for(int line = 0; line<36;line++){
+			int tempval = *(temp1+line);
+			//xil_printf("%d\n\r",tempval);
+			for(int j=0;tempval>0;j++){
+				A[j] = tempval%2;
+				//xil_printf("%d", A_bit[j]);
+				tempval = tempval/2;
+			}
+			tempval = *(template[char_index]+line);
+			for(int j=0;tempval>0;j++){
+				B[j] = tempval%2;
+				//xil_printf("%d", A_bit[j]);
+				tempval = tempval/2;
+			}
+			for(int j=0;j<26;j++){
+				top += (A[j]-A_mean)*(B[j]-B_mean);
+				bot1 += (A[j]-A_mean)*(A[j]-A_mean);
+				bot2 += (B[j]-B_mean)*(B[j]-B_mean);
+			}
+		}
+		corr = top/(sqrt(bot1*bot2));
+		if (corr > corr_max){
+			index = char_index;
+			corr_max = corr;
+		}
+	}
+	return find_char_from_index(index);
+}
+
+void OLEDInitialize();
+void OLEDInitDATA();
+void OLED_UPDATE_DATA(char input,int x, int y);
+void OLEDCleanup();
+void EnableCaches();
+void DisableCaches();
+
+PmodOLEDrgb oledrgb;
+
+u8 rgbUserFont[] = {
+	0x00, 0x04, 0x02, 0x1F, 0x02, 0x04, 0x00, 0x00, // 0x00
+	0x0E, 0x1F, 0x15, 0x1F, 0x17, 0x10, 0x1F, 0x0E, // 0x01
+	0x00, 0x1F, 0x11, 0x00, 0x00, 0x11, 0x1F, 0x00, // 0x02
+	0x00, 0x0A, 0x15, 0x11, 0x0A, 0x04, 0x00, 0x00, // 0x03
+	0x07, 0x0C, 0xFA, 0x2F, 0x2F, 0xFA, 0x0C, 0x07  // 0x04
+}; // This table defines 5 user characters, although only one is used
+
+
+void OLEDInitialize() {
+	EnableCaches();
+	OLEDrgb_begin(&oledrgb, XPAR_PMODOLEDRGB_0_AXI_LITE_GPIO_BASEADDR,
+		 XPAR_PMODOLEDRGB_0_AXI_LITE_SPI_BASEADDR);
+}
+
+void OLEDInitDATA() {
+	char ch;
+	// Define the user definable characters
+	for (ch = 0; ch < 5; ch++) {
+	  OLEDrgb_DefUserChar(&oledrgb, ch, &rgbUserFont[ch * 8]);
+	}
+
+	OLEDrgb_SetFontColor(&oledrgb, OLEDrgb_BuildRGB(8, 119, 208));
+	OLEDrgb_SetCursor(&oledrgb, 0, 0 );
+	OLEDrgb_PutString(&oledrgb, "ECE532"); // Default color (green)
+	OLEDrgb_SetCursor(&oledrgb, 7, 0);
+	OLEDrgb_PutChar(&oledrgb, 4);
+	OLEDrgb_SetCursor(&oledrgb, 0, 1);
+	OLEDrgb_PutString(&oledrgb, "GROUP3  DEMO");
+
+	OLEDrgb_SetFontColor(&oledrgb, OLEDrgb_BuildRGB(140,76,0));
+	OLEDrgb_SetCursor(&oledrgb, 0, 4);
+	OLEDrgb_PutChar(&oledrgb, 3);
+	OLEDrgb_SetCursor(&oledrgb, 1, 4);
+	OLEDrgb_PutChar(&oledrgb, 3);
+	OLEDrgb_SetCursor(&oledrgb, 3, 4);
+	OLEDrgb_PutString(&oledrgb, "STRING");
+	OLEDrgb_SetCursor(&oledrgb, 11, 4);
+	OLEDrgb_PutChar(&oledrgb, 3);
+	OLEDrgb_SetCursor(&oledrgb, 10, 4);
+	OLEDrgb_PutChar(&oledrgb, 3);
+
+	OLEDrgb_SetFontColor(&oledrgb, OLEDrgb_BuildRGB(254, 173, 182));
+	OLEDrgb_SetCursor(&oledrgb, 0, 5 );
+	OLEDrgb_PutString(&oledrgb, "L1:");
+	OLEDrgb_SetCursor(&oledrgb, 0, 6 );
+	OLEDrgb_PutString(&oledrgb, "L2:");
+
+}
+
+void OLED_UPDATE_DATA(char input,int x, int y) {
+	char input_string[1];
+	input_string[0] = input;
+	OLEDrgb_SetFontColor(&oledrgb, OLEDrgb_BuildRGB(254, 173, 182));
+	OLEDrgb_SetCursor(&oledrgb, x+4, y+5 );
+	OLEDrgb_PutString(&oledrgb, input_string);
+}
+
+void OLED_CLEAN_DATA() {
+	OLEDrgb_SetFontColor(&oledrgb, OLEDrgb_BuildRGB(254, 173, 182));
+	OLEDrgb_SetCursor(&oledrgb, 4, 5 );
+	OLEDrgb_PutString(&oledrgb, "        ");
+	OLEDrgb_SetCursor(&oledrgb, 4, 6 );
+	OLEDrgb_PutString(&oledrgb, "        ");
+}
+
+void OLEDCleanup() {
+   DisableCaches();
+}
+
+void EnableCaches() {
+#ifdef __MICROBLAZE__
+#ifdef XPAR_MICROBLAZE_USE_ICACHE
+   Xil_ICacheEnable();
+#endif
+#ifdef XPAR_MICROBLAZE_USE_DCACHE
+   Xil_DCacheEnable();
+#endif
+#endif
+}
+
+void DisableCaches() {
+#ifdef __MICROBLAZE__
+#ifdef XPAR_MICROBLAZE_USE_DCACHE
+   Xil_DCacheDisable();
+#endif
+#ifdef XPAR_MICROBLAZE_USE_ICACHE
+   Xil_ICacheDisable();
+#endif
+#endif
+}

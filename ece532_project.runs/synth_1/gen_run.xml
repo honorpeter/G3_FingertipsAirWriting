@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1521310443">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1521312868">
   <File Type="RDS-PROPCONSTRS" Name="design_1_wrapper_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
   <File Type="RDS-RDS" Name="design_1_wrapper.vds"/>
@@ -74,4 +74,5 @@
   <BlockFileSet Type="BlockSrcs" Name="design_1_vga444_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_ftps_locator_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_PmodOLEDrgb_0_0"/>
 </GenRun>

@@ -31,6 +31,8 @@ vlib riviera/lmb_v10_v3_0_9
 vlib riviera/lmb_bram_if_cntlr_v4_0_12
 vlib riviera/interrupt_control_v3_1_4
 vlib riviera/axi_gpio_v2_0_15
+vlib riviera/dist_mem_gen_v8_0_11
+vlib riviera/axi_quad_spi_v3_2_12
 
 vmap xil_defaultlib riviera/xil_defaultlib
 vmap xpm riviera/xpm
@@ -62,6 +64,8 @@ vmap lmb_v10_v3_0_9 riviera/lmb_v10_v3_0_9
 vmap lmb_bram_if_cntlr_v4_0_12 riviera/lmb_bram_if_cntlr_v4_0_12
 vmap interrupt_control_v3_1_4 riviera/interrupt_control_v3_1_4
 vmap axi_gpio_v2_0_15 riviera/axi_gpio_v2_0_15
+vmap dist_mem_gen_v8_0_11 riviera/dist_mem_gen_v8_0_11
+vmap axi_quad_spi_v3_2_12 riviera/axi_quad_spi_v3_2_12
 
 vlog -work xil_defaultlib  -sv2k12 "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/9c7f" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/39ca/hdl/verilog" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/f80f/hdl/verilog" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/7e3a/hdl" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/9c7f" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/39ca/hdl/verilog" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/f80f/hdl/verilog" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/7e3a/hdl" \
 "C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
@@ -415,10 +419,26 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../ece532_project.srcs/source
 "../../../bd/design_1/hdl/design_1.v" \
 "../../../bd/design_1/ipshared/00ef/src/ftps_locator.v" \
 "../../../bd/design_1/ip/design_1_ftps_locator_0_0/sim/design_1_ftps_locator_0_0.v" \
-"../../../bd/design_1/ipshared/e93a/vga_data_mux.v" \
-"../../../bd/design_1/ip/design_1_vga_data_mux_0_1/sim/design_1_vga_data_mux_0_1.v" \
 "../../../bd/design_1/ip/design_1_blk_mem_buffer_vga_0/sim/design_1_blk_mem_buffer_vga_0.v" \
 "../../../bd/design_1/ip/design_1_xlconstant_0_0/sim/design_1_xlconstant_0_0.v" \
+"../../../bd/design_1/ipshared/e93a/vga_data_mux.v" \
+"../../../bd/design_1/ip/design_1_vga_data_mux_0_0/sim/design_1_vga_data_mux_0_0.v" \
+
+vlog -work dist_mem_gen_v8_0_11  -v2k5 "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/9c7f" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/39ca/hdl/verilog" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/f80f/hdl/verilog" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/7e3a/hdl" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/9c7f" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/39ca/hdl/verilog" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/f80f/hdl/verilog" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/7e3a/hdl" \
+"../../../../ece532_project.srcs/sources_1/bd/design_1/ip/design_1_PmodOLEDrgb_0_0/ip/PmodOLEDrgb_axi_quad_spi_0_0/simulation/dist_mem_gen_v8_0.v" \
+
+vcom -work axi_quad_spi_v3_2_12 -93 \
+"../../../../ece532_project.srcs/sources_1/bd/design_1/ip/design_1_PmodOLEDrgb_0_0/ip/PmodOLEDrgb_axi_quad_spi_0_0/hdl/axi_quad_spi_v3_2_rfs.vhd" \
+
+vcom -work xil_defaultlib -93 \
+"../../../bd/design_1/ip/design_1_PmodOLEDrgb_0_0/ip/PmodOLEDrgb_axi_quad_spi_0_0/sim/PmodOLEDrgb_axi_quad_spi_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_PmodOLEDrgb_0_0/ip/PmodOLEDrgb_axi_gpio_0_1/sim/PmodOLEDrgb_axi_gpio_0_1.vhd" \
+
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/9c7f" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/39ca/hdl/verilog" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/f80f/hdl/verilog" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/7e3a/hdl" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/9c7f" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/39ca/hdl/verilog" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/f80f/hdl/verilog" "+incdir+../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/7e3a/hdl" \
+"../../../../ece532_project.srcs/sources_1/bd/design_1/ip/design_1_PmodOLEDrgb_0_0/ip/PmodOLEDrgb_pmod_bridge_0_0/src/pmod_concat.v" \
+"../../../bd/design_1/ip/design_1_PmodOLEDrgb_0_0/ip/PmodOLEDrgb_pmod_bridge_0_0/sim/PmodOLEDrgb_pmod_bridge_0_0.v" \
+"../../../../ece532_project.srcs/sources_1/bd/design_1/ipshared/f1fd/hdl/PmodOLEDrgb_v1_0.v" \
+"../../../bd/design_1/ip/design_1_PmodOLEDrgb_0_0/sim/design_1_PmodOLEDrgb_0_0.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

@@ -35,10 +35,10 @@ module vga_data_mux(
     wire [3:0]V;
     wire [15:0]rgb_out;
         
-    assign Y = {yuv_in[15:12],yuv_in[7:4]};
+    assign Y = ({yuv_in[15:12],yuv_in[7:4]});
     assign U = yuv_in[11:8];
     assign V = yuv_in[3:0];
-
+    
     assign R = (Y + 1770*V)/1000;
     assign G = (Y - 344*U - 714*V)/1000;
     assign B = (Y + 1770*U)/1000;  
