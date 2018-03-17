@@ -71,9 +71,7 @@ struct netif *echo_netif;
 
 volatile unsigned int * LED_CONTROL = (unsigned int *)0x40010000;
 volatile unsigned int * SW_CONTROL 	= (unsigned int *)0x40000000;
-volatile unsigned int * FTPS_VALID 	= (unsigned int *)0x40020000;
-volatile unsigned int * FTPS_X 		= (unsigned int *)0x40030000;
-volatile unsigned int * FTPS_Y 		= (unsigned int *)0x40040000;
+volatile unsigned int * FTPS_LOC 	= (unsigned int *)0x40020000;
 volatile unsigned int * SEND_MSG 	= (unsigned int *)0x40050000;
 volatile unsigned int * LED_IN_PRGS	= (unsigned int *)0x40060000;
 
@@ -207,6 +205,7 @@ int main()
 	/* receive and process packets */
 	//this is for ftps locate
 	int total_control;
+	int ftps_location;
 	int ftps_valid;
 	unsigned char ftps_x;
 	unsigned char ftps_y;
@@ -239,12 +238,13 @@ int main()
     	total_control = *SW_CONTROL;
 
     	if(total_control){
-    		ftps_valid = (*FTPS_VALID)&0x1;
-    		if (ftps_valid){
-    			ftps_x = ((*FTPS_X)&0x000001ff)/8;
-    			ftps_y = ((*FTPS_Y)&0x000000ff)/8;
+    		ftps_location = *FTPS_LOC;
+    		ftps_valid = (ftps_location>>31)&0x1;
+    		if (ftps_valid == 1){
+    			ftps_x = ((ftps_location>>10)&0x000001ff)/8;
+    			ftps_y = (ftps_location&0x000000ff)/8;
     			while (ftps_valid) {
-    				ftps_valid = (*FTPS_VALID)&0x1;
+    				ftps_valid = (*FTPS_LOC)&0x1;
     			}
     			if ((ftps_x != 0)||(ftps_y!=0)) {
     				last_valid = 1;
@@ -279,47 +279,47 @@ int main()
     					ftps_data[trans_y+1] = (1<<(trans_x))| ftps_data[trans_y+1];
     				}
 //    				printf("Get fingertips X1=%d ; Y1=%d ",ftps_x,ftps_y );
-//					printf("Get fingertips X=%d ; Y=%d \n",trans_x,trans_y );
+					printf("Get fingertips X=%d ; Y=%d \n",trans_x,trans_y );
     			} else {
-    				if (zero_input_count < 5 && last_valid) {
-    					zero_input_count++;
-//						printf ("Zero code %d \n",zero_input_count);
-    				}
-    				if (zero_input_count >= 5 ) {
-						*LED_IN_PRGS = 1;
-//	    				printf ("start_rec %d \n",start_rec);
-						//this section is charqcter rec
-						char char_rec;
-						char_rec= char_recognition(ftps_data);
-						//this section is modify send_data  to IOT
-						if(send_count < 4)
-							send_data_0[send_count] = char_rec;
-						if((send_count < 8)&&(send_count > 3))
-							send_data_1[send_count-4] = char_rec;
-						if((send_count < 12)&&(send_count > 7))
-							send_data_2[send_count-8] = char_rec;
-						if(send_count > 11)
-							send_data_3[send_count-12] = char_rec;
-						if (send_count < 16) {
-							send_count ++;
-//							printf ("send_count %d \n",send_count);
-						}
-						//xil_printf("matching index: %d\n\r",char_index);
-						xil_printf("Matching character is: %c\n", char_rec);
-						//add recognize function here
-//						printf("The output is \n");
-						for(int i=0;i<36;i++){
-//							printf("%2d:",i);
-//							for(int j=27;j>0;j--){
-//								printf ("%1d",(ftps_data[i]>>j)&0b1);
-//							}
-//							printf("\n");
-							ftps_data[i] = 0;
-						}
-						zero_input_count = 0;
-						last_valid = 0;
-						*LED_IN_PRGS = 0;
-    				}
+//    				if (zero_input_count < 5 && last_valid) {
+//    					zero_input_count++;
+////						printf ("Zero code %d \n",zero_input_count);
+//    				}
+//    				if (zero_input_count >= 5 ) {
+//						*LED_IN_PRGS = 1;
+////	    				printf ("start_rec %d \n",start_rec);
+//						//this section is charqcter rec
+//						char char_rec;
+//						char_rec= char_recognition(ftps_data);
+//						//this section is modify send_data  to IOT
+//						if(send_count < 4)
+//							send_data_0[send_count] = char_rec;
+//						if((send_count < 8)&&(send_count > 3))
+//							send_data_1[send_count-4] = char_rec;
+//						if((send_count < 12)&&(send_count > 7))
+//							send_data_2[send_count-8] = char_rec;
+//						if(send_count > 11)
+//							send_data_3[send_count-12] = char_rec;
+//						if (send_count < 16) {
+//							send_count ++;
+////							printf ("send_count %d \n",send_count);
+//						}
+//						//xil_printf("matching index: %d\n\r",char_index);
+//						xil_printf("Matching character is: %c\n", char_rec);
+//						//add recognize function here
+////						printf("The output is \n");
+//						for(int i=0;i<36;i++){
+////							printf("%2d:",i);
+////							for(int j=27;j>0;j--){
+////								printf ("%1d",(ftps_data[i]>>j)&0b1);
+////							}
+////							printf("\n");
+//							ftps_data[i] = 0;
+//						}
+//						zero_input_count = 0;
+//						last_valid = 0;
+//						*LED_IN_PRGS = 0;
+//    				}
     			}
     		}
     	}
