@@ -350,6 +350,10 @@
   "../../../bd/design_1/hdl/design_1.v" \
   "../../../bd/design_1/ipshared/00ef/src/ftps_locator.v" \
   "../../../bd/design_1/ip/design_1_ftps_locator_0_0/sim/design_1_ftps_locator_0_0.v" \
+  "../../../bd/design_1/ipshared/e93a/vga_data_mux.v" \
+  "../../../bd/design_1/ip/design_1_vga_data_mux_0_1/sim/design_1_vga_data_mux_0_1.v" \
+  "../../../bd/design_1/ip/design_1_blk_mem_buffer_vga_0/sim/design_1_blk_mem_buffer_vga_0.v" \
+  "../../../bd/design_1/ip/design_1_xlconstant_0_0/sim/design_1_xlconstant_0_0.v" \
 -endlib
 -makelib ies/xil_defaultlib \
   glbl.v

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xAF7064C2F472A1EC" bd:device="xc7a100tcsg324-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2017.2" bd:top="design_1" bd:version="1.00.a">
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x18B95A4F7936536F" bd:device="xc7a100tcsg324-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2017.2" bd:top="design_1" bd:version="1.00.a">
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -490,6 +490,12 @@
             </spirit:vector>
           </spirit:wire>
         </spirit:port>
+        <spirit:port>
+          <spirit:name>VGA_SELECT</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
       </spirit:ports>
     </spirit:model>
   </spirit:component>
@@ -743,6 +749,41 @@
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_ftps_locator_0_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>blk_mem_buffer_vga_YUV</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="blk_mem_gen" spirit:vendor="xilinx.com" spirit:version="8.3"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_blk_mem_buffer_vga_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Memory_Type">Simple_Dual_Port_RAM</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Enable_32bit_Address">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Use_Byte_Write_Enable">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Write_Width_A">16</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Write_Depth_A">76800</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Operating_Mode_A">NO_CHANGE</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Enable_A">Always_Enabled</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Write_Width_B">16</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Read_Width_B">16</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Enable_B">Always_Enabled</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Register_PortB_Output_of_Memory_Primitives">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Port_B_Clock">100</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Port_B_Enable_Rate">100</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="use_bram_block">Stand_Alone</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>cons_1</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlconstant" spirit:vendor="xilinx.com" spirit:version="1.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_xlconstant_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>vga_data_mux_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="vga_data_mux" spirit:vendor="utoronto.ca" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_vga_data_mux_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
     </spirit:componentInstances>
     <spirit:interconnections>
       <spirit:interconnection>
@@ -974,6 +1015,7 @@
         <spirit:internalPortReference spirit:componentRef="vga444_0" spirit:portRef="clk25"/>
         <spirit:internalPortReference spirit:componentRef="video_in_0" spirit:portRef="CLK25"/>
         <spirit:internalPortReference spirit:componentRef="blk_mem_buffer_vga" spirit:portRef="clkb"/>
+        <spirit:internalPortReference spirit:componentRef="blk_mem_buffer_vga_YUV" spirit:portRef="clkb"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>OV7670_PCLK_1</spirit:name>
@@ -982,6 +1024,7 @@
         <spirit:internalPortReference spirit:componentRef="blk_mem_buffer_vga" spirit:portRef="clka"/>
         <spirit:internalPortReference spirit:componentRef="frame_average_buffer_0" spirit:portRef="pclk"/>
         <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="pclk"/>
+        <spirit:internalPortReference spirit:componentRef="blk_mem_buffer_vga_YUV" spirit:portRef="clka"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>vga444_0_vga_red</spirit:name>
@@ -1072,6 +1115,7 @@
         <spirit:internalPortReference spirit:componentRef="vga444_0" spirit:portRef="frame_addr"/>
         <spirit:internalPortReference spirit:componentRef="blk_mem_buffer_vga" spirit:portRef="addrb"/>
         <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="request_addr"/>
+        <spirit:internalPortReference spirit:componentRef="blk_mem_buffer_vga_YUV" spirit:portRef="addrb"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>video_in_0_resend</spirit:name>
@@ -1083,11 +1127,13 @@
         <spirit:name>video_in_0_capture_addr</spirit:name>
         <spirit:internalPortReference spirit:componentRef="video_in_0" spirit:portRef="capture_addr"/>
         <spirit:internalPortReference spirit:componentRef="frame_average_buffer_0" spirit:portRef="capture_address"/>
+        <spirit:internalPortReference spirit:componentRef="blk_mem_buffer_vga_YUV" spirit:portRef="addra"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>video_in_0_data_16</spirit:name>
         <spirit:internalPortReference spirit:componentRef="video_in_0" spirit:portRef="data_16"/>
         <spirit:internalPortReference spirit:componentRef="frame_average_buffer_0" spirit:portRef="capture_data"/>
+        <spirit:internalPortReference spirit:componentRef="blk_mem_buffer_vga_YUV" spirit:portRef="dina"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>frame_average_buffer_0_avg_addr_out</spirit:name>
@@ -1133,14 +1179,34 @@
         <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="request_data"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>ftps_locator_0_frame_data</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="frame_data"/>
-        <spirit:internalPortReference spirit:componentRef="vga444_0" spirit:portRef="frame_pixel"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>ftps_locator_0_location_data</spirit:name>
         <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="location_data"/>
         <spirit:internalPortReference spirit:componentRef="axi_ftps_location" spirit:portRef="gpio_io_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>xlconstant_0_dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="cons_1" spirit:portRef="dout"/>
+        <spirit:internalPortReference spirit:componentRef="blk_mem_buffer_vga_YUV" spirit:portRef="wea"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>vga_data_mux_0_vga_data</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="vga_data_mux_0" spirit:portRef="vga_data"/>
+        <spirit:internalPortReference spirit:componentRef="vga444_0" spirit:portRef="frame_pixel"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>VGA_SELECT_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="VGA_SELECT"/>
+        <spirit:internalPortReference spirit:componentRef="vga_data_mux_0" spirit:portRef="data_slecet"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>ftps_locator_0_frame_data</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="ftps_locator_0" spirit:portRef="frame_data"/>
+        <spirit:internalPortReference spirit:componentRef="vga_data_mux_0" spirit:portRef="modify_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>blk_mem_buffer_vga_YUV_doutb</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="blk_mem_buffer_vga_YUV" spirit:portRef="doutb"/>
+        <spirit:internalPortReference spirit:componentRef="vga_data_mux_0" spirit:portRef="yuv_in"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>

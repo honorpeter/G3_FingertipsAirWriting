@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date                      : Sat Mar 17 12:43:03 2018
+| Date                      : Sat Mar 17 14:18:25 2018
 | Host                      : SFB520WS13 running 64-bit Service Pack 1  (build 7601)
 | Command                   : report_io -file design_1_wrapper_io_placed.rpt
 | Design                    : design_1_wrapper
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            96 |
+|            97 |
 +---------------+
 
 
@@ -333,7 +333,7 @@ Table of Contents
 | U8         |                      | High Range | IO_25_34                     | User IO     |                |      34 |            |      |                     |                      |         |            |           |          |          |                  |
 | U9         | DDR2_dqs_p[0]        | High Range | IO_L21P_T3_DQS_34            | BIDIR       | DIFF_SSTL18_II |      34 |            | FAST |    UNTUNED_SPLIT_50 |  NP_VTT_50_FP_VTT_50 |         | FIXED      |           |          |          | NONE             |
 | U10        |                      |            | GND                          | GND         |                |         |            |      |                     |                      |     0.0 |            |           |          |          |                  |
-| U11        |                      | High Range | IO_L19N_T3_A09_D25_VREF_14   | User IO     |                |      14 |            |      |                     |                      |         |            |           |          |          |                  |
+| U11        | VGA_SELECT           | High Range | IO_L19N_T3_A09_D25_VREF_14   | INPUT       | LVCMOS33       |      14 |            |      |                     |                 NONE |         | FIXED      |           |          |          | NONE             |
 | U12        |                      | High Range | IO_L20P_T3_A08_D24_14        | User IO     |                |      14 |            |      |                     |                      |         |            |           |          |          |                  |
 | U13        |                      | High Range | IO_L23N_T3_A02_D18_14        | User IO     |                |      14 |            |      |                     |                      |         |            |           |          |          |                  |
 | U14        |                      | High Range | IO_L22P_T3_A05_D21_14        | User IO     |                |      14 |            |      |                     |                      |         |            |           |          |          |                  |

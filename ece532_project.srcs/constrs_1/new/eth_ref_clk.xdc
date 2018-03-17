@@ -90,3 +90,6 @@ set_property PACKAGE_PIN M17 [get_ports {BTNR[0]}]
 
 set_property IOSTANDARD LVCMOS33 [get_ports BTNL]
 set_property PACKAGE_PIN P17 [get_ports BTNL]
+
+set_property IOSTANDARD LVCMOS33 [get_ports VGA_SELECT]
+set_property PACKAGE_PIN U11 [get_ports VGA_SELECT]

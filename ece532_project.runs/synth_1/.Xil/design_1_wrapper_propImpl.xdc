@@ -77,3 +77,5 @@ set_property src_info {type:XDC file:1 line:89 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN M17 [get_ports {BTNR[0]}]
 set_property src_info {type:XDC file:1 line:92 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN P17 [get_ports BTNL]
+set_property src_info {type:XDC file:1 line:95 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN U11 [get_ports VGA_SELECT]

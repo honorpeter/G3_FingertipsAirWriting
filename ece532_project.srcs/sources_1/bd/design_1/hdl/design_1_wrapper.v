@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-//Date        : Sat Mar 17 12:37:10 2018
+//Date        : Sat Mar 17 14:13:44 2018
 //Host        : SFB520WS13 running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -37,6 +37,7 @@ module design_1_wrapper
     OV7670_VSYNC,
     OV7670_XCLK,
     SW_15,
+    VGA_SELECT,
     eth_mdio_mdc_mdc,
     eth_mdio_mdc_mdio_io,
     eth_ref_clk,
@@ -83,6 +84,7 @@ module design_1_wrapper
   input OV7670_VSYNC;
   output OV7670_XCLK;
   input [0:0]SW_15;
+  input VGA_SELECT;
   output eth_mdio_mdc_mdc;
   inout eth_mdio_mdc_mdio_io;
   output eth_ref_clk;
@@ -130,6 +132,7 @@ module design_1_wrapper
   wire OV7670_VSYNC;
   wire OV7670_XCLK;
   wire [0:0]SW_15;
+  wire VGA_SELECT;
   wire eth_mdio_mdc_mdc;
   wire eth_mdio_mdc_mdio_i;
   wire eth_mdio_mdc_mdio_io;
@@ -181,6 +184,7 @@ module design_1_wrapper
         .OV7670_VSYNC(OV7670_VSYNC),
         .OV7670_XCLK(OV7670_XCLK),
         .SW_15(SW_15),
+        .VGA_SELECT(VGA_SELECT),
         .eth_mdio_mdc_mdc(eth_mdio_mdc_mdc),
         .eth_mdio_mdc_mdio_i(eth_mdio_mdc_mdio_i),
         .eth_mdio_mdc_mdio_o(eth_mdio_mdc_mdio_o),
