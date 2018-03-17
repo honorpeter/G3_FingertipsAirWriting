@@ -1,0 +1,25 @@
+12:23:37 **** Auto Build of configuration Debug for project ftps_locate ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ftps_locate_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:293:17: warning: implicit declaration of function 'char_recognition' [-Wimplicit-function-declaration]
+       char_rec= char_recognition(ftps_data);
+                 ^~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ftps_locate.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ftps_locate_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ftps_locate.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: ftps_locate.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ftps_locate.elf  |tee "ftps_locate.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 199988	   5348	 750672	 956008	  e9668	ftps_locate.elf
+'Finished building: ftps_locate.elf.size'
+' '
+
+12:23:38 Build Finished (took 1s.156ms)
+
