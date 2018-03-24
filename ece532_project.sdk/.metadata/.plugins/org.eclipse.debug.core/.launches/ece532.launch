@@ -25,6 +25,6 @@
 <booleanAttribute key="xilinx.profile.enable" value="false"/>
 <stringAttribute key="xilinx.stdio.baud" value="9600"/>
 <booleanAttribute key="xilinx.stdio.connect" value="true"/>
-<stringAttribute key="xilinx.stdio.port" value="COM6"/>
+<stringAttribute key="xilinx.stdio.port" value="COM5"/>
 <booleanAttribute key="xilinx.xmd.crosstrigger" value="false"/>
 </launchConfiguration>

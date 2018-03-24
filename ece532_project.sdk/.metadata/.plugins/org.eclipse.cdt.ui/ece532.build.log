@@ -1,6 +1,6 @@
-16:06:14 **** Incremental Build of configuration Debug for project ece532 ****
+15:33:00 **** Incremental Build of configuration Debug for project ece532 ****
 make all 
 make: Nothing to be done for `all'.
 
-16:06:14 Build Finished (took 199ms)
+15:33:00 Build Finished (took 210ms)
 
