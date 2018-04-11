@@ -12,7 +12,7 @@ How to run the program:
 Repository Structure:
 ---------------------
 ece532_project - root directory  
-  */ece532_project.sdk  
+..*/ece532_project.sdk  
     -/ece532/src/  
       -echo.c: includes TCP/IP client code, template matching code, and PmodOLEDrgb code  
       -main.c: main software code file that controls the overall flow of the system  
