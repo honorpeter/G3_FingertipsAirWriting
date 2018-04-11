@@ -29,3 +29,7 @@ ece532_project.xpr: the main project
 Authors:
 --------
 Gujiang Lin, Yueqi Chen, Qingnan Yu
+
+Acknowledgments:
+--------
+We used the Pmod example provided on Courese Piazza website
